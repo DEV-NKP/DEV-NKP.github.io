@@ -1,0 +1,79 @@
+.contact {
+    padding-top:0px ;
+  }
+
+.contact .title::after {
+    content: "Get In Touch";
+  }
+  .contact .contact-content .column {
+    width: calc(50% - 30px);
+  }
+
+  /*
+  .contact .contact-content .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .contact .contact-content .left p {
+    text-align: justify;
+  }*/
+  .contact .contact-content .left .icons {
+    margin: 10px 0;
+  }
+  
+  .contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+  }
+  .contact .contact-content .row .infoc {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+  }
+  .contact .contact-content .row i {
+    font-size: 25px;
+    color: #0088a9;
+  }
+  .contact .contact-content .infoc .head {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .contact .contact-content .infoc .sub-title {
+    color: rgba(51, 51, 51, 0.863);
+  }
+
+.contact-link-box{
+
+padding-left: 10%;
+}
+
+.contact-text{
+  font-size: 25px;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.contact-link{
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-link a i{
+  color: #0d95b7;
+cursor: pointer;
+}
+.contact-link a i:hover{
+  
+  color: #0d95b768;
+  }
+  
+#contact{
+  padding-bottom: 100px;
+}
+
+  

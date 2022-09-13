@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+/* about section styling */
+.about .title::after {
+  content: "Introduction";
+}
+.about .skill-title::after {
+  content: "Technical Level";
+}
+
+
+section .skill-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+
+}
+section .skill-title::after {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 20px;
+  color: #0088a9;
+  padding: 0 5px;
+  background: #fff;
+  transform: translateX(-50%);
+ 
+}
+
+.about .quali-title::after {
+  content: "Educational Journey";
+}
+section .quali-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 250px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+section .quali-title::after {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 20px;
+  color: #0088a9;
+  padding: 0 5px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+.about .about-content .left {
+  width: 40%;
+}
+.about .about-content .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.about .about-content .right {
+  width: 60%;
+}
+.about .about-content .right .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.about .about-content .right .text span {
+  color: #0088a9;
+}
+.about .about-content .right p {
+  text-align: justify;
+  font-size: 18px;
+}
+.about .about-content .right .about-cv {
+  display: inline-block;
+  background: #0088a9;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-left: 30%;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid #0088a9;
+  transition: all 0.3s ease;
+}
+.about .about-content .right .about-cv:hover {
+  color: #0088a9;
+  background: none;
+}
+
+.about-rat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 8%;
+}
+
+.skill-title {
+  padding-top: 0px;
+}
+
+.skills .skill-text{
+font-size: 18px;
+text-align: center;
+padding-bottom:30px;
+margin-top: -20px;
+}
+.skills .skills-content .column {
+  width: calc(50% - 30px);
+}
+
+
+ .bars {
+  margin-bottom: 15px;
+}
+ .info {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills .skills-content .right span {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.skills .skills-content .left span {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.line {
+  height: 5px;
+  width: 100%;
+  background: lightgrey;
+  position: relative;
+}
+.line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #0088a9;
+}
+.c::before {
+  width: 95%;
+}
+.cpp::before {
+  width: 90%;
+}
+.cs::before {
+  width: 85%;
+}
+.java::before {
+  width: 80%;
+}
+.py::before {
+  width: 30%;
+}
+.html::before {
+  width: 98%;
+}
+.css::before {
+  width: 95%;
+}
+.js::before {
+  width: 80%;
+}
+.php::before {
+  width: 85%;
+}
+.mysql::before {
+  width: 70%;
+}
+
+
+.quali-title{
+  padding-top: 0px;
+}
+
+.quali-button {
+  text-align: center;
+}
+
+.quali-edu img {
+  float: left;
+  margin-top: -10px;
+}
+.quali-work img {
+  float: left;
+  margin-top: -10px;
+}
+.quali-edu {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  margin-right: 30px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+  padding: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: transparent;
+  color: #24252a;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.quali-edu:hover {
+  color: #40b8d6;
+}
+.quali-work {
+  position: relative;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+  padding: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: transparent;
+  color: #24252a;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.quali-work:hover {
+  color: #40b8d6;
+}
+.quali-data {
+padding: 20px;
+border: 1px solid rgb(17, 170, 181);
+border-radius: 10px;
+width: 28%;
+background-color:  rgba(133, 205, 210, 0.254);
+
+}
+
+.quali-data i{
+  color: #025669af;
+  padding-bottom: 20px;
+}
+
+.edu-log {
+  text-align: center;
+  display: none;
+  justify-content: space-between;
+}
+.work-log {
+  text-align: center;
+  justify-content: center;
+  display: none;
+
+}
+
+
+
+/*
+.quali-round-left {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #0088a9;
+  margin-left: -300px;
+}
+.quali-line-left {
+  display: block;
+  width: 1px;
+  height: 100%;
+  transform: translate(6px, -7px);
+  background-color: #0088a9;
+  margin-left: -155px;
+}
+.quali-right {
+  margin-left: -150px;
+}
+.quali-round-right {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #0088a9;
+  margin-left: 300px;
+}
+.quali-line-right {
+  display: block;
+  width: 1px;
+  height: 100%;
+  transform: translate(6px, -7px);
+  background-color: #0088a9;
+  margin-left: 300px;
+}
+*/
+.qualification_active {
+  display: flex;
+}
+
+.qualification-active-option {
+
+  color: #0088a9;
+}
+
+#qualifications{
+  padding-bottom: 20px;
+}

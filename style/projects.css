@@ -1,0 +1,155 @@
+.projects {
+    padding-bottom: 0px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .projects .projects-title::after {
+    content: "About My Work";
+  }
+
+   .projects-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+  }
+   .projects-title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #0088a9;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+  }
+
+   .project-title {
+font-size: 22px;
+  }
+
+ .project-list a {
+    color: #000000;
+  }
+
+  .project-list .card {
+    background: #2570b61c;
+    border-radius: 10px;
+    border: 1px solid #0088a9;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+   .project-list .card:hover {
+    background: #96f1ff70;
+  }
+   .project-list .card .box {
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  .project-list .card:hover .box {
+    transform: scale(1.05);
+  }
+  .project-list .card .text {
+    text-align: justify;
+    font-size: 18px;
+    padding: 15px;
+font-weight: lighter;
+  }
+   .project-list .card img {
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+    border-radius:10px;
+    border: 2px solid #0088a9;
+    transition: all 0.3s ease;
+  }
+   .project-list .card:hover img {
+    border-color: #fff;
+  }
+
+
+   .project-quali span i{
+    color: #111;
+    padding-bottom: 10px;
+  }
+
+  .project-quali .project-language i{
+    color: #0a3945;
+      }
+     .project-quali .project-tool i{
+      color: #598a97;
+      }
+      .project-quali .project-ui i{
+      color: #4e646a;
+      }
+     .project-quali-title{
+      color: #021e25;
+      font-size: 18px;
+      font-weight: bolder;
+      line-height: 30px;
+      }
+
+      .project-list .show-more{
+        color: #0088a9;
+        background: none;
+  
+        font-size: 20px;
+        font-weight: 500;
+        padding: 10px 30px;
+        border-radius: 6px;
+        text-align: center;
+        border: 2px solid #0088a9;
+        cursor: pointer;
+transition: all 0.3s ease;
+      }
+
+      .show-more:hover{
+        background: #0088a9;
+ color: #fff;
+      }
+
+      .project-list .card-show-more {
+        padding-top: 60px;
+        padding-bottom: 0px;
+        border-radius: 6px;
+        text-align: center;
+     
+      }
+      
+      .project-list .show-less{
+        color: #0088a9;
+        background: none;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 10px 30px;
+        border-radius: 6px;
+        text-align: center;
+        border: 2px solid #0088a9;
+        
+        cursor: pointer;
+transition: all 0.3s ease;
+      }
+
+      .show-less:hover{
+        background: #0088a9;
+        color: #fff;
+
+      }
+
+      .project-list .card-show-less {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 6px;
+        text-align: center;
+     
+      }
