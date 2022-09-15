@@ -4,7 +4,7 @@
   }
   
   .projects .projects-title::after {
-    content: "About My Work";
+    content: "My Works";
   }
 
    .projects-title::before {
@@ -27,9 +27,9 @@
     background: #fff;
     transform: translateX(-50%);
   }
-
+/*
    .project-title {
-font-size: 22px;
+font-size: 16px;
   }
 
  .project-list a {
@@ -39,6 +39,7 @@ font-size: 22px;
   .project-list .card {
     background: #2570b61c;
     border-radius: 10px;
+    width: 60%;
     border: 1px solid #0088a9;
     padding: 25px 35px;
     text-align: center;
@@ -61,8 +62,9 @@ font-size: 22px;
   }
   .project-list .card .text {
     text-align: justify;
-    font-size: 18px;
-    padding: 15px;
+    font-size: 14px;
+    padding-left: 15px;
+     padding-right: 15px;
 font-weight: lighter;
   }
    .project-list .card img {
@@ -153,3 +155,144 @@ transition: all 0.3s ease;
         text-align: center;
      
       }
+
+
+
+      */
+
+      
+.carousel{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+  display: flex;
+  width:100%;
+}
+.carousel .card{
+
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin: 10px;
+  height:380px;
+  justify-content: space-between;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  border: 1px solid rgb(1, 172, 184);
+background-color:  rgba(126, 202, 194, 0.254);
+cursor: pointer;
+transition: all 0.3s ease;
+}
+  
+.carousel .card:hover{
+--angle:0deg;
+background-color:  rgba(126, 202, 194, 0.254);
+transform: scale(1.05);
+transition: all 0.3s ease;
+border:2px solid;
+border-image: linear-gradient(var(--angle), rgb(3, 255, 142), rgb(0, 94, 255)) 1;
+background-origin: border-box;
+background-clip: content-box, border-box;
+animation: 5s rotate linear infinite;
+}
+
+
+
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate {
+  to {
+    --angle:360deg;
+  }
+}
+
+.carousel .card:hover .card-img img{
+border: 2px solid rgb(1, 172, 184);
+border-radius: 5px;
+box-shadow: 0px 0px 2px 2px rgba(126, 202, 194, 0.636);
+transform: scale(0.9);
+transition: all 0.3s ease;
+}
+
+/*
+.carousel .card-1{
+border: 1px solid rgb(1, 172, 184);
+background-color:  rgba(126, 202, 194, 0.254);
+}
+*/
+
+.card-img{
+width: 100%;
+height: 50%;
+object-fit: cover;
+margin: auto;
+transition: all 0.3s ease;
+}
+.card-img img{
+  height: 100%;
+transition: all 0.3s ease;
+}
+
+.card-title{
+  font-size: 18px;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  
+}
+
+.card-text{
+  font-size: 12px;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  justify-content: center;
+}
+
+.card-tag{
+  font-size: 14px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.tag-1 i{
+  color: #0a3945;
+    }
+   .tag-2 i{
+    color: #163b76;
+    }
+    .tag-3 i{
+    color: #3f281f;
+    }
+
+
+
+.owl-dots{
+  text-align: center;
+  margin-top: 40px;
+}
+.owl-dot{
+  height: 15px;
+  width: 45px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 14px;
+  border: 2px solid #0088a9!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active{
+  background: #0087a9d5!important;
+}
+
+.owl-dot:hover{
+  background: #0087a961!important;
+}

@@ -114,6 +114,7 @@ font-size: 18px;
 text-align: center;
 padding-bottom:30px;
 margin-top: -20px;
+
 }
 .skills .skills-content .column {
   width: calc(50% - 30px);
@@ -145,44 +146,58 @@ margin-top: -20px;
   background: lightgrey;
   position: relative;
 }
-.line::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: #0088a9;
+
+.c {
+  width: 0%;
+  height: 5px;
+  background-color: #0088a9;
 }
-.c::before {
-  width: 95%;
+.cpp {
+  width: 0%;
+  height: 5px;
+  background-color: #0088a9;
 }
-.cpp::before {
-  width: 90%;
+.cs {
+  width: 0%;
+  height: 5px;
+  background-color: #0088a9;
 }
-.cs::before {
-  width: 85%;
+.java {
+  width: 0%;
+  height: 5px;
+  background-color: #0088a9;
 }
-.java::before {
-  width: 80%;
+.py {
+  width: 0%;
+  height: 5px;
+  background-color: #0088a9;
 }
-.py::before {
-  width: 30%;
+.html {
+  width: 0%;
+  height: 5px;
+  background-color: #0088a9;
 }
-.html::before {
-  width: 98%;
+.css {
+  width: 0%;
+  height: 5px;
+  background-color: #0088a9;
 }
-.css::before {
-  width: 95%;
+.js {
+  width: 0%;
+  height: 5px;
+  background-color: #0088a9;
 }
-.js::before {
-  width: 80%;
+.php {
+  width: 0%;
+  height: 5px;
+  background-color: #0088a9;
 }
-.php::before {
-  width: 85%;
+.mysql {
+  width: 0%;
+  height: 5px;
+  background-color: #0088a9;
 }
-.mysql::before {
-  width: 70%;
-}
+
 
 
 .quali-title{
@@ -249,8 +264,16 @@ border: 1px solid rgb(17, 170, 181);
 border-radius: 10px;
 width: 28%;
 background-color:  rgba(133, 205, 210, 0.254);
-
+cursor:default;
 }
+
+.quali-data:hover {
+
+border-top: 5px solid rgb(17, 170, 181);
+
+border-bottom: 2px solid rgb(17, 170, 181);
+}
+
 
 .quali-data i{
   color: #025669af;
@@ -269,47 +292,8 @@ background-color:  rgba(133, 205, 210, 0.254);
 
 }
 
-
-
-/*
-.quali-round-left {
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background-color: #0088a9;
-  margin-left: -300px;
-}
-.quali-line-left {
-  display: block;
-  width: 1px;
-  height: 100%;
-  transform: translate(6px, -7px);
-  background-color: #0088a9;
-  margin-left: -155px;
-}
-.quali-right {
-  margin-left: -150px;
-}
-.quali-round-right {
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background-color: #0088a9;
-  margin-left: 300px;
-}
-.quali-line-right {
-  display: block;
-  width: 1px;
-  height: 100%;
-  transform: translate(6px, -7px);
-  background-color: #0088a9;
-  margin-left: 300px;
-}
-*/
 .qualification_active {
-  display: flex;
+    display: flex;
 }
 
 .qualification-active-option {

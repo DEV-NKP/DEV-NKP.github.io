@@ -38,34 +38,31 @@
   <body>
     <header>
       <div>
-       <a href="">
-        <img
-          class="logo"
-          src="resources/images/nkp.png"
-          alt="Logo"
-          style="float: left"
-        />
-</a>
+        <a href="">
+          <img
+            class="logo"
+            src="resources/images/nkp.png"
+            alt="Logo"
+            style="float: left"
+          />
+        </a>
         <pre class="name" style="color: rgba(209, 209, 209, 0.691)">
 NILOY KANTI PAUL</pre
         >
       </div>
 
-      <button
-        class="mobile-nav-toggle"
-        aria-controls="navlink"
-        aria-expanded="false"
-      ></button>
+      <div class="max-width">
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="navlink"
+          aria-expanded="false"
+        ></button>
+      </div>
 
       <nav>
         <ul id="navlink" data-visible="false" class="navlink flex">
           <li>
             <a href="#about">About</a>
-            <!-- <ul class="nav-about">
-              <li><a href="#" style="text-align: center">Description</a></li>
-              <li><a href="#" style="text-align: center">Skills</a></li>
-              <li><a href="#" style="text-align: center">Qualification</a></li>
-            </ul>-->
           </li>
 
           <li>
@@ -78,12 +75,6 @@ NILOY KANTI PAUL</pre
 
           <li>
             <a href="#projects">Projects</a>
-
-            <!--  <ul class="nav-project">
-              <li><a href="#" style="text-align: center">SPI</a></li>
-              <li><a href="#" style="text-align: center">RAW</a></li>
-              <li><a href="#" style="text-align: center">FOH</a></li>
-            </ul>-->
           </li>
 
           <li>
@@ -94,7 +85,7 @@ NILOY KANTI PAUL</pre
         </ul>
       </nav>
     </header>
-    <!--            try                  -->
+    <!--            scroll up                  -->
     <div class="scroll-up-btn">
       <i class="fas fa-angle-up"></i>
     </div>
@@ -134,185 +125,201 @@ NILOY KANTI PAUL</pre
     <!-- about section start -->
     <section class="about" id="about">
       <div class="max-width">
-        <h2 class="title">About me</h2>
+        <h2 class="title reveal TTB">About me</h2>
 
         <div class="about-content">
-          <div class="column left">
+          <div class="column left reveal LTR">
             <img src="resources/images/niloy.jpg" alt="" />
           </div>
           <div class="column right">
-            <div class="text">
+            <div class="text reveal RTL">
               I'm Niloy and I'm a <span class="typing-2"></span>
             </div>
-            <p>
+            <p class="reveal RTL">
               I am a student of computer science and engineering at American
               International University-Bangladesh. Currently, completing my BSc
               in CSE. Working in web technologies, software development, and
               UI/UX design, delivering quality works.
             </p>
-            <div class="about-rat">
-              <p style="text-align: center">
-                <span style="font-weight: bold; text-align: center">9</span
-                ><br />
-                Completed <br />Projects
-              </p>
-              <p style="text-align: center">
-                <span style="font-weight: bold">0</span><br />Years
-                <br />Experience
-              </p>
-              <p style="text-align: center">
-                <span style="font-weight: bold">0</span><br />Companies
-                <br />Worked
-              </p>
+            <div class="reveal BTT about-count">
+              <div class="about-rat">
+                <p style="text-align: center">
+                  <span
+                    class="count-pro"
+                    style="font-weight: bold; text-align: center"
+                    >9</span
+                  ><br />
+                  Completed <br />Projects
+                </p>
+                <p style="text-align: center">
+                  <span class="count-exp" style="font-weight: bold">0</span
+                  ><br />Years <br />Experience
+                </p>
+                <p style="text-align: center">
+                  <span class="count-comp" style="font-weight: bold">0</span
+                  ><br />Companies <br />Worked
+                </p>
+              </div>
+              <a onclick="cvDownload()" class="about-cv">Download Resume</a>
             </div>
-            <a onclick="cvDownload()" class="about-cv">Download Resume</a>
           </div>
         </div>
         <!--Skill-->
-<section id="skills">
-        <div class="skills" >
-          <h3 class="skill-title">Skills</h3>
+        <section id="skills">
+          <div class="skills">
+            <h3 class="skill-title reveal TTB">Skills</h3>
 
-          <div class="skill-text">I have completed</div>
-
-          <div class="skills-content">
-            <div class="column left">
-              <div class="bars">
-                <div class="info">
-                  
-                  <span>C</span>
-                  <span>95%</span>
-                </div>
-                <div class="line c"></div>
-              </div>
-              <div class="bars">
-                <div class="info">
-                  <span>C++</span>
-                  <span>90%</span>
-                </div>
-                <div class="line cpp"></div>
-              </div>
-              <div class="bars">
-                <div class="info">
-                  <span>C#</span>
-                  <span>85%</span>
-                </div>
-                <div class="line cs"></div>
-              </div>
-              <div class="bars">
-                <div class="info">
-                  <span>JAVA</span>
-                  <span>80%</span>
-                </div>
-                <div class="line java"></div>
-              </div>
-              <div class="bars">
-                <div class="info">
-                  <span>Python</span>
-                  <span>30%</span>
-                </div>
-                <div class="line py"></div>
-              </div>
+            <div class="skill-text reveal BTT">
+              I have completed some projects in different programming languages
+              and different tools or IDE. I have already acquired some knowledge
+              about those and trying to learn more with time. I am very happy to
+              work with others.
+              <br />
+              My hobby is playing games in my free time.
+              <br /><br />
+              <b>Other Skills:</b> Interpersonal skills, collaboration,
+              communication, and lead skills.
             </div>
-            <div class="column right">
-              <div class="bars">
-                <div class="info">
-                  <span>HTML</span>
-                  <span>98%</span>
+
+            <div class="skills-content">
+              <div class="column left reveal LTR show-percent">
+                <div class="bars">
+                  <div class="info">
+                    <span>C</span>
+                    <span class="c-text">95%</span>
+                  </div>
+                  <div class="line">
+                    <div class="c"></div>
+                  </div>
                 </div>
-                <div class="line html"></div>
+                <div class="bars">
+                  <div class="info">
+                    <span>C++</span>
+                    <span class="cpp-text">90%</span>
+                  </div>
+                  <div class="line"><div class="cpp"></div></div>
+                </div>
+                <div class="bars">
+                  <div class="info">
+                    <span>C#</span>
+                    <span class="cs-text">85%</span>
+                  </div>
+                  <div class="line"><div class="cs"></div></div>
+                </div>
+                <div class="bars">
+                  <div class="info">
+                    <span>JAVA</span>
+                    <span class="java-text">80%</span>
+                  </div>
+                  <div class="line"><div class="java"></div></div>
+                </div>
+                <div class="bars">
+                  <div class="info">
+                    <span>Python</span>
+                    <span class="py-text">30%</span>
+                  </div>
+                  <div class="line"><div class="py"></div></div>
+                </div>
               </div>
-              <div class="bars">
-                <div class="info">
-                  <span>CSS</span>
-                  <span>95%</span>
+              <div class="column right reveal RTL show-percent">
+                <div class="bars">
+                  <div class="info">
+                    <span>HTML</span>
+                    <span class="html-text">98%</span>
+                  </div>
+                  <div class="line"><div class="html"></div></div>
                 </div>
-                <div class="line css"></div>
-              </div>
-              <div class="bars">
-                <div class="info">
-                  <span>JavaScript</span>
-                  <span>80%</span>
+                <div class="bars">
+                  <div class="info">
+                    <span>CSS</span>
+                    <span class="css-text">95%</span>
+                  </div>
+                  <div class="line"><div class="css"></div></div>
                 </div>
-                <div class="line js"></div>
-              </div>
-              <div class="bars">
-                <div class="info">
-                  <span>PHP</span>
-                  <span>85%</span>
+                <div class="bars">
+                  <div class="info">
+                    <span>JavaScript</span>
+                    <span class="js-text">80%</span>
+                  </div>
+                  <div class="line"><div class="js"></div></div>
                 </div>
-                <div class="line php"></div>
-              </div>
-              <div class="bars">
-                <div class="info">
-                  <span>MySQL</span>
-                  <span>70%</span>
+                <div class="bars">
+                  <div class="info">
+                    <span>PHP</span>
+                    <span class="php-text">85%</span>
+                  </div>
+                  <div class="line"><div class="php"></div></div>
                 </div>
-                <div class="line mysql"></div>
+                <div class="bars">
+                  <div class="info">
+                    <span>MySQL</span>
+                    <span class="mysql-text">70%</span>
+                  </div>
+                  <div class="line"><div class="mysql"></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
         <!--Skill-->
 
         <!--qualification-->
 
         <section id="qualifications">
-        <div><h4 class="quali-title">Qualifications</h4></div>
-        <div class="quali-button">
-          <button class="quali-edu qualification-active-option">
-            <img
-              src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/50/000000/external-education-online-learning-kiranshastry-gradient-kiranshastry.png"
-            />
-            Education
-          </button>
-          <button class="quali-work">
-            <img
-              src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/50/000000/external-work-graph-design-kiranshastry-gradient-kiranshastry.png"
-            />Work
-          </button>
-        </div>
-        <div class="edu-log qualification_active" id="education">
-          <div class="quali-data">
-            <i class="fa-solid fa-award fa-3x"></i>
-
-            <h3>Secondary School Certificate</h3>
-            <span>Dhaka Collegiate School</span>
-            <div>2016-2017</div>
+          <div><h4 class="quali-title reveal TTB">Qualifications</h4></div>
+          <div class="quali-button">
+            <button class="quali-edu qualification-active-option reveal LTR">
+              <img
+                src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/50/000000/external-education-online-learning-kiranshastry-gradient-kiranshastry.png"
+              />
+              Education
+            </button>
+            <button class="quali-work reveal RTL">
+              <img
+                src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/50/000000/external-work-graph-design-kiranshastry-gradient-kiranshastry.png"
+              />Work
+            </button>
           </div>
+          <div class="edu-log qualification_active reveal BTT" id="education">
+            <div class="quali-data">
+              <i class="fa-solid fa-award fa-3x"></i>
 
-          <div class="quali-data">
-            <i class="fa-solid fa-building-columns fa-3x"></i>
+              <h3>Secondary School Certificate</h3>
+              <span>Dhaka Collegiate School</span>
+              <div>2016-2017</div>
+            </div>
 
-            <h3>Higher Secondary Certificate</h3>
-            <span> St. Gregory High School & College </span>
-            <div>2017-2019</div>
-          </div>
+            <div class="quali-data">
+              <i class="fa-solid fa-building-columns fa-3x"></i>
 
-          <div class="quali-data">
-            <i class="fa-solid fa-graduation-cap fa-3x"></i>
+              <h3>Higher Secondary Certificate</h3>
+              <span> St. Gregory High School & College </span>
+              <div>2017-2019</div>
+            </div>
 
-            <h3>BSc In CSE</h3>
-            <span>American International University-Bangladesh </span>
-            <div>2020-Present</div>
-          </div>
-        </div>
+            <div class="quali-data">
+              <i class="fa-solid fa-graduation-cap fa-3x"></i>
 
-        <div class="work-log" id="work">
-          <div class="quali-data quali-left">
-            <i class="fa-solid fa-briefcase fa-3x"></i>
-            <h3>Student</h3>
-            <span> American International University-Bangladesh </span>
-            <div>2020-present</div>
-
-            <div>
-              <span class="quali-round-left"></span>
-              <span class="quali-line-left"></span>
+              <h3>BSc In CSE</h3>
+              <span>American International University-Bangladesh </span>
+              <div>2020-Present</div>
             </div>
           </div>
-        </div>
-      </section>
+
+          <div class="work-log reveal BTT" id="work">
+            <div class="quali-data quali-left">
+              <i class="fa-solid fa-briefcase fa-3x"></i>
+              <h3>Student</h3>
+              <span> American International University-Bangladesh </span>
+              <div>2020-present</div>
+
+              <div>
+                <span class="quali-round-left"></span>
+                <span class="quali-line-left"></span>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <!--qualification-->
     </section>
@@ -320,692 +327,239 @@ NILOY KANTI PAUL</pre
     <!--project-->
     <section class="projects" id="projects">
       <div class="max-width">
-        <div><h4 class="projects-title">Projects</h4></div>
-
-        <div class="project-list">
-          <!--spi-->
-          <a href="#" style="text-decoration: none" class="p1">
+        <div><h4 class="projects-title reveal BTT">Projects</h4></div>
+        <div class="carousel owl-carousel reveal BTT">
+          <a href="www.google.com">
             <div class="card">
-              <table style="width: 100%">
-                <tr>
-                  <td style="width: 30%">
-                    <div class="box">
-                      <img src="resources/images/nkp.png" alt="" />
-                    </div>
-                  </td>
-
-                  <td style="width: 70%">
-                    <div class="box">
-                      <div class="project-title">
-                        <h2>Student Progress Indicator (SPI)</h2>
-                        <br />
-                      </div>
-                      <div class="text">
-                        Student progress indicator or "SPI" was built with a
-                        view to reduce the paper work, increase the use of
-                        digital medias. It is a complete C++, console based
-                        system. We have tried to complete the full project with
-                        all of the required criteria's. But still there must be
-                        some update with some new features and characteristics.
-                        Stay tuned with us to get more special features.
-                      </div>
-
-                      <div class="about-rat project-quali">
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Languages:</span>
-                          <br />
-                          <span
-                            class="project-language"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-laptop-code fa-2x"></i
-                          ></span>
-                          <br />
-
-                          C++ <br />
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Tools:</span>
-                          <br />
-                          <span
-                            class="project-tool"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-screwdriver-wrench fa-2x"></i
-                          ></span>
-
-                          <br />Codeblock
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title">
-                            User Interface:</span
-                          >
-                          <br />
-                          <span
-                            class="project-ui"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-chalkboard-user fa-2x"></i
-                          ></span>
-
-                          <br />Terminal Base
-                        </p>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </a>
-          <br />
-          <!--spi-->
-          <a href="#" style="text-decoration: none" class="p2">
-            <div class="card">
-              <table style="width: 100%">
-                <tr>
-                  <td style="width: 30%">
-                    <div class="box">
-                      <img src="resources/images/nkp.png" alt="" />
-                    </div>
-                  </td>
-
-                  <td style="width: 70%">
-                    <div class="box">
-                      <div class="project-title">
-                        <h2>Student Progress Indicator (SPI)</h2>
-                        <br />
-                      </div>
-                      <div class="text">
-                        Student progress indicator or "SPI" was built with a
-                        view to reduce the paper work, increase the use of
-                        digital medias. It is a complete C++, console based
-                        system. We have tried to complete the full project with
-                        all of the required criteria's. But still there must be
-                        some update with some new features and characteristics.
-                        Stay tuned with us to get more special features.
-                      </div>
-
-                      <div class="about-rat project-quali">
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Languages:</span>
-                          <br />
-                          <span
-                            class="project-language"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-laptop-code fa-2x"></i
-                          ></span>
-                          <br />
-
-                          C++ <br />
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Tools:</span>
-                          <br />
-                          <span
-                            class="project-tool"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-screwdriver-wrench fa-2x"></i
-                          ></span>
-
-                          <br />Codeblock
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title">
-                            User Interface:</span
-                          >
-                          <br />
-                          <span
-                            class="project-ui"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-chalkboard-user fa-2x"></i
-                          ></span>
-
-                          <br />Terminal Base
-                        </p>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </a>
-          <br />
-
-          <div class="card-show-more">
-            <a onclick="showmore()" class="show-more">Show More</a>
-          </div>
-
-          <!--spi-->
-          <a href="#" style="text-decoration: none" class="p3">
-            <div class="card">
-              <table style="width: 100%">
-                <tr>
-                  <td style="width: 30%">
-                    <div class="box">
-                      <img src="resources/images/nkp.png" alt="" />
-                    </div>
-                  </td>
-
-                  <td style="width: 70%">
-                    <div class="box">
-                      <div class="project-title">
-                        <h2>Student Progress Indicator (SPI)</h2>
-                        <br />
-                      </div>
-                      <div class="text">
-                        Student progress indicator or "SPI" was built with a
-                        view to reduce the paper work, increase the use of
-                        digital medias. It is a complete C++, console based
-                        system. We have tried to complete the full project with
-                        all of the required criteria's. But still there must be
-                        some update with some new features and characteristics.
-                        Stay tuned with us to get more special features.
-                      </div>
-
-                      <div class="about-rat project-quali">
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Languages:</span>
-                          <br />
-                          <span
-                            class="project-language"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-laptop-code fa-2x"></i
-                          ></span>
-                          <br />
-
-                          C++ <br />
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Tools:</span>
-                          <br />
-                          <span
-                            class="project-tool"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-screwdriver-wrench fa-2x"></i
-                          ></span>
-
-                          <br />Codeblock
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title">
-                            User Interface:</span
-                          >
-                          <br />
-                          <span
-                            class="project-ui"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-chalkboard-user fa-2x"></i
-                          ></span>
-
-                          <br />Terminal Base
-                        </p>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </a>
-          <br />
-          <!--spi-->
-          <a href="#" style="text-decoration: none" class="p4">
-            <div class="card">
-              <table style="width: 100%">
-                <tr>
-                  <td style="width: 30%">
-                    <div class="box">
-                      <img src="resources/images/nkp.png" alt="" />
-                    </div>
-                  </td>
-
-                  <td style="width: 70%">
-                    <div class="box">
-                      <div class="project-title">
-                        <h2>Student Progress Indicator (SPI)</h2>
-                        <br />
-                      </div>
-                      <div class="text">
-                        Student progress indicator or "SPI" was built with a
-                        view to reduce the paper work, increase the use of
-                        digital medias. It is a complete C++, console based
-                        system. We have tried to complete the full project with
-                        all of the required criteria's. But still there must be
-                        some update with some new features and characteristics.
-                        Stay tuned with us to get more special features.
-                      </div>
-
-                      <div class="about-rat project-quali">
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Languages:</span>
-                          <br />
-                          <span
-                            class="project-language"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-laptop-code fa-2x"></i
-                          ></span>
-                          <br />
-
-                          C++ <br />
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Tools:</span>
-                          <br />
-                          <span
-                            class="project-tool"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-screwdriver-wrench fa-2x"></i
-                          ></span>
-
-                          <br />Codeblock
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title">
-                            User Interface:</span
-                          >
-                          <br />
-                          <span
-                            class="project-ui"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-chalkboard-user fa-2x"></i
-                          ></span>
-
-                          <br />Terminal Base
-                        </p>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </a>
-          <br />
-          <!--spi-->
-          <a href="#" style="text-decoration: none" class="p5">
-            <div class="card">
-              <table style="width: 100%">
-                <tr>
-                  <td style="width: 30%">
-                    <div class="box">
-                      <img src="resources/images/nkp.png" alt="" />
-                    </div>
-                  </td>
-
-                  <td style="width: 70%">
-                    <div class="box">
-                      <div class="project-title">
-                        <h2>Student Progress Indicator (SPI)</h2>
-                        <br />
-                      </div>
-                      <div class="text">
-                        Student progress indicator or "SPI" was built with a
-                        view to reduce the paper work, increase the use of
-                        digital medias. It is a complete C++, console based
-                        system. We have tried to complete the full project with
-                        all of the required criteria's. But still there must be
-                        some update with some new features and characteristics.
-                        Stay tuned with us to get more special features.
-                      </div>
-
-                      <div class="about-rat project-quali">
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Languages:</span>
-                          <br />
-                          <span
-                            class="project-language"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-laptop-code fa-2x"></i
-                          ></span>
-                          <br />
-
-                          C++ <br />
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Tools:</span>
-                          <br />
-                          <span
-                            class="project-tool"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-screwdriver-wrench fa-2x"></i
-                          ></span>
-
-                          <br />Codeblock
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title">
-                            User Interface:</span
-                          >
-                          <br />
-                          <span
-                            class="project-ui"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-chalkboard-user fa-2x"></i
-                          ></span>
-
-                          <br />Terminal Base
-                        </p>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </a>
-          <br />
-          <!--spi-->
-          <a href="#" style="text-decoration: none" class="p6">
-            <div class="card">
-              <table style="width: 100%">
-                <tr>
-                  <td style="width: 30%">
-                    <div class="box">
-                      <img src="resources/images/nkp.png" alt="" />
-                    </div>
-                  </td>
-
-                  <td style="width: 70%">
-                    <div class="box">
-                      <div class="project-title">
-                        <h2>Student Progress Indicator (SPI)</h2>
-                        <br />
-                      </div>
-                      <div class="text">
-                        Student progress indicator or "SPI" was built with a
-                        view to reduce the paper work, increase the use of
-                        digital medias. It is a complete C++, console based
-                        system. We have tried to complete the full project with
-                        all of the required criteria's. But still there must be
-                        some update with some new features and characteristics.
-                        Stay tuned with us to get more special features.
-                      </div>
-
-                      <div class="about-rat project-quali">
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Languages:</span>
-                          <br />
-                          <span
-                            class="project-language"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-laptop-code fa-2x"></i
-                          ></span>
-                          <br />
-
-                          C++ <br />
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Tools:</span>
-                          <br />
-                          <span
-                            class="project-tool"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-screwdriver-wrench fa-2x"></i
-                          ></span>
-
-                          <br />Codeblock
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title">
-                            User Interface:</span
-                          >
-                          <br />
-                          <span
-                            class="project-ui"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-chalkboard-user fa-2x"></i
-                          ></span>
-
-                          <br />Terminal Base
-                        </p>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </a>
-          <br />
-          <!--spi-->
-          <a href="#" style="text-decoration: none" class="p7">
-            <div class="card">
-              <table style="width: 100%">
-                <tr>
-                  <td style="width: 30%">
-                    <div class="box">
-                      <img src="resources/images/nkp.png" alt="" />
-                    </div>
-                  </td>
-
-                  <td style="width: 70%">
-                    <div class="box">
-                      <div class="project-title">
-                        <h2>Student Progress Indicator (SPI)</h2>
-                        <br />
-                      </div>
-                      <div class="text">
-                        Student progress indicator or "SPI" was built with a
-                        view to reduce the paper work, increase the use of
-                        digital medias. It is a complete C++, console based
-                        system. We have tried to complete the full project with
-                        all of the required criteria's. But still there must be
-                        some update with some new features and characteristics.
-                        Stay tuned with us to get more special features.
-                      </div>
-
-                      <div class="about-rat project-quali">
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Languages:</span>
-                          <br />
-                          <span
-                            class="project-language"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-laptop-code fa-2x"></i
-                          ></span>
-                          <br />
-
-                          C++ <br />
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Tools:</span>
-                          <br />
-                          <span
-                            class="project-tool"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-screwdriver-wrench fa-2x"></i
-                          ></span>
-
-                          <br />Codeblock
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title">
-                            User Interface:</span
-                          >
-                          <br />
-                          <span
-                            class="project-ui"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-chalkboard-user fa-2x"></i
-                          ></span>
-
-                          <br />Terminal Base
-                        </p>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </a>
-          <br />
-          <!--spi-->
-          <a href="#" style="text-decoration: none" class="p8">
-            <div class="card">
-              <table style="width: 100%">
-                <tr>
-                  <td style="width: 30%">
-                    <div class="box">
-                      <img src="resources/images/nkp.png" alt="" />
-                    </div>
-                  </td>
-
-                  <td style="width: 70%">
-                    <div class="box">
-                      <div class="project-title">
-                        <h2>Student Progress Indicator (SPI)</h2>
-                        <br />
-                      </div>
-                      <div class="text">
-                        Student progress indicator or "SPI" was built with a
-                        view to reduce the paper work, increase the use of
-                        digital medias. It is a complete C++, console based
-                        system. We have tried to complete the full project with
-                        all of the required criteria's. But still there must be
-                        some update with some new features and characteristics.
-                        Stay tuned with us to get more special features.
-                      </div>
-
-                      <div class="about-rat project-quali">
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Languages:</span>
-                          <br />
-                          <span
-                            class="project-language"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-laptop-code fa-2x"></i
-                          ></span>
-                          <br />
-
-                          C++ <br />
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Tools:</span>
-                          <br />
-                          <span
-                            class="project-tool"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-screwdriver-wrench fa-2x"></i
-                          ></span>
-
-                          <br />Codeblock
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title">
-                            User Interface:</span
-                          >
-                          <br />
-                          <span
-                            class="project-ui"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-chalkboard-user fa-2x"></i
-                          ></span>
-
-                          <br />Terminal Base
-                        </p>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </a>
-          <br />
-          <!--spi-->
-          <a href="#" style="text-decoration: none" class="p9">
-            <div class="card">
-              <table style="width: 100%">
-                <tr>
-                  <td style="width: 30%">
-                    <div class="box">
-                      <img src="resources/images/nkp.png" alt="" />
-                    </div>
-                  </td>
-
-                  <td style="width: 70%">
-                    <div class="box">
-                      <div class="project-title">
-                        <h2>Student Progress Indicator (SPI)</h2>
-                        <br />
-                      </div>
-                      <div class="text">
-                        Student progress indicator or "SPI" was built with a
-                        view to reduce the paper work, increase the use of
-                        digital medias. It is a complete C++, console based
-                        system. We have tried to complete the full project with
-                        all of the required criteria's. But still there must be
-                        some update with some new features and characteristics.
-                        Stay tuned with us to get more special features.
-                      </div>
-
-                      <div class="about-rat project-quali">
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Languages:</span>
-                          <br />
-                          <span
-                            class="project-language"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-laptop-code fa-2x"></i
-                          ></span>
-                          <br />
-
-                          C++ <br />
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title"> Tools:</span>
-                          <br />
-                          <span
-                            class="project-tool"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-screwdriver-wrench fa-2x"></i
-                          ></span>
-
-                          <br />Codeblock
-                        </p>
-                        <p style="text-align: center">
-                          <span class="project-quali-title">
-                            User Interface:</span
-                          >
-                          <br />
-                          <span
-                            class="project-ui"
-                            style="font-weight: bold; text-align: center"
-                          >
-                            <i class="fa-solid fa-chalkboard-user fa-2x"></i
-                          ></span>
-
-                          <br />Terminal Base
-                        </p>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </table>
+              <div class="card-img">
+                <img src="resources/images/spi.PNG" alt="" />
+              </div>
+              <div class="card-title">Student Progress Indicator (SPI)</div>
+              <div class="card-text">
+                SPI was built with a view to reduce the paper work, increase the
+                use of digital medias. It is a complete C++, console based
+                system.
+              </div>
+              <div class="card-tag">
+                <div class="tag-1">
+                  <i class="fa-solid fa-laptop-code fa-1x"></i>
+                  <br />
+                  C++
+                </div>
+                <div class="tag-2">
+                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
+                  <br />Codeblock
+                </div>
+                <div class="tag-3">
+                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
+                  <br />Console
+                </div>
+              </div>
             </div>
           </a>
 
-          <div class="card-show-less">
-            <a onclick="showless()" class="show-less">Show less</a>
-          </div>
+          <a href="www.google.com">
+            <div class="card">
+              <div class="card-img">
+                <img src="resources/images/spi.PNG" alt="" />
+              </div>
+              <div class="card-title">Student Progress Indicator (SPI)</div>
+              <div class="card-text">
+                SPI was built with a view to reduce the paper work, increase the
+                use of digital medias. It is a complete C++, console based
+                system.
+              </div>
+              <div class="card-tag">
+                <div class="tag-1">
+                  <i class="fa-solid fa-laptop-code fa-1x"></i>
+                  <br />
+                  C++
+                </div>
+                <div class="tag-2">
+                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
+                  <br />Codeblock
+                </div>
+                <div class="tag-3">
+                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
+                  <br />Console
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="www.google.com">
+            <div class="card">
+              <div class="card-img">
+                <img src="resources/images/spi.PNG" alt="" />
+              </div>
+              <div class="card-title">Student Progress Indicator (SPI)</div>
+              <div class="card-text">
+                SPI was built with a view to reduce the paper work, increase the
+                use of digital medias. It is a complete C++, console based
+                system.
+              </div>
+              <div class="card-tag">
+                <div class="tag-1">
+                  <i class="fa-solid fa-laptop-code fa-1x"></i>
+                  <br />
+                  C++
+                </div>
+                <div class="tag-2">
+                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
+                  <br />Codeblock
+                </div>
+                <div class="tag-3">
+                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
+                  <br />Console
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="www.google.com">
+            <div class="card">
+              <div class="card-img">
+                <img src="resources/images/spi.PNG" alt="" />
+              </div>
+              <div class="card-title">Student Progress Indicator (SPI)</div>
+              <div class="card-text">
+                SPI was built with a view to reduce the paper work, increase the
+                use of digital medias. It is a complete C++, console based
+                system.
+              </div>
+              <div class="card-tag">
+                <div class="tag-1">
+                  <i class="fa-solid fa-laptop-code fa-1x"></i>
+                  <br />
+                  C++
+                </div>
+                <div class="tag-2">
+                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
+                  <br />Codeblock
+                </div>
+                <div class="tag-3">
+                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
+                  <br />Console
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="www.google.com">
+            <div class="card">
+              <div class="card-img">
+                <img src="resources/images/spi.PNG" alt="" />
+              </div>
+              <div class="card-title">Student Progress Indicator (SPI)</div>
+              <div class="card-text">
+                SPI was built with a view to reduce the paper work, increase the
+                use of digital medias. It is a complete C++, console based
+                system.
+              </div>
+              <div class="card-tag">
+                <div class="tag-1">
+                  <i class="fa-solid fa-laptop-code fa-1x"></i>
+                  <br />
+                  C++
+                </div>
+                <div class="tag-2">
+                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
+                  <br />Codeblock
+                </div>
+                <div class="tag-3">
+                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
+                  <br />Console
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="www.google.com">
+            <div class="card">
+              <div class="card-img">
+                <img src="resources/images/spi.PNG" alt="" />
+              </div>
+              <div class="card-title">Student Progress Indicator (SPI)</div>
+              <div class="card-text">
+                SPI was built with a view to reduce the paper work, increase the
+                use of digital medias. It is a complete C++, console based
+                system.
+              </div>
+              <div class="card-tag">
+                <div class="tag-1">
+                  <i class="fa-solid fa-laptop-code fa-1x"></i>
+                  <br />
+                  C++
+                </div>
+                <div class="tag-2">
+                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
+                  <br />Codeblock
+                </div>
+                <div class="tag-3">
+                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
+                  <br />Console
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="www.google.com">
+            <div class="card">
+              <div class="card-img">
+                <img src="resources/images/spi.PNG" alt="" />
+              </div>
+              <div class="card-title">Student Progress Indicator (SPI)</div>
+              <div class="card-text">
+                SPI was built with a view to reduce the paper work, increase the
+                use of digital medias. It is a complete C++, console based
+                system.
+              </div>
+              <div class="card-tag">
+                <div class="tag-1">
+                  <i class="fa-solid fa-laptop-code fa-1x"></i>
+                  <br />
+                  C++
+                </div>
+                <div class="tag-2">
+                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
+                  <br />Codeblock
+                </div>
+                <div class="tag-3">
+                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
+                  <br />Console
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="www.google.com">
+            <div class="card">
+              <div class="card-img">
+                <img src="resources/images/spi.PNG" alt="" />
+              </div>
+              <div class="card-title">Student Progress Indicator (SPI)</div>
+              <div class="card-text">
+                SPI was built with a view to reduce the paper work, increase the
+                use of digital medias. It is a complete C++, console based
+                system.
+              </div>
+              <div class="card-tag">
+                <div class="tag-1">
+                  <i class="fa-solid fa-laptop-code fa-1x"></i>
+                  <br />
+                  C++
+                </div>
+                <div class="tag-2">
+                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
+                  <br />Codeblock
+                </div>
+                <div class="tag-3">
+                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
+                  <br />Console
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -1015,9 +569,9 @@ NILOY KANTI PAUL</pre
 
     <section class="contact" id="contact">
       <div class="max-width">
-        <h2 class="title">Contact me</h2>
+        <h2 class="title reveal BTT">Contact me</h2>
         <div class="contact-content">
-          <div class="column left">
+          <div class="column left reveal LTR">
             <div class="icons">
               <div class="row">
                 <i class="fa-solid fa-user-tie"></i>
@@ -1049,15 +603,48 @@ NILOY KANTI PAUL</pre
               </div>
             </div>
           </div>
-          <div class="column right contact-link-box">
+          <div class="column right contact-link-box reveal RTL">
             <div class="contact-text">Message me :</div>
             <div class="contact-link">
-              <a href="mailto:niloykanti.paul2017@gmail.com" title="Send me an Email" > <i class="fa-brands fa-google fa-2x"></i></a>
-              <a href="https://www.linkedin.com/in/niloy-kanti-paul-5543181ab" target="_blank" title="Contact with me via Linkedin"> <i class="fa-brands fa-linkedin-in fa-2x"></i></a>
-              <a href="https://www.facebook.com/niloypaul.nkp/" title="Contact with me via Messenger"target="_blank"> <i class="fa-brands fa-facebook-messenger fa-2x"></i></a>
-              <a href="https://www.instagram.com/niloy_kanti_paul/" title="Contact with me via Instagram"target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
-              <a href="https://twitter.com/Niloy_Paul_" title="Contact with me via Twitter"target="_blank"> <i class="fa-brands fa-twitter fa-2x"></i></a>
-              <a href="https://t.me/devilnkp" title="Contact with me via Telegram"target="_blank"><i class="fa-solid fa-paper-plane fa-2x"></i></a>
+              <a
+                href="mailto:niloykanti.paul2017@gmail.com"
+                title="Send me an Email"
+              >
+                <i class="fa-brands fa-google fa-2x"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/niloy-kanti-paul-5543181ab"
+                target="_blank"
+                title="Contact with me via Linkedin"
+              >
+                <i class="fa-brands fa-linkedin-in fa-2x"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/niloypaul.nkp/"
+                title="Contact with me via Messenger"
+                target="_blank"
+              >
+                <i class="fa-brands fa-facebook-messenger fa-2x"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/niloy_kanti_paul/"
+                title="Contact with me via Instagram"
+                target="_blank"
+                ><i class="fa-brands fa-instagram fa-2x"></i
+              ></a>
+              <a
+                href="https://twitter.com/Niloy_Paul_"
+                title="Contact with me via Twitter"
+                target="_blank"
+              >
+                <i class="fa-brands fa-twitter fa-2x"></i
+              ></a>
+              <a
+                href="https://t.me/devilnkp"
+                title="Contact with me via Telegram"
+                target="_blank"
+                ><i class="fa-solid fa-paper-plane fa-2x"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -1123,4 +710,10 @@ NILOY KANTI PAUL</pre
       document.querySelector(".card-show-less").style.display = "none";
     }
   </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+  />
 </html>
