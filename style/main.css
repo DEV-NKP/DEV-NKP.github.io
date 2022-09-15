@@ -40,7 +40,7 @@ section {
 }
 .max-width {
   max-width: 1300px;
-  padding: 0 0px;
+  padding: 0 80px;
   margin: auto;
 }
 .about,
@@ -335,6 +335,22 @@ opacity: 0;
     width: 100%;
     margin-bottom: 35px;
   }
+  .contact .contact-content {
+    flex-direction: column;
+    align-items: unset;
+ }
+ 
+ #con-left-detail{
+   width: 200%;
+ }
+ 
+ #contact-link{
+   width: 200%;
+ }
+ #contact-text{
+   width: 200%;
+ }
+ 
 }
 
 @media (max-width: 690px) {
@@ -353,6 +369,15 @@ opacity: 0;
   .projects .projects-content .card {
     width: 100%;
   }
+  
+.qualification_active {
+  flex-direction: column;
+}
+
+#quali-data {
+  width: 100%;
+  margin-bottom: 20px;
+}
 }
 
 @media (max-width: 500px) {
@@ -375,6 +400,108 @@ opacity: 0;
     font-size: 23px;
     line-height: 38px;
   }
+}
+
+@media (max-width: 450px) {
+  .home .home-content .text-1 {
+    font-size: 20px;
+  }  .home .home-content .text-2 {
+    font-size: 40px;
+  }
+  .home .home-content .text-3 {
+    font-size: 20px;
+  }
+#about-type-text{
+    font-size: 20px;
+  }
+#text-count {
+  font-size: 15px;
+}
+#about-text {
+  font-size: 15px;
+}
+
+#skill-text {
+  font-size: 15px;
+}
+
+
+#quali-edu, #quali-work{
+
+  font-size: 16px;
+}
+
+.qualification_active {
+  flex-direction: column;
+}
+
+#quali-data {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contact .contact-content {
+   flex-direction: column;
+   align-items: unset;
+}
+
+#con-left-detail{
+  width: 200%;
+}
+
+#contact-link{
+  width: 200%;
+}
+#contact-text{
+  width: 200%;
+}
+
+#quali-title::after{
+  font-size: 18px;
+}
+#about-title::after{
+  font-size: 18px;
+}
+#skill-title::after{
+  font-size: 18px;
+}
+#project-title::after{
+  font-size: 18px;
+}
+
+#contact-title::after{
+  font-size: 18px;
+}
+
+  .scroll-up-btn {
+    right: 15px;
+    bottom: 15px;
+    height: 38px;
+    width: 35px;
+    font-size: 23px;
+    line-height: 38px;
+  }
+}
+
+@media (max-width: 400px) {
+
+
+#quali-title::after{
+  font-size: 15px;
+}
+#about-title::after{
+  font-size: 15px;
+}
+#skill-title::after{
+  font-size: 15px;
+}
+#project-title::after{
+  font-size: 15px;
+}
+
+#contact-title::after{
+  font-size: 15px;
+}
+
 }
 
 

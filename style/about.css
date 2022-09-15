@@ -79,6 +79,10 @@ section .quali-title::after {
   text-align: justify;
   font-size: 18px;
 }
+
+.about-count{
+  text-align: center;
+}
 .about .about-content .right .about-cv {
   display: inline-block;
   background: #0088a9;
@@ -86,7 +90,6 @@ section .quali-title::after {
   font-size: 20px;
   font-weight: 500;
   padding: 10px 30px;
-  margin-left: 30%;
   margin-top: 20px;
   border-radius: 6px;
   border: 2px solid #0088a9;
