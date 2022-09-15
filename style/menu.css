@@ -187,8 +187,8 @@ nav ul ul li:hover {
     width: 3rem;
     border: 0;
     aspect-ratio: 1;
-    top: 1rem;
-    right: 2rem;
+    top: 0.3rem;
+    right: 1rem;
   }
   .mobile-nav-toggle[aria-expanded="true"] {
     background-image: url("https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/45/000000/external-close-banking-and-finance-kiranshastry-gradient-kiranshastry.png");
