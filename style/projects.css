@@ -78,6 +78,8 @@ animation: 5s rotate linear infinite;
   }
 }
 
+
+
 .carousel .card:hover .card-img img{
 border: 2px solid rgb(1, 172, 184);
 border-radius: 5px;
@@ -86,6 +88,13 @@ transform: scale(0.9);
 transition: all 0.3s ease;
 }
 
+.carousel .card:hover .youtube-video{
+border: 2px solid rgb(1, 172, 184);
+border-radius: 5px;
+box-shadow: 0px 0px 2px 2px rgba(126, 202, 194, 0.636);
+transform: scale(0.9);
+transition: all 0.3s ease;
+}
 
 .card-img{
 width: 100%;
@@ -94,6 +103,15 @@ object-fit: cover;
 margin: auto;
 transition: all 0.3s ease;
 }
+
+.youtube-video{
+width: 100%;
+height: 100%;
+object-fit: cover;
+margin: auto;
+transition: all 0.3s ease;
+}
+
 .card-img img{
   height: 100%;
 transition: all 0.3s ease;

@@ -17,23 +17,13 @@
     />
 
     <script src="function/nav.js" defer></script>
-
+    <script src="function/video.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
     />
-    <!--
-      
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-   
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />-->
   </head>
   <body>
     <header>
@@ -92,16 +82,13 @@ NILOY KANTI PAUL</pre
 
     <!-- home section start -->
     <section class="home" id="home">
+      <div class="bg"></div>
+      <div class="bg bg2"></div>
+      <div class="bg bg3"></div>
       <div class="max-width">
         <div class="home-content">
           <div class="text-1">Hello, My Name Is</div>
           <div class="text-2">Niloy Kanti Paul</div>
-          <!--  <div class="liquid">
-          <h2>Niloy Kanti Paul</h2>
-          <h2>Niloy Kanti Paul</h2>
-          <h2>Niloy Kanti Paul</h2>
-          <h2>Niloy Kanti Paul</h2>
-        </div> -->
 
           <div class="text-3">And I'm a <span class="typing"></span></div>
           <a href="#contact" class="home-hire">Contact Me</a><br />
@@ -151,7 +138,7 @@ NILOY KANTI PAUL</pre
                   ><br />
                   Completed <br />Projects
                 </p>
-                <p id="text-count"  style="text-align: center">
+                <p id="text-count" style="text-align: center">
                   <span class="count-exp" style="font-weight: bold">0</span
                   ><br />Years <br />Experience
                 </p>
@@ -178,7 +165,7 @@ NILOY KANTI PAUL</pre
               My hobby is playing games in my free time.
               <br /><br />
               <b>Other Skills:</b> Interpersonal skills, collaboration,
-              communication, and lead skills.
+              communication & leadership.
             </div>
 
             <div class="skills-content">
@@ -220,6 +207,13 @@ NILOY KANTI PAUL</pre
                   </div>
                   <div class="line"><div class="py"></div></div>
                 </div>
+                <div class="bars">
+                  <div class="info">
+                    <span>ASP.NET</span>
+                    <span class="aspnet-text">80%</span>
+                  </div>
+                  <div class="line"><div class="aspnet"></div></div>
+                </div>
               </div>
               <div class="column right reveal RTL show-percent">
                 <div class="bars">
@@ -253,9 +247,16 @@ NILOY KANTI PAUL</pre
                 <div class="bars">
                   <div class="info">
                     <span>MySQL</span>
-                    <span class="mysql-text">70%</span>
+                    <span class="mysql-text">75%</span>
                   </div>
                   <div class="line"><div class="mysql"></div></div>
+                </div>
+                <div class="bars">
+                  <div class="info">
+                    <span>SQL Server</span>
+                    <span class="sqlserver-text">70%</span>
+                  </div>
+                  <div class="line"><div class="sqlserver"></div></div>
                 </div>
               </div>
             </div>
@@ -266,9 +267,16 @@ NILOY KANTI PAUL</pre
         <!--qualification-->
 
         <section id="qualifications">
-          <div><h4 id="quali-title" class="quali-title reveal TTB">Qualifications</h4></div>
+          <div>
+            <h4 id="quali-title" class="quali-title reveal TTB">
+              Qualifications
+            </h4>
+          </div>
           <div class="quali-button">
-            <button id="quali-edu" class="quali-edu qualification-active-option reveal LTR">
+            <button
+              id="quali-edu"
+              class="quali-edu qualification-active-option reveal LTR"
+            >
               <img
                 src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/50/000000/external-education-online-learning-kiranshastry-gradient-kiranshastry.png"
               />
@@ -321,18 +329,36 @@ NILOY KANTI PAUL</pre
           </div>
         </section>
       </div>
-      <!--qualification-->
     </section>
+    <!--qualification-->
 
     <!--project-->
     <section class="projects" id="projects">
       <div class="max-width">
-        <div><h4 id="project-title" class="projects-title reveal BTT">Projects</h4></div>
+        <div>
+          <h4 id="project-title" class="projects-title reveal BTT">Projects</h4>
+        </div>
         <div class="carousel owl-carousel reveal BTT">
-          <a href="www.google.com">
-            <div class="card">
+       
+       <!--SPI-->
+       
+          <a href="https://github.com/DEV-NKP/Student-Progress-Indicator-SPI.git">
+            <div
+              class="card"
+              id="spi-div"
+              onmouseover="playvideo('spi-img','spi-video')"
+              onmouseout="pausevideo('spi-img','spi-video')"
+            >
               <div class="card-img">
-                <img src="resources/images/spi.PNG" alt="" />
+                <img src="resources/images/spi.PNG" alt="" id="spi-img" />
+
+                <iframe
+                  class="youtube-video"
+                  id="spi-video"
+                  src="https://www.youtube.com/embed/W-WLPlPVl8s?rel=1&enablejsapi=1&disablekb=1&controls=0&mute=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
               </div>
               <div class="card-title">Student Progress Indicator (SPI)</div>
               <div class="card-text">
@@ -358,208 +384,185 @@ NILOY KANTI PAUL</pre
             </div>
           </a>
 
-          <a href="www.google.com">
-            <div class="card">
-              <div class="card-img">
-                <img src="resources/images/spi.PNG" alt="" />
-              </div>
-              <div class="card-title">Student Progress Indicator (SPI)</div>
-              <div class="card-text">
-                SPI was built with a view to reduce the paper work, increase the
-                use of digital medias. It is a complete C++, console based
-                system.
-              </div>
-              <div class="card-tag">
-                <div class="tag-1">
-                  <i class="fa-solid fa-laptop-code fa-1x"></i>
-                  <br />
-                  C++
-                </div>
-                <div class="tag-2">
-                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
-                  <br />Codeblock
-                </div>
-                <div class="tag-3">
-                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
-                  <br />Console
-                </div>
-              </div>
-            </div>
-          </a>
 
-          <a href="www.google.com">
-            <div class="card">
-              <div class="card-img">
-                <img src="resources/images/spi.PNG" alt="" />
-              </div>
-              <div class="card-title">Student Progress Indicator (SPI)</div>
-              <div class="card-text">
-                SPI was built with a view to reduce the paper work, increase the
-                use of digital medias. It is a complete C++, console based
-                system.
-              </div>
-              <div class="card-tag">
-                <div class="tag-1">
-                  <i class="fa-solid fa-laptop-code fa-1x"></i>
-                  <br />
-                  C++
-                </div>
-                <div class="tag-2">
-                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
-                  <br />Codeblock
-                </div>
-                <div class="tag-3">
-                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
-                  <br />Console
-                </div>
-              </div>
-            </div>
-          </a>
+       <!--RAW V1.0-->
+       
+       <a href="https://github.com/DEV-NKP/Remotely-Assistant-Workers-RAW-V1.0.git">
+        <div
+          class="card"
+          id="rawv1-div"
+          onmouseover="playvideo('rawv1-img','rawv1-video')"
+          onmouseout="pausevideo('rawv1-img','rawv1-video')"
+        >
+          <div class="card-img">
+            <img src="resources/images/rawv1.PNG" alt="" id="rawv1-img" />
 
-          <a href="www.google.com">
-            <div class="card">
-              <div class="card-img">
-                <img src="resources/images/spi.PNG" alt="" />
-              </div>
-              <div class="card-title">Student Progress Indicator (SPI)</div>
-              <div class="card-text">
-                SPI was built with a view to reduce the paper work, increase the
-                use of digital medias. It is a complete C++, console based
-                system.
-              </div>
-              <div class="card-tag">
-                <div class="tag-1">
-                  <i class="fa-solid fa-laptop-code fa-1x"></i>
-                  <br />
-                  C++
-                </div>
-                <div class="tag-2">
-                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
-                  <br />Codeblock
-                </div>
-                <div class="tag-3">
-                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
-                  <br />Console
-                </div>
-              </div>
+            <iframe
+              class="youtube-video"
+              id="rawv1-video"
+              src="https://www.youtube.com/embed/aObzrlNLhI0?rel=1&enablejsapi=1&disablekb=1&controls=0&mute=1"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-title">Remotely Assistant Worker (RAW) V1.0</div>
+          <div class="card-text">
+            RAW was built with pure Java and console based. 
+            RAW was built with a view to making a freelancing community.
+          </div>
+          <div class="card-tag">
+            <div class="tag-1">
+              <i class="fa-solid fa-laptop-code fa-1x"></i>
+              <br />
+              JAVA
             </div>
-          </a>
+            <div class="tag-2">
+              <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
+              <br />Notepad<br>JDK-18.0.2.1
+            </div>
+            <div class="tag-3">
+              <i class="fa-solid fa-chalkboard-user fa-1x"></i>
+              <br />Console
+            </div>
+          </div>
+        </div>
+      </a>
 
-          <a href="www.google.com">
-            <div class="card">
-              <div class="card-img">
-                <img src="resources/images/spi.PNG" alt="" />
-              </div>
-              <div class="card-title">Student Progress Indicator (SPI)</div>
-              <div class="card-text">
-                SPI was built with a view to reduce the paper work, increase the
-                use of digital medias. It is a complete C++, console based
-                system.
-              </div>
-              <div class="card-tag">
-                <div class="tag-1">
-                  <i class="fa-solid fa-laptop-code fa-1x"></i>
-                  <br />
-                  C++
-                </div>
-                <div class="tag-2">
-                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
-                  <br />Codeblock
-                </div>
-                <div class="tag-3">
-                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
-                  <br />Console
-                </div>
-              </div>
-            </div>
-          </a>
+       <!--RAW V2.0-->
+       
+       <a href="https://github.com/DEV-NKP/Remotely-Assistant-Workers-RAW-V2.0.git">
+        <div
+          class="card"
+          id="rawv2-div"
+          onmouseover="playvideo('rawv2-img','rawv2-video')"
+          onmouseout="pausevideo('rawv2-img','rawv2-video')"
+        >
+          <div class="card-img">
+            <img src="resources/images/rawv2.PNG" alt="" id="rawv2-img" />
 
-          <a href="www.google.com">
-            <div class="card">
-              <div class="card-img">
-                <img src="resources/images/spi.PNG" alt="" />
-              </div>
-              <div class="card-title">Student Progress Indicator (SPI)</div>
-              <div class="card-text">
-                SPI was built with a view to reduce the paper work, increase the
-                use of digital medias. It is a complete C++, console based
-                system.
-              </div>
-              <div class="card-tag">
-                <div class="tag-1">
-                  <i class="fa-solid fa-laptop-code fa-1x"></i>
-                  <br />
-                  C++
-                </div>
-                <div class="tag-2">
-                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
-                  <br />Codeblock
-                </div>
-                <div class="tag-3">
-                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
-                  <br />Console
-                </div>
-              </div>
-            </div>
-          </a>
+            <iframe
+              class="youtube-video"
+              id="rawv2-video"
+              src="https://www.youtube.com/embed/AuJNB6E_LVY?rel=1&enablejsapi=1&disablekb=1&controls=0&mute=1"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
 
-          <a href="www.google.com">
-            <div class="card">
-              <div class="card-img">
-                <img src="resources/images/spi.PNG" alt="" />
-              </div>
-              <div class="card-title">Student Progress Indicator (SPI)</div>
-              <div class="card-text">
-                SPI was built with a view to reduce the paper work, increase the
-                use of digital medias. It is a complete C++, console based
-                system.
-              </div>
-              <div class="card-tag">
-                <div class="tag-1">
-                  <i class="fa-solid fa-laptop-code fa-1x"></i>
-                  <br />
-                  C++
-                </div>
-                <div class="tag-2">
-                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
-                  <br />Codeblock
-                </div>
-                <div class="tag-3">
-                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
-                  <br />Console
-                </div>
-              </div>
+          </div>
+          <div class="card-title">Remotely Assistant Worker (RAW) V2.0</div>
+          <div class="card-text">
+            RAW was built with pure Java and console based. 
+            RAW was built with a view to making a freelancing community.
+          </div>
+          <div class="card-tag">
+            <div class="tag-1">
+              <i class="fa-solid fa-laptop-code fa-1x"></i>
+              <br />
+              JAVA
             </div>
-          </a>
+            <div class="tag-2">
+              <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
+              <br />Notepad<br>JDK-18.0.2.1
+            </div>
+            <div class="tag-3">
+              <i class="fa-solid fa-chalkboard-user fa-1x"></i>
+              <br />Console
+            </div>
+          </div>
+        </div>
+      </a>
 
-          <a href="www.google.com">
-            <div class="card">
-              <div class="card-img">
-                <img src="resources/images/spi.PNG" alt="" />
-              </div>
-              <div class="card-title">Student Progress Indicator (SPI)</div>
-              <div class="card-text">
-                SPI was built with a view to reduce the paper work, increase the
-                use of digital medias. It is a complete C++, console based
-                system.
-              </div>
-              <div class="card-tag">
-                <div class="tag-1">
-                  <i class="fa-solid fa-laptop-code fa-1x"></i>
-                  <br />
-                  C++
-                </div>
-                <div class="tag-2">
-                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
-                  <br />Codeblock
-                </div>
-                <div class="tag-3">
-                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
-                  <br />Console
-                </div>
-              </div>
+      <!--RAW V3.0-->
+       
+      <a href="https://github.com/DEV-NKP/Remotely-Assistant-Workers-RAW-V3.0.git">
+        <div
+          class="card"
+          id="rawv3-div"
+          onmouseover="playvideo('rawv3-img','rawv3-video')"
+          onmouseout="pausevideo('rawv3-img','rawv3-video')"
+        >
+          <div class="card-img">
+            <img src="resources/images/rawv3.PNG" alt="" id="rawv3-img" />
+
+            <iframe
+              class="youtube-video"
+              id="rawv3-video"
+              src="https://www.youtube.com/embed/pC-buVJy-WQ?rel=1&enablejsapi=1&disablekb=1&controls=0&mute=1"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+
+          </div>
+          <div class="card-title">Remotely Assistant Worker (RAW) V3.0</div>
+          <div class="card-text">
+            RAW was built with pure Java and console based. 
+            RAW was built with a view to making a freelancing community.
+          </div>
+          <div class="card-tag">
+            <div class="tag-1">
+              <i class="fa-solid fa-laptop-code fa-1x"></i>
+              <br />
+              JAVA
             </div>
-          </a>
+            <div class="tag-2">
+              <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
+              <br />Notepad<br>JDK-18.0.2.1
+            </div>
+            <div class="tag-3">
+              <i class="fa-solid fa-chalkboard-user fa-1x"></i>
+              <br />Console
+            </div>
+          </div>
+        </div>
+      </a>
+
+
+   <!--FOH-->
+       
+   <a href="https://github.com/DEV-NKP/Remotely-Assistant-Workers-RAW-V3.0.git">
+    <div
+      class="card"
+      id="foh-div"
+      onmouseover="playvideo('foh-img','foh-video')"
+      onmouseout="pausevideo('foh-img','foh-video')"
+    >
+      <div class="card-img">
+        <img src="resources/images/foh.PNG" alt="" id="foh-img" />
+
+        <iframe
+          class="youtube-video"
+          id="foh-video"
+          src="https://www.youtube.com/embed/b0pqrtICzf8?rel=1&enablejsapi=1&disablekb=1&controls=0&mute=1"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+
+      </div>
+      <div class="card-title">Fest Of Harmony (FOH)</div>
+      <div class="card-text">
+        RAW was built with pure Java and console based. 
+        RAW was built with a view to making a freelancing community.
+      </div>
+      <div class="card-tag">
+        <div class="tag-1">
+          <i class="fa-solid fa-laptop-code fa-1x"></i>
+          <br />
+          JAVA
+        </div>
+        <div class="tag-2">
+          <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
+          <br />Notepad<br>JDK-18.0.2.1
+        </div>
+        <div class="tag-3">
+          <i class="fa-solid fa-chalkboard-user fa-1x"></i>
+          <br />Console
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+
         </div>
       </div>
     </section>
@@ -645,6 +648,7 @@ NILOY KANTI PAUL</pre
                 target="_blank"
                 ><i class="fa-solid fa-paper-plane fa-2x"></i
               ></a>
+        
             </div>
           </div>
         </div>
@@ -665,49 +669,37 @@ NILOY KANTI PAUL</pre
   </body>
 
   <script>
-    document.querySelector(".p1").style.display = "block";
-    document.querySelector(".p2").style.display = "block";
-    document.querySelector(".p3").style.display = "none";
-    document.querySelector(".p4").style.display = "none";
-    document.querySelector(".p5").style.display = "none";
-    document.querySelector(".p6").style.display = "none";
-    document.querySelector(".p7").style.display = "none";
-    document.querySelector(".p8").style.display = "none";
-    document.querySelector(".p9").style.display = "none";
-    document.querySelector(".card-show-more").style.display = "block";
-    document.querySelector(".card-show-less").style.display = "none";
+    document.getElementById("spi-video").style.display = "none";
+    document.getElementById("spi-img").style.display = "block";
+
+    document.getElementById("rawv1-video").style.display = "none";
+    document.getElementById("rawv1-img").style.display = "block";
+
+    document.getElementById("rawv2-video").style.display = "none";
+    document.getElementById("rawv2-img").style.display = "block";
+
+    document.getElementById("rawv3-video").style.display = "none";
+    document.getElementById("rawv3-img").style.display = "block";
+
+    document.getElementById("foh-video").style.display = "none";
+    document.getElementById("foh-img").style.display = "block";
+/*
+    document.getElementById("medicm-video").style.display = "none";
+    document.getElementById("medicm-img").style.display = "block";
+
+    document.getElementById("ideax-video").style.display = "none";
+    document.getElementById("ideax-img").style.display = "block";
+
+    document.getElementById("togo-video").style.display = "none";
+    document.getElementById("togo-img").style.display = "block";
+
+*/
+
+
+
 
     function cvDownload() {
       alert("OOPS!!! Sorry, This service is currently under development.");
-    }
-
-    function showmore() {
-      document.querySelector(".card-show-more").style.display = "none";
-      document.querySelector(".p1").style.display = "block";
-      document.querySelector(".p2").style.display = "block";
-      document.querySelector(".p3").style.display = "block";
-      document.querySelector(".p4").style.display = "block";
-      document.querySelector(".p5").style.display = "block";
-      document.querySelector(".p6").style.display = "block";
-      document.querySelector(".p7").style.display = "block";
-      document.querySelector(".p8").style.display = "block";
-      document.querySelector(".p9").style.display = "block";
-
-      document.querySelector(".card-show-less").style.display = "block";
-    }
-
-    function showless() {
-      document.querySelector(".p1").style.display = "block";
-      document.querySelector(".p2").style.display = "block";
-      document.querySelector(".p3").style.display = "none";
-      document.querySelector(".p4").style.display = "none";
-      document.querySelector(".p5").style.display = "none";
-      document.querySelector(".p6").style.display = "none";
-      document.querySelector(".p7").style.display = "none";
-      document.querySelector(".p8").style.display = "none";
-      document.querySelector(".p9").style.display = "none";
-      document.querySelector(".card-show-more").style.display = "block";
-      document.querySelector(".card-show-less").style.display = "none";
     }
   </script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

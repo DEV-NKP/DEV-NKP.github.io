@@ -16,7 +16,7 @@ else if(visibility==="true")
 }
 })
 
-//try
+
 
 const primaryEdu=document.querySelector('.edu-log');
 const primaryWork=document.querySelector('.work-log');
@@ -46,18 +46,18 @@ eduToggle.addEventListener('click', ()=> {
  });      
        
 
-//try
+
 
 $(document).ready(function(){
     $(window).scroll(function(){
-        // sticky navbar on scroll script
+      
         if(this.scrollY > 20){
             $('header').addClass("sticky");
         }else{
             $('header').removeClass("sticky");
         }
         
-        // scroll-up button show/hide script
+ 
         if(this.scrollY > 500){
             $('.scroll-up-btn').addClass("show");
         }else{
@@ -66,11 +66,11 @@ $(document).ready(function(){
     });
      $('.scroll-up-btn').click(function(){
         $('html').animate({scrollTop: 0});
-        // removing smooth scroll on slide-up button click
+
         $('html').css("scrollBehavior", "auto");
     });
     
-    // typing text animation script
+
     var typed = new Typed(".typing", {
         strings: ["Student.", "Engineer.", "Developer.", "Designer."],
         typeSpeed: 100,
@@ -130,7 +130,9 @@ function reveal() {
             barAnimation(".css", ".css-text", 95); 
             barAnimation(".js", ".js-text", 80); 
             barAnimation(".php", ".php-text", 85); 
-            barAnimation(".mysql", ".mysql-text", 70); 
+            barAnimation(".mysql", ".mysql-text", 75); 
+             barAnimation(".aspnet", ".aspnet-text", 80); 
+             barAnimation(".sqlserver", ".sqlserver-text", 70); 
         
         }
 
@@ -223,10 +225,17 @@ function countABAnimation(text, num) {
 
 $(".carousel").owlCarousel({
     margin: 20,
-    loop: true,
+    rewind:true,
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
+    mouseDrag:true,
+    touchDrag:true,
+    mergeFit:true,
+    lazyLoad:true,
+    video:true,
+    checkVisible:false,
+    
     responsive: {
       0:{
         items:1,

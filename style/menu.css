@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:500");
+
 
 * {
   padding: 0;
@@ -144,8 +144,7 @@ nav ul ul li {
   position: relative;
 
   border-bottom: 1px dotted #fff;
-  /* border-radius: 0;
-  text-align: left;*/
+
   transition: all 0.3s ease 0s;
 }
 nav ul ul li:last-child {
@@ -158,7 +157,7 @@ nav ul ul li:hover {
   color: #0088a9;
 }
 
-/*For responsive*/
+
 .mobile-nav-toggle {
   display: none;
 }
