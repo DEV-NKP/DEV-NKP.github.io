@@ -798,13 +798,18 @@ NILOY KANTI PAUL</pre
     <footer>
       <span
         >Created By <a href="https://github.com/DEV-NKP">DEV-NKP</a> |
-        <span class="far fa-copyright"></span> 2022 All rights reserved.</span
+        <span class="far fa-copyright"></span> 2022 All rights reserved. |
+        Visitors: <span id="visits"></span>
+        </span
       >
     </footer>
     <!--footer-->
   </body>
+  <script async src="https://api.countapi.xyz/hit/dev-nkp.github.io/f38274fa-3555-4e86-8958-d482e9e46da4?callback=websiteVisits">
 
+  </script>
   <script>
+
     document.getElementById("spi-video").style.display = "none";
     document.getElementById("spi-img").style.display = "block";
 
@@ -832,6 +837,10 @@ NILOY KANTI PAUL</pre
     function cvDownload() {
       alert("OOPS!!! Sorry, This service is currently under development.");
     }
+
+    function websiteVisits(response) {
+    document.querySelector("#visits").textContent = response.value;
+}
   </script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
