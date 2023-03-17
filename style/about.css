@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 
+
+
+
+
 /* about section styling */
 .about .title::after {
   content: "Introduction";
@@ -16,10 +20,12 @@ section .skill-title::before {
   left: 50%;
   width: 180px;
   height: 3px;
-  background: #111;
   transform: translateX(-50%);
 
 }
+
+
+
 section .skill-title::after {
   position: absolute;
   bottom: -8px;
@@ -27,7 +33,6 @@ section .skill-title::after {
   font-size: 20px;
   color: #0088a9;
   padding: 0 5px;
-  background: #fff;
   transform: translateX(-50%);
  
 }
@@ -42,7 +47,7 @@ section .quali-title::before {
   left: 50%;
   width: 250px;
   height: 3px;
-  background: #111;
+
   transform: translateX(-50%);
 }
 section .quali-title::after {
@@ -52,7 +57,7 @@ section .quali-title::after {
   font-size: 20px;
   color: #0088a9;
   padding: 0 5px;
-  background: #fff;
+ 
   transform: translateX(-50%);
 }
 .about .about-content .left {
@@ -243,7 +248,6 @@ margin-top: -20px;
   padding-top: 7px;
   padding-bottom: 7px;
   background-color: transparent;
-  color: #24252a;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -264,7 +268,7 @@ margin-top: -20px;
   padding-top: 7px;
   padding-bottom: 7px;
   background-color: transparent;
-  color: #24252a;
+
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -282,6 +286,18 @@ background-color:  rgba(133, 205, 210, 0.254);
 cursor:default;
 }
 
+.white-quali-data {
+background-color:  rgba(133, 205, 210, 0.254);
+}
+.dark-quali-data {
+background-color:   rgba(130, 245, 234, 0.199); 
+}
+.white-quali-data i{
+  color: #025669af;
+}
+.dark-quali-data i {
+  color: #0d9ebfcf;
+}
 .quali-data:hover {
 
 border-top: 5px solid rgb(17, 170, 181);
@@ -291,7 +307,7 @@ border-bottom: 2px solid rgb(17, 170, 181);
 
 
 .quali-data i{
-  color: #025669af;
+ 
   padding-bottom: 20px;
 }
 

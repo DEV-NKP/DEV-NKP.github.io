@@ -1,0 +1,30 @@
+.publication {
+    padding-bottom: 0px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .publication .publication-title::after {
+    content: "My Publications";
+  }
+
+   .publication-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 250px;
+    height: 3px;
+    transform: translateX(-50%);
+  }
+   .publication-title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #0088a9;
+    padding: 0 5px;
+
+    transform: translateX(-50%);
+  }
+
+ 

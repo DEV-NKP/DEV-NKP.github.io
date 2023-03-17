@@ -1,5 +1,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +28,23 @@ html {
 body{
   width: 100vw;
 }
+
+.white-body{
+  background: #fff;
+  color: #111;
+}
+.dark-body{
+  background: #000012f4;
+  color: #ffffffbf;
+}
+
+.white-text{
+  
+  color: #111111d7;
+}
+.dark-text{
+  color: #ffffff94;
+}
 html
 {
     width: 100%;
@@ -34,6 +53,27 @@ html
     padding: 0px;
     overflow-x: hidden;
 }
+
+.title-black::before {
+  background: #fff;
+}
+.title-black::after {
+  background: #000012
+}
+.title-white::before {
+  background: #111;
+}
+.title-white::after {
+  background: #fff;
+}
+
+.white-sub-title{
+  color: rgba(51, 51, 51, 0.863);
+}
+.dark-sub-title{
+  color: rgba(255, 255, 255, 0.308);
+}
+
 section {
   padding-top: 100px;
 }
@@ -46,13 +86,15 @@ section {
 .project,
 .skills,
 .contact,
+.publication,
 footer {
   font-family: "Poppins", sans-serif;
 }
 .about .about-content,
 .project .project-content,
 .skills .skills-content,
-.contact .contact-content {
+.contact .contact-content,
+.publication .publication-content{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -61,7 +103,8 @@ footer {
 section .title,
 .skill-title,
 .quali-title,
-.projects-title {
+.projects-title,
+.publication-title{
   position: relative;
   text-align: center;
   font-size: 40px;
@@ -259,7 +302,7 @@ section .title::before {
   left: 50%;
   width: 180px;
   height: 3px;
-  background: #111;
+ 
   transform: translateX(-50%);
 }
 section .title::after {
@@ -269,7 +312,7 @@ section .title::after {
   font-size: 20px;
   color: #0088a9;
   padding: 0 5px;
-  background: #fff;
+
   transform: translateX(-50%);
 }
 
@@ -370,11 +413,16 @@ opacity: 0;
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
+   .publication .publication-content .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
   .skills .skills-content .column,
   .contact .contact-content .column {
     width: 100%;
     margin-bottom: 35px;
   }
+ 
   .contact .contact-content {
     flex-direction: column;
     align-items: unset;
@@ -390,7 +438,9 @@ opacity: 0;
  #contact-text{
    width: 200%;
  }
- 
+ form{
+  width: 200%;
+}
 }
 
 @media (max-width: 690px) {
@@ -409,7 +459,9 @@ opacity: 0;
   .projects .projects-content .card {
     width: 100%;
   }
-  
+  .publication .publication-content .card {
+    width: 100%;
+  }
 .qualification_active {
   flex-direction: column;
 }
@@ -507,7 +559,9 @@ opacity: 0;
 #project-title::after{
   font-size: 18px;
 }
-
+#publication-title::after{
+  font-size: 18px;
+}
 #contact-title::after{
   font-size: 18px;
 }
@@ -537,7 +591,9 @@ opacity: 0;
 #project-title::after{
   font-size: 15px;
 }
-
+#publication-title::after{
+  font-size: 15px;
+}
 #contact-title::after{
   font-size: 15px;
 }

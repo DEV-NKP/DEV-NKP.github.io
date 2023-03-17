@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="style/wave.css" />
     <link rel="stylesheet" href="style/projects.css" />
     <link rel="stylesheet" href="style/contact.css" />
+     <link rel="stylesheet" href="style/publication.css" />
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
-
     <script src="function/nav.js" defer></script>
     <script src="function/video.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -25,7 +25,7 @@
       href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
     />
   </head>
-  <body>
+  <body id="body" class="white-body" >
     <header>
       <div>
         <a href="">
@@ -50,7 +50,7 @@ NILOY KANTI PAUL</pre
       </div>
 
       <nav>
-        <ul id="navlink" data-visible="false" class="navlink flex">
+        <ul  id="navlink" data-visible="false" class="navlink flex">
           <li>
             <a href="#about">About</a>
           </li>
@@ -66,10 +66,17 @@ NILOY KANTI PAUL</pre
           <li>
             <a href="#projects">Projects</a>
           </li>
-
+          <li>
+            <a href="#publication">Publications</a>
+          </li>
           <li>
             <a class="cta" href="#contact"
               ><button class="con-button">Contact</button></a
+            >
+          </li>
+          <li>
+            <a class="dark-but" onclick="changeColor()"
+              ><i id="dark-light" class="fa-solid fa-moon fa-1x" ></i></a
             >
           </li>
         </ul>
@@ -112,7 +119,7 @@ NILOY KANTI PAUL</pre
     <!-- about section start -->
     <section class="about" id="about">
       <div class="max-width">
-        <h2 id="about-title" class="title reveal TTB">About me</h2>
+        <h2 id="about-title" class="title title-white reveal TTB">About me</h2>
 
         <div class="about-content">
           <div class="column left reveal LTR">
@@ -134,7 +141,7 @@ NILOY KANTI PAUL</pre
                   <span
                     class="count-pro"
                     style="font-weight: bold; text-align: center"
-                    >9</span
+                    >10</span
                   ><br />
                   Completed <br />Projects
                 </p>
@@ -143,8 +150,8 @@ NILOY KANTI PAUL</pre
                   ><br />Years <br />Experience
                 </p>
                 <p id="text-count" style="text-align: center">
-                  <span class="count-comp" style="font-weight: bold">0</span
-                  ><br />Companies <br />Worked
+                  <span class="count-comp" style="font-weight: bold">1</span
+                  ><br />Research <br />Published
                 </p>
               </div>
               <a onclick="cvDownload()" class="about-cv">Download Resume</a>
@@ -154,7 +161,7 @@ NILOY KANTI PAUL</pre
         <!--Skill-->
         <section id="skills">
           <div class="skills">
-            <h3 id="skill-title" class="skill-title reveal TTB">Skills</h3>
+            <h3 id="skill-title" class="skill-title title-white reveal TTB">Skills</h3>
 
             <div id="skill-text" class="skill-text reveal BTT">
               I have completed some projects in different programming languages
@@ -166,6 +173,8 @@ NILOY KANTI PAUL</pre
               <br /><br />
               <b>Other Skills:</b> Interpersonal skills, collaboration,
               communication & leadership.
+               <br /><br />
+              <b>Research Interests:</b> Artificial Intelligence, Machine Learning, Automation System, Internet of Things.
             </div>
 
             <div class="skills-content">
@@ -203,7 +212,7 @@ NILOY KANTI PAUL</pre
                 <div class="bars">
                   <div class="info">
                     <span>Python</span>
-                    <span class="py-text">30%</span>
+                    <span class="py-text">60%</span>
                   </div>
                   <div class="line"><div class="py"></div></div>
                 </div>
@@ -260,6 +269,12 @@ NILOY KANTI PAUL</pre
                 </div>
               </div>
             </div>
+            <div id="skill-text" class="skill-text reveal BTT">
+             
+              <br /><br />
+              <b>Others:</b> NodeJS, NestJS, NextJS, TypeScript, TypeORM, PostgreSQL, Spring Framework.
+            </div>
+
           </div>
         </section>
         <!--Skill-->
@@ -268,28 +283,28 @@ NILOY KANTI PAUL</pre
 
         <section id="qualifications">
           <div>
-            <h4 id="quali-title" class="quali-title reveal TTB">
+            <h4 id="quali-title" class="quali-title title-white reveal TTB">
               Qualifications
             </h4>
           </div>
           <div class="quali-button">
             <button
               id="quali-edu"
-              class="quali-edu qualification-active-option reveal LTR"
+              class="quali-edu white-text qualification-active-option reveal LTR"
             >
               <img
                 src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/50/000000/external-education-online-learning-kiranshastry-gradient-kiranshastry.png"
               />
               Education
             </button>
-            <button id="quali-work" class="quali-work reveal RTL">
+            <button id="quali-work" class="quali-work white-text  reveal RTL">
               <img
                 src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/50/000000/external-work-graph-design-kiranshastry-gradient-kiranshastry.png"
               />Work
             </button>
           </div>
           <div class="edu-log qualification_active reveal BTT" id="education">
-            <div id="quali-data" class="quali-data">
+            <div id="quali-data" class="quali-data white-quali-data">
               <i class="fa-solid fa-award fa-3x"></i>
 
               <h3>Secondary School Certificate</h3>
@@ -297,7 +312,7 @@ NILOY KANTI PAUL</pre
               <div>2016-2017</div>
             </div>
 
-            <div id="quali-data" class="quali-data">
+            <div id="quali-data" class="quali-data white-quali-data">
               <i class="fa-solid fa-building-columns fa-3x"></i>
 
               <h3>Higher Secondary Certificate</h3>
@@ -305,7 +320,7 @@ NILOY KANTI PAUL</pre
               <div>2017-2019</div>
             </div>
 
-            <div id="quali-data" class="quali-data">
+            <div id="quali-data" class="quali-data white-quali-data">
               <i class="fa-solid fa-graduation-cap fa-3x"></i>
 
               <h3>BSc In CSE</h3>
@@ -315,7 +330,7 @@ NILOY KANTI PAUL</pre
           </div>
 
           <div class="work-log reveal BTT" id="work">
-            <div id="quali-data" class="quali-data quali-left">
+            <div id="quali-data" class="quali-data white-quali-data quali-left">
               <i class="fa-solid fa-briefcase fa-3x"></i>
               <h3>Student</h3>
               <span> American International University-Bangladesh </span>
@@ -336,7 +351,7 @@ NILOY KANTI PAUL</pre
     <section class="projects" id="projects">
       <div class="max-width">
         <div>
-          <h4 id="project-title" class="projects-title reveal BTT">Projects</h4>
+          <h4 id="project-title" class="projects-title title-white reveal BTT">Projects</h4>
         </div>
         <div class="carousel owl-carousel reveal BTT">
           <!--SPI-->
@@ -345,7 +360,7 @@ NILOY KANTI PAUL</pre
             href="https://github.com/DEV-NKP/Student-Progress-Indicator-SPI.git"
           >
             <div
-              class="card"
+              class="card white-card"
               id="spi-div"
               onmouseover="playvideo('spi-img','spi-video')"
               onmouseout="pausevideo('spi-img','spi-video')"
@@ -391,7 +406,7 @@ NILOY KANTI PAUL</pre
             href="https://github.com/DEV-NKP/Remotely-Assistant-Workers-RAW-V1.0.git"
           >
             <div
-              class="card"
+              class="card white-card"
               id="rawv1-div"
               onmouseover="playvideo('rawv1-img','rawv1-video')"
               onmouseout="pausevideo('rawv1-img','rawv1-video')"
@@ -436,7 +451,7 @@ NILOY KANTI PAUL</pre
             href="https://github.com/DEV-NKP/Remotely-Assistant-Workers-RAW-V2.0.git"
           >
             <div
-              class="card"
+              class="card white-card"
               id="rawv2-div"
               onmouseover="playvideo('rawv2-img','rawv2-video')"
               onmouseout="pausevideo('rawv2-img','rawv2-video')"
@@ -482,7 +497,7 @@ NILOY KANTI PAUL</pre
             href="https://github.com/DEV-NKP/Remotely-Assistant-Workers-RAW-V3.0.git"
           >
             <div
-              class="card"
+              class="card white-card"
               id="rawv3-div"
               onmouseover="playvideo('rawv3-img','rawv3-video')"
               onmouseout="pausevideo('rawv3-img','rawv3-video')"
@@ -527,7 +542,8 @@ NILOY KANTI PAUL</pre
             href="https://github.com/DEV-NKP/Remotely-Assistant-Workers-RAW-V3.0.git"
           >
             <div
-              class="card"
+
+              class="card white-card"
               id="foh-div"
               onmouseover="playvideo('foh-img','foh-video')"
               onmouseout="pausevideo('foh-img','foh-video')"
@@ -570,7 +586,7 @@ NILOY KANTI PAUL</pre
 
           <a href="https://github.com/DEV-NKP/Medic-Master-Medic-M.git">
             <div
-              class="card"
+              class="card white-card"
               id="medicm-div"
               onmouseover="playvideo('medicm-img','medicm-video')"
               onmouseout="pausevideo('medicm-img','medicm-video')"
@@ -615,7 +631,7 @@ NILOY KANTI PAUL</pre
 
           <a href="https://github.com/DEV-NKP/IDEA-X-V1.0.git">
             <div
-              class="card"
+              class="card white-card"
               id="ideax-div"
               onmouseover="playvideo('ideax-img','ideax-video')"
               onmouseout="pausevideo('ideax-img','ideax-video')"
@@ -660,7 +676,7 @@ NILOY KANTI PAUL</pre
 
           <a href="https://github.com/DEV-NKP/Together-Go-TOGO.git">
             <div
-              class="card"
+              class="card white-card"
               id="togo-div"
               onmouseover="playvideo('togo-img','togo-video')"
               onmouseout="pausevideo('togo-img','togo-video')"
@@ -700,51 +716,171 @@ NILOY KANTI PAUL</pre
               </div>
             </div>
           </a>
+
+          <!--Meta bin-->
+
+          <a href="https://github.com/DEV-NKP/Together-Go-TOGO.git">
+            <div
+              class="card white-card"
+              id="meta-div"
+              onmouseover="playvideo('meta-img','meta-video')"
+              onmouseout="pausevideo('meta-img','meta-video')"
+            >
+              <div class="card-img">
+                <img src="resources/images/meta.jpg" alt="" id="meta-img" />
+
+                <iframe
+                  class="youtube-video"
+                  id="meta-video"
+                  src="https://www.youtube.com/embed/GeP8AP01ut8?rel=1&enablejsapi=1&disablekb=1&controls=0&mute=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="card-title">Meta Bin</div>
+              <div class="card-text">
+                IoT-based trash collection system that can automatically detect obstacles,
+                  and opens the Meta Bin lid to receive the trash.
+                 It is driven from place to place by a car named Buzz. 
+              </div>
+              <div class="card-tag">
+                <div class="tag-1">
+                  <i class="fa-solid fa-laptop-code fa-1x"></i>
+                  <br />
+                  C++
+                </div>
+                <div class="tag-2">
+                  <i class="fa-solid fa-screwdriver-wrench fa-1x"></i>
+                  <br />Arduino IDE
+                </div>
+                <div class="tag-3">
+                  <i class="fa-solid fa-chalkboard-user fa-1x"></i>
+                  <br />
+                  Automation Device
+                </div>
+              </div>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
     <!--project-->
 
+  <!--publication-->
+  <section class="publication" id="publication">
+    <div class="max-width">
+      <div>
+        <h4 id="publication-title" class="publication-title title-white reveal BTT">Publications</h4>
+      </div>
+      <div align="center" class="carousel owl-carousel reveal BTT">
+           <!--Meta bin-->
+
+           <a href="https://www.researchgate.net/publication/367523882_Meta_Bin_-_An_Arduino-Based_Smart_Device_for_Collecting_Trash">
+            <div
+              class="card white-card"
+              id="p-meta-div"
+            >
+              <div class="card-img">
+                <img src="resources/images/pmeta.jpg" alt="" id="p-meta-img" />
+              </div>
+              <div class="card-title">Meta Bin – An Arduino-Based Smart Device for Collecting Trash</div>
+              <div class="card-text">
+                <b>Publication Type:</b> Conference Paper <br>
+                <b>Date of publication:</b> January 2023<br>
+                <b>Conference:</b> International Conference on Electronics and Informatics 2022<br>
+               <b>Location:</b> Bangladesh
+              </div>
+             
+            </div>
+          </a>
+      </div>
+    </div>
+  </section>
+  <!--publication-->
+
+
+
     <!--contact-->
 
     <section class="contact" id="contact">
       <div class="max-width">
-        <h2 id="contact-title" class="title reveal BTT">Contact me</h2>
+        <h2 id="contact-title" class="title title-white reveal BTT">Contact me</h2>
         <div class="contact-content">
+
           <div class="column left reveal LTR">
             <div class="icons">
               <div id="con-left-detail" class="row">
                 <i class="fa-solid fa-user-tie"></i>
                 <div class="infoc">
                   <div class="head">Name</div>
-                  <div class="sub-title">Niloy Kanti Paul</div>
+                  <div class="sub-title white-sub-title">Niloy Kanti Paul</div>
                 </div>
               </div>
               <div id="con-left-detail" class="row">
                 <i class="fa-solid fa-map-location-dot"></i>
                 <div class="infoc">
                   <div class="head">Address</div>
-                  <div class="sub-title">Dhaka, Bangladesh</div>
+                  <div class="sub-title white-sub-title">Dhaka, Bangladesh</div>
                 </div>
               </div>
               <div id="con-left-detail" class="row">
                 <i class="fa-solid fa-at"></i>
                 <div class="infoc">
                   <div class="head">Email</div>
-                  <div class="sub-title">niloykanti.paul2017@gmail.com</div>
+                  <div class="sub-title white-sub-title">niloykanti.paul2017@gmail.com</div>
                 </div>
               </div>
               <div id="con-left-detail" class="row">
                 <i class="fa-solid fa-phone"></i>
                 <div class="infoc">
                   <div class="head">Contact Number</div>
-                  <div class="sub-title">(+880) 1787700037</div>
+                  <div class="sub-title white-sub-title">(+880) 1787700037</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="column right contact-link-box reveal RTL">
-            <div class="contact-text" id="contact-text">Message me :</div>
+<!---->
+<div class="contact-text" id="contact-text">Message me :</div>
+                    <form action="./dev-nkp.php" method="POST">
+                        <div class="fields">
+                            <div class="field uname">
+                               <!-- <input type="text" placeholder="Name" required>-->
+                               <div class="inputBox">
+                                <input id="con-uname" name="uname" type="text" required="required" class="input white-input">
+                                <span class="input-span white-input-span">Name</span>
+                                </div>
+                            </div>
+                            <div class="field uemail">
+                               <!--  <input type="email" placeholder="Email" required>-->
+                               <div class="inputBox">
+                                <input id="con-email" name="uemail" type="email" required="required" class="input white-input input-email">
+                                <span class="input-span white-input-span">Email</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="field">
+                           <!-- <input type="text" placeholder="Subject" required>-->
+                           <div class="inputBox">
+                            <input id="con-sub" name="usub" type="text" required="required" class="input white-input">
+                            <span class="input-span white-input-span">Subject</span>
+                            </div>
+                        </div>
+                        <div class="field textarea">
+                             <!--<textarea cols="30" rows="10" placeholder="Message.." required></textarea>-->
+                             <div class="inputBox">
+                              <textarea id="con-msg" name="umsg" cols="30" rows="3" required="required" class="input white-input"></textarea>
+                              <span class="input-span white-input-span">Message</span>
+                              </div>
+                        </div>
+                        <div class="button-area">
+                            <button type="submit">Send message</button>
+                        </div>
+                    </form>
+<!---->
+           
             <div class="contact-link" id="contact-link">
               <a
                 href="mailto:niloykanti.paul2017@gmail.com"
@@ -805,9 +941,13 @@ NILOY KANTI PAUL</pre
     </footer>
     <!--footer-->
   </body>
-  <script async src="https://api.countapi.xyz/hit/dev-nkp.github.io/f38274fa-3555-4e86-8958-d482e9e46da4?callback=websiteVisits">
+ <!-- <script async src="https://api.countapi.xyz/hit/dev-nkp.github.io/f38274fa-3555-4e86-8958-d482e9e46da4?callback=websiteVisits">
 
-  </script>
+  </script>-->
+
+<!--<script src="https://smtpjs.com/v3/smtp.js"></script>-->
+
+
   <script>
 
     document.getElementById("spi-video").style.display = "none";
@@ -834,6 +974,8 @@ NILOY KANTI PAUL</pre
     document.getElementById("togo-video").style.display = "none";
     document.getElementById("togo-img").style.display = "block";
 
+ document.getElementById("meta-video").style.display = "none";
+    document.getElementById("meta-img").style.display = "block";
     function cvDownload() {
       alert("OOPS!!! Sorry, This service is currently under development.");
     }
@@ -841,6 +983,44 @@ NILOY KANTI PAUL</pre
     function websiteVisits(response) {
     document.querySelector("#visits").textContent = response.value;
 }
+
+
+/*
+function sendMessage()
+{
+  alert("call");
+  var uname = document.getElementById("con-uname").value;
+  var email = document.getElementById("con-email").value;
+  var sub = document.getElementById("con-sub").value;
+  var msg = document.getElementById("con-msg").value;
+
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "niloykantipaul@gmail.com",
+    Password: "gphslkuvzxczcdam",
+    To: 'niloykanti.paul2017@gmail.com',
+    From: "niloykantipaul@gmail.com",
+    Subject: sub,
+    Body: uname+" "+msg,
+  }).then(function (message) {
+      alert("mail sent successfully")
+    });
+
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "niloykantipaul@gmail.com",
+    Password: "gphslkuvzxczcdam",
+    To: email,
+    From: "niloykantipaul@gmail.com",
+    Subject: sub,
+    Body: uname+" "+msg,
+  })
+    .then(function (message) {
+      alert("mail sent successfully")
+    });
+ 
+}
+*/
   </script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

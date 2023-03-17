@@ -14,7 +14,7 @@
     left: 50%;
     width: 180px;
     height: 3px;
-    background: #111;
+    
     transform: translateX(-50%);
   }
    .projects-title::after {
@@ -24,7 +24,7 @@
     font-size: 20px;
     color: #0088a9;
     padding: 0 5px;
-    background: #fff;
+
     transform: translateX(-50%);
   }
 
@@ -45,15 +45,21 @@
   justify-content: space-between;
   box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
   border: 1px solid rgb(1, 172, 184);
-background-color:  rgba(126, 202, 194, 0.254);
+
 cursor: pointer;
 overflow :auto;
 transition: all 0.3s ease;
 }
-  
+
+.white-card{
+ background-color:  rgba(126, 202, 194, 0.254); 
+}
+.dark-card{
+ background-color:  rgba(141, 227, 218, 0.848); 
+}  
 .carousel .card:hover{
 --angle:0deg;
-background-color:  rgba(126, 202, 194, 0.254);
+background-color:  rgba(126, 202, 194, 0.604);
 transform: scale(1.05);
 transition: all 0.3s ease;
 border:2px solid;

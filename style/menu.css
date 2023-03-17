@@ -75,6 +75,10 @@ header.sticky {
   position: relative;
   margin-top: 9px;
 }
+.navlink li:last-child {
+ 
+  margin-right: 0px;
+}
 
 nav ul li {
   padding-bottom: 10px;
@@ -99,7 +103,27 @@ nav ul li {
 .con-button:hover {
   background-color: rgba(0, 136, 169, 0.8);
 }
-
+/*
+.col-button {
+  padding: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.col-button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+*/
+.dark-but{
+ /* background-color: rgba(0, 136, 169, 1);*/
+  border-radius: 20px;
+ padding: 5px 10px;
+  border: 1px solid #ffffff71;
+}
 .nav-project {
   position: absolute;
   top: 27px;

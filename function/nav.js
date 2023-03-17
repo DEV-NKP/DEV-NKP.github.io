@@ -1,3 +1,4 @@
+//import "https://smtpjs.com/v3/smtp.js";
 const primaryNav=document.querySelector('.navlink');
 const navToggle=document.querySelector('.mobile-nav-toggle');
 
@@ -29,9 +30,11 @@ eduToggle.addEventListener('click', ()=> {
     $(window).click(function(){
     
         $('.work-log').removeClass("qualification_active");
+
         $('.edu-log').addClass("qualification_active");
         $('.quali-edu').addClass("qualification-active-option");
         $('.quali-work').removeClass("qualification-active-option");
+        
     });
   
     })
@@ -112,9 +115,9 @@ function reveal() {
 
            if (reveals[i].classList.contains('about-count')&&flagABcount==false) {
             flagABcount=true;
-            countABAnimation(".count-pro",9);
+            countABAnimation(".count-pro",10);
             countABAnimation(".count-exp",0);
-            countABAnimation(".count-comp",0); 
+            countABAnimation(".count-comp",1); 
                 }
         } 
         else if (reveals[i].classList.contains('LTR')) {
@@ -125,7 +128,7 @@ function reveal() {
             barAnimation(".cpp", ".cpp-text", 90); 
             barAnimation(".cs", ".cs-text", 85); 
             barAnimation(".java", ".java-text", 80); 
-            barAnimation(".py", ".py-text", 30); 
+            barAnimation(".py", ".py-text", 60); 
             barAnimation(".html", ".html-text", 98); 
             barAnimation(".css", ".css-text", 95); 
             barAnimation(".js", ".js-text", 80); 
@@ -252,4 +255,132 @@ $(".carousel").owlCarousel({
     }
   });
 
+function changeColor(){
+var body = document.getElementById("body");
+    var element = document.getElementById("dark-light");
+    
+   var skillTitle = document.getElementById("skill-title");
+   var contactTitle = document.getElementById("contact-title");
+  var projectTitle = document.getElementById("project-title");
+  var qualiTitle = document.getElementById("quali-title");
+  var aboutTitle = document.getElementById("about-title");
+var publicationTitle = document.getElementById("publication-title");
 
+var projectCard = document.getElementsByClassName("card");
+
+var qualiEdu = document.getElementById("quali-edu");
+  var qualiWork = document.getElementById("quali-work");
+
+var qualiData = document.getElementsByClassName("quali-data");
+var contactsubTitle = document.getElementsByClassName("sub-title");
+
+var inputSpan = document.getElementsByClassName("input-span");
+var input = document.getElementsByClassName("input");
+
+  if(element.classList.contains("fa-moon"))
+   {
+
+    body.classList.add("dark-body");
+    body.classList.remove("white-body");
+   
+    for (var i = 0; i < projectCard.length; i++) {
+    projectCard[i].classList.add("dark-card");
+    projectCard[i].classList.remove("white-card");
+    }
+
+ 
+    for (var i = 0; i < qualiData.length; i++) {
+      qualiData[i].classList.add("dark-quali-data");
+      qualiData[i].classList.remove("white-quali-data");
+    }
+
+ for (var i = 0; i < contactsubTitle.length; i++) {
+  contactsubTitle[i].classList.add("dark-sub-title");
+  contactsubTitle[i].classList.remove("white-sub-title");
+    }
+
+ for (var i = 0; i < inputSpan.length; i++) {
+  inputSpan[i].classList.add("dark-input-span");
+  inputSpan[i].classList.remove("white-input-span");
+    }
+     for (var i = 0; i < input.length; i++) {
+      input[i].classList.add("dark-input");
+      input[i].classList.remove("white-input");
+    }
+
+    qualiEdu.classList.add("dark-text");
+    qualiEdu.classList.remove("white-text");
+    qualiWork.classList.add("dark-text");
+    qualiWork.classList.remove("white-text");
+
+    /*title color change*/
+    contactTitle.classList.add("title-black");
+    contactTitle.classList.remove("title-white");  
+    projectTitle.classList.add("title-black");
+    projectTitle.classList.remove("title-white");  
+    qualiTitle.classList.add("title-black");
+    qualiTitle.classList.remove("title-white");  
+    aboutTitle.classList.add("title-black");
+    aboutTitle.classList.remove("title-white");  
+    skillTitle.classList.add("title-black");
+    skillTitle.classList.remove("title-white");   
+    publicationTitle.classList.add("title-black");
+    publicationTitle.classList.remove("title-white");
+/*button change*/ 
+element.classList.remove("fa-moon");
+element.classList.add("fa-bolt");  
+   } 
+   else if(element.classList.contains("fa-bolt"))
+   {
+
+    body.classList.remove("dark-body");
+    body.classList.add("white-body");
+     
+for (var i = 0; i < projectCard.length; i++) {
+  projectCard[i].classList.remove("dark-card");
+  projectCard[i].classList.add("white-card");
+}
+
+for (var i = 0; i < qualiData.length; i++) {
+  qualiData[i].classList.remove("dark-quali-data");
+  qualiData[i].classList.add("white-quali-data");
+}
+for (var i = 0; i < contactsubTitle.length; i++) {
+  contactsubTitle[i].classList.remove("dark-sub-title");
+  contactsubTitle[i].classList.add("white-sub-title");
+    }
+    for (var i = 0; i < inputSpan.length; i++) {
+      inputSpan[i].classList.remove("dark-input-span");
+      inputSpan[i].classList.add("white-input-span");
+        }
+         for (var i = 0; i < input.length; i++) {
+          input[i].classList.remove("dark-input");
+          input[i].classList.add("white-input");
+        }
+    
+qualiEdu.classList.remove("dark-text");
+qualiEdu.classList.add("white-text");
+qualiWork.classList.remove("dark-text");
+qualiWork.classList.add("white-text");
+
+    /*title color change*/
+    contactTitle.classList.remove("title-black");
+    contactTitle.classList.add("title-white");
+    projectTitle.classList.remove("title-black");
+    projectTitle.classList.add("title-white");
+    qualiTitle.classList.remove("title-black");
+    qualiTitle.classList.add("title-white");
+    aboutTitle.classList.remove("title-black");
+    aboutTitle.classList.add("title-white");
+    skillTitle.classList.remove("title-black");
+    skillTitle.classList.add("title-white");
+    publicationTitle.classList.remove("title-black");
+    publicationTitle.classList.add("title-white");
+/*button change*/ 
+element.classList.remove("fa-bolt");
+element.classList.add("fa-moon");  
+   } 
+  else{
+    changeColor();
+  }
+}
