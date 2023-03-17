@@ -384,7 +384,7 @@ element.classList.add("fa-moon");
     changeColor();
   }
 }
-
+/*
 function submitForm()
 {
 
@@ -400,4 +400,4 @@ function submitForm()
             }
           );
           return false;
-}
+}*/
