@@ -335,3 +335,28 @@ border-bottom: 2px solid rgb(17, 170, 181);
 #qualifications{
   padding-bottom: 20px;
 }
+
+.skill-icon{
+
+display: inline-block;
+height: 40px;
+width: 40px;
+vertical-align: middle;
+}
+.skill-icon-text{
+display: inline-block;
+vertical-align: middle;
+}
+
+
+.other-skill-icon{
+display: inline-block;
+height: 50px;
+width: 50px;
+vertical-align: middle;
+ margin-right: 30px;
+}
+
+.other-skill-div{
+  margin-bottom: 20px;
+}
