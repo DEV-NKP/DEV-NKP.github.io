@@ -384,3 +384,20 @@ element.classList.add("fa-moon");
     changeColor();
   }
 }
+
+function submitForm()
+{
+
+   const form = document.querySelector('.my-form');
+          const formData = new FormData(form);
+          alert(formData);
+          const url ="https://formsubmit.co/niloykanti.paul2017@gmail.com"
+          fetch(
+            url,
+            {
+              method: 'POST',
+              body: formData
+            }
+          );
+          return false;
+}

@@ -843,19 +843,19 @@ NILOY KANTI PAUL</pre
           <div class="column right contact-link-box reveal RTL">
 <!---->
 <div class="contact-text" id="contact-text">Message me :</div>
-                    <form action="./dev-nkp.php" method="POST">
+                    <form  method="POST" class="my-form" onsubmit="return submitForm()">
                         <div class="fields">
                             <div class="field uname">
                                <!-- <input type="text" placeholder="Name" required>-->
                                <div class="inputBox">
-                                <input id="con-uname" name="uname" type="text" required="required" class="input white-input">
+                                <input id="con-uname" name="name" type="text" required="required" class="form-control input white-input">
                                 <span class="input-span white-input-span">Name</span>
                                 </div>
                             </div>
                             <div class="field uemail">
                                <!--  <input type="email" placeholder="Email" required>-->
                                <div class="inputBox">
-                                <input id="con-email" name="uemail" type="email" required="required" class="input white-input input-email">
+                                <input id="con-email" name="email" type="email" required="required" class="form-control input white-input input-email">
                                 <span class="input-span white-input-span">Email</span>
                                 </div>
 
@@ -864,14 +864,14 @@ NILOY KANTI PAUL</pre
                         <div class="field">
                            <!-- <input type="text" placeholder="Subject" required>-->
                            <div class="inputBox">
-                            <input id="con-sub" name="usub" type="text" required="required" class="input white-input">
+                            <input id="con-sub" name="sub" type="text" required="required" class="form-control input white-input">
                             <span class="input-span white-input-span">Subject</span>
                             </div>
                         </div>
                         <div class="field textarea">
                              <!--<textarea cols="30" rows="10" placeholder="Message.." required></textarea>-->
                              <div class="inputBox">
-                              <textarea id="con-msg" name="umsg" cols="30" rows="3" required="required" class="input white-input"></textarea>
+                              <textarea id="con-msg" name="msg" cols="30" rows="3" required="required" class="form-control input white-input"></textarea>
                               <span class="input-span white-input-span">Message</span>
                               </div>
                         </div>
