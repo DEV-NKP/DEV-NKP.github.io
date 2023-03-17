@@ -98,7 +98,7 @@ section .quali-title::after {
   margin-top: 20px;
   border-radius: 6px;
   border: 2px solid #0088a9;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 }
 .about .about-content .right .about-cv:hover {
   color: #0088a9;

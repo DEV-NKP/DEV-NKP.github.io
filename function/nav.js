@@ -384,20 +384,24 @@ element.classList.add("fa-moon");
     changeColor();
   }
 }
-/*
+
 function submitForm()
 {
+try{
 
    const form = document.querySelector('.my-form');
           const formData = new FormData(form);
-          alert(formData);
-          const url ="https://formsubmit.co/niloykanti.paul2017@gmail.com"
+          const url ="https://formsubmit.io/send/niloykantipaul@gmail.com"
           fetch(
             url,
             {
               method: 'POST',
               body: formData
             }
-          );
+          )
           return false;
-}*/
+          } finally {
+         window.location.href= "/popup.html";     
+        } 
+
+}

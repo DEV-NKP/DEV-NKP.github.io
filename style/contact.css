@@ -106,7 +106,7 @@ cursor: pointer;
   flex-wrap: nowrap;
   background: #0088a9;
   border: 2px solid #0088a9;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 }
 .right form .button-area button:hover {
   color: #0088a9;

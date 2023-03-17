@@ -1,0 +1,88 @@
+	/* Style the container */
+    .success-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000012ee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    
+    }
+
+
+    /* Style the message box */
+    .success-message {
+        background-color: #ffffff;
+        text-align: center;
+        box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+        --angle:0deg;
+transform: scale(1.05);
+transition: all 0.3s ease;
+border:5px solid;
+border-image: linear-gradient(var(--angle), rgb(173, 6, 6), rgb(55, 0, 255)) 1;
+background-origin: border-box;
+background-clip: content-box, border-box;
+animation: 5s rotate linear infinite;
+        max-width: 80%;
+       
+       
+ 
+    }
+    @property --angle {
+        syntax: '<angle>';
+        initial-value: 0deg;
+        inherits: false;
+      }
+      
+      @keyframes rotate {
+        to {
+          --angle:360deg;
+        }
+      }
+
+
+      .success-contain{
+        padding: 20px;
+      }
+      
+    /* Style the heading */
+    .success-heading {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    /* Style the message */
+    .success-message p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    /* Style the GIF */
+    .success-gif {
+        max-width: 50%;
+        max-height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .success-button {
+        display: inline-block;
+        background: #0088a9;
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 10px 30px;
+        margin-top: 20px;
+        border-radius: 6px;
+        border: 2px solid #0088a9;
+        transition: all 1s ease;
+      }
+      .success-button:hover {
+        color: #0088a9;
+        background: none;
+      }
