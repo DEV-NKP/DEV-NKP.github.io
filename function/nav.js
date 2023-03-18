@@ -328,9 +328,9 @@ var input = document.getElementsByClassName("input");
     publicationTitle.classList.remove("title-white");
 /*button change*/ 
 element.classList.remove("fa-moon");
-element.classList.add("fa-bolt");  
+element.classList.add("fa-sun");  
    } 
-   else if(element.classList.contains("fa-bolt"))
+   else if(element.classList.contains("fa-sun"))
    {
 
     body.classList.remove("dark-body");
@@ -377,7 +377,7 @@ qualiWork.classList.add("white-text");
     publicationTitle.classList.remove("title-black");
     publicationTitle.classList.add("title-white");
 /*button change*/ 
-element.classList.remove("fa-bolt");
+element.classList.remove("fa-sun");
 element.classList.add("fa-moon");  
    } 
   else{
@@ -385,13 +385,19 @@ element.classList.add("fa-moon");
   }
 }
 
+
 function submitForm()
 {
-try{
 
+//window.location.href= "/popup.html"; 
+document.getElementById("success-container").style.display='flex';
+const html= document.getElementById("html");
+html.classList.add("stop-scroll");
+const successMsg= document.getElementById("success-message");
+successMsg.classList.add("start-scroll");
    const form = document.querySelector('.my-form');
           const formData = new FormData(form);
-          const url ="https://formsubmit.io/send/niloykantipaul@gmail.com"
+          const url ="https://formsubmit.io/send/3d570815-9c63-444a-b736-63cc759338a9"
           fetch(
             url,
             {
@@ -400,8 +406,9 @@ try{
             }
           )
           return false;
-          } finally {
-         window.location.href= "/popup.html";     
+        
         } 
 
-}
+
+           
+        

@@ -358,5 +358,40 @@ vertical-align: middle;
 }
 
 .other-skill-div{
+
   margin-bottom: 20px;
 }
+.other-skill-div a{
+  margin-bottom: 20px;
+}
+
+.other-skill-icon:hover{
+  height: 60px;
+  width: 60px;
+  }
+  .skill-icon:hover{
+  height: 50px;
+  width: 50px;
+  }
+  
+  .bars{
+    padding-top: 5px;
+    border-top: 1px solid rgba(133, 205, 210, 0);
+    border-left: 1px solid rgba(133, 205, 210, 0);
+    border-right: 1px solid rgba(133, 205, 210, 0);
+  }
+  .info{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .bars:hover{
+    background-color: rgba(133, 205, 210, 0.254);
+    border-top: 1px solid rgba(15, 121, 129, 0.759);
+    border-left: 1px solid rgba(15, 121, 129, 0.759);
+    border-right: 1px solid rgba(15, 121, 129, 0.759);
+  }
+
+  .other-skill-link{
+    text-decoration: none;
+  }
+

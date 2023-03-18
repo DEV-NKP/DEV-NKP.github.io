@@ -185,7 +185,7 @@ nav ul ul li:hover {
 .mobile-nav-toggle {
   display: none;
 }
-@media (max-width: 55em) {
+@media (max-width: 1260px) {
   .navlink {
     --gap: 2em;
     position: fixed;
