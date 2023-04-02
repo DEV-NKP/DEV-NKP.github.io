@@ -263,6 +263,7 @@ var body = document.getElementById("body");
    var contactTitle = document.getElementById("contact-title");
   var projectTitle = document.getElementById("project-title");
   var qualiTitle = document.getElementById("quali-title");
+    var certificationTitle = document.getElementById("certification-title");
   var aboutTitle = document.getElementById("about-title");
 var publicationTitle = document.getElementById("publication-title");
 
@@ -320,6 +321,8 @@ var input = document.getElementsByClassName("input");
     projectTitle.classList.remove("title-white");  
     qualiTitle.classList.add("title-black");
     qualiTitle.classList.remove("title-white");  
+     certificationTitle.classList.add("title-black");
+     certificationTitle.classList.remove("title-white");  
     aboutTitle.classList.add("title-black");
     aboutTitle.classList.remove("title-white");  
     skillTitle.classList.add("title-black");
@@ -370,6 +373,8 @@ qualiWork.classList.add("white-text");
     projectTitle.classList.add("title-white");
     qualiTitle.classList.remove("title-black");
     qualiTitle.classList.add("title-white");
+    certificationTitle.classList.remove("title-black");
+    certificationTitle.classList.add("title-white");
     aboutTitle.classList.remove("title-black");
     aboutTitle.classList.add("title-white");
     skillTitle.classList.remove("title-black");
@@ -391,7 +396,7 @@ function submitForm()
 
 //window.location.href= "/popup.html"; 
 document.getElementById("success-container").style.display='flex';
-const html= document.getElementById("html");
+const html= document.getElementById("html-main");
 html.classList.add("stop-scroll");
 const successMsg= document.getElementById("success-message");
 successMsg.classList.add("start-scroll");
@@ -409,6 +414,61 @@ successMsg.classList.add("start-scroll");
         
         } 
 
+
+        function showmore() {
+          const buttonmsg=document.getElementById("showmore").innerHTML;
+          if(buttonmsg=="Show More")
+          {
+            
+            const hideitems=document.getElementById("hide-certificates");  
+            while(hideitems.firstChild){
+            document.getElementById("certificates").appendChild(hideitems.firstChild);
+            }
+          document.getElementById("showmore").innerHTML="Show Less";
+         
+          }
+        
+          else{
+            const items=document.getElementById("certificates");  
+            const hideitems=document.getElementById("hide-certificates"); 
+            var x= items.children.length+hideitems.children.length;
+            for( var i=3; i<x; i++){
+              document.getElementById("hide-certificates").appendChild(items.children[3]);
+          }
+          document.getElementById("showmore").innerHTML="Show More";
+          window.location.href= "#qualifications"; 
+          }
+          
+          }
+
+
+          function showcertificate(name)
+          {
+
+//window.location.href= "/popup.html"; 
+document.getElementById("certificate-container").style.display='flex';
+document.getElementById("certificate-gif").src="./resources/certificates/"+name+".jpg";
+const html= document.getElementById("html-main");
+html.classList.add("stop-scroll");
+const certiMsg= document.getElementById("certificate-message");
+certiMsg.classList.add("start-scroll");
+
+
+          }
+
+          function backtocertificate()
+          {
+
+//window.location.href= "/popup.html"; 
+document.getElementById("certificate-container").style.display='none';
+const html= document.getElementById("html-main");
+html.classList.remove("stop-scroll");
+// html.classList.add("start-scroll");
+const certiMsg= document.getElementById("certificate-message");
+certiMsg.classList.remove("start-scroll");
+          }
+          
+          
 
            
         

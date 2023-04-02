@@ -41,16 +41,16 @@
   color: rgb(0, 0, 0);
   text-align: center;
   margin: 10px;
-  height:380px;
   justify-content: space-between;
   box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
   border: 1px solid rgb(1, 172, 184);
-
+height: 450px;
 cursor: pointer;
-overflow :auto;
 transition: all 0.3s ease;
 }
-
+.owl-carousel .owl-stage{
+  height: 480px;
+}
 .white-card{
  background-color:  rgba(126, 202, 194, 0.254); 
 }
@@ -92,6 +92,7 @@ border-radius: 5px;
 box-shadow: 0px 0px 2px 2px rgba(126, 202, 194, 0.636);
 transform: scale(0.9);
 transition: all 0.3s ease;
+
 }
 
 .carousel .card:hover .youtube-video{
@@ -109,6 +110,7 @@ object-fit: cover;
 margin: auto;
 transition: all 0.3s ease;
 }
+
 
 .youtube-video{
 width: 100%;
@@ -138,15 +140,18 @@ transition: all 0.3s ease;
   padding-top: 10px;
   padding-bottom: 20px;
   justify-content: center;
+  display: inline-block;
 }
 
 .card-tag{
-  font-size: 14px;
-  padding-left: 50px;
-  padding-right: 50px;
+  font-size: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
+margin: 10px;
+
 }
 
 
@@ -160,15 +165,30 @@ transition: all 0.3s ease;
     color: #3f281f;
     }
 
+.tag-1{
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+    }
+   .tag-2{
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    }
+    .tag-3{
+      -webkit-writing-mode: vertical-rl;
+      writing-mode: vertical-rl;
+    }
 
+.tag-span{
+  writing-mode:horizontal-tb;
+    }
 
 .owl-dots{
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 .owl-dot{
   height: 15px;
-  width: 45px;
+  width: 25px;
   margin: 0 5px;
   outline: none;
   border-radius: 14px;
@@ -183,3 +203,13 @@ transition: all 0.3s ease;
 .owl-dot:hover{
   background: #0087a961!important;
 }
+
+.owl-carousel .owl-item img{
+  height: 200px;
+}
+
+.youtube-video{
+   height: 200px;
+}
+
+

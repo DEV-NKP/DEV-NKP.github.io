@@ -110,6 +110,7 @@ footer {
 section .title,
 .skill-title,
 .quali-title,
+.certification-title,
 .projects-title,
 .publication-title{
   position: relative;
@@ -620,6 +621,9 @@ opacity: 0;
 #quali-title::after{
   font-size: 18px;
 }
+#certification-title::after{
+  font-size: 18px;
+}
 #about-title::after{
   font-size: 18px;
 }
@@ -650,6 +654,9 @@ opacity: 0;
 
 
 #quali-title::after{
+  font-size: 15px;
+}
+#certification-title::after{
   font-size: 15px;
 }
 #about-title::after{

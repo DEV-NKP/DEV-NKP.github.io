@@ -107,5 +107,119 @@ animation: 5s rotate linear infinite;
         background: none;
       }
 
+	/* Style the container */
+  .certificate-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   /* background-color: #000012;*/
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    font-family: "Poppins", sans-serif;
+    background:  linear-gradient(to right,rgba(212, 70, 70, 0.308), rgba(4, 38, 124, 0.745));
+    background-blend-mode: saturation;
+  
+   backdrop-filter: blur(10px);
+}
+
+
+/* Style the message box */
+.certificate-message {
+    background-color: #ffffff85;
+    text-align: center;
+    box-shadow: 2px 2px 25px rgba(255, 255, 255, 0.3);
+    --angle:0deg;
+transform: scale(1.05);
+transition: all 0.3s ease;
+border:5px solid;
+border-image: linear-gradient(var(--angle), rgb(173, 6, 6), rgb(55, 0, 255)) 1;
+background-origin: border-box;
+background-clip: content-box, border-box;
+animation: 5s rotate linear infinite;
+
+max-width: 50%;
+max-height: 80%;   
+   
+
+}
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  @keyframes rotate {
+    to {
+      --angle:360deg;
+    }
+  }
+
+
+  .certificate-contain{
+    padding: 20px;
+  }
+  
+/* Style the heading */
+.certificate-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: changeColor 5s infinite;
+   
+}
+@keyframes changeColor {
+  0% { color: blue}
+  50% { color: rgb(0, 73, 128); }
+  100% { color: blue; }
+}
+
+
+/* Style the message */
+.certificate-message p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Style the GIF */
+.certificate-gif {
+    width: 40%;
+    height: 40%;
+    min-width: 400px;
+    min-height: 300px;
+    margin-bottom: 20px;
+    --angle:0deg;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    border:2px solid;
+    border-image: linear-gradient(var(--angle), rgb(173, 6, 6), rgb(55, 0, 255)) 1;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation: 5s rotate linear infinite;
+  }
+
+.certificate-button {
+    display: inline-block;
+    background: #0088a9;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 2px solid #0088a9;
+    transition: all 1s ease;
+  }
+  .certificate-button:hover {
+    color: #0088a9;
+    background: none;
+  }
+
+
+  
 
       
