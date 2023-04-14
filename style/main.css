@@ -30,7 +30,7 @@ body{
 }
 
 .white-body{
-  background: #fff;
+  background: #e2e6ea;
   color: #111;
 }
 .dark-body{
@@ -62,7 +62,7 @@ overflow: hidden;
 overflow-y:auto;
 }
 .title-black::before {
-  background: #fff;
+  background: #ffffff94;
 }
 .title-black::after {
   background: #000012
@@ -71,7 +71,7 @@ overflow-y:auto;
   background: #111;
 }
 .title-white::after {
-  background: #fff;
+  background: #e2e6ea;
 }
 
 .white-sub-title{
@@ -324,12 +324,14 @@ section .title::after {
   transform: translateX(-50%);
 }
 
+
 .home-social-div {
   padding-top: 30px;
-  width: 150px;
-  display: flex;
+  width: 200px;
+  position: absolute;
   justify-content: space-between;
-  align-items: center;
+  right: 20px;
+  bottom: 50px;
   animation: animeHbs 2s 1;
 }
 @keyframes animeHbs {
@@ -344,6 +346,7 @@ opacity: 0;
 
 .home-social-div a i{
   color:#ffffff99;
+  padding-right: 5px;
 }
 
 .home-social-div a i:hover{
@@ -427,6 +430,9 @@ opacity: 0;
 }
 
 @media (max-width: 947px) {
+  section .certification-title::after{
+    font-size: 15px!Important;
+  }
   .menu-btn {
     display: block;
     z-index: 999;
@@ -541,6 +547,7 @@ opacity: 0;
   width: 100%;
   margin-bottom: 20px;
 }
+
 }
 
 @media (max-width: 500px) {

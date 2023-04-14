@@ -55,8 +55,15 @@ transition: all 0.3s ease;
  background-color:  rgba(126, 202, 194, 0.254); 
 }
 .dark-card{
- background-color:  rgba(141, 227, 218, 0.848); 
+ background-color:  rgba(130, 245, 234, 0.2);
+ color: #ffffff94!Important;
 }  
+
+.dark-card .card-title
+{
+
+color: #fff!Important;
+}
 .carousel .card:hover{
 --angle:0deg;
 background-color:  rgba(126, 202, 194, 0.604);

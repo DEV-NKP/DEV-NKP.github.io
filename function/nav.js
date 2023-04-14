@@ -75,7 +75,7 @@ $(document).ready(function(){
     
 
     var typed = new Typed(".typing", {
-        strings: ["Student.", "Engineer.", "Developer.", "Designer."],
+        strings: ["a Student.", "an Engineer.", "a Developer.", "a Designer."],
         typeSpeed: 100,
         backSpeed: 50,
         loop: true
@@ -83,7 +83,7 @@ $(document).ready(function(){
 
 
   var typed = new Typed(".typing-2", {
-    strings: ["Student.", "Engineer.", "Developer.", "Designer."],
+    strings: ["a Student.", "an Engineer.", "a Developer.", "a Designer."],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -117,7 +117,7 @@ function reveal() {
             flagABcount=true;
             countABAnimation(".count-pro",10);
             countABAnimation(".count-exp",0);
-            countABAnimation(".count-comp",1); 
+            countABAnimation(".count-comp",3); 
                 }
         } 
         else if (reveals[i].classList.contains('LTR')) {
@@ -277,13 +277,13 @@ var contactsubTitle = document.getElementsByClassName("sub-title");
 
 var inputSpan = document.getElementsByClassName("input-span");
 var input = document.getElementsByClassName("input");
-
+var certificates = document.getElementById("certificates");
   if(element.classList.contains("fa-moon"))
    {
 
     body.classList.add("dark-body");
     body.classList.remove("white-body");
-   
+  
     for (var i = 0; i < projectCard.length; i++) {
     projectCard[i].classList.add("dark-card");
     projectCard[i].classList.remove("white-card");
@@ -314,6 +314,8 @@ var input = document.getElementsByClassName("input");
     qualiWork.classList.add("dark-text");
     qualiWork.classList.remove("white-text");
 
+    certificates.classList.add("dark-certificate");
+    certificates.classList.remove("white-certificate");
     /*title color change*/
     contactTitle.classList.add("title-black");
     contactTitle.classList.remove("title-white");  
@@ -365,7 +367,8 @@ qualiEdu.classList.remove("dark-text");
 qualiEdu.classList.add("white-text");
 qualiWork.classList.remove("dark-text");
 qualiWork.classList.add("white-text");
-
+certificates.classList.remove("dark-certificate");
+certificates.classList.add("white-certificate");
     /*title color change*/
     contactTitle.classList.remove("title-black");
     contactTitle.classList.add("title-white");
