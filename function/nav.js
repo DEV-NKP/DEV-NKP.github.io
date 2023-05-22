@@ -333,9 +333,9 @@ var certificates = document.getElementById("certificates");
     publicationTitle.classList.remove("title-white");
 /*button change*/ 
 element.classList.remove("fa-moon");
-element.classList.add("fa-sun");  
+element.classList.add("fa-lightbulb");  
    } 
-   else if(element.classList.contains("fa-sun"))
+   else if(element.classList.contains("fa-lightbulb"))
    {
 
     body.classList.remove("dark-body");
@@ -385,7 +385,7 @@ certificates.classList.add("white-certificate");
     publicationTitle.classList.remove("title-black");
     publicationTitle.classList.add("title-white");
 /*button change*/ 
-element.classList.remove("fa-sun");
+element.classList.remove("fa-lightbulb");
 element.classList.add("fa-moon");  
    } 
   else{
