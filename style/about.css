@@ -63,6 +63,7 @@ section .quali-title::after {
 
 .about .certification-title::after {
   content: "Achivements & Milestones";
+    
 }
 section .certification-title::before {
   content: "";
@@ -89,9 +90,17 @@ section .certification-title::after {
 }
 .about .about-content .left img {
   height: 450px;
-  width: 400px;
+  width: 380px;
   object-fit: cover;
   border-radius: 6px;
+  padding: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.about .about-content .left img:hover {
+filter:grayscale(0.5);
+border-color: #0088a9;
 }
 .about .about-content .right {
   width: 60%;
@@ -381,34 +390,76 @@ display: inline-block;
 vertical-align: middle;
 }
 
-
+.other-skill-link{
+  height: 70px;
+  width: 70px;
+  text-decoration: none;
+  border:3px solid transparent;
+    position: relative;
+   display: inline-block; /* or any other display value */
+   transition: all 0.3s ease-in-out;
+}
 .other-skill-icon{
 display: inline-block;
-height: 50px;
-width: 50px;
-vertical-align: middle;
- margin-right: 30px;
+max-height: 50px;
+max-width: 50px;
+min-height: 50px;
+min-width: 50px;
+ margin: auto;
+margin: 10px 0;
+filter:brightness(100%) grayscale(0.4);
+transition: all 0.3s ease-in-out;
 }
 
+.other-skill-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  height: 0%;
+  background: linear-gradient(to right, #08bce95c, #ec236344); /* Adjust colors */
+  mix-blend-mode: multiply; /* Adjust blending mode */
+  transition: all 0.3s ease-in-out;
+}
+.other-skill-link:hover::before 
+{top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+.other-skill-link:hover 
+{
+  border:3px solid;
+  border-image: linear-gradient(var(--angle), #057b88, #b5204f) 1;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: 5s rotate linear infinite;
+}
+.other-skill-link:hover .other-skill-icon{
+  filter:brightness(110%) grayscale(0);
+}
 .other-skill-div{
 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .other-skill-div a{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-
-.other-skill-icon:hover{
+ /*
+ .other-skill-icon:hover{
   border:3px solid;
   border-image: linear-gradient(var(--angle), rgb(3, 255, 142), rgb(0, 94, 255)) 1;
   background-origin: border-box;
   background-clip: content-box, border-box;
   animation: 5s rotate linear infinite;
   padding: 8px;
-  }
+
+
+  }  */
   .bars:hover .skill-icon{
     border:3px solid;
-    border-image: linear-gradient(var(--angle), rgb(3, 255, 142), rgb(0, 94, 255)) 1;
+    border-image: linear-gradient(var(--angle),#057b88, #b5204f) 1;
     background-origin: border-box;
     background-clip: content-box, border-box;
     animation: 5s rotate linear infinite;
@@ -428,6 +479,7 @@ vertical-align: middle;
 }
 
   .bars{
+    position: relative;
     padding-top: 5px;
     cursor:pointer;
     border-top: 1px solid rgba(133, 205, 210, 0);
@@ -438,14 +490,30 @@ vertical-align: middle;
     padding-left: 10px;
     padding-right: 10px;
   }
-  .bars:hover{
+  .bars::before{
+    background: rgba(106, 234, 244, 0.254);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+    }
+    .bars::before{
+    width: 0;
+    height: 100%;
+    }
+    .bars:hover::before{
+    width: 100%;
+    }
+
+  /* .bars:hover{
     background-color: rgba(133, 205, 210, 0.254);
     
-  }
+  } */
 
-  .other-skill-link{
-    text-decoration: none;
-  }
+
 .certificate{
   color: #111;
 }
@@ -544,7 +612,7 @@ border-radius: 10px;
 
 .certificate-title{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 22px;
+font-size: calc(10px + 0.5vw);
 font-weight:bold;
 }
 .dark-certificate .certificate-title{
@@ -557,25 +625,25 @@ font-weight:bold;
 .certificate-ico{
 
   color: #033b49;
-  font-size: 25px;
+  font-size: calc(13px + 0.5vw);
 }
 .certificate-institute-ico{
   color: #033b49;
-  font-size: 18px;
+  font-size: calc(8px + 0.5vw);
 }
 .certificate-body{
-  font-size: 12px;
+  font-size: calc(8px + 0.3vw);
 }
 
 .certificate-given{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 16px;
+  font-size: calc(8px + 0.3vw);
   font-weight: bolder;
   color: #111;
 }
 
 .certificate-no{
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 12px;
+  font-size: calc(8px + 0.2vw);
     font-weight: bolder;
 }

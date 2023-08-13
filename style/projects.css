@@ -133,7 +133,7 @@ transition: all 0.3s ease;
 }
 
 .card-title{
-  font-size: 18px;
+  font-size: calc(10px + 0.5vw);
   padding-top: 10px;
   padding-left: 10px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -142,7 +142,7 @@ transition: all 0.3s ease;
 }
 
 .card-text{
-  font-size: 12px;
+  font-size: calc(8px + 0.3vw);
   padding: 20px;
   padding-top: 10px;
   padding-bottom: 20px;
@@ -151,13 +151,11 @@ transition: all 0.3s ease;
 }
 
 .card-tag{
-  font-size: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 10px;
+  font-size: calc(6px + 0.3vw);
+ width: 80%;
   display: flex;
   justify-content: space-between;
-margin: 10px;
+margin: auto;
 
 }
 

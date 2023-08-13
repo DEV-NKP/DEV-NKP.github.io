@@ -1,12 +1,15 @@
 .contact {
     padding-top:50px ;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
   }
 
 .contact .title::after {
     content: "Get In Touch";
   }
   .contact .contact-content .column {
-    width: calc(50% - 30px);
+    width: calc(50% - 0px);
   }
 
   .contact .contact-content .left .icons {

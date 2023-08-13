@@ -431,7 +431,7 @@ opacity: 0;
 
 @media (max-width: 947px) {
   section .certification-title::after{
-    font-size: 15px!Important;
+    font-size: 15px!important;
   }
   .menu-btn {
     display: block;
@@ -494,6 +494,8 @@ opacity: 0;
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
+  
+ 
   .skills .skills-content .column,
   .contact .contact-content .column {
     width: 100%;
@@ -542,7 +544,9 @@ opacity: 0;
 .qualification_active {
   flex-direction: column;
 }
-
+.contact{
+  margin: 0px;
+}
 #quali-data {
   width: 100%;
   margin-bottom: 20px;
@@ -561,7 +565,7 @@ opacity: 0;
   .skills .skills-content .left .text {
     font-size: 19px;
   }
-
+   
   .scroll-up-btn {
     right: 15px;
     bottom: 15px;
@@ -590,7 +594,7 @@ opacity: 0;
 #about-text {
   font-size: 10px;
 }
-
+ 
 #skill-text {
   font-size: 15px;
 }
@@ -629,7 +633,7 @@ opacity: 0;
   font-size: 18px;
 }
 #certification-title::after{
-  font-size: 18px;
+  font-size: 13px!important;
 }
 #about-title::after{
   font-size: 18px;
@@ -664,7 +668,7 @@ opacity: 0;
   font-size: 15px;
 }
 #certification-title::after{
-  font-size: 15px;
+  font-size: 13px!important;
 }
 #about-title::after{
   font-size: 15px;
@@ -681,7 +685,9 @@ opacity: 0;
 #contact-title::after{
   font-size: 15px;
 }
-
+.contact{
+  margin: 0px;
+}
 }
 
 
