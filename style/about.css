@@ -88,7 +88,7 @@ section .certification-title::after {
   width: 40%;
 }
 .about .about-content .left img {
-  height: 400px;
+  height: 450px;
   width: 400px;
   object-fit: cover;
   border-radius: 6px;
@@ -106,7 +106,7 @@ section .certification-title::after {
 }
 .about .about-content .right p {
   text-align: justify;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .about-count{
@@ -309,10 +309,16 @@ width: 28%;
 background-color:  rgba(133, 205, 210, 0.254);
 cursor:default;
 }
-
+.quali-data {
+color: #111;
+}
 .white-quali-data {
 background-color:  rgba(133, 205, 210, 0.254);
 }
+.white-quali-data a {
+color: #111;
+}
+
 .dark-quali-data {
 background-color:   rgba(130, 245, 234, 0.199); 
 }
@@ -321,6 +327,9 @@ background-color:   rgba(130, 245, 234, 0.199);
 }
 .dark-quali-data i {
   color: #0d9ebfcf;
+}
+.dark-quali-data a {
+  color: #ffffffbf;
 }
 .quali-data:hover {
 
