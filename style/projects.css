@@ -142,7 +142,7 @@ transition: all 0.3s ease;
 }
 
 .card-text{
-  font-size: calc(8px + 0.3vw);
+  font-size: calc(8px + 0.25vw);
   padding: 20px;
   padding-top: 10px;
   padding-bottom: 20px;
@@ -151,7 +151,7 @@ transition: all 0.3s ease;
 }
 
 .card-tag{
-  font-size: calc(6px + 0.3vw);
+  font-size: calc(5px + 0.25vw);
  width: 80%;
   display: flex;
   justify-content: space-between;
