@@ -60,7 +60,9 @@ section .quali-title::after {
  
   transform: translateX(-50%);
 }
-
+.about .certi-show-button{
+  cursor: pointer !important;
+}
 .about .certification-title::after {
   content: "Achivements & Milestones";
     
@@ -528,6 +530,7 @@ transition: all 0.3s ease-in-out;
   border-radius: 6px;
   border: 2px solid #0088a9;
   transition: all 1s ease;
+  cursor: pointer;
 
 }
 .showmore:hover {
