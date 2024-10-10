@@ -278,12 +278,17 @@ var contactsubTitle = document.getElementsByClassName("sub-title");
 var inputSpan = document.getElementsByClassName("input-span");
 var input = document.getElementsByClassName("input");
 var certificates = document.getElementById("certificates");
+var videoDescriptions = document.getElementsByClassName("video-ques-div");
   if(element.classList.contains("fa-moon"))
    {
 
     body.classList.add("dark-body");
     body.classList.remove("white-body");
-  
+    for (var i = 0; i < videoDescriptions.length; i++) {
+      videoDescriptions[i].classList.add("dark");
+      videoDescriptions[i].classList.remove("white");
+        }
+
     for (var i = 0; i < projectCard.length; i++) {
     projectCard[i].classList.add("dark-card");
     projectCard[i].classList.remove("white-card");
@@ -308,29 +313,58 @@ var certificates = document.getElementById("certificates");
       input[i].classList.add("dark-input");
       input[i].classList.remove("white-input");
     }
-
-    qualiEdu.classList.add("dark-text");
+    if(qualiEdu!=null)
+    {
+      qualiEdu.classList.add("dark-text");
     qualiEdu.classList.remove("white-text");
+    }
+    
+    if(qualiWork!=null)
+    {
     qualiWork.classList.add("dark-text");
     qualiWork.classList.remove("white-text");
-
+    }
+    if(certificates!=null)
+    {
     certificates.classList.add("dark-certificate");
     certificates.classList.remove("white-certificate");
+    }
     /*title color change*/
+    if(contactTitle!=null)
+    {
     contactTitle.classList.add("title-black");
     contactTitle.classList.remove("title-white");  
+    }
+    if(projectTitle!=null)
+    {
     projectTitle.classList.add("title-black");
     projectTitle.classList.remove("title-white");  
+    }
+    if(qualiTitle!=null)
+    {
     qualiTitle.classList.add("title-black");
     qualiTitle.classList.remove("title-white");  
+    }
+    if(certificationTitle!=null)
+    {
      certificationTitle.classList.add("title-black");
-     certificationTitle.classList.remove("title-white");  
+     certificationTitle.classList.remove("title-white"); 
+    }
+    if(aboutTitle!=null)
+    { 
     aboutTitle.classList.add("title-black");
     aboutTitle.classList.remove("title-white");  
+    }
+    if(skillTitle!=null)
+    {
     skillTitle.classList.add("title-black");
     skillTitle.classList.remove("title-white");   
+    }
+    if(publicationTitle!=null)
+    {
     publicationTitle.classList.add("title-black");
     publicationTitle.classList.remove("title-white");
+    }
 /*button change*/ 
 element.classList.remove("fa-moon");
 element.classList.add("fa-lightbulb");  
@@ -340,7 +374,10 @@ element.classList.add("fa-lightbulb");
 
     body.classList.remove("dark-body");
     body.classList.add("white-body");
-     
+    for (var i = 0; i < videoDescriptions.length; i++) {
+      videoDescriptions[i].classList.add("white");
+      videoDescriptions[i].classList.remove("dark");
+        }
 for (var i = 0; i < projectCard.length; i++) {
   projectCard[i].classList.remove("dark-card");
   projectCard[i].classList.add("white-card");
@@ -362,28 +399,57 @@ for (var i = 0; i < contactsubTitle.length; i++) {
           input[i].classList.remove("dark-input");
           input[i].classList.add("white-input");
         }
-    
-qualiEdu.classList.remove("dark-text");
-qualiEdu.classList.add("white-text");
-qualiWork.classList.remove("dark-text");
-qualiWork.classList.add("white-text");
+        if(qualiEdu!=null)
+        { 
+        qualiEdu.classList.remove("dark-text");
+        qualiEdu.classList.add("white-text");
+        }
+        if(qualiWork!=null)
+    {
+      qualiWork.classList.remove("dark-text");
+      qualiWork.classList.add("white-text");
+    }
+    if(certificates!=null)
+    {
 certificates.classList.remove("dark-certificate");
 certificates.classList.add("white-certificate");
+    }
     /*title color change*/
+    if(contactTitle!=null)
+    {
     contactTitle.classList.remove("title-black");
     contactTitle.classList.add("title-white");
+    }
+    if(projectTitle!=null)
+    {
     projectTitle.classList.remove("title-black");
     projectTitle.classList.add("title-white");
+    }
+    if(qualiTitle!=null)
+    {
     qualiTitle.classList.remove("title-black");
     qualiTitle.classList.add("title-white");
+    }
+    if(certificationTitle!=null)
+    {
     certificationTitle.classList.remove("title-black");
     certificationTitle.classList.add("title-white");
+    }
+    if(aboutTitle!=null)
+    {
     aboutTitle.classList.remove("title-black");
     aboutTitle.classList.add("title-white");
+    }
+    if(skillTitle!=null)
+    {
     skillTitle.classList.remove("title-black");
     skillTitle.classList.add("title-white");
+    }
+    if(publicationTitle!=null)
+    {
     publicationTitle.classList.remove("title-black");
     publicationTitle.classList.add("title-white");
+    }
 /*button change*/ 
 element.classList.remove("fa-lightbulb");
 element.classList.add("fa-moon");  
