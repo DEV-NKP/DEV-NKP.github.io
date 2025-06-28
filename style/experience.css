@@ -1,0 +1,208 @@
+.experience-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.about .work-title::after { content: "Professional Experience"; }
+section .work-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 250px;
+    height: 3px;
+    transform: translateX(-50%);
+}
+section .work-title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #0088a9;
+    padding: 0 5px;
+    transform: translateX(-50%);
+}
+
+.timeline {
+    position: relative;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #0088a9, #ff6b6b);
+    box-shadow: 0 0 15px rgba(0, 136, 169, 0.5);
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Informative Message */
+.hover-info {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.experience {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 80px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px; /* Ensure consistent height for alignment */
+}
+
+.experience.odd {
+    flex-direction: row;
+}
+.experience.even {
+    flex-direction: row-reverse;
+}
+
+.date {
+    flex: 1;
+    font-size: 1.1em;
+    padding: 10px 20px; /* Gap from dot */
+    text-align: right; /* Right align for odd */
+    max-width: 40%; /* Prevent overlap */
+}
+.experience.even .date {
+    text-align: left; /* Left align for even */
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    background-color: #0088a9;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 136, 169, 0.5);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: transform 0.5s ease, background-color 0.5s ease; /* Add transition for smooth animation */
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.5); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+.experience:hover .dot {
+    animation: pulse 1.5s infinite; /* 1.5s duration, infinite loop */
+    background-color: #0088a9; /* Change color on hover */
+}
+
+
+.position-card {
+    flex: 1;
+    background: #e2e6ea;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #0088a9;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Left align for odd */
+    margin-left: 45px; /* Gap from dot for odd */
+    max-width: 40%; /* Prevent overlap */
+    z-index: 100;
+    cursor: pointer;
+}
+ .dark-work-data .position-card {
+            background: #0b0b1c;
+           }
+.experience.even .position-card {
+    text-align: right; /* Right align for even */
+    margin-left: 0;
+    margin-right: 45px; /* Gap from dot for even */
+}
+.position-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.position {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.company {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #0088a9;
+    display: block;
+    margin-bottom: 15px;
+    transition: text-decoration 0.3s ease;
+}
+.company:hover {
+    text-decoration: underline;
+}
+.description {
+    font-size: 0.95em;
+    line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 1s ease, opacity 1s ease;
+    text-align: left; /* Always left-aligned */
+}
+.position-card:hover .description {
+    max-height: 500px; /* Large enough to accommodate content */
+    opacity: 1;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    @keyframes pulse {
+    0% { transform:  scale(1); }
+    50% { transform:  scale(1.5); }
+    100% { transform:  scale(1); }
+}
+    .experience.odd {
+display: block;
+}
+.experience.even {
+    display: block;
+}
+    .timeline::before {
+        left: 8px; /* Center of the 16px dot */
+    }
+    .experience {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto; /* Remove fixed height */
+        padding-left: 40px; /* Gap from dot and line */
+    }
+    .date {
+        min-width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+        padding-left: 0; /* Reset padding */
+    }
+    .dot {
+        left: 0px; /* Align with timeline */
+        top: 20px; /* Adjust to top of date */
+        transform: translate(0, -50%);
+    }
+    .position-card {
+        min-width: 100%;
+        text-align: left;
+        margin-top: 0;
+        margin-left: 0; 
+        /* padding-left: 0;  */
+    }
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <title>Case Study - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #14b8a6;
+      --secondary: #f43f5e;
+      --bg-light: #f9fafb;
+      --bg-dark: #1e293b;
+      --text-light: #1e293b;
+      --text-dark: #f1f5f9;
+    }
+    [data-theme="dark"] {
+      --bg-light: #1e293b;
+      --bg-dark: #0f172a;
+      --text-light: #f1f5f9;
+      --card-bg: #334155;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, var(--bg-light), var(--bg-dark));
+      color: var(--text-light);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .tech-badge {
+      background: var(--primary);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      margin: 0.25rem;
+    }
+    .theme-toggle {
+      background: var(--primary);
+      padding: 0.5rem;
+      border-radius: 9999px;
+      transition: background 0.3s ease;
+    }
+    .theme-toggle:hover {
+      background: var(--secondary);
+    }
+  </style>
+</head>
+<body data-theme="light">
+  <section class="py-20" aria-labelledby="case-study-title" itemscope itemtype="https://schema.org/Project">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center mb-12">
+        <h1 id="case-study-title" class="text-4xl sm:text-5xl font-bold text-[var(--text-light)]"></h1>
+        <button class="theme-toggle text-white p-2 rounded-full" onclick="toggleTheme()" aria-label="Toggle dark mode">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+        </button>
+      </div>
+      <div id="case-study-content" class="bg-white rounded-lg p-6 sm:p-8 [data-theme=dark]:bg-[var(--card-bg)]">
+        <div id="content-body"></div>
+        <a href="/case-studies" class="mt-6 inline-block bg-[var(--primary)] text-white px-5 py-2 rounded-full hover:bg-[var(--secondary)] transition-colors" aria-label="Back to all case studies">Back to Case Studies</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const caseStudies = {
+      project1: {
+        title: "E-Commerce Platform",
+        slug: "e-commerce-platform",
+        description: "Case study on a scalable e-commerce platform built with React, Node.js, MongoDB, and AWS.",
+        keywords: "e-commerce case study, React, Node.js, MongoDB, AWS, web development",
+        ogTitle: "E-Commerce Platform Case Study",
+        ogDescription: "Learn how a scalable e-commerce solution was built with React and AWS.",
+        ogImage: "https://yourportfolio.com/e-commerce-screenshot.jpg",
+        problem: "The client needed a high-performance platform to handle peak traffic and improve user retention.",
+        solution: "Developed a full-stack solution with React, Node.js, and MongoDB, deployed on AWS with CI/CD pipelines for scalability and performance.",
+        technologies: ["React", "Node.js", "MongoDB", "AWS", "Redux"],
+        outcomes: "Achieved 99.9% uptime, reduced cart abandonment by 20%, and boosted user retention by 15%.",
+        visuals: ["https://via.placeholder.com/800x400"]
+      },
+      project2: {
+        title: "Inventory Management System",
+        slug: "inventory-management",
+        description: "Case study on an efficient inventory management system built with Python, Django, and PostgreSQL.",
+        keywords: "inventory management case study, Python, Django, PostgreSQL, web development",
+        ogTitle: "Inventory Management System Case Study",
+        ogDescription: "Discover how a Python-based system streamlined warehouse operations.",
+        ogImage: "https://yourportfolio.com/inventory-screenshot.jpg",
+        problem: "Manual inventory tracking caused errors and delays in warehouse operations.",
+        solution: "Built a Python and Django-based system with PostgreSQL for real-time updates and reporting.",
+        technologies: ["Python", "Django", "PostgreSQL", "JavaScript"],
+        outcomes: "Reduced errors by 30% and improved processing time by 25%.",
+        visuals: ["https://via.placeholder.com/800x400"]
+      },
+      project3: {
+        title: "Healthcare Dashboard",
+        slug: "healthcare-dashboard",
+        description: "Case study on a real-time healthcare dashboard built with Angular, TypeScript, and Firebase.",
+        keywords: "healthcare dashboard case study, Angular, TypeScript, Firebase, web development",
+        ogTitle: "Healthcare Dashboard Case Study",
+        ogDescription: "Explore a real-time patient data visualization solution.",
+        ogImage: "https://yourportfolio.com/healthcare-screenshot.jpg",
+        problem: "Hospital required real-time patient data visualization for faster decisions.",
+        solution: "Created an Angular-based dashboard with TypeScript and Firebase, using Chart.js for visuals.",
+        technologies: ["Angular", "TypeScript", "Firebase", "Chart.js"],
+        outcomes: "40% faster data access, improved clinical efficiency.",
+        visuals: ["https://via.placeholder.com/800x400"]
+      }
+    };
+
+    function getCaseIdFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('caseId');
+    }
+
+    function updateMetadata(project) {
+      document.querySelector('title').textContent = `${project.title} Case Study - Portfolio`;
+      document.querySelector('meta[name="description"]').setAttribute('content', project.description);
+      document.querySelector('meta[name="keywords"]').setAttribute('content', project.keywords);
+      document.querySelector('meta[property="og:title"]').setAttribute('content', project.ogTitle);
+      document.querySelector('meta[property="og:description"]').setAttribute('content', project.ogDescription);
+      document.querySelector('meta[property="og:url"]').setAttribute('content', `https://yourportfolio.com/case-study?caseId=${project.slug}`);
+      document.querySelector('meta[property="og:image"]').setAttribute('content', project.ogImage);
+    }
+
+    function renderCaseStudy() {
+      const caseId = getCaseIdFromUrl();
+      const project = caseStudies[caseId];
+      if (!project) {
+        document.getElementById('content-body').innerHTML = '<p class="text-[var(--text-light)]">Case study not found.</p>';
+        return;
+      }
+
+      // Update metadata for SEO
+      updateMetadata(project);
+
+      // Update page content
+      document.getElementById('case-study-title').textContent = project.title;
+      document.getElementById('content-body').innerHTML = `
+        <img src="${project.visuals[0]}" alt="${project.title} screenshot" class="w-full h-64 sm:h-96 object-cover rounded-lg mb-6" loading="lazy" itemprop="image">
+        <h2 class="text-2xl font-semibold text-[var(--text-light)] mb-4">Problem Statement</h2>
+        <p class="text-[var(--text-light)] opacity-75 mb-6" itemprop="description">${project.problem}</p>
+        <h2 class="text-2xl font-semibold text-[var(--text-light)] mb-4">Solution</h2>
+        <p class="text-[var(--text-light)] opacity-75 mb-6">${project.solution}</p>
+        <h2 class="text-2xl font-semibold text-[var(--text-light)] mb-4">Technologies Used</h2>
+        <div class="flex flex-wrap gap-2 mb-6">
+          ${project.technologies.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
+        </div>
+        <h2 class="text-2xl font-semibold text-[var(--text-light)] mb-4">Outcomes</h2>
+        <p class="text-[var(--text-light)] opacity-75">${project.outcomes}</p>
+      `;
+    }
+
+    function toggleTheme() {
+      const theme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.body.setAttribute('data-theme', theme);
+    }
+
+    // Render case study on page load
+    window.onload = renderCaseStudy;
+  </script>
+</body>
+</html>

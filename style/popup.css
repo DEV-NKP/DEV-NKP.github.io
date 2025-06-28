@@ -118,7 +118,7 @@ animation: 5s rotate linear infinite;
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 9999;
+    z-index: 500;
     font-family: "Poppins", sans-serif;
     background:  linear-gradient(to right,rgba(212, 70, 70, 0.308), rgba(4, 38, 124, 0.745));
     background-blend-mode: saturation;
@@ -213,6 +213,7 @@ max-height: 80%;
     border-radius: 6px;
     border: 2px solid #0088a9;
     transition: all 1s ease;
+    cursor: pointer;
   }
   .certificate-button:hover {
     color: #0088a9;

@@ -1,0 +1,115 @@
+        .edu-experience-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            position: relative;
+        }
+  .about .edu-title::after { content: "Educational Qualifications"; }
+section .edu-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 280px;
+    height: 3px;
+    transform: translateX(-50%);
+}
+section .edu-title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #0088a9;
+    padding: 0 5px;
+    transform: translateX(-50%);
+}
+
+        .edu-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 80px;
+        }
+        .edu-card {
+            background: #e2e6ea;
+            width: 250px;
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid #0088a9;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            overflow: visible;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+           .dark-edu-data .edu-card {
+            background: #0b0b1c;
+           }
+        .edu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .edu-icon-container {
+            width: 80px;
+            height: 80px;
+            background: #e2e6ea;
+            border-radius: 50%;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid #0088a9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: edu-float 2s ease-in-out infinite;
+        }
+         .dark-edu-data .edu-icon-container {
+            background: #0b0b1c;
+           }
+        @keyframes edu-float {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+        .edu-icon-container i {
+            font-size: 2em;
+            color: #0088a9;
+        }
+        .edu-date {
+            font-size: 0.9em;
+            margin-top: 40px;
+            margin-bottom: 5px;
+        }
+        .edu-position {
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .edu-company {
+            text-decoration: none;
+            color: #006d87;
+            font-size: 1em;
+            display: block;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+        .edu-company:hover {
+            color: #006c87be;
+        }
+
+     
+        @media (max-width: 768px) {
+            .edu-cards {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+            .edu-card {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }

@@ -11,7 +11,38 @@
 html {
   scroll-behavior: smooth;
 }
+:root {
+      --primary: #4f46e5;    /* Blue color for default cursor */
+      --secondary: #a855f7;  /* Purple color for hovered cursor */
+    }
 
+    /* Basic body styles to hide default cursor and ensure visibility */
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f3f4f6;    /* Light gray background */
+      /*cursor: none;*/           /* Hide default cursor */
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;      /* Ensure the page has height to move cursor */
+    }
+
+    /* Styles for the custom cursor */
+    .custom-cursor {
+      position: fixed;        /* Stays at mouse position */
+      width: 20px;
+      height: 20px;
+      background: radial-gradient(circle, var(--primary) 20%, transparent 80%);
+      border-radius: 50%;     /* Circular shape */
+      pointer-events: none;   /* Prevents cursor from interfering with clicks */
+      z-index: 9999;          /* Ensures cursor is on top */
+      transition: transform 0.2s ease;  /* Smooth scaling on hover */
+    }
+
+    /* Hover state for the cursor */
+    .custom-cursor.hovered {
+      transform: scale(1.5);  /* Enlarges cursor */
+      background: radial-gradient(circle, var(--secondary) 20%, transparent 80%);
+    }
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -83,9 +114,15 @@ overflow-y:auto;
 
 section {
   padding-top: 100px;
+
 }
 .max-width {
   max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+.max-width2 {
+  max-width: 90%;
   padding: 0 80px;
   margin: auto;
 }
@@ -109,7 +146,8 @@ footer {
 }
 section .title,
 .skill-title,
-.quali-title,
+.edu-title,
+.work-title,
 .certification-title,
 .projects-title,
 .publication-title{
@@ -209,7 +247,7 @@ section .title,
 
 
 
-.home .max-width {
+.home .max-width{
   width: 100%;
   display: flex;
 }
@@ -394,7 +432,7 @@ opacity: 0;
     font-size: 23px;
     padding: 10px 30px;
   }
-  .max-width {
+  .max-width, .max-width2{
     max-width: 930px;
     
   }
@@ -424,7 +462,7 @@ opacity: 0;
 }
 
 @media (max-width: 991px) {
-  .max-width {
+  .max-width, .max-width2 {
     padding: 0 50px;
   }
 }
@@ -472,7 +510,7 @@ opacity: 0;
     font-size: 23px;
     padding: 10px 30px;
   }
-  .max-width {
+  .max-width, .max-width2 {
     max-width: 930px;
   }
   .about .about-content .column {
@@ -523,7 +561,7 @@ opacity: 0;
 }
 
 @media (max-width: 690px) {
-  .max-width {
+  .max-width, .max-width2 {
     padding: 0 23px;
   }
   .home .home-content .text-2 {
@@ -541,13 +579,12 @@ opacity: 0;
   .publication .publication-content .card {
     width: 100%;
   }
-.qualification_active {
-  flex-direction: column;
-}
+
 .contact{
   margin: 0px;
 }
-#quali-data {
+#edu-data,
+#work-data {
   width: 100%;
   margin-bottom: 20px;
 }
@@ -600,16 +637,8 @@ opacity: 0;
 }
 
 
-#quali-edu, #quali-work{
-
-  font-size: 16px;
-}
-
-.qualification_active {
-  flex-direction: column;
-}
-
-#quali-data {
+#edu-data,
+#work-data{
   width: 100%;
   margin-bottom: 20px;
 }
@@ -629,7 +658,10 @@ opacity: 0;
   width: 200%;
 }
 
-#quali-title::after{
+#edu-title::after{
+  font-size: 18px;
+}
+#work-title::after{
   font-size: 18px;
 }
 #certification-title::after{
@@ -664,7 +696,10 @@ opacity: 0;
 @media (max-width: 400px) {
 
 
-#quali-title::after{
+#edu-title::after{
+  font-size: 15px;
+}
+#work-title::after{
   font-size: 15px;
 }
 #certification-title::after{

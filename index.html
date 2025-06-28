@@ -40,6 +40,10 @@
     <link rel="stylesheet" href="style/contact.css" />
     <link rel="stylesheet" href="style/publication.css" />
     <link rel="stylesheet" href="style/popup.css" />
+    <link rel="stylesheet" href="style/experience.css" />
+    <link rel="stylesheet" href="style/education.css" />
+    <link rel="stylesheet" href="style/skill.css" />
+    <link rel="stylesheet" href="style/professional_projects.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"/>
 
  <!-- Schema for a person entity (Niloy Kanti Paul) -->
@@ -781,9 +785,12 @@
   ]
      </script>
   
-      
+        <script src="https://cdn.tailwindcss.com"></script>
+
  <!-- Google tag (gtag.js) -->
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-48TDTQMGNW"></script>
+
+ 
  <script>
    window.dataLayer = window.dataLayer || [];
    function gtag(){dataLayer.push(arguments);}
@@ -791,13 +798,9 @@
    gtag('config', 'G-48TDTQMGNW');
  </script>
 
-
-
-
-
-
   </head>
   <body id="body" class="white-body" >
+    <div class="custom-cursor" id="cursor"></div>
     <header>
        
       <div>
@@ -832,9 +835,11 @@ NILOY KANTI PAUL</pre></a>
           </li>
 
           <li>
-            <a href="#qualifications">Qualifications</a>
+            <a href="#educations">Educations</a>
           </li>
-         
+         <li>
+            <a href="#experiences">Experiences</a>
+          </li>
         
           <li>
             <a href="#projects">Projects</a>
@@ -921,12 +926,12 @@ NILOY KANTI PAUL</pre></a>
                   <span
                     class="count-pro"
                     style="font-weight: bold; text-align: center"
-                    >10</span
-                  ><br />
+                    >25</span
+                  ><b>+</b><br />
                   Completed <br />Projects
                 </p>
                 <p id="text-count" style="text-align: center">
-                  <span class="count-exp" style="font-weight: bold">1.5</span
+                  <span class="count-exp" style="font-weight: bold">2+</span
                   ><br />Years <br />Experience
                 </p>
                 <p id="text-count" style="text-align: center">
@@ -941,12 +946,14 @@ NILOY KANTI PAUL</pre></a>
             </div>
           </div>
         </div>
+       </div>
         <!--Skill-->
+        <div class="max-width2">
         <section id="skills">
+       
           <div class="skills">
-            <h3 id="skill-title" class="skill-title title-white reveal TTB">Skills</h3>
 
-            <div id="skill-text" class="skill-text reveal BTT">
+            <!-- <div id="skill-text" class="skill-text reveal BTT">
               I have completed some projects in different programming languages
               and different tools or IDE. I have already acquired some knowledge
               about those and trying to learn more with time. I am very happy to
@@ -958,152 +965,93 @@ NILOY KANTI PAUL</pre></a>
               communication & leadership.
                <br /><br />
               <b>Research Interests:</b> Artificial Intelligence, Machine Learning, Automation System, Internet of Things.
-            </div>
+            </div> -->
 
-            <div class="skills-content">
-              <div class="column left reveal LTR show-percent">
-                <div class="bars">
-                  <div class="info">
-                    <span>
-                     
-                        <img src="./resources/icons/c.svg" class="skill-icon" alt="C Programming Language Icon - Niloy's Expertise in C Development and Software Engineering">
 
-             
-                      <span class="skill-icon-text"> C</span>
-                    </span>
-                    <span class="c-text">95%</span>
-                  </div>
-                  <div class="line">
-                    <div class="c"></div>
-                  </div>
+ <div class="exp-skill-container">
+              <h3 id="skill-title" class="skill-title title-white reveal TTB">Skills</h3>
+
+        <div class="exp-skill-details">
+            <h4>My Expertise</h3>
+            <p>I have completed some projects in different programming languages
+              and different tools or IDE. I have already acquired some knowledge
+              about those and trying to learn more with time. I am very happy to
+              work with others.
+              <br />
+              My hobby is playing games in my free time.
+              <br /><br />
+              <span class="accent">Other Skills:</span> Interpersonal skills, collaboration,
+              communication & leadership.
+               <br /><br />
+              <span class="accent">Research Interests:</span> Artificial Intelligence, Machine Learning, Automation System, Internet of Things.
+              </p>
+        </div>
+        <div class="exp-skill-system">
+            <div class="exp-skill-core"> <img src="resources/images/niloy_PP_Square.jpg" alt="Niloy Kanti Paul - Software Developer, Full Stack Developer, CRM Solutions Specialist" /></div>
+        
+            <div class="exp-skill-orbit" id="prog-lang-orbit" style="--radius: clamp(10vmin, 12.5vmin, 100px);">
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(0deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="C"><img src="./resources/icons/c.svg" alt="C"></div>
                 </div>
-                <div class="bars">
-                  <div class="info">
-                    <span>
-                     
-                        <img src="./resources/icons/cpp.svg" class="skill-icon" alt="Showcasing Niloy's proficiency in C++ programming, emphasizing skills in object-oriented design, algorithm development, and efficient system-level programming for performance optimization.">
-                  
-                      <span class="skill-icon-text"> C++</span>
-                    </span>
-                    <span class="cpp-text">90%</span>
-                  </div>
-                  <div class="line"><div class="cpp"></div></div>
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(72deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="C++"><img src="./resources/icons/cpp.svg" alt="C++"></div>
                 </div>
-                <div class="bars">
-                  <div class="info">
-                    <span>
-                        <img src="./resources/icons/C-Sharp.svg" class="skill-icon" alt="Highlighting Niloy's expertise in C# development, showcasing skills in object-oriented programming, .NET framework applications, and innovative solutions in software development." />
-                      <span class="skill-icon-text">
-                        C#</span>
-                      </span>
-                    <span class="cs-text">85%</span>
-                  </div>
-                  <div class="line"><div class="cs"></div></div>
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(144deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="C#"><img src="./resources/icons/C-Sharp.svg" alt="C#"></div>
                 </div>
-                <div class="bars">
-                  <div class="info">
-                    <span>
-                      <img src="./resources/icons/java.svg"  class="skill-icon" alt="Showcasing Niloy's proficiency in Java development, featuring expertise in object-oriented programming, multithreading, and full-stack application development using Java frameworks.">
-                      <span class="skill-icon-text">
-                        JAVA</span>
-                      </span>
-                    <span class="java-text">80%</span>
-                  </div>
-                  <div class="line"><div class="java"></div></div>
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(216deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="Java"><img src="./resources/icons/java.svg" alt="JAVA"></div>
                 </div>
-                <div class="bars">
-                  <div class="info">
-                    <span>
-                      <img src="./resources/icons/python.svg"  class="skill-icon" alt="Highlighting Niloy's expertise in Python programming, showcasing skills in data analysis, web development, and automation, along with proficiency in popular libraries such as Pandas, NumPy, and Flask.">
-                      <span class="skill-icon-text">
-                        Python</span>
-                      </span>
-                    <span class="py-text">60%</span>
-                  </div>
-                  <div class="line"><div class="py"></div></div>
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(288deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="Python"><img src="./resources/icons/python.svg" alt="Python"></div>
                 </div>
-                <div class="bars">
-                  <div class="info">
-                    <span>
-                      <img src="./resources/icons/asp-net.svg"  class="skill-icon" alt="Showcasing Niloy's proficiency in ASP.NET development, including expertise in building dynamic web applications, implementing MVC architecture, and utilizing Entity Framework for data management and manipulation.">
-                      <span class="skill-icon-text">
-                        ASP.NET</span>
-                      </span>
-                    <span class="aspnet-text">80%</span>
-                  </div>
-                  <div class="line"><div class="aspnet"></div></div>
-                </div>
-              </div>
-              <div class="column right reveal RTL show-percent">
-                <div class="bars">
-                  <div class="info">
-                    <span>
-                      <img src="./resources/icons/html.svg" class="skill-icon" alt="Displaying Niloy's expertise in HTML development, showcasing skills in creating structured and semantic web pages, utilizing HTML5 features, and ensuring cross-browser compatibility for enhanced user experience.">
-                      <span class="skill-icon-text">
-                        HTML</span>
-                      </span>
-                    <span class="html-text">98%</span>
-                  </div>
-                  <div class="line"><div class="html"></div></div>
-                </div>
-                <div class="bars">
-                  <div class="info">
-                    <span>
-                      <img src="./resources/icons/css.svg"  class="skill-icon" alt="Showcasing Niloy's proficiency in CSS, highlighting the ability to design responsive and visually appealing layouts, implement modern CSS techniques, and enhance web applications through effective styling and animations.">
-                      <span class="skill-icon-text">
-                        CSS</span>
-                      </span>
-                    <span class="css-text">95%</span>
-                  </div>
-                  <div class="line"><div class="css"></div></div>
-                </div>
-                <div class="bars">
-                  <div class="info">
-                    <span>
-                      <img src="./resources/icons/javascript.svg"  class="skill-icon" alt="Highlighting Niloy's expertise in JavaScript, showcasing the ability to develop interactive web applications, utilize asynchronous programming, and implement dynamic features using modern frameworks and libraries.">
-                      <span class="skill-icon-text">
-                        Java Script
-                      </span>
-                     </span>
-                    <span class="js-text">80%</span>
-                  </div>
-                  <div class="line"><div class="js"></div></div>
-                </div>
-                <div class="bars">
-                  <div class="info">
-                    <span>
-                      <img src="./resources/icons/php.svg"  class="skill-icon" alt="Showcasing Niloy's proficiency in PHP, illustrating the ability to build robust server-side applications, manage databases, and create dynamic web pages with seamless user experiences.">
-                      <span class="skill-icon-text">
-                        PHP</span>
-                      </span>
-                    <span class="php-text">85%</span>
-                  </div>
-                  <div class="line"><div class="php"></div></div>
-                </div>
-                <div class="bars">
-                  <div class="info">
-                    <span>
-                      <img src="./resources/icons/mysql.svg" class="skill-icon" alt="Highlighting Niloy's expertise in MySQL, demonstrating the ability to design and manage databases, execute complex queries, and ensure data integrity and security for efficient data handling in web applications.">
-                      <span class="skill-icon-text">
-                        MySQL</span>
-                      </span>
-                    <span class="mysql-text">75%</span>
-                  </div>
-                  <div class="line"><div class="mysql"></div></div>
-                </div>
-                <div class="bars">
-                  <div class="info">
-                    <span>
-                      <img src="./resources/icons/sql-database.svg"  class="skill-icon" alt="Showcasing Niloy's proficiency in SQL Server, emphasizing the ability to design robust databases, optimize queries for performance, implement security measures, and utilize advanced features like stored procedures and triggers for efficient data management.">
-                      <span class="skill-icon-text">
-                        SQL Server</span>
-                      </span>
-                    <span class="sqlserver-text">70%</span>
-                  </div>
-                  <div class="line"><div class="sqlserver"></div></div>
-                </div>
-              </div>
             </div>
+           
+            <div class="exp-skill-orbit" id="frameworks-orbit" style="--radius: clamp(15vmin, 20vmin, 160px);">
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(0deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="React"><img src="./resources/icons/react-original.svg" alt="React"></div>
+                </div>
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(72deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="Node.js"><img src="./resources/icons/nodejs.svg" alt="Node.js"></div>
+                </div>
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(144deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="Salesforce"><img src="./resources/icons/salesforce.svg" alt="Salesforce"></div>
+                </div>
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(216deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="Spring"><img src="./resources/icons/spring.svg" alt="Spring"></div>
+                </div>
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(288deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="ASP.NET"><img src="./resources/icons/asp-net.svg" alt="ASP.NET"></div>
+                </div>
+            </div>
+             <div class="exp-skill-orbit" id="web-dev-orbit"  style="--radius: clamp(20vmin, 27.5vmin, 220px);">
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(0deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="HTML5"><img src="./resources/icons/html.svg" alt="HTML5"></div>
+                </div>
+                
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(72deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="TypeScript"><img src="./resources/icons/typescript.svg" alt="TypeScript"></div>
+                </div>
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(144deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="CSS3"><img src="./resources/icons/css.svg" alt="CSS3"></div>
+                </div>
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(216deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="JavaScript"><img src="./resources/icons/javascript.svg" alt="JavaScript"></div>
+                </div>
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(288deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="PHP"><img src="./resources/icons/php.svg" alt="PHP"></div>
+                </div>
+            </div>
+            <div class="exp-skill-orbit" id="databases-orbit" style="--radius: clamp(25vmin, 35vmin, 280px);">
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(0deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="MySQL"><img src="./resources/icons/mysql.svg" alt="My SQL"></div>
+                </div>
+                <div class="exp-skill-icon-wrapper" style="transform: rotate(180deg) translate(0, calc(-1 * var(--radius)));">
+                    <div class="exp-skill-icon" data-skill="SQL Server"><img src="./resources/icons/sql-database.svg" alt="SQL Server"></div>
+                </div>
+            </div>
+        </div>
+    </div>        
             <div id="skill-text" class="skill-text reveal BTT">
              
               <br /><br />
@@ -1111,6 +1059,11 @@ NILOY KANTI PAUL</pre></a>
             </div>
  <div id="skill-text" class="other-skill-image-div skill-text ">
 <div class="other-skill-div reveal LTR">
+      <div  class="other-skill-link">
+        <img src="./resources/icons/spring.svg"  class="other-skill-icon" alt="This portfolio highlights Niloy's expertise in the Spring Framework, showcasing his skills in building robust and scalable Java applications. It features projects that demonstrate his proficiency in Spring Boot, dependency injection, RESTful services, and security features. The portfolio emphasizes best practices in software development and the use of Spring's modular architecture to create efficient solutions.">
+    </div>
+    <div  class="other-skill-link">  <img src="./resources/icons/salesforce.svg"  class="other-skill-icon" alt="This portfolio showcases Niloy's proficiency in Salesforce, including expertise in Apex programming, Flow automation, and various Salesforce clouds such as Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, and Partner Cloud. It highlights his ability to implement custom solutions, streamline business processes, and enhance user experiences across multiple Salesforce platforms, demonstrating a comprehensive understanding of Salesforce development and administration.">
+    </div>
  <div  class="other-skill-link">
   <img src="./resources/icons/nodejs.svg"  class="other-skill-icon" alt="Highlighting Niloy's expertise in Node.js, demonstrating skills in building scalable web applications, utilizing asynchronous programming, managing server-side logic, and integrating with databases to create robust and efficient back-end solutions.">
  </div>
@@ -1122,35 +1075,28 @@ NILOY KANTI PAUL</pre></a>
  <div  class="other-skill-link">
    <img src="./resources/icons/nextjs.svg"  class="other-skill-icon" alt="Highlighting Niloy's expertise in Next.js, showcasing the creation of performant and user-friendly React applications with server-side rendering (SSR) and static site generation (SSG). The portfolio emphasizes skills in building dynamic web interfaces, optimizing performance, and leveraging Next.js features like API routes and automatic code splitting to enhance the user experience.">
 </div>
-<div  class="other-skill-link">
-   <img src="./resources/icons/git.svg"  class="other-skill-icon" alt="Showcasing Niloy's proficiency in Git version control, emphasizing collaborative coding practices, efficient branch management, and expertise in using Git workflows to enhance project development. The portfolio illustrates experience with repositories, pull requests, and conflict resolution, highlighting the importance of version control in maintaining code integrity and facilitating team collaboration.">
- </div>
+
 </div>
   
 <div class="other-skill-div reveal RTL">
- 
-  <div  class="other-skill-link">
-      <img src="./resources/icons/github.svg"  class="other-skill-icon" alt="Highlighting Niloy's expertise in GitHub, this portfolio demonstrates his ability to manage repositories, collaborate on projects, and utilize features such as issues, pull requests, and GitHub Actions for CI/CD. It showcases contributions to open-source projects and emphasizes his skills in effective version control and team collaboration through GitHub's platform.">
-  </div>
-  <div  class="other-skill-link">
-      <img src="./resources/icons/linux.svg"  class="other-skill-icon" alt="This portfolio showcases Niloy's proficiency in Linux, demonstrating his ability to navigate the command line, manage system resources, and utilize shell scripting for automation. It highlights his experience with various distributions, system administration tasks, and troubleshooting, emphasizing his skills in creating secure and efficient environments.">
-  </div>
   <div  class="other-skill-link">
         <img src="./resources/icons/typescript.svg"  class="other-skill-icon" alt="This portfolio highlights Niloy's expertise in TypeScript, showcasing his ability to build robust and scalable web applications. It includes examples of his work with type safety, interfaces, and generics, demonstrating how he leverages TypeScript features to enhance code quality and maintainability in modern development environments.">
   </div>
   <div  class="other-skill-link">
       <img src="./resources/icons/postgresql.svg"  class="other-skill-icon" alt="This portfolio showcases Niloy's proficiency in PostgreSQL, highlighting his ability to design and manage complex databases. It features examples of his work in data modeling, SQL query optimization, and implementing advanced features like stored procedures and indexing, demonstrating his commitment to ensuring data integrity and performance in various applications.">
+  </div> 
+
+  <div  class="other-skill-link">
+      <img src="./resources/icons/linux.svg"  class="other-skill-icon" alt="This portfolio showcases Niloy's proficiency in Linux, demonstrating his ability to navigate the command line, manage system resources, and utilize shell scripting for automation. It highlights his experience with various distributions, system administration tasks, and troubleshooting, emphasizing his skills in creating secure and efficient environments.">
   </div>
+  <div  class="other-skill-link">
+      <img src="./resources/icons/github.svg"  class="other-skill-icon" alt="Highlighting Niloy's expertise in GitHub, this portfolio demonstrates his ability to manage repositories, collaborate on projects, and utilize features such as issues, pull requests, and GitHub Actions for CI/CD. It showcases contributions to open-source projects and emphasizes his skills in effective version control and team collaboration through GitHub's platform.">
+  </div>
+  <div  class="other-skill-link">
+   <img src="./resources/icons/git.svg"  class="other-skill-icon" alt="Showcasing Niloy's proficiency in Git version control, emphasizing collaborative coding practices, efficient branch management, and expertise in using Git workflows to enhance project development. The portfolio illustrates experience with repositories, pull requests, and conflict resolution, highlighting the importance of version control in maintaining code integrity and facilitating team collaboration.">
+ </div>
  </div>
 
-  <div class="other-skill-div reveal LTR">
-  
-    <div  class="other-skill-link">
-        <img src="./resources/icons/spring.svg"  class="other-skill-icon" alt="This portfolio highlights Niloy's expertise in the Spring Framework, showcasing his skills in building robust and scalable Java applications. It features projects that demonstrate his proficiency in Spring Boot, dependency injection, RESTful services, and security features. The portfolio emphasizes best practices in software development and the use of Spring's modular architecture to create efficient solutions.">
-    </div>
-    <div  class="other-skill-link">  <img src="./resources/icons/salesforce.svg"  class="other-skill-icon" alt="This portfolio showcases Niloy's proficiency in Salesforce, including expertise in Apex programming, Flow automation, and various Salesforce clouds such as Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, and Partner Cloud. It highlights his ability to implement custom solutions, streamline business processes, and enhance user experiences across multiple Salesforce platforms, demonstrating a comprehensive understanding of Salesforce development and administration.">
-    </div>
-</div>
 
 </div>
 
@@ -1171,6 +1117,12 @@ NILOY KANTI PAUL</pre></a>
     <div  class="other-skill-link">
       <img src="./resources/icons/anaconda.svg"  class="other-skill-icon" alt="This portfolio showcases Niloy's proficiency in Anaconda, emphasizing skills in managing Python environments and packages effectively. It highlights expertise in data science workflows, utilizing Anaconda for seamless package management, virtual environment creation, and integration with Jupyter Notebooks. The portfolio includes projects demonstrating data analysis, machine learning, and visualization techniques using libraries such as Pandas, NumPy, and Matplotlib, all facilitated through the Anaconda platform.">
     </div>
+      <div  class="other-skill-link">
+    <img src="./resources/icons/pycharm.svg"  class="other-skill-icon" alt="This portfolio showcases Niloy's expertise in using PyCharm for Python development. It highlights skills in creating and managing Python projects, utilizing advanced debugging tools, and employing features like code refactoring, virtual environments, and package management. The portfolio also includes examples of leveraging PyCharm’s integrated testing framework, code inspections, and version control support, demonstrating a thorough understanding of best practices in Python development and collaborative coding environments.">
+  </div>
+  <div  class="other-skill-link">
+    <img src="./resources/icons/adobe.svg"  class="other-skill-icon" alt="This portfolio showcases Niloy's proficiency in Adobe Creative Suite, highlighting skills in design software such as Adobe Photoshop, Illustrator, and InDesign. It features examples of graphic design projects, photo editing, and layout creation, emphasizing an understanding of design principles, color theory, and typography. The portfolio also demonstrates the ability to work with various media formats, from digital illustrations to print materials, showcasing Niloy's versatility and creativity in visual communication.">
+  </div>
 </div>
 <div class="other-skill-div reveal RTL">
   <div  class="other-skill-link">
@@ -1185,15 +1137,7 @@ NILOY KANTI PAUL</pre></a>
   <div  class="other-skill-link">
     <img src="./resources/icons/eclipse.svg"  class="other-skill-icon" alt="This portfolio showcases Niloy's proficiency in Eclipse IDE, emphasizing skills in Java development, plugin integration, and project management. It includes examples of building and debugging Java applications, utilizing Eclipse's powerful features for code completion, version control integration, and efficient project navigation. The portfolio also highlights expertise in customizing the Eclipse environment for enhanced productivity, along with a strong grasp of using Eclipse for collaborative development and unit testing, demonstrating a comprehensive understanding of software development best practices.">
   </div>
-</div>
-<div class="other-skill-div reveal LTR">
-  <div  class="other-skill-link">
-    <img src="./resources/icons/pycharm.svg"  class="other-skill-icon" alt="This portfolio showcases Niloy's expertise in using PyCharm for Python development. It highlights skills in creating and managing Python projects, utilizing advanced debugging tools, and employing features like code refactoring, virtual environments, and package management. The portfolio also includes examples of leveraging PyCharm’s integrated testing framework, code inspections, and version control support, demonstrating a thorough understanding of best practices in Python development and collaborative coding environments.">
-  </div>
-  <div  class="other-skill-link">
-    <img src="./resources/icons/adobe.svg"  class="other-skill-icon" alt="This portfolio showcases Niloy's proficiency in Adobe Creative Suite, highlighting skills in design software such as Adobe Photoshop, Illustrator, and InDesign. It features examples of graphic design projects, photo editing, and layout creation, emphasizing an understanding of design principles, color theory, and typography. The portfolio also demonstrates the ability to work with various media formats, from digital illustrations to print materials, showcasing Niloy's versatility and creativity in visual communication.">
-  </div>
-  <div  class="other-skill-link">
+    <div  class="other-skill-link">
     <img src="./resources/icons/arduino.svg"  class="other-skill-icon" alt="This portfolio showcases Niloy's expertise in Arduino programming and electronics. It highlights projects that demonstrate the ability to design and implement microcontroller-based solutions, utilizing various sensors and components. The portfolio includes examples of innovative prototypes, from IoT devices to robotics, illustrating problem-solving skills and a solid understanding of embedded systems. Each project reflects proficiency in coding, circuit design, and integration, showcasing Niloy's capacity to bring ideas to life through practical applications of Arduino technology.">
   </div>
   <div  class="other-skill-link">
@@ -1205,88 +1149,115 @@ NILOY KANTI PAUL</pre></a>
         </section>
         <!--Skill-->
 
-        <!--qualification-->
 
-        <section id="qualifications">
-          <div>
-            <h4 id="quali-title" class="quali-title title-white reveal TTB">
-              Qualifications
-            </h4>
-          </div>
-          <div class="quali-button">
-            <button
-              id="quali-edu"
-              class="quali-edu white-text qualification-active-option reveal LTR"
-            >
-              <img
-                src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/50/000000/external-education-online-learning-kiranshastry-gradient-kiranshastry.png"
-                alt="Education menu showcasing Niloy's academic achievements, skills, and educational background, highlighting courses and projects in computer science and programming."
-              />
-              Education
-            </button>
-            <button id="quali-work" class="quali-work white-text  reveal RTL">
-              <img
-                src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/50/000000/external-work-graph-design-kiranshastry-gradient-kiranshastry.png"
-                alt="Visual representation of Niloy's working experience, showcasing a menu of previous job roles, projects, and skills gained, highlighting professional development in various sectors."
-              />Work
-            </button>
-          </div>
-          <div class="edu-log qualification_active reveal BTT" id="education">
-            
-            <div id="quali-data" class="quali-data white-quali-data">
-              <a href="https://www.aiub.edu/" target="_blank" rel="noopener noreferrer">
-              <i class="fa-solid fa-user-graduate fa-3x"></i>
 
-              <h3>MSc In CS</h3>
-              <span>American International University-Bangladesh </span>
-              <div>2024-Present</div>
-              </a>
+         <!--qualification-->
+ <section id="educations" class="edu-experience-container">
+        <h4 id="edu-title" class="edu-title title-white reveal TTB">Educations</h4>
+        <div class="edu-data edu-cards reveal BTT">
+            <div class="edu-card">
+                <div class="edu-icon-container"><i class="fa-solid fa-user-graduate"></i></div>
+                <div class="edu-date">2024-Present</div>
+                <div class="edu-position">Master of Science In Computer Science (MSC)</div>
+                <a href="https://www.aiub.edu/" target="_blank" class="edu-company" rel="noopener noreferrer">American International University-Bangladesh</a>
             </div>
-            <div id="quali-data" class="quali-data white-quali-data">
-              <a href="https://www.aiub.edu/" target="_blank" rel="noopener noreferrer">
-              <i class="fa-solid fa-graduation-cap fa-3x"></i>
-
-              <h3>BSc In CSE</h3>
-              <span>American International University-Bangladesh </span>
-              <div>2020-2023</div>
-              </a>
+            <div class="edu-card">
+                <div class="edu-icon-container"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="edu-date">2020-2023</div>
+                <div class="edu-position">Bachelor of Science In Computer Science and Engineering (BSC)</div>
+                <a href="https://www.aiub.edu/" target="_blank" class="edu-company" rel="noopener noreferrer">American International University-Bangladesh</a>
             </div>
-            <div id="quali-data" class="quali-data white-quali-data">
-              <a href="https://sghscdhaka.edu.bd/" target="_blank" rel="noopener noreferrer">
-              <i class="fa-solid fa-building-columns fa-3x"></i>
-
-              <h3>Higher Secondary Certificate</h3>
-              <span> St. Gregory's High School & College </span>
-              <div>2017-2019</div>
-            </a>
+            <div class="edu-card">
+                <div class="edu-icon-container"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="edu-date">2017-2019</div>
+                <div class="edu-position">Higher Secondary Certificate (HSC)</div>
+                <a href="https://sghscdhaka.edu.bd/" target="_blank" class="edu-company" rel="noopener noreferrer">St. Gregory's High School & College</a>
             </div>
-            <div id="quali-data" class="quali-data white-quali-data">
-              <a href="https://en.wikipedia.org/wiki/Dhaka_Collegiate_School" target="_blank" rel="noopener noreferrer">
-              <i class="fa-solid fa-award fa-3x"></i>
-
-              <h3>Secondary School Certificate</h3>
-              <span>Dhaka Collegiate School</span>
-              <div>2016-2017</div>
-            </a>
+            <div class="edu-card">
+                <div class="edu-icon-container"><i class="fa-solid fa-award"></i></div>
+                <div class="edu-date">2016-2017</div>
+                <div class="edu-position">Secondary School Certificate (SSC)</div>
+                <a href="https://bn.wikipedia.org/s/2cyf" target="_blank" class="edu-company" rel="noopener noreferrer">Dhaka Collegiate School</a>
             </div>
+        </div>
+    </section>
+      
+        <!-- experience -->
+       <section id="experiences">
+    <div>
+        <h4 id="work-title" class="work-title title-white reveal TTB">
+            Experiences
+        </h4>
+        <div class="hover-info reveal TTB">Hover over the positions to see detailed descriptions</div>
 
+    </div>
+    <div class="work-data timeline">
+        <!-- Informative Message -->
 
-          </div>
-
-          <div class="work-log reveal BTT" id="work">
-            
-            <div id="quali-data" class="quali-data white-quali-data quali-left">
-              <a href="https://twinforce.net/" target="_blank" rel="noopener noreferrer">
-                <i class="fa-solid fa-briefcase fa-3x"></i>
-              <h3>Senior Software Developer</h3>
-              <span> TwinForce Solution Ltd.</span>
-              <div>July, 2023 - present</div>
-
-             </a>
+        <!-- Intellier SE (Odd) -->
+        <div class="experience odd">
+            <div class="date reveal LTR">April 2025 - Present</div>
+            <div class="dot"></div>
+            <div class="position-card reveal RTL">
+                <div class="position">Software Engineer</div>
+                <a class="company" href="https://www.intellier.com" target="_blank" rel="noopener noreferrer">INTELLIER LIMITED</a>
+                <div class="description">
+                    Developing and maintaining scalable, high-performance software applications tailored to client needs.
+                    Collaborating across cross-functional teams to deliver secure and efficient enterprise solutions.
+                    Utilizing tools like Git, Jira, and CI/CD pipelines to ensure streamlined development workflows.
+                    Continuously exploring and integrating new technologies to optimize performance and user experience.
+                </div>
             </div>
-          
-          </div>
-        </section>
+        </div>
+
+        <!-- TFS SSD (Even) -->
+        <div class="experience even">
+            <div class="date reveal RTL">June 2024 - April 2025</div>
+            <div class="dot"></div>
+            <div class="position-card reveal LTR">
+                <div class="position">Senior Software Developer</div>
+                <a class="company" href="https://twinforce.net" target="_blank" rel="noopener noreferrer">TwinForce Solutions Limited</a>
+                <div class="description">
+                    Lead a team of developers to design and implement complex business solutions on Salesforce platforms.
+                    Managed workflows using tools like Trello, Zoho, ClickUp, and Notion to ensure timely and efficient delivery.
+                    Integrated Salesforce with third-party tools such as Stripe, DocuSign, QuickBooks, and Mulesoft.
+                    Maintained strong client communication, handling real-time issue resolution and product delivery.
+                    Conducted code reviews and mentored junior developers to enhance team performance.
+                </div>
+            </div>
+        </div>
+
+        <!-- TFS SD (Odd) -->
+        <div class="experience odd">
+            <div class="date reveal LTR">September 2023 - June 2024</div>
+            <div class="dot"></div>
+            <div class="position-card reveal RTL">
+                <div class="position">Software Developer</div>
+                <a class="company" href="https://twinforce.net" target="_blank" rel="noopener noreferrer">TwinForce Solutions Limited</a>
+                <div class="description">
+                    Worked across multiple Salesforce Clouds (Sales, Service, Experience, Partner, Marketing) to deliver client solutions.
+                    Managed a team, streamlining project delivery, and ensuring the successful completion of all projects.
+                    Built and customized websites using Salesforce Experience Cloud, enhancing front-end and back-end functionality.
+                    Deliver CRM and ERP automation solutions to optimize business operations for clients.
+                </div>
+            </div>
+        </div>
+
+        <!-- TFS SDI (Even) -->
+        <div class="experience even">
+            <div class="date reveal RTL">July 2023 - September 2023</div>
+            <div class="dot"></div>
+            <div class="position-card reveal LTR">
+                <div class="position">Software Developer (Intern)</div>
+                <a class="company" href="https://twinforce.net" target="_blank" rel="noopener noreferrer">TwinForce Solutions Limited</a>
+                <div class="description">
+                    Assisted in Salesforce development projects, hands-on experience with Apex, process automation, and integrations.
+                    Assisted in developing and testing solutions, and prioritizing system performance.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!--certification-->
         <section id="qualifications">
           <div align="center">
@@ -2036,6 +2007,13 @@ NILOY KANTI PAUL</pre></a>
     </section>
     <!--qualification-->
 
+
+  <!--professional project-->
+
+      
+  
+  <!--professional project-->
+
     <!--project-->
     <section class="projects" id="projects">
       <div class="max-width">
@@ -2768,7 +2746,21 @@ NILOY KANTI PAUL</pre></a>
     </div>
 
 
+ <script>  
+const cursor = document.getElementById('cursor');
 
+    // Update cursor position on mouse movement
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    });
+
+    // Add hover effects for .card and button elements
+    document.querySelectorAll('.card, button').forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+    });
+</script>
     <!--footer-->
   </body>
   <!-- <script async src="https://api.countapi.xyz/hit/dev-nkp.github.io/f38274fa-3555-4e86-8958-d482e9e46da4?callback=websiteVisits">

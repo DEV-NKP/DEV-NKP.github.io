@@ -18,39 +18,6 @@ else if(visibility==="true")
 })
 
 
-
-const primaryEdu=document.querySelector('.edu-log');
-const primaryWork=document.querySelector('.work-log');
-const eduToggle=document.querySelector('.quali-edu');
-const workToggle=document.querySelector('.quali-work');
-
-
-eduToggle.addEventListener('click', ()=> {
-     
-    $(window).click(function(){
-    
-        $('.work-log').removeClass("qualification_active");
-
-        $('.edu-log').addClass("qualification_active");
-        $('.quali-edu').addClass("qualification-active-option");
-        $('.quali-work').removeClass("qualification-active-option");
-        
-    });
-  
-    })
-    workToggle.addEventListener('click', ()=> {
-        $(window).click(function(){
-    
-            $('.edu-log').removeClass("qualification_active");
-            $('.work-log').addClass("qualification_active");
-            $('.quali-work').addClass("qualification-active-option");
-            $('.quali-edu').removeClass("qualification-active-option");
-        });
- });      
-       
-
-
-
 $(document).ready(function(){
     $(window).scroll(function(){
       
@@ -115,7 +82,7 @@ function reveal() {
 
            if (reveals[i].classList.contains('about-count')&&flagABcount==false) {
             flagABcount=true;
-            countABAnimation(".count-pro",10);
+            countABAnimation(".count-pro",25);
             countABAnimation(".count-exp",0);
             countABAnimation(".count-comp",3); 
                 }
@@ -219,7 +186,7 @@ function countABAnimation(text, num) {
         c.innerHTML=x;
       }
     }
-, 200);
+, 100);
 
 
   }
@@ -262,17 +229,17 @@ var body = document.getElementById("body");
    var skillTitle = document.getElementById("skill-title");
    var contactTitle = document.getElementById("contact-title");
   var projectTitle = document.getElementById("project-title");
-  var qualiTitle = document.getElementById("quali-title");
+  var eduTitle = document.getElementById("edu-title");
+  var workTitle = document.getElementById("work-title");
     var certificationTitle = document.getElementById("certification-title");
   var aboutTitle = document.getElementById("about-title");
 var publicationTitle = document.getElementById("publication-title");
 
 var projectCard = document.getElementsByClassName("card");
 
-var qualiEdu = document.getElementById("quali-edu");
-  var qualiWork = document.getElementById("quali-work");
+var eduData = document.getElementsByClassName("edu-data");
+var workData = document.getElementsByClassName("work-data");
 
-var qualiData = document.getElementsByClassName("quali-data");
 var contactsubTitle = document.getElementsByClassName("sub-title");
 
 var inputSpan = document.getElementsByClassName("input-span");
@@ -295,9 +262,13 @@ var videoDescriptions = document.getElementsByClassName("video-ques-div");
     }
 
  
-    for (var i = 0; i < qualiData.length; i++) {
-      qualiData[i].classList.add("dark-quali-data");
-      qualiData[i].classList.remove("white-quali-data");
+    for (var i = 0; i < workData.length; i++) {
+      workData[i].classList.add("dark-work-data");
+      workData[i].classList.remove("white-work-data");
+    }
+    for (var i = 0; i < eduData.length; i++) {
+      eduData[i].classList.add("dark-edu-data");
+      eduData[i].classList.remove("white-edu-data");
     }
 
  for (var i = 0; i < contactsubTitle.length; i++) {
@@ -313,17 +284,7 @@ var videoDescriptions = document.getElementsByClassName("video-ques-div");
       input[i].classList.add("dark-input");
       input[i].classList.remove("white-input");
     }
-    if(qualiEdu!=null)
-    {
-      qualiEdu.classList.add("dark-text");
-    qualiEdu.classList.remove("white-text");
-    }
     
-    if(qualiWork!=null)
-    {
-    qualiWork.classList.add("dark-text");
-    qualiWork.classList.remove("white-text");
-    }
     if(certificates!=null)
     {
     certificates.classList.add("dark-certificate");
@@ -340,11 +301,16 @@ var videoDescriptions = document.getElementsByClassName("video-ques-div");
     projectTitle.classList.add("title-black");
     projectTitle.classList.remove("title-white");  
     }
-    if(qualiTitle!=null)
+    if(workTitle!=null)
     {
-    qualiTitle.classList.add("title-black");
-    qualiTitle.classList.remove("title-white");  
+      workTitle.classList.add("title-black");
+      workTitle.classList.remove("title-white");  
     }
+    if(eduTitle!=null)
+      {
+        eduTitle.classList.add("title-black");
+        eduTitle.classList.remove("title-white");  
+      }
     if(certificationTitle!=null)
     {
      certificationTitle.classList.add("title-black");
@@ -383,9 +349,13 @@ for (var i = 0; i < projectCard.length; i++) {
   projectCard[i].classList.add("white-card");
 }
 
-for (var i = 0; i < qualiData.length; i++) {
-  qualiData[i].classList.remove("dark-quali-data");
-  qualiData[i].classList.add("white-quali-data");
+for (var i = 0; i < workData.length; i++) {
+  workData[i].classList.remove("dark-work-data");
+  workData[i].classList.add("white-work-data");
+}
+for (var i = 0; i < eduData.length; i++) {
+  eduData[i].classList.remove("dark-edu-data");
+  eduData[i].classList.add("white-edu-data");
 }
 for (var i = 0; i < contactsubTitle.length; i++) {
   contactsubTitle[i].classList.remove("dark-sub-title");
@@ -399,16 +369,7 @@ for (var i = 0; i < contactsubTitle.length; i++) {
           input[i].classList.remove("dark-input");
           input[i].classList.add("white-input");
         }
-        if(qualiEdu!=null)
-        { 
-        qualiEdu.classList.remove("dark-text");
-        qualiEdu.classList.add("white-text");
-        }
-        if(qualiWork!=null)
-    {
-      qualiWork.classList.remove("dark-text");
-      qualiWork.classList.add("white-text");
-    }
+    
     if(certificates!=null)
     {
 certificates.classList.remove("dark-certificate");
@@ -425,10 +386,15 @@ certificates.classList.add("white-certificate");
     projectTitle.classList.remove("title-black");
     projectTitle.classList.add("title-white");
     }
-    if(qualiTitle!=null)
+    if(workTitle!=null)
     {
-    qualiTitle.classList.remove("title-black");
-    qualiTitle.classList.add("title-white");
+      workTitle.classList.remove("title-black");
+      workTitle.classList.add("title-white");
+    }
+     if(eduTitle!=null)
+    {
+      eduTitle.classList.remove("title-black");
+      eduTitle.classList.add("title-white");
     }
     if(certificationTitle!=null)
     {
@@ -505,7 +471,7 @@ successMsg.classList.add("start-scroll");
               document.getElementById("hide-certificates").appendChild(items.children[3]);
           }
           document.getElementById("showmore").innerHTML="Show More";
-          window.location.href= "#qualifications"; 
+          window.location.href= "#experience"; 
           }
           
           }
