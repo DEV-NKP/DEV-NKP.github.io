@@ -1,509 +1,276 @@
-//import "https://smtpjs.com/v3/smtp.js";
-const primaryNav=document.querySelector('.navlink');
-const navToggle=document.querySelector('.mobile-nav-toggle');
+// Constants for DOM elements
+const primaryNav = document.querySelector('.navlink');
+const navToggle = document.querySelector('.mobile-nav-toggle');
+const body = document.getElementById("body");
+const htmlMain = document.getElementById("html-main");
+const successContainer = document.getElementById("success-container");
+const certificateContainer = document.getElementById("certificate-container");
+const certificateGif = document.getElementById("certificate-gif");
+const successMsg = document.getElementById("success-message");
+const certificateMsg = document.getElementById("certificate-message");
+const showMoreBtn = document.getElementById("showmore");
+const certificates = document.getElementById("certificates");
+const hideCertificates = document.getElementById("hide-certificates");
 
-navToggle.addEventListener('click', ()=> {
-const visibility=primaryNav.getAttribute('data-visible');
-
-if(visibility==="false")
-{
-    primaryNav.setAttribute('data-visible', "true");
-    navToggle.setAttribute('aria-expanded', "true");
+// Function to toggle navigation visibility
+function toggleNav() {
+    const visibility = primaryNav.getAttribute('data-visible');
+    const newVisibility = visibility === "false" ? "true" : "false";
+    primaryNav.setAttribute('data-visible', newVisibility);
+    navToggle.setAttribute('aria-expanded', newVisibility);
 }
-else if(visibility==="true")
-{
-    primaryNav.setAttribute('data-visible', "false");
-    navToggle.setAttribute('aria-expanded', "false");
-}
-})
 
-
-$(document).ready(function(){
-    $(window).scroll(function(){
-      
-        if(this.scrollY > 20){
-            $('header').addClass("sticky");
-        }else{
-            $('header').removeClass("sticky");
-        }
-        
- 
-        if(this.scrollY > 500){
-            $('.scroll-up-btn').addClass("show");
-        }else{
-            $('.scroll-up-btn').removeClass("show");
-        }
-    });
-     $('.scroll-up-btn').click(function(){
-        $('html').animate({scrollTop: 0});
-
-        $('html').css("scrollBehavior", "auto");
-    });
+// Scroll event handler
+function handleScroll() {
+    const scrollY = window.scrollY;
+    const header = document.querySelector('header');
+    const scrollUpBtn = document.querySelector('.scroll-up-btn');
     
+    // Check if we're on a page where sticky header should be applied
+    const shouldApplySticky = document.body.classList.contains('sticky-header-enabled');
+    
+    // Apply sticky header only on pages where it's enabled
+    if (shouldApplySticky) {
+        header.classList.toggle("sticky", scrollY > 20);
+    }
+    
+    // Show scroll-up button (this will work on all pages)
+    scrollUpBtn.classList.toggle("show", scrollY > 500);
+}
 
-    var typed = new Typed(".typing", {
+// Scroll to top
+function scrollToTop() {
+    document.documentElement.style.scrollBehavior = "auto";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Initialize Typed.js for typing animations
+function initTyped() {
+    new Typed(".typing", {
         strings: ["an Engineer.", "a Researcher.", "a Developer.", "a Designer."],
         typeSpeed: 100,
         backSpeed: 50,
         loop: true
     });
 
-
-  var typed = new Typed(".typing-2", {
-    strings: ["an Engineer.", "a Researcher.", "a Developer.", "a Designer."],
+    new Typed(".typing-2", {
+        strings: ["an Engineer.", "a Researcher.", "a Developer.", "a Designer."],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
+}
 
-
-});
-
-
-
-
-  var flagbar=false;
-var flagABcount=false;
+// Reveal animations on scroll
+let flagbar = false;
+let flagABcount = false;
 function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
+    const reveals = document.querySelectorAll(".reveal");
+    const windowHeight = window.innerHeight;
+    const elementVisible = 100;
 
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 100;
-  
-      if (elementTop < windowHeight - elementVisible) {
-        if (reveals[i].classList.contains('TTB')) {
-           reveals[i].classList.add("activeTTB"); 
-          
-        }
-        else if (reveals[i].classList.contains('BTT')) {
-           reveals[i].classList.add("activeBTT"); 
+    reveals.forEach(reveal => {
+        const elementTop = reveal.getBoundingClientRect().top;
 
-           if (reveals[i].classList.contains('about-count')&&flagABcount==false) {
-            flagABcount=true;
-            countABAnimation(".count-pro",25);
-            countABAnimation(".count-exp",0);
-            countABAnimation(".count-comp",3); 
+        if (elementTop < windowHeight - elementVisible) {
+            if (reveal.classList.contains('TTB')) {
+                reveal.classList.add("activeTTB");
+            } else if (reveal.classList.contains('BTT')) {
+                reveal.classList.add("activeBTT");
+                if (reveal.classList.contains('about-count') && !flagABcount) {
+                    flagABcount = true;
+                    countABAnimation(".count-pro", 25);
+                    countABAnimation(".count-exp", 0);
+                    countABAnimation(".count-comp", 3);
                 }
-        } 
-        else if (reveals[i].classList.contains('LTR')) {
-           reveals[i].classList.add("activeLTR"); 
-           if (reveals[i].classList.contains('show-percent')&&flagbar==false) {
-            flagbar=true;
-            barAnimation(".c", ".c-text", 95); 
-            barAnimation(".cpp", ".cpp-text", 90); 
-            barAnimation(".cs", ".cs-text", 85); 
-            barAnimation(".java", ".java-text", 80); 
-            barAnimation(".py", ".py-text", 60); 
-            barAnimation(".html", ".html-text", 98); 
-            barAnimation(".css", ".css-text", 95); 
-            barAnimation(".js", ".js-text", 80); 
-            barAnimation(".php", ".php-text", 85); 
-            barAnimation(".mysql", ".mysql-text", 75); 
-             barAnimation(".aspnet", ".aspnet-text", 80); 
-             barAnimation(".sqlserver", ".sqlserver-text", 70); 
-        
-        }
-
-
-        
-        } 
-        else if (reveals[i].classList.contains('RTL')) {
-           reveals[i].classList.add("activeRTL"); 
-        }
-        else{
-
-        }
-      } 
-
-      
-    
-      else {
-      if (reveals[i].classList.contains('show-percent')&&flagbar==true) {
-            flagbar=false;
-        }
-        if (reveals[i].classList.contains('about-count')&&flagABcount==true) {
-            flagABcount=false;
-       
+            } else if (reveal.classList.contains('LTR')) {
+                reveal.classList.add("activeLTR");
+                if (reveal.classList.contains('show-percent') && !flagbar) {
+                    flagbar = true;
+                    barAnimation(".c", ".c-text", 95);
+                    barAnimation(".cpp", ".cpp-text", 90);
+                    barAnimation(".cs", ".cs-text", 85);
+                    barAnimation(".java", ".java-text", 80);
+                    barAnimation(".py", ".py-text", 60);
+                    barAnimation(".html", ".html-text", 98);
+                    barAnimation(".css", ".css-text", 95);
+                    barAnimation(".js", ".js-text", 80);
+                    barAnimation(".php", ".php-text", 85);
+                    barAnimation(".mysql", ".mysql-text", 75);
+                    barAnimation(".aspnet", ".aspnet-text", 80);
+                    barAnimation(".sqlserver", ".sqlserver-text", 70);
                 }
+            } else if (reveal.classList.contains('RTL')) {
+                reveal.classList.add("activeRTL");
+            }
+        } else {
+            if (reveal.classList.contains('show-percent') && flagbar) flagbar = false;
+            if (reveal.classList.contains('about-count') && flagABcount) flagABcount = false;
+            reveal.classList.remove("activeTTB", "activeBTT", "activeLTR", "activeRTL");
+        }
+    });
+}
 
-        reveals[i].classList.remove("activeTTB");
-        reveals[i].classList.remove("activeBTT");
-        reveals[i].classList.remove("activeLTR");
-        reveals[i].classList.remove("activeRTL");
-      }
-    }
-
-
-
-
-
-  }
-  
-  window.addEventListener("scroll", reveal);
-
-
-
+// Bar animation for skills
 function barAnimation(line, text, percent) {
- var w = 0;
-  if (w == 0) {
-    w = 1;
-    var elem = document.querySelector(line);
-    var elemText= document.querySelector(text);
-    var width = 1;
-    var id = setInterval(
-    function() {
-      if (width >= Number(percent)) {
-        clearInterval(id);
-        w = 0;
-      } else {
-        width++;
-        elem.style.width = width + "%";
-        elemText.innerHTML=width+"%";
-      }
-    }
-, 30);
-
-
-  }
+    const elem = document.querySelector(line);
+    const elemText = document.querySelector(text);
+    let width = 1;
+    const id = setInterval(() => {
+        if (width >= percent) {
+            clearInterval(id);
+        } else {
+            width++;
+            elem.style.width = width + "%";
+            elemText.innerHTML = width + "%";
+        }
+    }, 30);
 }
 
+// Count animation for about section
 function countABAnimation(text, num) {
-
- var cx = 0;
-  if (cx == 0) {
-    cx = 1;
-    var c = document.querySelector(text);
-    var x = 1;
-    var id = setInterval(
-    function() {
-      if (x >= Number(num)) {
-        clearInterval(id);
-        cx = 0;
-      } else {
-        x++;
-        c.innerHTML=x;
-      }
-    }
-, 100);
-
-
-  }
-}
-
-
-$(".carousel").owlCarousel({
-    margin: 20,
-    rewind:true,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    mouseDrag:true,
-    touchDrag:true,
-    mergeFit:true,
-    lazyLoad:true,
-    video:true,
-    checkVisible:false,
-    
-    responsive: {
-      0:{
-        items:1,
-        nav: false
-      },
-      600:{
-        items:2,
-        nav: false
-      },
-      1000:{
-        items:3,
-        nav: false
-      }
-    }
-  });
-
-function changeColor(){
-var body = document.getElementById("body");
-    var element = document.getElementById("dark-light");
-    
-   var skillTitle = document.getElementById("skill-title");
-   var contactTitle = document.getElementById("contact-title");
-  var projectTitle = document.getElementById("project-title");
-  var eduTitle = document.getElementById("edu-title");
-  var workTitle = document.getElementById("work-title");
-    var certificationTitle = document.getElementById("certification-title");
-  var aboutTitle = document.getElementById("about-title");
-var publicationTitle = document.getElementById("publication-title");
-
-var projectCard = document.getElementsByClassName("card");
-
-var eduData = document.getElementsByClassName("edu-data");
-var workData = document.getElementsByClassName("work-data");
-
-var contactsubTitle = document.getElementsByClassName("sub-title");
-
-var inputSpan = document.getElementsByClassName("input-span");
-var input = document.getElementsByClassName("input");
-var certificates = document.getElementById("certificates");
-var videoDescriptions = document.getElementsByClassName("video-ques-div");
-  if(element.classList.contains("fa-moon"))
-   {
-
-    body.classList.add("dark-body");
-    body.classList.remove("white-body");
-    for (var i = 0; i < videoDescriptions.length; i++) {
-      videoDescriptions[i].classList.add("dark");
-      videoDescriptions[i].classList.remove("white");
+    const c = document.querySelector(text);
+    let x = 1;
+    const id = setInterval(() => {
+        if (x >= num) {
+            clearInterval(id);
+        } else {
+            x++;
+            c.innerHTML = x;
         }
-
-    for (var i = 0; i < projectCard.length; i++) {
-    projectCard[i].classList.add("dark-card");
-    projectCard[i].classList.remove("white-card");
-    }
-
- 
-    for (var i = 0; i < workData.length; i++) {
-      workData[i].classList.add("dark-work-data");
-      workData[i].classList.remove("white-work-data");
-    }
-    for (var i = 0; i < eduData.length; i++) {
-      eduData[i].classList.add("dark-edu-data");
-      eduData[i].classList.remove("white-edu-data");
-    }
-
- for (var i = 0; i < contactsubTitle.length; i++) {
-  contactsubTitle[i].classList.add("dark-sub-title");
-  contactsubTitle[i].classList.remove("white-sub-title");
-    }
-
- for (var i = 0; i < inputSpan.length; i++) {
-  inputSpan[i].classList.add("dark-input-span");
-  inputSpan[i].classList.remove("white-input-span");
-    }
-     for (var i = 0; i < input.length; i++) {
-      input[i].classList.add("dark-input");
-      input[i].classList.remove("white-input");
-    }
-    
-    if(certificates!=null)
-    {
-    certificates.classList.add("dark-certificate");
-    certificates.classList.remove("white-certificate");
-    }
-    /*title color change*/
-    if(contactTitle!=null)
-    {
-    contactTitle.classList.add("title-black");
-    contactTitle.classList.remove("title-white");  
-    }
-    if(projectTitle!=null)
-    {
-    projectTitle.classList.add("title-black");
-    projectTitle.classList.remove("title-white");  
-    }
-    if(workTitle!=null)
-    {
-      workTitle.classList.add("title-black");
-      workTitle.classList.remove("title-white");  
-    }
-    if(eduTitle!=null)
-      {
-        eduTitle.classList.add("title-black");
-        eduTitle.classList.remove("title-white");  
-      }
-    if(certificationTitle!=null)
-    {
-     certificationTitle.classList.add("title-black");
-     certificationTitle.classList.remove("title-white"); 
-    }
-    if(aboutTitle!=null)
-    { 
-    aboutTitle.classList.add("title-black");
-    aboutTitle.classList.remove("title-white");  
-    }
-    if(skillTitle!=null)
-    {
-    skillTitle.classList.add("title-black");
-    skillTitle.classList.remove("title-white");   
-    }
-    if(publicationTitle!=null)
-    {
-    publicationTitle.classList.add("title-black");
-    publicationTitle.classList.remove("title-white");
-    }
-/*button change*/ 
-element.classList.remove("fa-moon");
-element.classList.add("fa-lightbulb");  
-   } 
-   else if(element.classList.contains("fa-lightbulb"))
-   {
-
-    body.classList.remove("dark-body");
-    body.classList.add("white-body");
-    for (var i = 0; i < videoDescriptions.length; i++) {
-      videoDescriptions[i].classList.add("white");
-      videoDescriptions[i].classList.remove("dark");
-        }
-for (var i = 0; i < projectCard.length; i++) {
-  projectCard[i].classList.remove("dark-card");
-  projectCard[i].classList.add("white-card");
+    }, 100);
 }
 
-for (var i = 0; i < workData.length; i++) {
-  workData[i].classList.remove("dark-work-data");
-  workData[i].classList.add("white-work-data");
-}
-for (var i = 0; i < eduData.length; i++) {
-  eduData[i].classList.remove("dark-edu-data");
-  eduData[i].classList.add("white-edu-data");
-}
-for (var i = 0; i < contactsubTitle.length; i++) {
-  contactsubTitle[i].classList.remove("dark-sub-title");
-  contactsubTitle[i].classList.add("white-sub-title");
-    }
-    for (var i = 0; i < inputSpan.length; i++) {
-      inputSpan[i].classList.remove("dark-input-span");
-      inputSpan[i].classList.add("white-input-span");
-        }
-         for (var i = 0; i < input.length; i++) {
-          input[i].classList.remove("dark-input");
-          input[i].classList.add("white-input");
-        }
-    
-    if(certificates!=null)
-    {
-certificates.classList.remove("dark-certificate");
-certificates.classList.add("white-certificate");
-    }
-    /*title color change*/
-    if(contactTitle!=null)
-    {
-    contactTitle.classList.remove("title-black");
-    contactTitle.classList.add("title-white");
-    }
-    if(projectTitle!=null)
-    {
-    projectTitle.classList.remove("title-black");
-    projectTitle.classList.add("title-white");
-    }
-    if(workTitle!=null)
-    {
-      workTitle.classList.remove("title-black");
-      workTitle.classList.add("title-white");
-    }
-     if(eduTitle!=null)
-    {
-      eduTitle.classList.remove("title-black");
-      eduTitle.classList.add("title-white");
-    }
-    if(certificationTitle!=null)
-    {
-    certificationTitle.classList.remove("title-black");
-    certificationTitle.classList.add("title-white");
-    }
-    if(aboutTitle!=null)
-    {
-    aboutTitle.classList.remove("title-black");
-    aboutTitle.classList.add("title-white");
-    }
-    if(skillTitle!=null)
-    {
-    skillTitle.classList.remove("title-black");
-    skillTitle.classList.add("title-white");
-    }
-    if(publicationTitle!=null)
-    {
-    publicationTitle.classList.remove("title-black");
-    publicationTitle.classList.add("title-white");
-    }
-/*button change*/ 
-element.classList.remove("fa-lightbulb");
-element.classList.add("fa-moon");  
-   } 
-  else{
-    changeColor();
-  }
-}
+// Theme toggle function
+function changeColor() {
+    const element = document.getElementById("dark-light");
+    const isDarkMode = element.classList.contains("fa-moon");
 
+    // Toggle body theme
+    body.classList.toggle("dark-body", isDarkMode);
+    body.classList.toggle("white-body", !isDarkMode);
 
-function submitForm()
-{
+    // Theme elements configuration
+    const themeElements = [
+        { elements: document.getElementsByClassName("video-ques-div"), dark: "dark", light: "white" },
+        { elements: document.getElementsByClassName("card"), dark: "dark-card", light: "white-card" },
+        { elements: document.getElementsByClassName("work-data"), dark: "dark-work-data", light: "white-work-data" },
+        { elements: document.getElementsByClassName("case_study_card"), dark: "dark-case-study", light: "white-case-study" },
+        { elements: document.getElementsByClassName("edu-data"), dark: "dark-edu-data", light: "white-edu-data" },
+        { elements: document.getElementsByClassName("sub-title"), dark: "dark-sub-title", light: "white-sub-title" },
+        { elements: document.getElementsByClassName("input-span"), dark: "dark-input-span", light: "white-input-span" },
+        { elements: document.getElementsByClassName("input"), dark: "dark-input", light: "white-input" },
+        { elements: document.getElementById("certificates"), dark: "dark-certificate", light: "white-certificate" },
+        { elements: document.getElementById("contact-title"), dark: "title-black", light: "title-white" },
+        { elements: document.getElementById("project-title"), dark: "title-black", light: "title-white" },
+        { elements: document.getElementById("work-title"), dark: "title-black", light: "title-white" },
+        { elements: document.getElementById("edu-title"), dark: "title-black", light: "title-white" },
+        { elements: document.getElementById("case-title"), dark: "title-black", light: "title-white" },
+        { elements: document.getElementById("certification-title"), dark: "title-black", light: "title-white" },
+        { elements: document.getElementById("about-title"), dark: "title-black", light: "title-white" },
+        { elements: document.getElementById("skill-title"), dark: "title-black", light: "title-white" },
+        { elements: document.getElementById("publication-title"), dark: "title-black", light: "title-white" },
+    ];
 
-//window.location.href= "/popup.html"; 
-document.getElementById("success-container").style.display='flex';
-const html= document.getElementById("html-main");
-html.classList.add("stop-scroll");
-const successMsg= document.getElementById("success-message");
-successMsg.classList.add("start-scroll");
-   const form = document.querySelector('.my-form');
-          const formData = new FormData(form);
-          const url ="https://formsubmit.io/send/3d570815-9c63-444a-b736-63cc759338a9"
-          fetch(
-            url,
-            {
-              method: 'POST',
-              body: formData
+    themeElements.forEach(({ elements, dark, light }) => {
+        if (elements) {
+            if (elements instanceof Element) {
+                elements.classList.toggle(dark, isDarkMode);
+                elements.classList.toggle(light, !isDarkMode);
+            } else {
+                Array.from(elements).forEach(el => {
+                    el.classList.toggle(dark, isDarkMode);
+                    el.classList.toggle(light, !isDarkMode);
+                });
             }
-          )
-          return false;
-        
-        } 
+        }
+    });
 
+    // Toggle icon
+    element.classList.toggle("fa-moon", !isDarkMode);
+    element.classList.toggle("fa-lightbulb", isDarkMode);
+}
 
-        function showmore() {
-          const buttonmsg=document.getElementById("showmore").innerHTML;
-          if(buttonmsg=="Show More")
-          {
-            
-            const hideitems=document.getElementById("hide-certificates");  
-            while(hideitems.firstChild){
-            document.getElementById("certificates").appendChild(hideitems.firstChild);
-            }
-          document.getElementById("showmore").innerHTML="Show Less";
-         
-          }
-        
-          else{
-            const items=document.getElementById("certificates");  
-            const hideitems=document.getElementById("hide-certificates"); 
-            var x= items.children.length+hideitems.children.length;
-            for( var i=3; i<x; i++){
-              document.getElementById("hide-certificates").appendChild(items.children[3]);
-          }
-          document.getElementById("showmore").innerHTML="Show More";
-          window.location.href= "#experience"; 
-          }
-          
-          }
+// Form submission
+function submitForm() {
+    successContainer.style.display = 'flex';
+    htmlMain.classList.add("stop-scroll");
+    successMsg.classList.add("start-scroll");
 
+    const form = document.querySelector('.my-form');
+    const formData = new FormData(form);
+    const url = "https://formsubmit.io/send/3d570815-9c63-444a-b736-63cc759338a9";
 
-          function showcertificate(name)
-          {
+    fetch(url, {
+        method: 'POST',
+        body: formData
+    }).then(response => {
+        console.log('Form submitted successfully');
+    }).catch(error => {
+        console.error('Form submission error:', error);
+    });
 
-//window.location.href= "/popup.html"; 
-document.getElementById("certificate-container").style.display='flex';
-document.getElementById("certificate-gif").src="./resources/certificates/"+name+".jpg";
-const html= document.getElementById("html-main");
-html.classList.add("stop-scroll");
-const certiMsg= document.getElementById("certificate-message");
-certiMsg.classList.add("start-scroll");
+    return false;
+}
 
+// Show more certificates
+function showmore() {
+    const buttonmsg = showMoreBtn.innerHTML;
+    if (buttonmsg === "Show More") {
+        while (hideCertificates.firstChild) {
+            certificates.appendChild(hideCertificates.firstChild);
+        }
+        showMoreBtn.innerHTML = "Show Less";
+    } else {
+        const items = certificates.children;
+        while (items.length > 3) {
+            hideCertificates.appendChild(items[3]);
+        }
+        showMoreBtn.innerHTML = "Show More";
+        window.location.href = "#experience";
+    }
+}
 
-          }
+// Show certificate
+function showcertificate(name) {
+    certificateContainer.style.display = 'flex';
+    certificateGif.src = `./resources/certificates/${name}.jpg`;
+    htmlMain.classList.add("stop-scroll");
+    certificateMsg.classList.add("start-scroll");
+}
 
-          function backtocertificate()
-          {
+// Back to certificates
+function backtocertificate() {
+    certificateContainer.style.display = 'none';
+    htmlMain.classList.remove("stop-scroll");
+    certificateMsg.classList.remove("start-scroll");
+}
 
-//window.location.href= "/popup.html"; 
-document.getElementById("certificate-container").style.display='none';
-const html= document.getElementById("html-main");
-html.classList.remove("stop-scroll");
-// html.classList.add("start-scroll");
-const certiMsg= document.getElementById("certificate-message");
-certiMsg.classList.remove("start-scroll");
-          }
-          
-          
+// Event listeners
+navToggle.addEventListener('click', toggleNav);
+window.addEventListener("scroll", handleScroll);
+document.querySelector('.scroll-up-btn').addEventListener('click', scrollToTop);
+window.addEventListener("scroll", reveal);
 
-           
-        
+// Initialize Typed.js and Owl Carousel
+document.addEventListener("DOMContentLoaded", () => {
+    initTyped();
+    $(".carousel").owlCarousel({
+        margin: 20,
+        rewind: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        mouseDrag: true,
+        touchDrag: true,
+        mergeFit: true,
+        lazyLoad: true,
+        video: true,
+        checkVisible: false,
+        responsive: {
+            0: { items: 1, nav: false },
+            600: { items: 2, nav: false },
+            1000: { items: 3, nav: false }
+        }
+    });
+});

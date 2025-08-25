@@ -26,7 +26,18 @@
     <meta name="twitter:description" content="Explore the portfolio of Niloy Kanti Paul, showcasing software development, web projects, and engineering solutions.">
     <meta name="twitter:image" content="https://dev-nkp.github.io/resources/images/niloy.jpg">
     <meta name="twitter:site" content="@Niloy_Paul_">
-
+  <!-- Additional SEO Meta Tags -->
+  <meta name="theme-color" content="#0087a9">
+  <meta name="msapplication-TileColor" content="#0087a9">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
     <!-- Website title and logo -->
     <title>Niloy Kanti Paul - Software Engineer | Developer | Innovator</title>
     <link rel="canonical" href="https://dev-nkp.github.io" />
@@ -45,6 +56,9 @@
     <link rel="stylesheet" href="style/skill.css" />
     <link rel="stylesheet" href="style/professional_projects.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"/>
+  <!-- Footer Styles -->
+    <link rel="stylesheet" href="./footer/footer-styles.css">
+
 
  <!-- Schema for a person entity (Niloy Kanti Paul) -->
  <script type="application/ld+json">
@@ -784,8 +798,98 @@
       }
   ]
      </script>
-  
-        <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Schema for case study entity -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Professional Case Studies",
+  "description": "Explore my portfolio of professional Salesforce development projects showcasing innovative solutions across multiple industries including travel, nonprofit, finance, healthcare, manufacturing, and agriculture.",
+  "url": "https://dev-nkp.github.io/professional-projects/",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://dev-nkp.github.io/professional-projects/?caseId=travel-experience-platform",
+        "name": "Travel Experience Platform"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://dev-nkp.github.io/professional-projects/?caseId=nonprofit-resource-hub",
+        "name": "Nonprofit Resource Hub"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://dev-nkp.github.io/professional-projects/?caseId=community-advocacy-platform",
+        "name": "Community Advocacy Platform"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://dev-nkp.github.io/professional-projects/?caseId=educator-advocacy-system",
+        "name": "Educator Advocacy System"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://dev-nkp.github.io/professional-projects/?caseId=mortgage-financing-platform",
+        "name": "Mortgage Financing Platform"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "url": "https://dev-nkp.github.io/professional-projects/?caseId=agricultural-marketing-system",
+        "name": "Agricultural Marketing System"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "url": "https://dev-nkp.github.io/professional-projects/?caseId=humanitarian-aid-management",
+        "name": "Humanitarian Aid Management"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "url": "https://dev-nkp.github.io/professional-projects/?caseId=medical-treatment-platform",
+        "name": "Medical Treatment Platform"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "url": "https://dev-nkp.github.io/professional-projects/?caseId=workplace-safety-system",
+        "name": "Workplace Safety System"
+      }
+    ]
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Niloy Kanti Paul",
+    "url": "https://dev-nkp.github.io"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://dev-nkp.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Professional Projects",
+        "item": "https://dev-nkp.github.io/professional-projects/"
+      }
+    ]
+  }
+}
+</script>
+
 
  <!-- Google tag (gtag.js) -->
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-48TDTQMGNW"></script>
@@ -797,9 +901,9 @@
    gtag('js', new Date());
    gtag('config', 'G-48TDTQMGNW');
  </script>
-
+<script src="./function/professionalProjects.js"></script>
   </head>
-  <body id="body" class="white-body" >
+  <body id="body" class="white-body sticky-header-enabled" >
     <div class="custom-cursor" id="cursor"></div>
     <header>
        
@@ -1149,7 +1253,43 @@ NILOY KANTI PAUL</pre></a>
         </section>
         <!--Skill-->
 
+ <!--professional project-->
 
+   <section id="case-studies">
+    <div class="container">
+                        <h4 id="case-title" class="case-title title-white reveal TTB">Professional Project</h4>
+      <!-- Header Section -->
+      <div class="case-studies-header">
+        <h1 class="case-studies-title">Innovative Solutions</h1>
+        <p class="case-studies-subtitle">Explore my case studies of professional development projects showcasing innovative solutions across multiple industries.</p>
+      </div>
+      
+      <!-- Filter Section -->
+      <div class="filter-section">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="travel">Travel</button>
+        <button class="filter-btn" data-filter="nonprofit">Nonprofit</button>
+        <button class="filter-btn" data-filter="finance">Finance</button>
+        <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+        <button class="filter-btn" data-filter="garments">Garments</button>
+        <button class="filter-btn" data-filter="agriculture">Agriculture</button>
+        <button class="filter-btn" data-filter="other">Other</button>
+      </div>
+      
+      <!-- Case Studies Grid -->
+      <div class="case-studies-grid" id="case-studies-grid">
+        <!-- Project cards will be dynamically generated here -->
+      </div>
+      
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <a href="#contact" class="cta-button">
+          <span>Discuss Your Project</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
 
          <!--qualification-->
  <section id="educations" class="edu-experience-container">
@@ -2008,9 +2148,7 @@ NILOY KANTI PAUL</pre></a>
     <!--qualification-->
 
 
-  <!--professional project-->
-
-      
+ 
   
   <!--professional project-->
 
@@ -2687,7 +2825,7 @@ NILOY KANTI PAUL</pre></a>
     <!--contact-->
 
     <!--footer-->
-
+<!-- 
     <footer>
       <span
         >Created By <a href="https://github.com/DEV-NKP"  target="_blank" rel="noopener noreferrer">DEV-NKP</a> |
@@ -2695,7 +2833,7 @@ NILOY KANTI PAUL</pre></a>
          <span id="visits"></span>
         </span
       >
-    </footer>
+    </footer> -->
     
 
 
@@ -2745,7 +2883,7 @@ NILOY KANTI PAUL</pre></a>
     </div>
     </div>
 
-
+  <script src="./footer/footer-loader.js"></script>
  <script>  
 const cursor = document.getElementById('cursor');
 

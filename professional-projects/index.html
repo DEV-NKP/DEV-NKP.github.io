@@ -1,171 +1,1659 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-main" class="html-main">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="google-site-verification" content="0Q44ThNd-nRbHfHzQhiPxU1ZzrModxospSeE9wBv-SM" />
+  
+  <!-- Dynamic Meta Tags - will be updated by JavaScript -->
+  <meta name="author" content="Niloy Kanti Paul">
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <meta name="author" content="Your Name">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="article">
   <meta property="og:title" content="">
   <meta property="og:description" content="">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="">
   <meta property="og:image" content="">
-  <title>Case Study - Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #14b8a6;
-      --secondary: #f43f5e;
-      --bg-light: #f9fafb;
-      --bg-dark: #1e293b;
-      --text-light: #1e293b;
-      --text-dark: #f1f5f9;
-    }
-    [data-theme="dark"] {
-      --bg-light: #1e293b;
-      --bg-dark: #0f172a;
-      --text-light: #f1f5f9;
-      --card-bg: #334155;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, var(--bg-light), var(--bg-dark));
-      color: var(--text-light);
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-    .tech-badge {
-      background: var(--primary);
-      color: white;
-      padding: 0.25rem 0.75rem;
-      border-radius: 9999px;
-      font-size: 0.875rem;
-      margin: 0.25rem;
-    }
-    .theme-toggle {
-      background: var(--primary);
-      padding: 0.5rem;
-      border-radius: 9999px;
-      transition: background 0.3s ease;
-    }
-    .theme-toggle:hover {
-      background: var(--secondary);
-    }
-  </style>
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="Niloy Kanti Paul - Software Engineer Portfolio">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="Niloy Kanti Paul">
+  <meta property="article:published_time" content="">
+  <meta property="article:modified_time" content="">
+  <meta property="article:section" content="Case Studies">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+  <meta name="twitter:site" content="@Niloy_Paul_">
+  <meta name="twitter:creator" content="@Niloy_Paul_">
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="theme-color" content="#0087a9">
+  <meta name="msapplication-TileColor" content="#0087a9">
+  
+  <!-- Structured Data (JSON-LD) - will be updated by JavaScript -->
+  <script type="application/ld+json" id="structured-data">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "",
+    "description": "",
+    "image": "",
+    "author": {
+      "@type": "Person",
+      "name": "Niloy Kanti Paul",
+      "url": "https://dev-nkp.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Niloy Kanti Paul - Software Engineer Portfolio",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://dev-nkp.github.io/resources/images/nkp.png"
+      }
+    },
+    "datePublished": "",
+    "dateModified": "",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": ""
+    },
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "keywords": "",
+    "articleSection": "Case Studies"
+  }
+  </script>
+  
+  <!-- Dynamic Title - will be updated by JavaScript -->
+  <title>Case Study - Niloy Kanti Paul - Software Engineer | Developer | Innovator</title>
+  
+  <!-- Website icon and fonts -->
+  <link rel="icon" href="../resources/images/nkpico.png" style="border-radius:50px;" type="image/png">
+  <link rel="apple-touch-icon" href="../resources/images/nkpico.png">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"/>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="../style/about.css" />
+  <link rel="stylesheet" href="../style/menu.css" />
+  <link rel="stylesheet" href="../style/main.css" />
+  <link rel="stylesheet" href="../style/CaseStudyPage.css" />
 </head>
-<body data-theme="light">
-  <section class="py-20" aria-labelledby="case-study-title" itemscope itemtype="https://schema.org/Project">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center mb-12">
-        <h1 id="case-study-title" class="text-4xl sm:text-5xl font-bold text-[var(--text-light)]"></h1>
-        <button class="theme-toggle text-white p-2 rounded-full" onclick="toggleTheme()" aria-label="Toggle dark mode">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-        </button>
-      </div>
-      <div id="case-study-content" class="bg-white rounded-lg p-6 sm:p-8 [data-theme=dark]:bg-[var(--card-bg)]">
-        <div id="content-body"></div>
-        <a href="/case-studies" class="mt-6 inline-block bg-[var(--primary)] text-white px-5 py-2 rounded-full hover:bg-[var(--secondary)] transition-colors" aria-label="Back to all case studies">Back to Case Studies</a>
-      </div>
+<body id="body" class="white-body">
+  <!-- Header (Keeping existing structure) -->
+  <header style="display:fix;" class="sticky">
+    <div>
+      <a href="/">
+        <img class="logo" src="../resources/images/nkp.png" alt="Niloy Kanti Paul Portfolio Logo - Software Developer, Salesforce Expert" style="float: left" />
+      </a>
+      <a href="/"><pre class="name" style="color: rgba(236, 234, 234, 0.691); font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+NILOY KANTI PAUL</pre></a>
     </div>
+    <div class="max-width">
+      <button class="mobile-nav-toggle" aria-controls="navlink" aria-expanded="false"></button>
+    </div>
+    <nav>
+      <ul id="navlink" data-visible="false" class="navlink flex">
+        <li>
+          <a href="../">Home</a>
+        </li>
+        <li>
+          <div class="dark-but" onclick="changeColor()"
+              ><i id="dark-light" class="fa-solid fa-moon fa-1x" ></i></div
+            >
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Scroll up button -->
+  <div class="scroll-up-btn">
+    <i class="fas fa-angle-up"></i>
+  </div>
+
+  <!-- Header gap -->
+  <div class="header-block"></div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="case-study-hero" aria-labelledby="hero-title">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <div class="hero-badge" id="hero-badge">CASE STUDY</div>
+        <h1 class="hero-title" id="case-study-title">Project Title</h1>
+        <p class="hero-subtitle" id="case-study-subtitle">Project description will appear here</p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" id="stat-1">0%</span>
+            <span class="stat-label" id="stat-label-1">Metric 1</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="stat-2">0%</span>
+            <span class="stat-label" id="stat-label-2">Metric 2</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="stat-3">0%</span>
+            <span class="stat-label" id="stat-label-3">Metric 3</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Architecture Section -->
+    <section class="architecture-section" id="architecture-section" aria-labelledby="architecture-title">
+      <h2 class="section-title" id="architecture-title">Technology Architecture</h2>
+      <div class="architecture-diagram">
+        <div class="architecture-container" id="architecture-container">
+          <!-- Architecture boxes will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="case-study-section">
+      <!-- Problem Statement -->
+      <article class="content-card">
+        <div class="card-icon">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <h2 class="card-title">Problem Statement</h2>
+        <p class="card-description" id="problem-description">
+          Problem statement will appear here
+        </p>
+      </article>
+
+      <!-- Solution -->
+      <article class="content-card">
+        <div class="card-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h2 class="card-title">Solution</h2>
+        <p class="card-description" id="solution-description">
+          Solution details will appear here
+        </p>
+        <div class="solution-cards" id="solution-cards">
+          <!-- Solution cards will be populated by JavaScript -->
+        </div>
+      </article>
+
+      <!-- My Contribution -->
+      <article class="content-card">
+        <div class="card-icon">
+          <i class="fas fa-user-cog"></i>
+        </div>
+        <h2 class="card-title">My Contribution</h2>
+        <p class="card-description" id="contribution-description">
+          Contribution details will appear here
+        </p>
+      </article>
+
+      <!-- Technology Stack -->
+      <section class="tech-stack" aria-labelledby="tech-title">
+        <h2 class="tech-title" id="tech-title">Technology Stack</h2>
+        <div class="tech-carousel-container">
+          <div class="tech-carousel" id="tech-carousel" aria-label="Technology stack carousel">
+            <!-- Tech items will be populated by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline -->
+      <section class="timeline" id="timeline" aria-label="Project timeline">
+        <!-- Timeline items will be populated by JavaScript -->
+      </section>
+
+      <!-- Outcomes -->
+      <article class="content-card">
+        <div class="card-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h2 class="card-title">Outcomes</h2>
+        <p class="card-description" id="outcomes-description">
+          Outcomes will appear here
+        </p>
+        <div class="outcomes-cards" id="outcomes-cards">
+          <!-- Outcomes cards will be populated by JavaScript -->
+        </div>
+      </article>
+
+      <!-- Results -->
+      <section class="results" aria-labelledby="results-title">
+        <div class="results-bg-animation">
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+        </div>
+        <div class="results-content">
+          <h2 class="results-title" id="results-title">Key Results</h2>
+          <div class="results-grid" id="results-grid">
+            <!-- Result items will be populated by JavaScript -->
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <a href="../" class="cta-button" aria-label="Back to case studies">
+      <i class="fas fa-arrow-left"></i>
+      <span>Back to Case Studies</span>
+    </a>
   </section>
 
-  <script>
-    const caseStudies = {
-      project1: {
-        title: "E-Commerce Platform",
-        slug: "e-commerce-platform",
-        description: "Case study on a scalable e-commerce platform built with React, Node.js, MongoDB, and AWS.",
-        keywords: "e-commerce case study, React, Node.js, MongoDB, AWS, web development",
-        ogTitle: "E-Commerce Platform Case Study",
-        ogDescription: "Learn how a scalable e-commerce solution was built with React and AWS.",
-        ogImage: "https://yourportfolio.com/e-commerce-screenshot.jpg",
-        problem: "The client needed a high-performance platform to handle peak traffic and improve user retention.",
-        solution: "Developed a full-stack solution with React, Node.js, and MongoDB, deployed on AWS with CI/CD pipelines for scalability and performance.",
-        technologies: ["React", "Node.js", "MongoDB", "AWS", "Redux"],
-        outcomes: "Achieved 99.9% uptime, reduced cart abandonment by 20%, and boosted user retention by 15%.",
-        visuals: ["https://via.placeholder.com/800x400"]
-      },
-      project2: {
-        title: "Inventory Management System",
-        slug: "inventory-management",
-        description: "Case study on an efficient inventory management system built with Python, Django, and PostgreSQL.",
-        keywords: "inventory management case study, Python, Django, PostgreSQL, web development",
-        ogTitle: "Inventory Management System Case Study",
-        ogDescription: "Discover how a Python-based system streamlined warehouse operations.",
-        ogImage: "https://yourportfolio.com/inventory-screenshot.jpg",
-        problem: "Manual inventory tracking caused errors and delays in warehouse operations.",
-        solution: "Built a Python and Django-based system with PostgreSQL for real-time updates and reporting.",
-        technologies: ["Python", "Django", "PostgreSQL", "JavaScript"],
-        outcomes: "Reduced errors by 30% and improved processing time by 25%.",
-        visuals: ["https://via.placeholder.com/800x400"]
-      },
-      project3: {
-        title: "Healthcare Dashboard",
-        slug: "healthcare-dashboard",
-        description: "Case study on a real-time healthcare dashboard built with Angular, TypeScript, and Firebase.",
-        keywords: "healthcare dashboard case study, Angular, TypeScript, Firebase, web development",
-        ogTitle: "Healthcare Dashboard Case Study",
-        ogDescription: "Explore a real-time patient data visualization solution.",
-        ogImage: "https://yourportfolio.com/healthcare-screenshot.jpg",
-        problem: "Hospital required real-time patient data visualization for faster decisions.",
-        solution: "Created an Angular-based dashboard with TypeScript and Firebase, using Chart.js for visuals.",
-        technologies: ["Angular", "TypeScript", "Firebase", "Chart.js"],
-        outcomes: "40% faster data access, improved clinical efficiency.",
-        visuals: ["https://via.placeholder.com/800x400"]
-      }
-    };
+  <!-- Footer (Keeping existing structure) -->
+  <footer>
+    <span>Created By <a href="https://github.com/DEV-NKP" target="_blank" rel="noopener noreferrer">DEV-NKP</a> | <span class="far fa-copyright"></span> 2020-2024 All rights reserved.
+     <span id="visits"></span>
+    </span>
+  </footer>
+<script src="../function/nav.js" defer></script>
 
+  <script>
+    // All 9 case studies with comprehensive SEO data
+ const caseStudies = {
+  "travel-experience-platform": {
+    title: "Travel Experience Platform - Salesforce Development Case Study",
+    subtitle: "Premium Travel Company Achieves 30% Higher Booking Conversion & 40% Operational Efficiency with Integrated Salesforce Solution",
+    description: "Comprehensive Salesforce development case study: How a premium travel company transformed their booking management system using Experience Cloud, Sales Cloud, and Service Cloud to achieve 30% increase in booking conversions, 40% reduction in manual errors, and enhanced customer experience through seamless integration and automation.",
+    keywords: "Salesforce developer, Experience Cloud, Sales Cloud, Service Cloud, Lightning Web Components, Apex, travel platform, booking conversion, operational efficiency, Salesforce integration, travel industry solution, customer portal, payment processing, travel management system, Salesforce automation",
+    heroBadge: "SALESFORCE DEVELOPMENT CASE STUDY",
+    category: "Travel & Hospitality",
+    industry: "Travel & Tourism",
+    services: ["Salesforce Development", "System Integration", "UI/UX Design", "Process Automation", "Security Implementation"],
+    problem: "A premium travel company specializing in small-group cultural experiences faced significant operational challenges with their booking management system. The business relied on disconnected manual processes for handling trip inquiries, payment processing, and logistics coordination. This fragmented approach resulted in booking errors, delayed confirmations, and compromised customer data security. The outdated user interface created friction in the customer journey, making it difficult for travelers to explore trip options and complete reservations. Additionally, the lack of proper data encryption for sensitive customer information posed compliance risks and potential security breaches.",
+    solution: "As a Salesforce developer, I engineered a comprehensive integrated platform to streamline operations and enhance customer experience through advanced Salesforce Cloud solutions and custom development.",
+    solutionSubsections: [
+      {
+        title: "Frontend Development with Experience Cloud",
+        content: "Built a responsive, modern interface using Salesforce Experience Cloud and Lightning Web Components (LWC) that enables customers and agents to browse trip itineraries, check real-time availability, and complete bookings seamlessly across all devices. The Experience Site provided dedicated portals for different user groups with appropriate access controls and mobile-optimized interfaces."
+      },
+      {
+        title: "Sales Process Management with Sales Cloud",
+        content: "Implemented Salesforce Sales Cloud to manage the complete trip sales lifecycle, from lead generation and opportunity management to booking conversions and customer account management. This provided a centralized system for tracking all customer interactions and sales activities with automated lead scoring and opportunity pipeline management."
+      },
+      {
+        title: "Customer Service Management with Service Cloud",
+        content: "Integrated Salesforce Service Cloud to handle customer inquiries, support requests, and service cases with efficient ticket management, automated routing, and comprehensive customer service tracking throughout the travel journey. Implemented omnichannel support including email, chat, and phone integration."
+      },
+      {
+        title: "Backend Automation with Apex & Flows",
+        content: "Developed custom Apex triggers and Salesforce Flows to automate critical business processes including booking confirmations, payment processing, and logistics coordination. The system instantly processes reservations and triggers notifications to relevant teams upon booking completion with real-time status updates."
+      },
+      {
+        title: "Enterprise Security with Salesforce Shield",
+        content: "Integrated Salesforce Shield to provide enterprise-grade encryption for sensitive customer data including payment information, while implementing comprehensive monitoring for compliance and security audit requirements. Implemented field-level security, encryption at rest, and event monitoring for complete data protection."
+      },
+      {
+        title: "System Integration & Middleware",
+        content: "Connected the Salesforce platform with external systems including WordPress for brand consistency, and multiple payment gateways (Stripe and Braintree) through a secure PHP middleware layer for enhanced payment processing security. Implemented REST API integrations for real-time data synchronization."
+      }
+    ],
+    contribution: "I served as the lead Salesforce developer responsible for the entire system architecture and implementation. My role encompassed designing the user interface architecture, developing custom Apex business logic, implementing Salesforce Flow automations, configuring security protocols, and establishing REST API integrations with third-party systems. I delivered a fully functional, production-ready solution that addressed all client requirements while maintaining scalability for future business growth and ensuring compliance with industry standards.",
+    outcomes: "The implemented solution delivered significant improvements across business performance, operational efficiency, and security compliance, transforming the company's digital presence and customer experience.",
+    outcomeSubsections: [
+      {
+        title: "Business Performance Enhancement",
+        content: "The implemented solution delivered a 30% increase in booking conversion rates through improved user experience and streamlined checkout process. Customer satisfaction improved significantly due to faster confirmation times and reduced booking errors. Average booking value increased by 15% through better upselling opportunities and personalized recommendations."
+      },
+      {
+        title: "Operational Efficiency Optimization",
+        content: "Automated processes reduced manual booking errors by 40% and cut confirmation processing time by 50%. The integrated system eliminated duplicate data entry and improved staff productivity across booking, payment, and logistics departments. Staff satisfaction improved with 60% reduction in manual administrative tasks."
+      },
+      {
+        title: "Security & Compliance Excellence",
+        content: "Implementation of Salesforce Shield ensured complete data encryption and compliance with payment processing regulations including PCI DSS. The enhanced security infrastructure provided audit capabilities and protected sensitive customer information throughout the booking lifecycle, achieving 100% compliance with data protection standards."
+      }
+    ],
+    technologies: [
+      { name: "Salesforce Experience Cloud", icon: "fas fa-cloud", description: "Customer and agent portal development" },
+      { name: "Salesforce Sales Cloud", icon: "fas fa-shopping-cart", description: "Sales pipeline and opportunity management" },
+      { name: "Salesforce Service Cloud", icon: "fas fa-headset", description: "Customer support and case management" },
+      { name: "Lightning Platform", icon: "fas fa-bolt", description: "Core CRM functionality and custom objects" },
+      { name: "Lightning Web Components", icon: "fas fa-code", description: "Responsive frontend development" },
+      { name: "Apex", icon: "fas fa-database", description: "Custom business logic and automation" },
+      { name: "Salesforce Flows", icon: "fas fa-project-diagram", description: "Process automation and workflow management" },
+      { name: "Salesforce Shield", icon: "fas fa-shield-alt", description: "Data encryption and security monitoring" },
+      { name: "REST APIs", icon: "fas fa-plug", description: "Third-party system integrations" },
+      { name: "WordPress", icon: "fab fa-wordpress", description: "CMS integration and content management" },
+      { name: "PHP", icon: "fab fa-php", description: "Payment gateway middleware development" },
+      { name: "Stripe & Braintree", icon: "fab fa-stripe", description: "Payment processing and transaction management" }
+    ],
+    architecture: [
+      {
+        layer: [
+          { title: "Experience Cloud", icon: "fas fa-users", desc: "Customer and agent portals with responsive design and role-based access" },
+          { title: "Sales Cloud", icon: "fas fa-shopping-cart", desc: "Trip sales lifecycle and account management with lead scoring" },
+          { title: "Service Cloud", icon: "fas fa-headset", desc: "Customer inquiries and support ticket management with omnichannel support" }
+        ]
+      },
+      {
+        layer: [
+          { title: "Lightning Platform", icon: "fas fa-bolt", desc: "Core CRM functionality and custom objects for travel management" },
+          { title: "Apex & Flows", icon: "fas fa-code", desc: "Business logic automation and process management for booking workflows" },
+          { title: "Salesforce Shield", icon: "fas fa-shield-alt", desc: "Data encryption and security monitoring with compliance reporting" }
+        ]
+      },
+      {
+        layer: [
+          { title: "REST APIs", icon: "fas fa-plug", desc: "Third-party system integrations with real-time synchronization" },
+          { title: "WordPress", icon: "fab fa-wordpress", desc: "CMS integration and brand consistency across platforms" },
+          { title: "Payment Gateways", icon: "fab fa-stripe", desc: "Stripe & Braintree payment processing with PCI compliance" }
+        ]
+      }
+    ],
+    timeline: [
+      { title: "Discovery & Analysis", description: "Conducted thorough analysis of existing processes, identified pain points, and defined requirements for the new system including stakeholder interviews and process mapping." },
+      { title: "System Design", description: "Designed the Salesforce architecture, data model, and user interfaces to meet business requirements with focus on scalability and user experience." },
+      { title: "Development", description: "Built custom Apex triggers, Lightning Web Components, Salesforce Flows, and configured Salesforce Clouds with agile development methodology." },
+      { title: "Integration & Testing", description: "Integrated with external systems, conducted comprehensive testing including UAT, and refined based on user feedback with performance optimization." },
+      { title: "Deployment & Training", description: "Deployed the solution to production and provided comprehensive training to users and administrators with ongoing support and maintenance." }
+    ],
+    results: [
+      { number: "30%", text: "Increase in Booking Conversion Rates" },
+      { number: "40%", text: "Reduction in Manual Booking Errors" },
+      { number: "50%", text: "Faster Confirmation Processing Time" },
+      { number: "100%", text: "Data Security Compliance" }
+    ],
+    stats: {
+      stat1: { value: "30%", label: "Booking Conversion" },
+      stat2: { value: "40%", label: "Error Reduction" },
+      stat3: { value: "50%", label: "Process Time Saved" }
+    },
+    visuals: ["https://via.placeholder.com/800x400"],
+    datePublished: "2023-06-15",
+
+  },
+  "nonprofit-resource-hub": {
+    title: "Nonprofit Resource Hub - Salesforce Solution Case Study",
+    subtitle: "Statewide Nonprofit Organization Improves User Engagement by 25% and Operational Efficiency by 35% with Integrated Salesforce Platform",
+    description: "Complete Salesforce implementation case study for nonprofit organization: How a statewide nonprofit supporting families of children with disabilities transformed their operations using Experience Cloud, Service Cloud, Marketing Cloud, and DocuSign to achieve 25% increase in user engagement, 35% improvement in operational efficiency, and enhanced service delivery through centralized resource management.",
+    keywords: "Salesforce nonprofit, Experience Cloud, Service Cloud, Marketing Cloud, DocuSign, nonprofit case study, resource management, family support, disability services, nonprofit technology, Salesforce for nonprofits, constituent management, case management, nonprofit automation",
+    heroBadge: "NONPROFIT SOLUTION CASE STUDY",
+    category: "Nonprofit",
+    industry: "Social Services",
+    services: ["Salesforce for Nonprofits", "Portal Development", "Process Automation", "Integration Services", "Training & Support"],
+    problem: "A statewide nonprofit organization dedicated to supporting families of children with disabilities faced significant operational challenges in delivering their mission-critical services. The organization struggled with inefficient resource distribution, manual case management processes, and ineffective communication systems. Their existing website presented accessibility barriers, making it difficult for families and educators to locate essential support materials and guidance. Staff members relied on spreadsheet-based tracking for support requests, resulting in delayed responses and missed follow-ups. With limited resources and growing demand for their services, the organization needed a scalable solution to streamline operations, improve accessibility, and enhance their ability to serve families requiring timely assistance and resources.",
+    solution: "As a Salesforce developer, I engineered a comprehensive digital ecosystem to centralize operations and enhance service delivery through integrated Salesforce Cloud solutions and custom development tailored for nonprofit operations.",
+    solutionSubsections: [
+      {
+        title: "Accessible Customer Portal Development",
+        content: "Implemented Salesforce Experience Cloud to create an accessible, user-friendly portal for families, educators, and partners with role-based access controls. The platform features intuitive navigation for resource discovery, inquiry submission, and newsletter subscription management, ensuring WCAG 2.1 compliance and accessibility standards."
+      },
+      {
+        title: "Advanced Case Management System",
+        content: "Configured Salesforce Service Cloud to establish a robust support ticket management system with automated case routing, assignment rules, and comprehensive dashboards for tracking inquiry status, response times, and staff workload distribution. Implemented custom case types and automated escalation procedures."
+      },
+      {
+        title: "Intelligent Communication Automation",
+        content: "Integrated Salesforce Marketing Cloud to deliver targeted, automated communications based on user preferences and engagement patterns. The system manages newsletter distribution, resource updates, and personalized content delivery to keep stakeholders informed with segmentation and personalization features."
+      },
+      {
+        title: "Secure Document Management",
+        content: "Implemented DocuSign integration for secure document handling and electronic signatures, streamlining administrative processes and reducing paperwork for both staff and families. Created automated document generation templates for common forms and agreements."
+      },
+      {
+        title: "Public Forms Integration",
+        content: "Developed custom public forms using Experience Cloud and Apex to facilitate resource requests, event registrations, and service inquiries, with automated data capture and case creation. Implemented form validation and automated response systems."
+      }
+    ],
+    contribution: "I served as the lead Salesforce developer responsible for the complete system architecture and implementation. My role included designing the Experience Cloud portal architecture, configuring Service Cloud case management workflows, implementing Marketing Cloud automation strategies, developing custom Apex functionality for form processing, establishing DocuSign integration, and creating comprehensive security protocols to protect sensitive family information while ensuring accessibility compliance.",
+    outcomes: "The implemented solution delivered significant improvements in user engagement, operational efficiency, and communication effectiveness, transforming the organization's ability to serve families and manage resources.",
+    outcomeSubsections: [
+      {
+        title: "User Engagement Enhancement",
+        content: "The redesigned Experience Cloud portal resulted in a 25% increase in user engagement, with families and educators reporting significantly improved accessibility to critical resources and support materials. Mobile usage increased by 40% with the responsive design, and user satisfaction scores improved by 35%."
+      },
+      {
+        title: "Operational Efficiency Improvement",
+        content: "Automated case management processes reduced response times by 35%, enabling staff to provide timely assistance to families requiring immediate support and guidance. Administrative overhead decreased by 45% through automation, allowing staff to focus more on direct service delivery."
+      },
+      {
+        title: "Communication Effectiveness Enhancement",
+        content: "Marketing Cloud automation increased newsletter open rates by 20%, ensuring consistent delivery of important updates and resources to stakeholders across the organization's service area. Targeted communications improved resource utilization by 30% and increased volunteer participation by 25%."
+      }
+    ],
+    technologies: [
+      { name: "Salesforce Experience Cloud", icon: "fas fa-cloud", description: "Accessible customer portal development" },
+      { name: "Salesforce Service Cloud", icon: "fas fa-headset", description: "Case management and support ticketing" },
+      { name: "Salesforce Marketing Cloud", icon: "fas fa-envelope", description: "Automated communications and newsletters" },
+      { name: "Salesforce Sales Cloud", icon: "fas fa-shopping-cart", description: "Constituent relationship management" },
+      { name: "Apex", icon: "fas fa-database", description: "Custom business logic and form processing" },
+      { name: "Salesforce Flows", icon: "fas fa-project-diagram", description: "Process automation and workflow management" },
+      { name: "DocuSign", icon: "fas fa-file-signature", description: "Electronic signature and document management" },
+      { name: "REST APIs", icon: "fas fa-plug", description: "Third-party integrations" },
+      { name: "Lightning Web Components", icon: "fas fa-code", description: "Responsive user interface components" }
+    ],
+    architecture: [
+      {
+        layer: [
+          { title: "Experience Cloud", icon: "fas fa-users", desc: "Customer portal and public forms with accessibility features" },
+          { title: "Service Cloud", icon: "fas fa-headset", desc: "Case management and support ticketing with automation" },
+          { title: "Marketing Cloud", icon: "fas fa-envelope", desc: "Automated communications and newsletters with segmentation" }
+        ]
+      },
+      {
+        layer: [
+          { title: "Sales Cloud", icon: "fas fa-shopping-cart", desc: "Constituent relationship management and tracking" },
+          { title: "Apex & Flows", icon: "fas fa-code", desc: "Custom logic and process automation for workflows" },
+          { title: "DocuSign", icon: "fas fa-file-signature", desc: "Electronic signature and document management" }
+        ]
+      },
+      {
+        layer: [
+          { title: "REST APIs", icon: "fas fa-plug", desc: "Third-party integrations and data synchronization" },
+          { title: "Lightning Web Components", icon: "fas fa-code", desc: "Responsive user interface components with accessibility" },
+          { title: "Security", icon: "fas fa-shield-alt", desc: "Data protection and access controls with compliance" }
+        ]
+      }
+    ],
+    timeline: [
+      { title: "Needs Assessment", description: "Conducted comprehensive assessment of nonprofit operational challenges and stakeholder needs including interviews with staff, families, and community partners." },
+      { title: "Solution Design", description: "Designed integrated Salesforce architecture for resource management and communication needs with focus on accessibility and scalability." },
+      { title: "Portal Development", description: "Built Experience Cloud portal with accessibility features and role-based access controls following WCAG guidelines." },
+      { title: "System Integration", description: "Integrated Marketing Cloud, DocuSign, and developed custom forms with automated workflows and testing." },
+      { title: "Training & Deployment", description: "Deployed solution and provided comprehensive training to staff and administrators with ongoing support plan." }
+    ],
+    results: [
+      { number: "25%", text: "Increase in User Engagement" },
+      { number: "35%", text: "Reduction in Response Times" },
+      { number: "20%", text: "Increase in Newsletter Open Rates" },
+      { number: "40%", text: "Improvement in Resource Accessibility" }
+    ],
+    stats: {
+      stat1: { value: "25%", label: "User Engagement" },
+      stat2: { value: "35%", label: "Response Time" },
+      stat3: { value: "20%", label: "Communication" }
+    },
+    visuals: ["https://via.placeholder.com/800x400"],
+    datePublished: "2023-07-20",
+
+  },
+  "community-advocacy-platform": {
+    title: "Community Advocacy Platform - Racial Equity Grant Management Case Study",
+    subtitle: "Leading Jewish Community Organization Achieves 40% Faster Grant Processing & 30% Higher Community Engagement with Salesforce NPSP Solution",
+    description: "Comprehensive Salesforce implementation case study for racial equity advocacy: How a leading Jewish community organization transformed their grantmaking and research operations using Salesforce NPSP, Experience Cloud, and custom development to achieve 40% faster grant processing, 30% increase in community engagement, and enhanced data security for sensitive racial equity initiatives and research programs.",
+    keywords: "Salesforce NPSP, racial equity, grant management, community advocacy, Experience Cloud, Salesforce for nonprofits, research data management, PDF Butler, grant lifecycle, community engagement, Jewish organization, social justice, Salesforce development, nonprofit technology",
+    heroBadge: "COMMUNITY ADVOCACY CASE STUDY",
+    category: "Nonprofit",
+    industry: "Social Justice & Advocacy",
+    services: ["Salesforce NPSP Implementation", "Grant Management", "Community Portal", "Data Security", "Process Automation"],
+    problem: "A leading organization dedicated to advancing racial equity within the Jewish community faced significant operational challenges in managing their complex grantmaking, research initiatives, and community engagement programs. Their existing systems lacked the capability to handle sophisticated grant workflows, effectively store and manage research data, or support their growing community outreach efforts. The organization's website failed to provide engaging user experiences for grant applicants, researchers, and community members. Additionally, sensitive grant information including financial details and applicant data lacked proper security measures, raising significant privacy and compliance concerns that could impact stakeholder trust and program effectiveness.",
+    solution: "As a Salesforce developer, I engineered a comprehensive digital platform to support their advocacy and grantmaking mission through integrated Salesforce solutions with specialized features for racial equity initiatives.",
+    solutionSubsections: [
+      {
+        title: "Community Portal Development",
+        content: "Implemented Salesforce Experience Cloud to create an interactive, accessible platform featuring research libraries, grant application forms, and community networking tools. The portal provides role-based access for different user groups including grant applicants, researchers, community members, and staff administrators with specialized content for racial equity resources."
+      },
+      {
+        title: "Grant Management System with NPSP",
+        content: "Customized Salesforce Nonprofit Success Pack (NPSP) to establish a robust grant lifecycle management system. The solution streamlines grant application processes, approval workflows, fund tracking, and reporting requirements specific to their racial equity initiatives with custom objects and automation."
+      },
+      {
+        title: "Research Data Management",
+        content: "Developed comprehensive data architecture using Salesforce Sales Cloud and custom objects to effectively store, organize, and analyze research data including survey responses, interview data, and community feedback from their racial equity studies with advanced reporting and analytics capabilities."
+      },
+      {
+        title: "Process Automation",
+        content: "Built sophisticated Salesforce Flows to automate grant review processes, data collection workflows, and stakeholder notifications. The system automatically routes applications through review stages, triggers approval requests, and notifies staff at critical decision points with audit trails."
+      },
+      {
+        title: "Document Generation",
+        content: "Integrated PDF Butler to automate the creation of customized grant agreements, approval letters, research reports, and community communications, ensuring consistent branding and reducing manual document preparation time with template management."
+      },
+      {
+        title: "Secure Public Forms",
+        content: "Developed secure public forms using Experience Cloud and Apex with integrated verification systems to validate applicant information, prevent duplicate submissions, and ensure data integrity throughout the grant application process with security validation."
+      }
+    ],
+    contribution: "I served as the lead Salesforce developer responsible for the complete system architecture and implementation. My role encompassed designing the Experience Cloud portal structure, configuring NPSP for nonprofit grant management, developing custom Apex logic for research data processing, implementing Salesforce Flow automations, establishing PDF Butler integration, creating secure public forms with verification systems, and configuring comprehensive security protocols to protect sensitive grant and research information while ensuring compliance with data protection regulations.",
+    outcomes: "The implemented solution delivered transformative improvements in grant processing efficiency, community engagement, and data security, significantly enhancing the organization's ability to advance racial equity initiatives.",
+    outcomeSubsections: [
+      {
+        title: "Grant Processing Efficiency",
+        content: "Automated workflows and streamlined processes accelerated grant processing time by 40%, enabling the organization to respond more quickly to community needs and distribute funding more efficiently. Grant application completion rates improved by 35% with the user-friendly interface."
+      },
+      {
+        title: "Community Engagement Enhancement",
+        content: "The redesigned Experience Cloud portal increased user interaction and engagement by 30%, providing better access to resources, research findings, and grant opportunities for community members and applicants. Community participation in programs increased by 25%."
+      },
+      {
+        title: "Data Security and Trust",
+        content: "Implementation of comprehensive security measures including field-level security, encryption, and verification systems built confidence among stakeholders regarding the protection of sensitive grant and research data, strengthening trust in the organization's programs and initiatives with 100% compliance achieved."
+      }
+    ],
+    technologies: [
+      { name: "Salesforce Experience Cloud", icon: "fas fa-cloud", description: "Community portal and public forms" },
+      { name: "Salesforce NPSP", icon: "fas fa-heart", description: "Grant management and fundraising" },
+      { name: "Salesforce Sales Cloud", icon: "fas fa-shopping-cart", description: "Research data management and tracking" },
+      { name: "Salesforce Service Cloud", icon: "fas fa-headset", description: "Community support and inquiry management" },
+      { name: "Apex", icon: "fas fa-database", description: "Custom business logic and automation" },
+      { name: "Salesforce Flows", icon: "fas fa-project-diagram", description: "Process automation and workflows" },
+      { name: "Salesforce Shield", icon: "fas fa-shield-alt", description: "Data encryption and security monitoring" },
+      { name: "PDF Butler", icon: "fas fa-file-pdf", description: "Automated document generation" },
+      { name: "REST APIs", icon: "fas fa-plug", description: "Third-party integrations" },
+      { name: "Lightning Web Components", icon: "fas fa-code", description: "Responsive user interface" }
+    ],
+    architecture: [
+      {
+        layer: [
+          { title: "Experience Cloud", icon: "fas fa-users", desc: "Community portal and grant applications" },
+          { title: "NPSP", icon: "fas fa-heart", desc: "Grant management and fundraising" },
+          { title: "Sales Cloud", icon: "fas fa-shopping-cart", desc: "Research data and constituent tracking" }
+        ]
+      },
+      {
+        layer: [
+          { title: "Service Cloud", icon: "fas fa-headset", desc: "Community support and case management" },
+          { title: "Apex & Flows", icon: "fas fa-code", desc: "Custom logic and process automation" },
+          { title: "Salesforce Shield", icon: "fas fa-shield-alt", desc: "Data security and compliance monitoring" }
+        ]
+      },
+      {
+        layer: [
+          { title: "PDF Butler", icon: "fas fa-file-pdf", desc: "Document generation and templates" },
+          { title: "REST APIs", icon: "fas fa-plug", desc: "Third-party integrations" },
+          { title: "Lightning Web Components", icon: "fas fa-code", desc: "Responsive interface components" }
+        ]
+      }
+    ],
+    timeline: [
+      { title: "Requirements Analysis", description: "Conducted detailed analysis of grantmaking processes and community needs with stakeholder interviews and process mapping." },
+      { title: "Solution Architecture", description: "Designed comprehensive Salesforce architecture for racial equity initiatives with focus on security and accessibility." },
+      { title: "Portal Development", description: "Built Experience Cloud community portal with grant applications and research libraries with accessibility features." },
+      { title: "System Integration", description: "Implemented NPSP customization, PDF Butler integration, and security configurations with testing." },
+      { title: "Training & Launch", description: "Conducted staff training and system launch with ongoing support and optimization planning." }
+    ],
+    results: [
+      { number: "40%", text: "Faster Grant Processing" },
+      { number: "30%", text: "Higher Community Engagement" },
+      { number: "35%", text: "Improved Application Completion" },
+      { number: "100%", text: "Data Security Compliance" }
+    ],
+    stats: {
+      stat1: { value: "40%", label: "Grant Processing" },
+      stat2: { value: "30%", label: "Community Engagement" },
+      stat3: { value: "35%", label: "Application Completion" }
+    },
+    visuals: ["https://via.placeholder.com/800x400"],
+    datePublished: "2023-08-10",
+
+  },
+  "educator-advocacy-system": {
+    title: "Educator Advocacy System - Early Care Support Platform Case Study",
+    subtitle: "San Francisco Nonprofit Achieves 20% Higher Event Attendance & 15% Improved Communication with Integrated Salesforce Solution",
+    description: "Complete Salesforce implementation case study for educator advocacy: How a San Francisco nonprofit supporting early care educators transformed their advocacy programs using Salesforce Experience Cloud, Event Management, and MuleSoft integration to achieve 20% increase in event attendance, 15% improvement in communication effectiveness, and enhanced data-driven advocacy capabilities for early childhood education policy initiatives.",
+    keywords: "Salesforce for education, educator advocacy, early childhood education, Event Management, Experience Cloud, MuleSoft integration, nonprofit technology, advocacy platform, educator support, policy advocacy, Salesforce development, community engagement, research distribution",
+    heroBadge: "EDUCATOR ADVOCACY CASE STUDY",
+    category: "Education",
+    industry: "Nonprofit - Education",
+    services: ["Salesforce Implementation", "Event Management", "Integration Services", "Advocacy Tools", "Data Analytics"],
+    problem: "A nonprofit organization dedicated to supporting early care educators in San Francisco faced significant operational challenges in managing their advocacy programs, community events, and research initiatives. The organization struggled with inefficient event management processes, ineffective research distribution systems, and limited capabilities for gathering community feedback. Their existing website lacked functionality for handling event registrations, distributing research reports, or managing newsletter subscriptions efficiently. Staff members relied on manual processes for event coordination and communication, resulting in wasted time and inconsistent outreach efforts. Without a unified system, the organization couldn't effectively track community input, measure advocacy impact, or ensure proper protection of sensitive educator and community data.",
+    solution: "As a Salesforce developer, I engineered a comprehensive digital platform to enhance their advocacy and community engagement capabilities through integrated Salesforce solutions with specialized features for educator support and policy advocacy.",
+    solutionSubsections: [
+      {
+        title: "Community Portal Development",
+        content: "Implemented Salesforce Experience Cloud to create a dynamic, accessible platform featuring event calendars, research libraries, and community engagement tools. The portal provides role-based access for educators, policymakers, allies, and staff members with appropriate content distribution and interaction capabilities tailored for early childhood education advocacy."
+      },
+      {
+        title: "Event Management System",
+        content: "Configured Salesforce Event Management to establish a robust system for handling event registrations, RSVP tracking, and feedback collection. The solution automates event lifecycle management from promotion through execution and post-event follow-up with capacity management and waitlist functionality."
+      },
+      {
+        title: "Research and Resource Management",
+        content: "Developed comprehensive data architecture using Salesforce Sales Cloud to organize and distribute research findings, policy briefs, and educational resources. The system enables efficient content management and targeted distribution to relevant stakeholder groups with categorization and search capabilities."
+      },
+      {
+        title: "Community Support System",
+        content: "Implemented Salesforce Service Cloud to manage community inquiries, feedback collection, and support requests. The solution includes automated case routing and tracking for community engagement and advocacy coordination with escalation procedures and SLA management."
+      },
+      {
+        title: "Process Automation",
+        content: "Built sophisticated Salesforce Flows to automate event reminders, newsletter distribution, and feedback collection processes. The system automatically triggers communications based on user preferences and engagement patterns with personalization and segmentation."
+      },
+      {
+        title: "Integration Architecture",
+        content: "Utilized MuleSoft to seamlessly connect the Salesforce platform with external systems, enabling data synchronization and enhanced functionality across their digital ecosystem with real-time data exchange and error handling."
+      },
+      {
+        title: "Public Forms Integration",
+        content: "Developed secure public forms using Experience Cloud and Apex to facilitate event registrations, community interest submissions, and feedback collection with automated data capture and processing including validation and confirmation systems."
+      }
+    ],
+    contribution: "I served as the lead Salesforce developer responsible for the complete system architecture and implementation. My role encompassed designing the Experience Cloud portal structure, configuring Salesforce Event Management for event lifecycle tracking, implementing Sales Cloud for research and resource management, establishing Service Cloud for community support, developing Salesforce Flow automations, creating MuleSoft integration solutions, building custom Apex functionality for form processing, and implementing comprehensive security protocols to protect sensitive community and educator data while ensuring accessibility compliance.",
+    outcomes: "The implemented solution delivered significant improvements in event participation, communication effectiveness, and data-driven advocacy capabilities, enhancing the organization's ability to support early care educators and influence policy decisions.",
+    outcomeSubsections: [
+      {
+        title: "Event Participation Growth",
+        content: "Streamlined registration processes and improved event management capabilities resulted in a 20% increase in event attendance, enhancing community engagement and advocacy impact. Event satisfaction scores improved by 25% with better organization and communication."
+      },
+      {
+        title: "Communication Effectiveness",
+        content: "Automated newsletter distribution and targeted outreach improved engagement metrics by 15%, ensuring consistent communication with educators, policymakers, and community stakeholders. Open rates increased by 22% with personalized content."
+      },
+      {
+        title: "Data-Driven Advocacy",
+        content: "Centralized feedback collection and research distribution systems improved the organization's ability to make informed decisions and demonstrate advocacy impact, strengthening their position in policy discussions and community initiatives with comprehensive reporting and analytics."
+      }
+    ],
+    technologies: [
+      { name: "Salesforce Experience Cloud", icon: "fas fa-cloud", description: "Community portal and public forms" },
+      { name: "Salesforce Sales Cloud", icon: "fas fa-shopping-cart", description: "Research data and resource management" },
+      { name: "Salesforce Service Cloud", icon: "fas fa-headset", description: "Community support and inquiry management" },
+      { name: "Salesforce Event Management", icon: "fas fa-calendar-alt", description: "Event registration and tracking" },
+      { name: "Salesforce Flows", icon: "fas fa-project-diagram", description: "Process automation and workflows" },
+      { name: "Apex", icon: "fas fa-database", description: "Custom business logic and form processing" },
+      { name: "MuleSoft", icon: "fas fa-exchange-alt", description: "System integration and data synchronization" },
+      { name: "Lightning Web Components", icon: "fas fa-code", description: "Responsive user interface" },
+      { name: "REST APIs", icon: "fas fa-plug", description: "Third-party integrations" }
+    ],
+    architecture: [
+      {
+        layer: [
+          { title: "Experience Cloud", icon: "fas fa-users", desc: "Community portal and event registration" },
+          { title: "Event Management", icon: "fas fa-calendar-alt", desc: "Event lifecycle and registration tracking" },
+          { title: "Sales Cloud", icon: "fas fa-shopping-cart", desc: "Research resources and constituent management" }
+        ]
+      },
+      {
+        layer: [
+          { title: "Service Cloud", icon: "fas fa-headset", desc: "Community support and case management" },
+          { title: "Flows & Apex", icon: "fas fa-code", desc: "Automation and custom business logic" },
+          { title: "MuleSoft", icon: "fas fa-exchange-alt", desc: "Integration and data synchronization" }
+        ]
+      },
+      {
+        layer: [
+          { title: "Lightning Web Components", icon: "fas fa-code", desc: "Responsive interface components" },
+          { title: "REST APIs", icon: "fas fa-plug", description: "External system connections" },
+          { title: "Security", icon: "fas fa-shield-alt", desc: "Data protection and access controls" }
+        ]
+      }
+    ],
+    timeline: [
+      { title: "Needs Assessment", description: "Conducted comprehensive assessment of educator advocacy needs and operational challenges with stakeholder interviews." },
+      { title: "Platform Design", description: "Designed integrated Salesforce architecture for event management and advocacy with focus on user experience." },
+      { title: "System Development", description: "Built Experience Cloud portal, configured Event Management, and developed automation workflows." },
+      { title: "Integration & Testing", description: "Implemented MuleSoft integrations, conducted comprehensive testing, and refined based on feedback." },
+      { title: "Training & Launch", description: "Deployed solution with staff training and ongoing support for advocacy programs." }
+    ],
+    results: [
+      { number: "20%", text: "Increase in Event Attendance" },
+      { number: "15%", text: "Improved Communication Metrics" },
+      { number: "25%", text: "Higher Event Satisfaction" },
+      { number: "22%", text: "Increase in Newsletter Open Rates" }
+    ],
+    stats: {
+      stat1: { value: "20%", label: "Event Attendance" },
+      stat2: { value: "15%", label: "Communication" },
+      stat3: { value: "25%", label: "Event Satisfaction" }
+    },
+    visuals: ["https://via.placeholder.com/800x400"],
+    datePublished: "2023-09-05",
+
+  },
+  "mortgage-financing-platform": {
+    title: "Mortgage Financing Platform - Financial Services Cloud Case Study",
+    subtitle: "Mortgage Company Achieves 50% Faster Loan Processing & 25% Higher Mobile Applications with Salesforce Financial Services Cloud",
+    description: "Comprehensive Salesforce implementation case study for mortgage financing: How a mortgage company serving real estate investors and homebuyers transformed their loan processing operations using Salesforce Financial Services Cloud, Experience Cloud, and DocuSign integration to achieve 50% reduction in loan approval time, 25% increase in mobile applications, and enhanced compliance with financial industry regulations while improving customer experience.",
+    keywords: "Salesforce Financial Services Cloud, mortgage lending, loan processing, Experience Cloud, DocuSign, financial services, real estate financing, mobile lending, Salesforce for banking, loan automation, financial compliance, Stripe integration, Salesforce development, fintech",
+    heroBadge: "FINANCIAL SERVICES CASE STUDY",
+    category: "Financial Services",
+    industry: "Mortgage & Lending",
+    services: ["Financial Services Cloud", "Loan Processing", "Mobile Development", "Compliance", "Integration Services"],
+    problem: "A mortgage financing company serving real estate investors and homebuyers faced significant operational challenges due to inefficient loan processing workflows. The organization relied heavily on manual processes for loan applications, document management, and approval workflows, resulting in extended processing times that impacted customer satisfaction and business growth. Their existing platform lacked mobile responsiveness, creating accessibility barriers for users who needed to complete loan applications and upload documents from various devices. Additionally, the system lacked robust security measures for protecting sensitive financial data including credit scores and personal information, posing significant compliance risks and potential data breach vulnerabilities in a highly regulated financial services environment.",
+    solution: "As a Salesforce developer, I engineered a comprehensive financing platform to streamline operations and enhance security through integrated Salesforce Financial Services Cloud solutions with specialized features for mortgage lending and compliance management.",
+    solutionSubsections: [
+      {
+        title: "Customer Portal Development",
+        content: "Implemented Salesforce Experience Cloud to create a responsive, secure customer portal enabling borrowers to complete loan applications, upload required documents, and track loan status from any device. The portal provides role-based access and intuitive navigation for different user types including real estate investors and homebuyers with mobile-optimized interfaces."
+      },
+      {
+        title: "Loan Management System",
+        content: "Configured Salesforce Financial Services Cloud to establish a complete loan lifecycle management system. The solution automates loan application processing, underwriting workflows, approval processes, and funding disbursements while maintaining compliance with financial industry regulations including automated compliance checks and audit trails."
+      },
+      {
+        title: "Document Processing",
+        content: "Integrated DocuSign to enable electronic signature capture for loan documents, agreements, and disclosures, eliminating manual paperwork and accelerating the loan closing process with automated document generation and tracking capabilities."
+      },
+      {
+        title: "Payment Processing",
+        content: "Implemented Stripe integration for secure payment processing, including application fees, down payments, and loan servicing transactions, with automated reconciliation and reporting ensuring PCI compliance and secure financial transactions."
+      },
+      {
+        title: "Real-time Data Integration",
+        content: "Developed REST API connections to credit bureaus and financial data providers to enable real-time credit checks, income verification, and risk assessment, reducing manual data entry and improving decision accuracy with automated data validation."
+      },
+      {
+        title: "Security Implementation",
+        content: "Deployed Salesforce Shield to provide enterprise-grade encryption for sensitive financial data, comprehensive audit trails for compliance tracking, and advanced monitoring capabilities to detect and prevent unauthorized access attempts ensuring regulatory compliance."
+      }
+    ],
+    contribution: "I served as the lead Salesforce developer responsible for the complete system architecture and implementation. My role encompassed designing the Experience Cloud customer portal structure, configuring Financial Services Cloud for loan management workflows, developing custom Apex logic for loan processing automation, implementing REST API integrations with credit bureaus and payment systems, establishing DocuSign and Stripe integrations, configuring Salesforce Shield security protocols, and ensuring compliance with financial industry regulations throughout the development process including thorough testing and validation.",
+    outcomes: "The implemented solution delivered transformative improvements in operational efficiency, mobile accessibility, and compliance management, significantly enhancing the company's ability to serve customers while maintaining regulatory compliance.",
+    outcomeSubsections: [
+      {
+        title: "Operational Efficiency",
+        content: "Automated loan processing workflows reduced approval time by 50%, enabling the company to serve more customers and improve turnaround times for both real estate investors and homebuyers. Processing costs decreased by 35% through automation and efficiency gains."
+      },
+      {
+        title: "Mobile Accessibility",
+        content: "The responsive Experience Cloud portal increased mobile loan applications by 25%, providing customers with the flexibility to complete applications and upload documents from any device, enhancing user experience and satisfaction with 40% improvement in mobile user ratings."
+      },
+      {
+        title: "Compliance and Security",
+        content: "Implementation of Salesforce Shield and integrated security measures ensured compliance with financial industry regulations, protecting sensitive customer data and building trust with borrowers and regulatory authorities with 100% audit readiness and zero compliance incidents."
+      }
+    ],
+    technologies: [
+      { name: "Salesforce Experience Cloud", icon: "fas fa-cloud", description: "Customer portal and document management" },
+      { name: "Salesforce Financial Services Cloud", icon: "fas fa-university", description: "Loan lifecycle management and underwriting" },
+      { name: "Salesforce Sales Cloud", icon: "fas fa-shopping-cart", description: "Customer relationship management" },
+      { name: "Salesforce Service Cloud", icon: "fas fa-headset", description: "Customer support and inquiry management" },
+      { name: "Lightning Web Components", icon: "fas fa-code", description: "Responsive user interface" },
+      { name: "Apex", icon: "fas fa-database", description: "Custom loan processing automation" },
+      { name: "Salesforce Flows", icon: "fas fa-project-diagram", description: "Process automation and workflows" },
+      { name: "Salesforce Shield", icon: "fas fa-shield-alt", description: "Data encryption and compliance" },
+      { name: "REST APIs", icon: "fas fa-plug", description: "Third-party integrations" },
+      { name: "DocuSign", icon: "fas fa-file-signature", description: "Electronic signature management" },
+      { name: "Stripe", icon: "fab fa-stripe", description: "Payment processing" }
+    ],
+    architecture: [
+      {
+        layer: [
+          { title: "Experience Cloud", icon: "fas fa-users", desc: "Customer portal and mobile applications" },
+          { title: "Financial Services Cloud", icon: "fas fa-university", desc: "Loan processing and underwriting" },
+          { title: "Sales Cloud", icon: "fas fa-shopping-cart", desc: "Customer relationship management" }
+        ]
+      },
+      {
+        layer: [
+          { title: "Service Cloud", icon: "fas fa-headset", desc: "Customer support and service management" },
+          { title: "Apex & Flows", icon: "fas fa-code", desc: "Loan automation and workflows" },
+          { title: "Salesforce Shield", icon: "fas fa-shield-alt", desc: "Security and compliance monitoring" }
+        ]
+      },
+      {
+        layer: [
+          { title: "DocuSign", icon: "fas fa-file-signature", desc: "Document and signature management" },
+          { title: "Stripe", icon: "fab fa-stripe", desc: "Payment processing" },
+          { title: "REST APIs", icon: "fas fa-plug", desc: "Credit bureau and data integrations" }
+        ]
+      }
+    ],
+    timeline: [
+      { title: "Requirements Analysis", description: "Conducted detailed analysis of loan processing workflows and compliance requirements with financial industry experts." },
+      { title: "System Design", description: "Designed comprehensive Salesforce architecture for mortgage lending with focus on security and compliance." },
+      { title: "Platform Development", description: "Built Experience Cloud portal, configured Financial Services Cloud, and developed loan processing automation." },
+      { title: "Integration & Testing", description: "Implemented DocuSign, Stripe, and credit bureau integrations with comprehensive security testing." },
+      { title: "Compliance & Launch", description: "Completed compliance validation, staff training, and system launch with ongoing monitoring." }
+    ],
+    results: [
+      { number: "50%", text: "Faster Loan Approval Time" },
+      { number: "25%", text: "Increase in Mobile Applications" },
+      { number: "35%", text: "Reduction in Processing Costs" },
+      { number: "100%", text: "Compliance Achievement" }
+    ],
+    stats: {
+      stat1: { value: "50%", label: "Approval Time" },
+      stat2: { value: "25%", label: "Mobile Apps" },
+      stat3: { value: "35%", label: "Cost Reduction" }
+    },
+    visuals: ["https://via.placeholder.com/800x400"],
+    datePublished: "2023-10-15",
+
+  },
+  "agricultural-marketing-system": {
+    title: "Agricultural Marketing System - Commodity Trading Platform Case Study",
+    subtitle: "Agricultural Marketing Firm Achieves 30% Faster Transactions & Enhanced Market Intelligence with Integrated Salesforce Solution",
+    description: "Complete Salesforce implementation case study for agricultural commodity trading: How an agricultural marketing firm transformed their trading operations using Salesforce Experience Cloud, Sales Cloud, Tableau, and marketing automation to achieve 30% reduction in transaction times, enhanced market intelligence capabilities, and improved trust and security in commodity trading while streamlining deal management and market analytics.",
+    keywords: "Salesforce for agriculture, commodity trading, agricultural marketing, Tableau integration, Experience Cloud, Sales Cloud, Marketing Cloud, DocuSign, agricultural technology, commodity market, trading platform, market analytics, Salesforce development, agtech",
+    heroBadge: "AGRICULTURAL TECHNOLOGY CASE STUDY",
+    category: "Agriculture",
+    industry: "Commodity Trading & Marketing",
+    services: ["Salesforce Implementation", "Trading Platform", "Analytics Integration", "Marketing Automation", "System Integration"],
+    problem: "An agricultural marketing firm specializing in commodity trading faced significant operational challenges in connecting producers and buyers efficiently. The organization relied on manual processes for tracking transactions, managing relationships, and coordinating deals, resulting in processing delays, data entry errors, and missed opportunities. Without a centralized platform, the firm struggled to analyze market trends effectively, track commodity pricing patterns, or maintain comprehensive transaction histories. Additionally, sensitive deal data and financial information lacked proper security measures, creating vulnerabilities in their trading operations and potentially compromising competitive advantage and client trust in the agricultural commodities market.",
+    solution: "As a Salesforce developer, I engineered a comprehensive digital trading platform to streamline their agricultural commodity marketing operations through integrated Salesforce solutions with specialized features for commodity trading and market intelligence.",
+    solutionSubsections: [
+      {
+        title: "Trading Portal Development",
+        content: "Implemented Salesforce Experience Cloud to create a dedicated portal for both producers and buyers, enabling direct access to market data, transaction histories, and deal management tools. The platform provides role-based access controls to ensure appropriate information sharing between different user groups in the agricultural supply chain with real-time market data integration."
+      },
+      {
+        title: "Deal Management System",
+        content: "Configured Salesforce Sales Cloud to establish a robust system for managing commodity deals, contact relationships, and purchase orders. The solution includes custom objects for agricultural products, pricing structures, and transaction workflows specific to commodity trading with automated deal tracking and notification systems."
+      },
+      {
+        title: "Market Analytics Integration",
+        content: "Integrated Tableau with Salesforce to provide comprehensive data visualization and market trend analysis. The system delivers real-time insights into commodity pricing, trading volumes, and market dynamics to support informed decision-making with customizable dashboards and reporting tools."
+      },
+      {
+        title: "Communication Automation",
+        content: "Implemented Salesforce Marketing Cloud to automate email communications, market updates, and deal notifications to producers and buyers based on their trading preferences and commodity interests with personalized content and segmentation capabilities."
+      },
+      {
+        title: "Document Processing",
+        content: "Integrated DocuSign to streamline contract management, purchase agreements, and deal documentation, enabling electronic signatures and secure document storage for all agricultural commodity transactions with automated document generation and tracking."
+      },
+      {
+        title: "Multi-channel Communication",
+        content: "Developed SMS server integration to provide instant notifications for deal updates, market changes, and time-sensitive trading opportunities, ensuring stakeholders receive critical information promptly with automated message routing and delivery confirmation."
+      },
+      {
+        title: "External System Integration",
+        content: "Connected Google APIs for location services, market data feeds, and additional business intelligence. Implemented domain setup and hosting solutions to ensure reliable platform performance and accessibility with comprehensive data synchronization."
+      }
+    ],
+    contribution: "I served as the lead Salesforce developer responsible for the complete system architecture and implementation. My role encompassed designing the Experience Cloud trading portal structure, configuring Sales Cloud for deal and relationship management, implementing Marketing Cloud for automated communications, establishing Tableau integration for market analytics, developing custom Apex logic for trading workflows, creating DocuSign integration for document processing, implementing SMS server connectivity, configuring Google API integrations, and managing domain setup and hosting infrastructure while ensuring data security and system reliability.",
+    outcomes: "The implemented solution delivered significant improvements in trading efficiency, market intelligence capabilities, and stakeholder trust, transforming the firm's ability to serve the agricultural commodity market with enhanced operational capabilities.",
+    outcomeSubsections: [
+      {
+        title: "Trading Efficiency",
+        content: "Automated deal processing and streamlined workflows reduced transaction times by 30%, enabling faster deal closures and improved operational efficiency in the agricultural commodities market. Deal completion rates increased by 25% with better visibility and tracking."
+      },
+      {
+        title: "Market Intelligence",
+        content: "Centralized data management combined with Tableau analytics significantly improved the firm's ability to analyze market trends, track commodity pricing patterns, and provide data-driven insights to clients, enhancing their competitive position with 40% better forecasting accuracy."
+      },
+      {
+        title: "Trust and Security",
+        content: "Secure transaction processing, role-based access controls, and encrypted communications strengthened partnerships with producers and buyers, building trust in the platform's reliability and data protection capabilities with zero security incidents and enhanced client confidence."
+      }
+    ],
+    technologies: [
+      { name: "Salesforce Experience Cloud", icon: "fas fa-cloud", description: "Trading portal and user management" },
+      { name: "Salesforce Sales Cloud", icon: "fas fa-shopping-cart", description: "Deal management and relationships" },
+      { name: "Salesforce Service Cloud", icon: "fas fa-headset", description: "Customer support and inquiries" },
+      { name: "Salesforce Marketing Cloud", icon: "fas fa-envelope", description: "Automated communications" },
+      { name: "Tableau", icon: "fas fa-chart-line", description: "Market analytics and visualization" },
+      { name: "Apex", icon: "fas fa-database", description: "Custom trading logic" },
+      { name: "Salesforce Flows", icon: "fas fa-project-diagram", description: "Process automation" },
+      { name: "DocuSign", icon: "fas fa-file-signature", description: "Document management" },
+      { name: "Google APIs", icon: "fab fa-google", description: "Location and data services" },
+      { name: "SMS Server", icon: "fas fa-sms", description: "Real-time notifications" },
+      { name: "REST APIs", icon: "fas fa-plug", description: "Third-party integrations" },
+      { name: "Lightning Web Components", icon: "fas fa-code", description: "Responsive interface" }
+    ],
+    architecture: [
+      {
+        layer: [
+          { title: "Experience Cloud", icon: "fas fa-users", desc: "Trading portal and market access" },
+          { title: "Sales Cloud", icon: "fas fa-shopping-cart", desc: "Deal management and CRM" },
+          { title: "Marketing Cloud", icon: "fas fa-envelope", desc: "Communications and notifications" }
+        ]
+      },
+      {
+        layer: [
+          { title: "Service Cloud", icon: "fas fa-headset", desc: "Support and inquiry management" },
+          { title: "Tableau", icon: "fas fa-chart-line", desc: "Analytics and visualization" },
+          { title: "Apex & Flows", icon: "fas fa-code", desc: "Trading automation and logic" }
+        ]
+      },
+      {
+        layer: [
+          { title: "DocuSign", icon: "fas fa-file-signature", desc: "Document and contract management" },
+          { title: "Google APIs", icon: "fab fa-google", desc: "External data and services" },
+          { name: "SMS Server", icon: "fas fa-sms", desc: "Real-time communications" }
+        ]
+      }
+    ],
+    timeline: [
+      { title: "Market Analysis", description: "Conducted comprehensive analysis of agricultural trading processes and market requirements with industry experts." },
+      { title: "Platform Design", description: "Designed integrated Salesforce architecture for commodity trading with focus on market intelligence and security." },
+      { title: "System Development", description: "Built trading portal, configured deal management, and implemented analytics and automation systems." },
+      { title: "Integration & Testing", description: "Implemented Tableau, DocuSign, SMS, and Google API integrations with comprehensive testing." },
+      { title: "Training & Launch", description: "Conducted user training and system launch with ongoing support and optimization." }
+    ],
+    results: [
+      { number: "30%", text: "Faster Transaction Times" },
+      { number: "25%", text: "Higher Deal Completion" },
+      { number: "40%", text: "Better Forecasting Accuracy" },
+      { number: "100%", text: "Security Compliance" }
+    ],
+    stats: {
+      stat1: { value: "30%", label: "Transaction Speed" },
+      stat2: { value: "25%", label: "Deal Completion" },
+      stat3: { value: "40%", label: "Forecast Accuracy" }
+    },
+    visuals: ["https://via.placeholder.com/800x400"],
+    datePublished: "2023-11-20",
+
+  },
+  "humanitarian-aid-management": {
+    title: "Humanitarian Aid Management - Global NGO Operations Platform Case Study",
+    subtitle: "Leading Humanitarian Organization Achieves 40% Faster Emergency Response & 20% Higher Donor Engagement with Integrated Salesforce Solution",
+    description: "Comprehensive Salesforce implementation case study for humanitarian aid: How a leading humanitarian organization with 30+ years of global service transformed their operations using Salesforce NPSP, Experience Cloud, Shopify, and Stripe integration to achieve 40% improvement in emergency response times, 20% increase in donor engagement, and enhanced program impact measurement across 13 global offices while improving transparency and accountability.",
+    keywords: "Salesforce for nonprofits, humanitarian aid, global NGO, emergency response, donor management, NPSP, Experience Cloud, Shopify integration, Stripe donations, international development, disaster relief, program management, Salesforce development, nonprofit technology",
+    heroBadge: "HUMANITARIAN AID CASE STUDY",
+    category: "Nonprofit",
+    industry: "International Aid & Development",
+    services: ["Global NGO Implementation", "Donor Management", "Emergency Response", "E-commerce Integration", "Program Management"],
+    problem: "A leading humanitarian aid organization with over 30 years of global service faced significant operational challenges in coordinating emergency response efforts, tracking program effectiveness, and maintaining donor engagement across their worldwide operations. The organization relied on manual processes for aid distribution management, resulting in delayed response times during critical emergencies and inefficient resource allocation. Their existing digital infrastructure lacked integration capabilities, preventing effective coordination between their 13 global offices and hindering real-time program tracking. Additionally, the organization struggled with donor engagement and retention due to limited online giving capabilities and insufficient impact reporting. Sensitive donor and beneficiary data required enhanced protection measures to ensure compliance with international data protection regulations and maintain stakeholder trust in their humanitarian mission.",
+    solution: "As a Salesforce developer, I engineered a comprehensive humanitarian aid management platform to enhance their operational efficiency and donor engagement capabilities through integrated Salesforce solutions with specialized features for global humanitarian operations.",
+    solutionSubsections: [
+      {
+        title: "Donor Engagement Portal",
+        content: "Implemented Salesforce Experience Cloud to create an engaging, accessible donor portal enabling supporters to make donations, track program impact, and receive personalized updates. The platform provides role-based access for different donor segments and integrates seamlessly with their existing website infrastructure with multilingual support."
+      },
+      {
+        title: "Program Management System",
+        content: "Configured Salesforce Nonprofit Success Pack (NPSP) to establish a robust system for managing humanitarian programs, tracking aid distribution, and measuring program effectiveness across global operations. The solution includes custom objects for emergency response tracking, beneficiary management, and impact measurement with geographic mapping."
+      },
+      {
+        title: "E-commerce Integration",
+        content: "Connected Shopify with Salesforce to create a unified donation and merchandise purchasing experience, enabling supporters to contribute financially while purchasing humanitarian-related products, with automated data synchronization between platforms and inventory management."
+      },
+      {
+        title: "Payment Processing",
+        content: "Implemented Stripe integration for secure donation processing, recurring giving management, and financial transaction tracking, ensuring PCI compliance and providing donors with multiple payment options including international currencies and mobile payment methods."
+      },
+      {
+        title: "Data Management",
+        content: "Established integration with third-party data servers to synchronize beneficiary information, program data, and impact metrics across global operations, enabling real-time reporting and analysis with automated data validation and conflict resolution."
+      },
+      {
+        title: "Communication Automation",
+        content: "Built sophisticated Salesforce Flows to automate donor communications, impact reporting, and emergency response notifications, ensuring timely and relevant engagement with supporters and stakeholders with personalized content and segmentation."
+      }
+    ],
+    contribution: "I served as the lead Salesforce developer responsible for the complete system architecture and implementation. My role encompassed designing the Experience Cloud donor portal structure, configuring NPSP for nonprofit program management, developing custom Apex logic for humanitarian aid workflows, implementing Salesforce Flow automations for donor communications, establishing Shopify and Stripe integrations, creating third-party data server connectivity, and configuring comprehensive security protocols to protect sensitive donor and beneficiary information throughout the global humanitarian operations while ensuring compliance with international data protection regulations.",
+    outcomes: "The implemented solution delivered transformative improvements in emergency response efficiency, donor engagement, and impact measurement capabilities, significantly enhancing the organization's ability to deliver humanitarian aid worldwide.",
+    outcomeSubsections: [
+      {
+        title: "Emergency Response Efficiency",
+        content: "Automated program management and streamlined workflows improved emergency response times by 40%, enabling the organization to deliver critical aid more quickly to communities in crisis across their 13 global offices. Response coordination improved by 45% with better communication and resource allocation."
+      },
+      {
+        title: "Donor Engagement Growth",
+        content: "Enhanced digital giving capabilities and personalized engagement strategies increased donor participation by 20%, expanding the organization's capacity to fund humanitarian programs and emergency relief efforts worldwide. Recurring donations increased by 30% with improved donor retention."
+      },
+      {
+        title: "Impact Measurement and Reporting",
+        content: "Centralized data management and integrated analytics improved the organization's ability to track program effectiveness, measure humanitarian impact, and provide transparent reporting to donors and stakeholders, strengthening trust and supporting data-driven decision-making for future humanitarian initiatives with comprehensive dashboards and real-time reporting."
+      }
+    ],
+    technologies: [
+      { name: "Salesforce Experience Cloud", icon: "fas fa-cloud", description: "Donor portal and engagement" },
+      { name: "Salesforce NPSP", icon: "fas fa-heart", description: "Program management and fundraising" },
+      { name: "Salesforce Sales Cloud", icon: "fas fa-shopping-cart", description: "Donor relationship management" },
+      { name: "Salesforce Service Cloud", icon: "fas fa-headset", description: "Donor support and inquiries" },
+      { name: "Salesforce Marketing Cloud", icon: "fas fa-envelope", description: "Donor communications" },
+      { name: "Apex", icon: "fas fa-database", description: "Custom humanitarian logic" },
+      { name: "Salesforce Flows", icon: "fas fa-project-diagram", description: "Process automation" },
+      { name: "Salesforce Shield", icon: "fas fa-shield-alt", description: "Data security and compliance" },
+      { name: "Shopify", icon: "fab fa-shopify", description: "E-commerce integration" },
+      { name: "Stripe", icon: "fab fa-stripe", description: "Donation processing" },
+      { name: "REST APIs", icon: "fas fa-plug", description: "Third-party integrations" },
+      { name: "Lightning Web Components", icon: "fas fa-code", description: "Responsive interface" }
+    ],
+    architecture: [
+      {
+        layer: [
+          { title: "Experience Cloud", icon: "fas fa-users", desc: "Donor portal and engagement" },
+          { title: "NPSP", icon: "fas fa-heart", desc: "Program management and fundraising" },
+          { title: "Shopify", icon: "fab fa-shopify", desc: "E-commerce and merchandise" }
+        ]
+      },
+      {
+        layer: [
+          { title: "Sales Cloud", icon: "fas fa-shopping-cart", desc: "Donor relationship management" },
+          { title: "Marketing Cloud", icon: "fas fa-envelope", desc: "Communications and engagement" },
+          { title: "Service Cloud", icon: "fas fa-headset", desc: "Donor support and service" }
+        ]
+      },
+      {
+        layer: [
+          { title: "Stripe", icon: "fab fa-stripe", desc: "Payment processing" },
+          { title: "Apex & Flows", icon: "fas fa-code", desc: "Automation and workflows" },
+          { title: "Data Servers", icon: "fas fa-server", desc: "Global data synchronization" }
+        ]
+      }
+    ],
+    timeline: [
+      { title: "Global Assessment", description: "Conducted comprehensive assessment of humanitarian operations across 13 global offices with stakeholder interviews." },
+      { title: "Platform Architecture", description: "Designed integrated Salesforce architecture for global humanitarian operations with focus on scalability and security." },
+      { title: "System Development", description: "Built donor portal, configured NPSP, and implemented program management and automation systems." },
+      { title: "Global Integration", description: "Implemented Shopify, Stripe, and global data integrations with multilingual support and testing." },
+      { title: "Training & Deployment", description: "Conducted global staff training and phased deployment across all regions with ongoing support." }
+    ],
+    results: [
+      { number: "40%", text: "Faster Emergency Response" },
+      { number: "20%", text: "Higher Donor Engagement" },
+      { number: "30%", text: "Increase in Recurring Donations" },
+      { number: "45%", text: "Better Response Coordination" }
+    ],
+    stats: {
+      stat1: { value: "40%", label: "Response Time" },
+      stat2: { value: "20%", label: "Donor Engagement" },
+      stat3: { value: "30%", label: "Recurring Donations" }
+    },
+    visuals: ["https://via.placeholder.com/800x400"],
+    datePublished: "2023-12-10",
+
+  },
+  "medical-treatment-platform": {
+    title: "Medical Treatment Platform - Healthcare Practice Case Study",
+    subtitle: "Regenerative Medicine Practice Achieves 25% Higher Patient Bookings & 30% Reduced Scheduling Conflicts with Salesforce Health Cloud",
+    description: "Complete Salesforce implementation case study for healthcare: How a specialized medical practice offering regenerative therapies transformed their patient management using Salesforce Health Cloud, Experience Cloud, and HIPAA-compliant security to achieve 25% increase in patient bookings, 30% reduction in scheduling conflicts, and enhanced patient experience while maintaining full compliance with healthcare regulations and improving operational efficiency.",
+    keywords: "Salesforce Health Cloud, medical practice, regenerative medicine, HIPAA compliance, patient portal, healthcare technology, Experience Cloud, Squarespace integration, stem cell therapy, PRP therapy, healthcare automation, Salesforce for healthcare, patient management, medical scheduling",
+    heroBadge: "HEALTHCARE TECHNOLOGY CASE STUDY",
+    category: "Healthcare",
+    industry: "Medical Practice - Regenerative Medicine",
+    services: ["Health Cloud Implementation", "Patient Portal", "HIPAA Compliance", "Healthcare Integration", "Process Automation"],
+    problem: "A specialized medical practice offering regenerative therapies including stem cell treatments and PRP therapy faced significant operational challenges that impacted patient care and business efficiency. The organization relied on manual processes for appointment scheduling, patient record management, and treatment coordination, resulting in scheduling conflicts, delayed care delivery, and compromised patient experience. Their existing Squarespace website lacked integration capabilities, preventing online appointment booking and effective patient education about regenerative treatment options. Additionally, sensitive patient health information lacked proper security measures, creating potential HIPAA compliance vulnerabilities and eroding patient trust in their medical services.",
+    solution: "As a Salesforce developer, I engineered a comprehensive healthcare management platform to enhance operational efficiency and patient care delivery through integrated Salesforce solutions with specialized features for regenerative medicine practices and HIPAA compliance.",
+    solutionSubsections: [
+      {
+        title: "Patient Portal Development",
+        content: "Implemented Salesforce Experience Cloud to create a secure, patient-friendly portal enabling online appointment scheduling, treatment information access, and personalized health content delivery. The platform provides intuitive navigation for patients seeking regenerative therapy services and maintains HIPAA compliance throughout the patient journey with secure authentication."
+      },
+      {
+        title: "Clinical Management System",
+        content: "Configured Salesforce Health Cloud to establish a complete patient management solution including electronic health records, treatment planning, appointment scheduling, and clinical workflow automation. The system supports the unique requirements of regenerative medicine practices with custom objects for treatment protocols, patient outcomes tracking, and therapy progress monitoring."
+      },
+      {
+        title: "Website Integration",
+        content: "Connected the Salesforce platform with their existing Squarespace website to create a unified digital presence, enabling seamless patient transitions from educational content to appointment booking while maintaining brand consistency and user experience continuity with responsive design."
+      },
+      {
+        title: "Care Coordination Automation",
+        content: "Implemented sophisticated Salesforce Flows to automate appointment reminders, treatment follow-ups, and patient communications, ensuring timely engagement throughout the regenerative therapy treatment lifecycle with personalized messaging and automated scheduling."
+      },
+      {
+        title: "Compliance and Security",
+        content: "Deployed Salesforce Shield to provide HIPAA-compliant security measures including data encryption, audit trails, and advanced monitoring capabilities to protect sensitive patient health information and ensure regulatory compliance in the medical practice environment with comprehensive access controls."
+      }
+    ],
+    contribution: "I served as the lead Salesforce developer responsible for the complete healthcare platform architecture and implementation. My role encompassed designing the Experience Cloud patient portal structure, configuring Health Cloud for clinical management and patient records, developing custom Apex logic for regenerative therapy workflows, implementing Salesforce Flow automations for patient communications, establishing Squarespace integration for website functionality, and configuring comprehensive HIPAA-compliant security protocols to protect patient data throughout the treatment process while ensuring full compliance with healthcare regulations.",
+    outcomes: "The implemented solution delivered significant improvements in patient acquisition, operational efficiency, and compliance management, enhancing the practice's ability to deliver regenerative medicine services while maintaining patient trust and regulatory compliance.",
+    outcomeSubsections: [
+      {
+        title: "Patient Acquisition Growth",
+        content: "The integrated online booking system and improved patient experience resulted in a 25% increase in appointment bookings, expanding the practice's capacity to serve patients seeking regenerative therapies. New patient acquisition increased by 30% with better online visibility and booking convenience."
+      },
+      {
+        title: "Operational Efficiency",
+        content: "Automated scheduling and clinical workflow management reduced scheduling conflicts by 30%, improving staff productivity and enabling more efficient delivery of regenerative treatments. Administrative time savings of 40% allowed staff to focus more on patient care."
+      },
+      {
+        title: "Compliance and Trust",
+        content: "Implementation of HIPAA-compliant security measures ensured patient data protection and regulatory compliance, strengthening patient trust in the practice's ability to safeguard sensitive health information while delivering advanced regenerative medicine services with zero compliance incidents."
+      }
+    ],
+    technologies: [
+      { name: "Salesforce Health Cloud", icon: "fas fa-heartbeat", description: "Patient records and clinical management" },
+      { name: "Salesforce Experience Cloud", icon: "fas fa-cloud", description: "Patient portal and scheduling" },
+      { name: "Salesforce Sales Cloud", icon: "fas fa-shopping-cart", description: "Patient relationship management" },
+      { name: "Salesforce Service Cloud", icon: "fas fa-headset", description: "Patient support and inquiries" },
+      { name: "Salesforce Marketing Cloud", icon: "fas fa-envelope", description: "Patient education and communication" },
+      { name: "Lightning Web Components", icon: "fas fa-code", description: "Responsive patient interface" },
+      { name: "Apex", icon: "fas fa-database", description: "Custom medical workflow automation" },
+      { name: "Salesforce Flows", icon: "fas fa-project-diagram", description: "Care coordination automation" },
+      { name: "Salesforce Shield", icon: "fas fa-shield-alt", description: "HIPAA compliance and security" },
+      { name: "Squarespace", icon: "fas fa-globe", description: "Website integration" },
+      { name: "REST APIs", icon: "fas fa-plug", description: "Third-party integrations" }
+    ],
+    architecture: [
+      {
+        layer: [
+          { title: "Experience Cloud", icon: "fas fa-users", desc: "Patient portal and scheduling" },
+          { title: "Health Cloud", icon: "fas fa-heartbeat", desc: "Clinical management and EHR" },
+          { title: "Squarespace", icon: "fas fa-globe", desc: "Website and content management" }
+        ]
+      },
+      {
+        layer: [
+          { title: "Sales Cloud", icon: "fas fa-shopping-cart", desc: "Patient relationship management" },
+          { title: "Service Cloud", icon: "fas fa-headset", desc: "Patient support and service" },
+          { title: "Marketing Cloud", icon: "fas fa-envelope", desc: "Patient education and communications" }
+        ]
+      },
+      {
+        layer: [
+          { title: "Apex & Flows", icon: "fas fa-code", desc: "Medical automation and workflows" },
+          { title: "Salesforce Shield", icon: "fas fa-shield-alt", desc: "HIPAA compliance and security" },
+          { title: "REST APIs", icon: "fas fa-plug", desc: "External system integrations" }
+        ]
+      }
+    ],
+    timeline: [
+      { title: "Healthcare Assessment", description: "Conducted comprehensive assessment of medical practice workflows and HIPAA requirements with healthcare compliance experts." },
+      { title: "Platform Design", description: "Designed HIPAA-compliant Salesforce architecture for regenerative medicine practice with focus on patient experience." },
+      { title: "System Development", description: "Built patient portal, configured Health Cloud, and implemented clinical workflows with security measures." },
+      { title: "Integration & Testing", description: "Implemented Squarespace integration, conducted HIPAA validation testing, and refined based on medical staff feedback." },
+      { title: "Compliance & Launch", description: "Completed HIPAA compliance validation, staff training, and system launch with ongoing monitoring and support." }
+    ],
+    results: [
+      { number: "25%", text: "Increase in Patient Bookings" },
+      { number: "30%", text: "Reduction in Scheduling Conflicts" },
+      { number: "40%", text: "Administrative Time Savings" },
+      { number: "100%", text: "HIPAA Compliance" }
+    ],
+    stats: {
+      stat1: { value: "25%", label: "Patient Bookings" },
+      stat2: { value: "30%", label: "Scheduling Efficiency" },
+      stat3: { value: "40%", label: "Time Savings" }
+    },
+    visuals: ["https://via.placeholder.com/800x400"],
+    datePublished: "2024-01-05",
+
+  },
+  "workplace-safety-system": {
+    title: "Workplace Safety System - RMG Factory Inspection Platform Case Study",
+    subtitle: "Major Safety Organization Achieves 35% Higher Inspection Completion & 40% Faster Issue Resolution with Offline-Enabled Salesforce Solution",
+    description: "Complete Salesforce implementation case study for workplace safety: How a major organization overseeing 1,800+ Ready-Made Garment factories in Bangladesh transformed their safety inspection operations using Salesforce Experience Cloud, Service Cloud, offline-capable Lightning Web Components, and custom development to achieve 35% increase in inspection completion rates, 40% faster safety issue resolution, and enhanced stakeholder collaboration while ensuring comprehensive workplace safety compliance across the entire supply chain.",
+    keywords: "Salesforce for manufacturing, workplace safety, factory inspection, offline mobile, RMG industry, safety compliance, Experience Cloud, Service Cloud, Lightning Web Components, workplace safety system, garment industry, safety inspection, Bangladesh manufacturing, offline Salesforce, industrial safety",
+    heroBadge: "WORKPLACE SAFETY CASE STUDY",
+    category: "Manufacturing",
+    industry: "Workplace Safety & Compliance",
+    services: ["Offline Mobile Development", "Safety Inspection System", "Custom Application", "Factory Management", "Compliance Tracking"],
+    problem: "A major workplace safety organization overseeing 1,800+ Ready-Made Garment factories in Bangladesh faced significant operational challenges in managing their comprehensive safety inspection programs. The organization relied on manual processes for tracking structural, electrical, fire, and boiler safety inspections, creating bottlenecks in data collection and reporting. Their existing system lacked efficiency in handling occupational safety complaints, managing remediation programs, and coordinating safety training initiatives across multiple factory locations. Without a centralized platform, the organization struggled to ensure transparency in safety compliance, track corrective action plans effectively, or provide real-time insights to stakeholders including government agencies, global brands, and trade unions. These operational inefficiencies directly impacted worker safety and regulatory compliance in a critical industrial sector.",
+    solution: "As a Salesforce developer, I engineered a comprehensive workplace safety management platform to streamline their safety inspection and compliance operations through integrated Salesforce solutions with specialized features for large-scale factory inspections and offline data collection.",
+    solutionSubsections: [
+      {
+        title: "Factory and Inspector Portal Development",
+        content: "Implemented Salesforce Experience Cloud to create dedicated portals for factory management and safety inspectors, enabling real-time access to safety resources, inspection schedules, and complaint filing capabilities. The platform provides role-based access controls for different stakeholders including factory management, safety inspectors, and regulatory authorities with multilingual support."
+      },
+      {
+        title: "Safety Inspection Management",
+        content: "Configured Salesforce Service Cloud to establish a robust system for managing safety inspections across multiple departments including Structural Safety, Electrical Safety, Fire & Life Safety, and Boiler Safety. The solution includes automated inspection scheduling, finding documentation, and corrective action plan tracking with comprehensive reporting and analytics."
+      },
+      {
+        title: "Offline-Online Data Synchronization",
+        content: "Developed custom Lightning Web Components (LWC) with offline capabilities to enable inspectors to collect safety data in factory environments with limited internet connectivity. The system automatically synchronizes data when online connectivity is restored, ensuring no data loss during field inspections with conflict resolution mechanisms."
+      },
+      {
+        title: "Document Management",
+        content: "Integrated PDF Butler to automate the generation of inspection reports, safety compliance certificates, and corrective action plans, ensuring consistent formatting and professional documentation across all safety departments with template management and automated distribution."
+      },
+      {
+        title: "Payment Processing",
+        content: "Implemented Stripe integration for handling inspection fees, training program payments, and certification costs, providing secure financial transaction capabilities within the safety management ecosystem with automated invoicing and receipt generation."
+      },
+      {
+        title: "Custom Application Development",
+        content: "Built a custom Salesforce application specifically designed for workplace safety management, including custom objects for safety inspections, remediation tracking, training programs, and complaint management tailored to the RMG industry requirements with specialized workflows and approval processes."
+      },
+      {
+        title: "Offline File and Data Storage",
+        content: "Implemented offline file storage capabilities to enable inspectors to store and access safety documentation, inspection photos, and compliance records without constant internet connectivity, with automatic synchronization to the central Salesforce platform when online with version control and data integrity checks."
+      }
+    ],
+    contribution: "I served as the lead Salesforce developer responsible for the complete workplace safety management system architecture and implementation. My role encompassed designing the Experience Cloud portal structure for factories and inspectors, configuring Service Cloud for safety inspection and complaint management, developing custom LWC components with offline-online synchronization capabilities, implementing PDF Butler integration for automated document generation, establishing Stripe payment processing, building custom safety management applications, and creating offline file storage solutions with online synchronization capabilities while ensuring system scalability and reliability for large-scale operations.",
+    outcomes: "The implemented solution delivered transformative improvements in inspection completion rates, operational efficiency, and stakeholder collaboration, significantly enhancing workplace safety across 1,800+ factories while ensuring regulatory compliance and transparency.",
+    outcomeSubsections: [
+      {
+        title: "Compliance Improvement",
+        content: "Automated inspection management and reporting systems increased inspection completion rates by 35%, enhancing workplace safety compliance across 1,800+ factories and strengthening regulatory adherence. Safety standard compliance improved by 40% with better tracking and reporting capabilities."
+      },
+      {
+        title: "Operational Efficiency",
+        content: "Streamlined complaint handling and remediation tracking processes accelerated safety issue resolution by 40%, enabling faster response to workplace hazards and improved worker protection. Inspector productivity increased by 45% with mobile offline capabilities and automated workflows."
+      },
+      {
+        title: "Stakeholder Collaboration",
+        content: "The integrated platform improved coordination between factories, inspectors, government agencies, and global brands, creating a unified approach to workplace safety management and ensuring transparency in safety compliance across the entire supply chain with real-time visibility and reporting."
+      }
+    ],
+    technologies: [
+      { name: "Salesforce Experience Cloud", icon: "fas fa-cloud", description: "Factory and inspector portals" },
+      { name: "Salesforce Service Cloud", icon: "fas fa-headset", description: "Safety inspection management" },
+      { name: "Salesforce Sales Cloud", icon: "fas fa-shopping-cart", description: "Factory relationship management" },
+      { name: "Lightning Web Components", icon: "fas fa-code", description: "Offline mobile interface" },
+      { name: "Apex", icon: "fas fa-database", description: "Custom safety logic" },
+      { name: "Salesforce Flows", icon: "fas fa-project-diagram", description: "Process automation" },
+      { name: "PDF Butler", icon: "fas fa-file-pdf", description: "Report generation" },
+      { name: "Stripe", icon: "fab fa-stripe", description: "Payment processing" },
+      { name: "Custom Salesforce App", icon: "fas fa-cogs", description: "Safety management system" },
+      { name: "Offline Storage", icon: "fas fa-database", description: "Field data collection" },
+      { name: "REST APIs", icon: "fas fa-plug", description: "System integrations" },
+      { name: "Third-party Libraries", icon: "fas fa-puzzle-piece", description: "Enhanced functionality" }
+    ],
+    architecture: [
+      {
+        layer: [
+          { title: "Experience Cloud", icon: "fas fa-users", desc: "Factory and inspector portals" },
+          { title: "Service Cloud", icon: "fas fa-headset", desc: "Inspection and complaint management" },
+          { title: "Sales Cloud", icon: "fas fa-shopping-cart", desc: "Factory relationship tracking" }
+        ]
+      },
+      {
+        layer: [
+          { title: "LWC Offline", icon: "fas fa-code", desc: "Mobile inspection interface" },
+          { title: "Custom App", icon: "fas fa-cogs", desc: "Safety management system" },
+          { title: "Apex & Flows", icon: "fas fa-code", desc: "Automation and workflows" }
+        ]
+      },
+      {
+        layer: [
+          { title: "PDF Butler", icon: "fas fa-file-pdf", desc: "Document generation" },
+          { title: "Stripe", icon: "fab fa-stripe", desc: "Payment processing" },
+          { title: "Offline Storage", icon: "fas fa-database", desc: "Field data synchronization" }
+        ]
+      }
+    ],
+    timeline: [
+      { title: "Factory Assessment", description: "Conducted comprehensive assessment of safety inspection processes across 1,800+ factories with stakeholder interviews." },
+      { title: "Platform Architecture", description: "Designed offline-enabled Salesforce architecture for large-scale safety inspections with focus on mobile capabilities." },
+      { title: "System Development", description: "Built offline LWC components, custom safety app, and inspection management systems with comprehensive testing." },
+      { title: "Mobile Implementation", description: "Deployed offline mobile solutions, conducted field testing, and refined based on inspector feedback." },
+      { title: "Factory Deployment", description: "Rolled out system across all factories with training and ongoing support for safety operations." }
+    ],
+    results: [
+      { number: "35%", text: "Higher Inspection Completion" },
+      { number: "40%", text: "Faster Issue Resolution" },
+      { number: "45%", text: "Improved Inspector Productivity" },
+      { number: "40%", text: "Better Safety Compliance" }
+    ],
+    stats: {
+      stat1: { value: "35%", label: "Inspection Rate" },
+      stat2: { value: "40%", label: "Issue Resolution" },
+      stat3: { value: "45%", label: "Productivity" }
+    },
+    visuals: ["https://via.placeholder.com/800x400"],
+    datePublished: "2024-01-20",
+ 
+  }
+};
     function getCaseIdFromUrl() {
       const params = new URLSearchParams(window.location.search);
       return params.get('caseId');
     }
 
     function updateMetadata(project) {
-      document.querySelector('title').textContent = `${project.title} Case Study - Portfolio`;
+      // Get current date for modified time
+      const currentDate = new Date().toISOString();
+      
+      // Update basic meta tags
+      document.querySelector('title').textContent = `${project.title} Case Study | Niloy Kanti Paul - Salesforce Developer`;
       document.querySelector('meta[name="description"]').setAttribute('content', project.description);
       document.querySelector('meta[name="keywords"]').setAttribute('content', project.keywords);
-      document.querySelector('meta[property="og:title"]').setAttribute('content', project.ogTitle);
-      document.querySelector('meta[property="og:description"]').setAttribute('content', project.ogDescription);
-      document.querySelector('meta[property="og:url"]').setAttribute('content', `https://yourportfolio.com/case-study?caseId=${project.slug}`);
-      document.querySelector('meta[property="og:image"]').setAttribute('content', project.ogImage);
+      
+      // Update Open Graph tags
+      document.querySelector('meta[property="og:title"]').setAttribute('content', `${project.title} Case Study | Niloy Kanti Paul`);
+      document.querySelector('meta[property="og:description"]').setAttribute('content', project.description);
+      document.querySelector('meta[property="og:url"]').setAttribute('content', `https://dev-nkp.github.io/case-study.html?caseId=${getCaseIdFromUrl()}`);
+      document.querySelector('meta[property="og:image"]').setAttribute('content', project.visuals[0]);
+      document.querySelector('meta[property="article:published_time"]').setAttribute('content', project.datePublished);
+      document.querySelector('meta[property="article:modified_time"]').setAttribute('content', currentDate);
+      
+      // Update Twitter Card tags
+      document.querySelector('meta[name="twitter:title"]').setAttribute('content', `${project.title} Case Study | Niloy Kanti Paul`);
+      document.querySelector('meta[name="twitter:description"]').setAttribute('content', project.description);
+      document.querySelector('meta[name="twitter:image"]').setAttribute('content', project.visuals[0]);
+      
+      // Update canonical URL
+      document.querySelector('link[rel="canonical"]').setAttribute('href', `https://dev-nkp.github.io/case-study.html?caseId=${getCaseIdFromUrl()}`);
+      
+      // Update structured data (JSON-LD)
+      const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": project.title,
+        "description": project.description,
+        "image": project.visuals[0],
+        "author": {
+          "@type": "Person",
+          "name": "Niloy Kanti Paul",
+          "url": "https://dev-nkp.github.io"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Niloy Kanti Paul - Software Engineer Portfolio",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://dev-nkp.github.io/resources/images/nkp.png"
+          }
+        },
+        "datePublished": project.datePublished,
+        "dateModified": currentDate,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://dev-nkp.github.io/case-study.html?caseId=${getCaseIdFromUrl()}`
+        },
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "keywords": project.keywords,
+        "articleSection": "Case Studies"
+      };
+      
+      document.getElementById('structured-data').textContent = JSON.stringify(structuredData);
     }
 
     function renderCaseStudy() {
       const caseId = getCaseIdFromUrl();
       const project = caseStudies[caseId];
+      
       if (!project) {
-        document.getElementById('content-body').innerHTML = '<p class="text-[var(--text-light)]">Case study not found.</p>';
+        document.getElementById('problem-description').innerHTML = '<p>Case study not found.</p>';
         return;
       }
-
+      
       // Update metadata for SEO
       updateMetadata(project);
-
-      // Update page content
+      
+      // Update hero section
+      document.getElementById('hero-badge').textContent = project.heroBadge;
       document.getElementById('case-study-title').textContent = project.title;
-      document.getElementById('content-body').innerHTML = `
-        <img src="${project.visuals[0]}" alt="${project.title} screenshot" class="w-full h-64 sm:h-96 object-cover rounded-lg mb-6" loading="lazy" itemprop="image">
-        <h2 class="text-2xl font-semibold text-[var(--text-light)] mb-4">Problem Statement</h2>
-        <p class="text-[var(--text-light)] opacity-75 mb-6" itemprop="description">${project.problem}</p>
-        <h2 class="text-2xl font-semibold text-[var(--text-light)] mb-4">Solution</h2>
-        <p class="text-[var(--text-light)] opacity-75 mb-6">${project.solution}</p>
-        <h2 class="text-2xl font-semibold text-[var(--text-light)] mb-4">Technologies Used</h2>
-        <div class="flex flex-wrap gap-2 mb-6">
-          ${project.technologies.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
+      document.getElementById('case-study-subtitle').textContent = project.subtitle;
+      
+      // Update stats
+      document.getElementById('stat-1').textContent = project.stats.stat1.value;
+      document.getElementById('stat-label-1').textContent = project.stats.stat1.label;
+      document.getElementById('stat-2').textContent = project.stats.stat2.value;
+      document.getElementById('stat-label-2').textContent = project.stats.stat2.label;
+      document.getElementById('stat-3').textContent = project.stats.stat3.value;
+      document.getElementById('stat-label-3').textContent = project.stats.stat3.label;
+      
+      // Update problem, solution, contribution, and outcomes
+      document.getElementById('problem-description').innerHTML = project.problem;
+      document.getElementById('solution-description').innerHTML = project.solution;
+      document.getElementById('contribution-description').textContent = project.contribution;
+      document.getElementById('outcomes-description').innerHTML = project.outcomes;
+      
+      // Update solution cards
+      const solutionCards = document.getElementById('solution-cards');
+      solutionCards.innerHTML = project.solutionSubsections.map(subsection => `
+        <div class="solution-card">
+          <h3 class="solution-card-title">${subsection.title}</h3>
+          <p class="solution-card-content">${subsection.content}</p>
         </div>
-        <h2 class="text-2xl font-semibold text-[var(--text-light)] mb-4">Outcomes</h2>
-        <p class="text-[var(--text-light)] opacity-75">${project.outcomes}</p>
-      `;
+      `).join('');
+      
+      // Update outcomes cards
+      const outcomesCards = document.getElementById('outcomes-cards');
+      outcomesCards.innerHTML = project.outcomeSubsections.map(subsection => `
+        <div class="outcome-card">
+          <h3 class="outcome-card-title">${subsection.title}</h3>
+          <p class="outcome-card-content">${subsection.content}</p>
+        </div>
+      `).join('');
+      
+      // Update technology stack carousel
+      const techCarousel = document.getElementById('tech-carousel');
+      techCarousel.innerHTML = project.technologies.map(tech => `
+        <div class="tech-item">
+          <div class="tech-icon">
+            <i class="${tech.icon}"></i>
+          </div>
+          <div class="tech-name">${tech.name}</div>
+        </div>
+      `).join('');
+      
+      // Initialize carousel after populating
+      initTechCarousel();
+      
+      // Update architecture
+      const architectureContainer = document.getElementById('architecture-container');
+      architectureContainer.innerHTML = project.architecture.map(layer => `
+        <div class="architecture-layer">
+          ${layer.layer.map(item => `
+            <div class="architecture-box">
+              <div class="architecture-icon">
+                <i class="${item.icon}"></i>
+              </div>
+              <h3 class="architecture-title">${item.title}</h3>
+              <p class="architecture-desc">${item.desc}</p>
+            </div>
+          `).join('')}
+        </div>
+      `).join('');
+      
+      // Update timeline
+      const timeline = document.getElementById('timeline');
+      timeline.innerHTML = project.timeline.map((item, index) => `
+        <div class="timeline-item" style="animation-delay: ${index * 0.2}s">
+          <div class="timeline-content">
+            <div class="timeline-dot"></div>
+            <h3 class="timeline-title">${item.title}</h3>
+            <p class="timeline-description">${item.description}</p>
+          </div>
+        </div>
+      `).join('');
+      
+      // Update results
+      const resultsGrid = document.getElementById('results-grid');
+      resultsGrid.innerHTML = project.results.map(result => `
+        <div class="result-item">
+          <div class="result-number">${result.number}</div>
+          <div class="result-text">${result.text}</div>
+        </div>
+      `).join('');
+      
+      // Animate elements on scroll
+      animateOnScroll();
     }
 
-    function toggleTheme() {
-      const theme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      document.body.setAttribute('data-theme', theme);
+    // Initialize technology stack carousel
+    function initTechCarousel() {
+      const carousel = document.getElementById('tech-carousel');
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+      let autoScrollInterval;
+      let scrollSpeed = 1;
+      let isAutoScrolling = true;
+      
+      // Clone all items for infinite scroll
+      const items = Array.from(carousel.children);
+      items.forEach(item => {
+        const clone = item.cloneNode(true);
+        carousel.appendChild(clone);
+      });
+      
+      // Auto-scroll functionality
+      function startAutoScroll() {
+        autoScrollInterval = setInterval(() => {
+          if (isAutoScrolling) {
+            carousel.scrollLeft += scrollSpeed;
+            
+            // If we've scrolled to the end of the original items, reset to beginning
+            if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+              carousel.scrollLeft = 0;
+            }
+          }
+        }, 20);
+      }
+      
+      function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+      }
+      
+      // Start auto-scroll on load
+      startAutoScroll();
+      
+      // Mouse events for dragging
+      carousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        isAutoScrolling = false;
+        stopAutoScroll();
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+        carousel.style.cursor = 'grabbing';
+      });
+      
+      carousel.addEventListener('mouseleave', () => {
+        isDown = false;
+        carousel.style.cursor = 'grab';
+        isAutoScrolling = true;
+        startAutoScroll();
+      });
+      
+      carousel.addEventListener('mouseup', () => {
+        isDown = false;
+        carousel.style.cursor = 'grab';
+        isAutoScrolling = true;
+        startAutoScroll();
+      });
+      
+      carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 3; // Increased scroll speed for faster dragging
+        carousel.scrollLeft = scrollLeft - walk;
+        
+        // Handle infinite scroll during drag
+        if (carousel.scrollLeft <= 0) {
+          carousel.scrollLeft = carousel.scrollWidth / 2;
+        } else if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+          carousel.scrollLeft = 0;
+        }
+      });
+      
+      // Touch events for mobile
+      carousel.addEventListener('touchstart', (e) => {
+        isDown = true;
+        isAutoScrolling = false;
+        stopAutoScroll();
+        startX = e.touches[0].pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
+      
+      carousel.addEventListener('touchend', () => {
+        isDown = false;
+        isAutoScrolling = true;
+        startAutoScroll();
+      });
+      
+      carousel.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        const x = e.touches[0].pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 3; // Increased scroll speed for faster dragging
+        carousel.scrollLeft = scrollLeft - walk;
+        
+        // Handle infinite scroll during drag
+        if (carousel.scrollLeft <= 0) {
+          carousel.scrollLeft = carousel.scrollWidth / 2;
+        } else if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+          carousel.scrollLeft = 0;
+        }
+      });
+      
+      // Add wheel event for mouse scroll
+      carousel.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        isAutoScrolling = false;
+        stopAutoScroll();
+        
+        // Scroll horizontally based on wheel delta
+        carousel.scrollLeft += e.deltaY * 0.5;
+        
+        // Handle infinite scroll during wheel
+        if (carousel.scrollLeft <= 0) {
+          carousel.scrollLeft = carousel.scrollWidth / 2;
+        } else if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+          carousel.scrollLeft = 0;
+        }
+        
+        // Restart auto-scroll after a delay
+        clearTimeout(carousel.restartTimeout);
+        carousel.restartTimeout = setTimeout(() => {
+          isAutoScrolling = true;
+          startAutoScroll();
+        }, 3000);
+      });
     }
+
+    function animateOnScroll() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+          }
+        });
+      });
+      
+      document.querySelectorAll('.timeline-item').forEach(item => {
+        item.style.animationPlayState = 'paused';
+        observer.observe(item);
+      });
+    }
+
+
 
     // Render case study on page load
-    window.onload = renderCaseStudy;
+    window.onload = function() {
+   
+      renderCaseStudy();
+      
+      // Scroll up button
+      const scrollBtn = document.querySelector('.scroll-up-btn');
+      
+      window.addEventListener('scroll', () => {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+          scrollBtn.classList.add('show');
+        } else {
+          scrollBtn.classList.remove('show');
+        }
+      });
+      
+      scrollBtn.addEventListener('click', () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      });
+    };
+
+    // Add smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Add number animation for stats
+    function animateValue(element, start, end, duration, suffix = '') {
+      const range = end - start;
+      const increment = range / (duration / 16);
+      let current = start;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= end) {
+          current = end;
+          clearInterval(timer);
+        }
+        element.textContent = current.toFixed(0) + suffix;
+      }, 16);
+    }
+
+    // Animate numbers when they come into view
+    const numberObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const element = entry.target;
+          const textContent = element.textContent;
+          const finalValue = parseFloat(textContent);
+          const suffix = textContent.replace(/[0-9.]/g, '');
+          animateValue(element, 0, finalValue, 2000, suffix);
+          numberObserver.unobserve(element);
+        }
+      });
+    });
+
+    document.querySelectorAll('.stat-number, .result-number').forEach(element => {
+      numberObserver.observe(element);
+    });
   </script>
 </body>
 </html>

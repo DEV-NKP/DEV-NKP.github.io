@@ -51,7 +51,7 @@ header {
   padding-left: 70px;
 }
 header {
-  position: fixed;
+  position: fixed!important;
   width: 100%;
   z-index: 999;
   font-family: "Ubuntu", sans-serif;

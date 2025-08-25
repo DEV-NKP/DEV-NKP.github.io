@@ -96,7 +96,7 @@ overflow-y:auto;
   background: #ffffff94;
 }
 .title-black::after {
-  background: #000012
+  background: #0b0b1c;
 }
 .title-white::before {
   background: #111;
@@ -130,8 +130,7 @@ section {
 .project,
 .skills,
 .contact,
-.publication,
-footer {
+.publication {
   font-family: "Poppins", sans-serif;
 }
 .about .about-content,
@@ -147,6 +146,7 @@ footer {
 section .title,
 .skill-title,
 .edu-title,
+.case-title,
 .work-title,
 .certification-title,
 .projects-title,
@@ -727,20 +727,6 @@ opacity: 0;
 
 
 
-  /* footer section styling */
-  footer {
-    background:linear-gradient(to right, #001d3b, #51192b);
-    padding: 15px 23px;
-    color: #fff;
-    text-align: center;
-  }
-  footer span a {
-    color:   #0d95b7;
-    text-decoration: none;
-  }
-  footer span a:hover {
-    text-decoration: underline;
-  }
 
 
 

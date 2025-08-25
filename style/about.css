@@ -330,10 +330,10 @@ cursor: text;
 margin-bottom: 20px;
 }
 .white-certificate .certificate-div{
-  background-color: #5bbfd81a;
+  /* background-color: #5bbfd81a; */
  }
 .dark-certificate .certificate-div{
-  background-color:  rgba(130, 245, 234, 0.24);
+  /* background-color:  rgba(130, 245, 234, 0.24)!important; */
   color: #ffffff94;
  }
 
