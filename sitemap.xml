@@ -57,12 +57,183 @@
     <priority>0.5</priority>
   </url>
 
-
-   <!-- Video Page -->
-   <url>
+  <!-- Video Page -->
+  <url>
     <loc>https://dev-nkp.github.io/project-video/</loc>
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Professional Projects Page -->
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Professional Project Case Studies -->
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/?caseId=travel-experience-platform</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/?caseId=nonprofit-resource-hub</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/?caseId=community-advocacy-platform</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/?caseId=educator-advocacy-system</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/?caseId=mortgage-financing-platform</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/?caseId=agricultural-marketing-system</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/?caseId=humanitarian-aid-management</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/?caseId=medical-treatment-platform</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/?caseId=workplace-safety-system</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Project Detail Pages (if they exist as separate pages) -->
+  <url>
+    <loc>https://dev-nkp.github.io/projects/student-progress-indicator/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/projects/remotely-assistant-workers-v1/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/projects/remotely-assistant-workers-v2/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/projects/remotely-assistant-workers-v3/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/projects/fest-of-harmony/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/projects/medic-master/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/projects/idea-x/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/projects/together-go/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/projects/toss/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/projects/meta-bin/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/projects/skyhawk/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Publication Detail Pages (if they exist as separate pages) -->
+  <url>
+    <loc>https://dev-nkp.github.io/publications/meta-bin-arduino-smart-device/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/publications/iot-based-trash-collection-system/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/publications/traffic-violation-detection/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

@@ -37,50 +37,19 @@
 
 
 <link rel="stylesheet" href="../style/about.css" />
-<link rel="stylesheet" href="../style/menu.css" />
+
 <link rel="stylesheet" href="../style/main.css" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"/>
 <link rel="stylesheet" href="../style/video.css" />
+ <!-- Footer Styles -->
+    <link rel="stylesheet" href="../internalFooter/footer-styles.css">
+<link rel="stylesheet" href="../cursor/cursor.css">
+ <!-- Header Styles -->
+    <link rel="stylesheet" href="../internalHeader/header-styles.css">
 </head>
 <body id="body" class="white-body" >
 
-  <header style="display:fix; " class="sticky">
-       
-    <div>
-      <a href="/">
-        <img
-          class="logo"
-          src="../resources/images/nkp.png"
-          alt="Niloy Kanti Paul Portfolio Logo - Software Developer, Salesforce Expert"
-          style="float: left"
-        />
-      </a>
-      <a href="/"><pre class="name" style="color: rgba(236, 234, 234, 0.691); font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-NILOY KANTI PAUL</pre></a>
-    </div>
 
-    <div class="max-width">
-      <button
-        class="mobile-nav-toggle"
-        aria-controls="navlink"
-        aria-expanded="false"
-      ></button>
-    </div>
-
-    <nav>
-      <ul  id="navlink" data-visible="false" class="navlink flex">
-        <li>
-          <a href="../">Home</a>
-        </li>
-
-        <li>
-          <div class="dark-but" onclick="changeColor()"
-            ><i id="dark-light" class="fa-solid fa-moon fa-1x" ></i></div
-          >
-        </li>
-      </ul>
-    </nav>
-  </header>
 <!--            scroll up                  -->
 <div class="scroll-up-btn">
   <i class="fas fa-angle-up"></i>
@@ -142,13 +111,28 @@ NILOY KANTI PAUL</pre></a>
   <div class="col-1 col-s-12"></div>
 </div>
 
-<footer>
-  <span
-    >Created By <a href="https://github.com/DEV-NKP"  target="_blank" rel="noopener noreferrer">DEV-NKP</a> | <span class="far fa-copyright"></span> 2020-2024 All rights reserved.
-     <span id="visits"></span>
-    </span
-  >
-</footer>
+  <!-- Header Loader Script -->
+    <script src="../internalHeader/header-loader.js"></script>
+    <!-- <script src="./header/theme-toggle.js"></script> -->
+  <script src="../internalFooter/footer-loader.js"></script>
+ 
+      <script src="../cursor/cursor.js"></script>
+
+ <script>  
+const cursor = document.getElementById('cursor');
+
+    // Update cursor position on mouse movement
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    });
+
+    // Add hover effects for .card and button elements
+    document.querySelectorAll('.card, button').forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+    });
+</script>
 
 </body>
 <script src="../function/nav.js" defer></script>

@@ -91,13 +91,17 @@
   
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="../style/about.css" />
-  <link rel="stylesheet" href="../style/menu.css" />
   <link rel="stylesheet" href="../style/main.css" />
   <link rel="stylesheet" href="../style/CaseStudyPage.css" />
+    <!-- Footer Styles -->
+    <link rel="stylesheet" href="../internalFooter/footer-styles.css">
+<link rel="stylesheet" href="../cursor/cursor.css">
+ <!-- Header Styles -->
+    <link rel="stylesheet" href="../internalHeader/header-styles.css">
 </head>
-<body id="body" class="white-body">
+<body id="body" class="white-body sticky-header-enabled">
   <!-- Header (Keeping existing structure) -->
-  <header style="display:fix;" class="sticky">
+  <!-- <header style="display:fix;" class="sticky">
     <div>
       <a href="/">
         <img class="logo" src="../resources/images/nkp.png" alt="Niloy Kanti Paul Portfolio Logo - Software Developer, Salesforce Expert" style="float: left" />
@@ -120,7 +124,7 @@ NILOY KANTI PAUL</pre></a>
         </li>
       </ul>
     </nav>
-  </header>
+  </header> -->
 
   <!-- Scroll up button -->
   <div class="scroll-up-btn">
@@ -257,13 +261,34 @@ NILOY KANTI PAUL</pre></a>
       <span>Back to Case Studies</span>
     </a>
   </section>
+  <!-- Header Loader Script -->
+    <script src="../internalHeader/header-loader.js"></script>
+    <!-- <script src="./header/theme-toggle.js"></script> -->
+  <script src="../internalFooter/footer-loader.js"></script>
+ 
+      <script src="../cursor/cursor.js"></script>
 
+ <script>  
+const cursor = document.getElementById('cursor');
+
+    // Update cursor position on mouse movement
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    });
+
+    // Add hover effects for .card and button elements
+    document.querySelectorAll('.card, button').forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+    });
+</script>
   <!-- Footer (Keeping existing structure) -->
-  <footer>
+  <!-- <footer>
     <span>Created By <a href="https://github.com/DEV-NKP" target="_blank" rel="noopener noreferrer">DEV-NKP</a> | <span class="far fa-copyright"></span> 2020-2024 All rights reserved.
      <span id="visits"></span>
     </span>
-  </footer>
+  </footer> -->
 <script src="../function/nav.js" defer></script>
 
   <script>

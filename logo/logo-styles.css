@@ -1,0 +1,194 @@
+/* logo-styles.css */
+/* Logo-specific variables to prevent override */
+.logo-root {
+    /* Color palette matching the portfolio theme */
+    --logo-bg-light: #f8f9fa;
+    --logo-text-light: #333;
+    --logo-text-dark: #555;
+    --logo-white: #ffffff;
+    --logo-black: #000000;
+}
+
+/* Logo Container */
+.logo-container {
+    position: relative;
+    width: 450px;
+    height: 140px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.logo-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.logo-border-path {
+    fill: none;
+    stroke: var(--logo-text-light);
+    stroke-width: 3;
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200;
+}
+
+.logo-content {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.logo-left, .logo-right {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+.logo-left {
+    background-color: var(--logo-black);
+    color: var(--logo-white);
+}
+
+.logo-right {
+    background-color: var(--logo-white);
+    color: var(--logo-black);
+}
+
+.logo-morph-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.logo-morph-path-left {
+    fill: var(--logo-white);
+}
+
+.logo-morph-path-right {
+    fill: var(--logo-black);
+}
+
+.logo-text-content {
+    position: relative;
+    z-index: 25;
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+.logo-letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px) rotateX(90deg);
+}
+
+.logo-liquid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.logo-liquid-left {
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+    transform: translateX(-100%) rotate(45deg);
+}
+
+.logo-liquid-right {
+    background: linear-gradient(45deg, transparent 30%, rgba(0,0,0,0.2) 50%, transparent 70%);
+    transform: translateX(100%) rotate(45deg);
+}
+
+.logo-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    z-index: 15;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    pointer-events: none;
+}
+
+.logo-subtitle {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--logo-text-dark);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+.logo-particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 8;
+    pointer-events: none;
+}
+
+.logo-particle-left {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+}
+
+.logo-particle-right {
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .logo-container {
+        width: 320px;
+        height: 100px;
+    }
+    
+    .logo-left, .logo-right {
+        font-size: 1.8rem;
+    }
+    
+    .logo-content {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,415 @@
+/* header-styles.css */
+/* Header-specific variables to prevent override */
+.header-root {
+    /* Color palette matching the portfolio theme */
+    --header-primary-dark: #0a0a0a;
+    --header-secondary-dark: #1a1a2e;
+    --header-accent-purple: #9333ea;
+    --header-accent-light-purple: #c084fc;
+    --header-accent-violet: #7c3aed;
+    --header-text-light: #ffffff;
+    --header-text-dim: #a1a1aa;
+    --header-bg: rgba(15, 15, 30, 0.8);
+    --header-border: rgba(147, 51, 234, 0.3);
+    --header-nav-font-size: 0.9rem;
+
+    
+     /* Improved gradient colors */
+    --header-gradient-start: #4f46e5;     /* Indigo */
+    --header-gradient-middle: #2563eb;    /* Blue */
+    --header-gradient-end: #7c3aed;       /* Purple */
+}
+
+/* PROFESSIONAL HEADER DESIGN */
+.header-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+        background: linear-gradient(to right, #001d3b, #2f141d);
+
+}
+
+.header-header.sticky {
+    background: linear-gradient(to right, #001d3b, #2f141d);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 5px 3%;
+}
+
+.header-container {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 10px 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo and Name */
+.header-logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+.header-logo {
+    cursor: pointer;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+}
+
+.header-name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: rgba(236, 234, 234, 0.691);
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 15px;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.header-logo-container:hover .header-name {
+    color: var(--header-accent-light-purple);
+}
+
+/* Navigation Menu */
+.header-nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    flex-grow: 1;
+    justify-content: end;
+    position: relative;
+}
+
+.header-nav-item {
+    position: relative;
+    white-space: nowrap;
+}
+
+.header-nav-link {
+    text-decoration: none;
+    color: var(--header-text-dim);
+    font-weight: 500;
+    font-size: var(--header-nav-font-size);
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+/* Professional Underline Animation */
+.header-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--header-accent-purple), var(--header-accent-light-purple));
+    transition: width 0.3s ease;
+}
+
+.header-nav-link:hover::after,
+.header-nav-link.active::after {
+    width: 100%;
+}
+
+.header-nav-link:hover {
+    color: var(--header-text-light);
+}
+
+.header-nav-link.active {
+    color: var(--header-accent-light-purple);
+}
+
+/* PROFESSIONAL THEME TOGGLE */
+.header-theme-toggle-container {
+    position: relative;
+    margin-left: 1rem;
+    flex-shrink: 0;
+}
+
+.header-theme-toggle {
+    width: 50px;
+    height: 26px;
+    background: rgba(147, 51, 234, 0.1);
+    border: 1px solid var(--header-border);
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+
+.header-theme-toggle:hover {
+    background: rgba(147, 51, 234, 0.2);
+}
+
+.header-theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Click Animation */
+.header-theme-toggle.clicked {
+    animation: header-toggleClick 0.4s ease;
+}
+
+@keyframes header-toggleClick {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.header-theme-toggle-slider {
+    width: 20px;
+    height: 20px;
+    background: var(--header-accent-purple);
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-theme-toggle.light .header-theme-toggle-slider {
+    transform: translateX(24px);
+    color: var(--header-accent-purple);
+    background: #ffffff;
+}
+
+/* Mobile Menu Toggle with Morph Animation */
+.header-mobile-nav-toggle {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    width: 30px;
+    height: 30px;
+    top: 1.2rem;
+    right: 1rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.header-mobile-nav-toggle span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--header-text-light);
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.header-mobile-nav-toggle span:nth-child(1) {
+    top: 0px;
+}
+
+.header-mobile-nav-toggle span:nth-child(2) {
+    top: 9px;
+}
+
+.header-mobile-nav-toggle span:nth-child(3) {
+    top: 18px;
+}
+
+.header-mobile-nav-toggle[aria-expanded="true"] span:nth-child(1) {
+    top: 9px;
+    transform: rotate(135deg);
+}
+
+.header-mobile-nav-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.header-mobile-nav-toggle[aria-expanded="true"] span:nth-child(3) {
+    top: 9px;
+    transform: rotate(-135deg);
+}
+
+/* Mobile Navigation */
+.header-mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 350px;
+    height: 100vh;
+    background: var(--header-bg);
+    z-index: 999;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--header-border);
+}
+
+.header-mobile-nav.active {
+    right: 0;
+}
+
+.header-mobile-nav-header {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--header-border);
+}
+
+.header-mobile-nav-menu {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.header-mobile-nav-item {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: header-slideIn 0.3s ease forwards;
+}
+
+.header-mobile-nav-item:nth-child(1) { animation-delay: 0.1s; }
+
+@keyframes header-slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.header-mobile-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: var(--header-text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.header-mobile-nav-link i {
+    margin-right: 10px;
+    color: var(--header-accent-purple);
+    font-size: 1rem;
+}
+
+.header-mobile-nav-link:hover {
+    background: rgba(147, 51, 234, 0.1);
+    transform: translateX(5px);
+}
+
+.header-mobile-cta {
+    margin-top: auto;
+    padding: 1.5rem;
+}
+
+/* Scroll Up Button */
+.header-scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: var(--header-accent-purple);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: var(--header-text-light);
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.header-scroll-up-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
+.header-scroll-up-btn:hover {
+    color: var(--header-text-light);
+    background: var(--header-accent-violet);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .header-nav-menu {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-nav-menu {
+        display: none;
+    }
+    
+    .header-mobile-nav-toggle {
+        display: block;
+    }
+    
+    .header-name {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 10px 3%;
+    }
+    
+    .header-logo {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .header-name {
+        font-size: 1.2rem;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-mobile-nav {
+        max-width: 100%;
+    }
+    
+    .header-name {
+        font-size: 1.1rem;
+    }
+}

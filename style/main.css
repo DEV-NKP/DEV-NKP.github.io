@@ -24,25 +24,25 @@ html {
       margin: 0;
       padding: 0;
       min-height: 100vh;      /* Ensure the page has height to move cursor */
+      overflow-x: hidden;   /* Prevent horizontal scroll */
     }
 
-    /* Styles for the custom cursor */
-    .custom-cursor {
-      position: fixed;        /* Stays at mouse position */
+    /* .custom-cursor {
+      position: fixed;        
       width: 20px;
       height: 20px;
       background: radial-gradient(circle, var(--primary) 20%, transparent 80%);
-      border-radius: 50%;     /* Circular shape */
-      pointer-events: none;   /* Prevents cursor from interfering with clicks */
-      z-index: 9999;          /* Ensures cursor is on top */
-      transition: transform 0.2s ease;  /* Smooth scaling on hover */
+      border-radius: 50%;  
+      pointer-events: none;   
+      z-index: 9999;      
+      transition: transform 0.2s ease; 
     }
 
-    /* Hover state for the cursor */
+    
     .custom-cursor.hovered {
-      transform: scale(1.5);  /* Enlarges cursor */
+      transform: scale(1.5);  
       background: radial-gradient(circle, var(--secondary) 20%, transparent 80%);
-    }
+    } */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -65,7 +65,7 @@ body{
   color: #111;
 }
 .dark-body{
-  background: #000012f4;
+  background: #0f172a;
   color: #ffffffbf;
 }
 
@@ -393,7 +393,7 @@ opacity: 0;
 
 
 @media (max-width: 1340px) {
-  .menu-btn {
+  /* .menu-btn {
     display: block;
     z-index: 999;
   }
@@ -421,7 +421,7 @@ opacity: 0;
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
-  }
+  } */
   .home .home-content .text-2 {
     font-size: 70px;
   }
@@ -471,7 +471,7 @@ opacity: 0;
   section .certification-title::after{
     font-size: 15px!important;
   }
-  .menu-btn {
+  /* .menu-btn {
     display: block;
     z-index: 999;
   }
@@ -499,7 +499,7 @@ opacity: 0;
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
-  }
+  } */
   .home .home-content .text-2 {
     font-size: 70px;
   }

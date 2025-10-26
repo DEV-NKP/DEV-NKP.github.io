@@ -1,0 +1,85 @@
+/* Custom Cursor Styles - Optimized for Performance */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(37, 99, 235, 0.6); /* Using --footer-primary-color with opacity */
+    position: fixed;
+    transform: translate(-50%, -50%) translateZ(0);
+    pointer-events: none;
+    z-index: 9999;
+    will-change: transform;
+    backface-visibility: hidden;
+    /* mix-blend-mode: difference; */
+}
+
+/* Cursor States - Optimized with theme colors */
+.cursor-heading {
+    width: 28px;
+    height: 28px;
+    background-color: rgba(37, 99, 235, 0.7); /* --footer-primary-color */
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+}
+
+.cursor-link {
+    width: 28px;
+    height: 28px;
+    background-color: rgba(124, 58, 237, 0.7); /* --footer-secondary-color */
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
+}
+
+.cursor-img {
+    width: 28px;
+    height: 28px;
+    background-color: rgba(239, 68, 68, 0.7); /* --footer-accent-color */
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+}
+
+.cursor-paragraph {
+    width: 18px;
+    height: 18px;
+    background-color: rgba(37, 99, 235, 0.5); /* --footer-primary-color */
+    border-radius: 50%;
+}
+
+.cursor-input {
+    width: 3px;
+    height: 22px;
+    background-color: #e2e8f0; /* --footer-text */
+    border-radius: 0;
+    mix-blend-mode: normal;
+}
+
+.cursor-button {
+    width: 28px;
+    height: 28px;
+    background-color: rgba(16, 185, 129, 0.7); /* --footer-success-color */
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+}
+
+/* Cursor Animation - Optimized */
+@keyframes cursorPulse {
+    0% { transform: translate(-50%, -50%) translateZ(0) scale(1); opacity: 0.7; }
+    50% { transform: translate(-50%, -50%) translateZ(0) scale(1.3); opacity: 1; }
+    100% { transform: translate(-50%, -50%) translateZ(0) scale(1); opacity: 0.7; }
+}
+
+.cursor.pulse {
+    animation: cursorPulse 1.5s infinite;
+}
+
+/* Custom cursor active class - keeps default cursor visible */
+.custom-cursor-active {
+    /* Default cursor remains visible */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cursor {
+        display: none;
+    }
+}

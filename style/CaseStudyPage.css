@@ -589,11 +589,11 @@ body {
 }
 
 .timeline-item:nth-child(odd) .timeline-dot {
-  right: -10px;
+  right: -8.2rem;
 }
 
 .timeline-item:nth-child(even) .timeline-dot {
-  left: -10px;
+  left: -8.2rem;
 }
 
 .timeline-title {
@@ -845,7 +845,7 @@ body {
   }
   
   .timeline-dot {
-    left: 20px !important;
+    left: -60px !important;
     right: auto !important;
   }
 }

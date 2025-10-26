@@ -1,0 +1,168 @@
+<!-- header.html -->
+<div class="header-root">
+    <!-- Developer Themed Loading Animation -->
+    <div class="header-loading-overlay" id="header-loading-overlay">
+        <div class="header-dev-loader">
+            <!-- Floating Developer Icons -->
+            <div class="header-dev-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="header-dev-icon"><i class="fas fa-desktop"></i></div>
+            <div class="header-dev-icon"><i class="fas fa-keyboard"></i></div>
+            <div class="header-dev-icon"><i class="fas fa-mouse"></i></div>
+            <div class="header-dev-icon"><i class="fas fa-code"></i></div>
+            <div class="header-dev-icon"><i class="fas fa-terminal"></i></div>
+            
+            <!-- Laptop Frame with Code -->
+            <div class="header-laptop-frame">
+                <div class="header-laptop-screen">
+                    <span class="header-code-line">const developer = {</span>
+                    <span class="header-code-line">  skills: ['JavaScript', 'React'],</span>
+                    <span class="header-code-line">  portfolio: 'awesome',</span>
+                    <span class="header-code-line">  ready: true<span class="header-cursor"></span></span>
+                    <div class="header-loading-message" id="header-loading-message">Setting things in motion...</div>
+                </div>
+            </div>
+            
+            <!-- Loading Text -->
+            <div class="header-loading-text" id="header-loading-text">INITIALIZING...</div>
+        </div>
+    </div>
+    
+    <!-- Professional Header -->
+    <header class="header-header" id="header-header">
+        <div class="header-container">
+            <!-- Logo and Name -->
+            <a href="/" class="header-logo-container">
+                <img
+                    class="header-logo"
+                    src="resources/images/nkp.png"
+                    alt="Niloy Kanti Paul Portfolio Logo - Software Developer, Salesforce Expert"
+                />
+                <pre class="header-name">Niloy Kanti Paul</pre>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="header-nav-menu" id="header-navlink" data-visible="false">
+                <div class="header-nav-item">
+                    <a href="#about" class="header-nav-link">About</a>
+                </div>
+                <div class="header-nav-item">
+                    <a href="#skills" class="header-nav-link">Skills</a>
+                </div>
+                <div class="header-nav-item">
+                    <a href="#educations" class="header-nav-link">Educations</a>
+                </div>
+                <div class="header-nav-item">
+                    <a href="#experiences" class="header-nav-link">Experiences</a>
+                </div>
+                <div class="header-nav-item">
+                    <a href="#projects" class="header-nav-link">Projects</a>
+                </div>
+                <div class="header-nav-item">
+                    <a href="#publication" class="header-nav-link">Publications</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="#contact" class="header-cta-button" id="header-contact-button">Contact</a>
+                
+                <!-- Professional Theme Toggle -->
+                <div class="header-theme-toggle-container">
+                    <div class="header-theme-toggle" id="header-theme-toggle">
+                        <div class="header-theme-toggle-slider">
+                            <i id="header-dark-light" class="fa-solid fa-lightbulb"></i>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Mobile Menu Toggle -->
+            <button
+                class="header-mobile-nav-toggle"
+                aria-controls="header-navlink"
+                aria-expanded="false"
+                id="header-mobile-nav-toggle"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <div class="header-mobile-nav" id="header-mobile-nav">
+        <div class="header-mobile-nav-header">
+            <a href="/" class="header-logo-container">
+                <img
+                    class="header-logo"
+                    src="resources/images/nkp.png"
+                    alt="Niloy Kanti Paul Portfolio Logo"
+                />
+                <pre class="header-name">NILOY KANTI PAUL</pre>
+            </a>
+            <button class="header-mobile-nav-toggle" id="header-mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="header-mobile-nav-menu">
+            <div class="header-mobile-nav-item">
+                <a href="#about" class="header-mobile-nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </a>
+            </div>
+            <div class="header-mobile-nav-item">
+                <a href="#skills" class="header-mobile-nav-link">
+                    <i class="fas fa-code"></i>
+                    <span>Skills</span>
+                </a>
+            </div>
+            <div class="header-mobile-nav-item">
+                <a href="#educations" class="header-mobile-nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Educations</span>
+                </a>
+            </div>
+            <div class="header-mobile-nav-item">
+                <a href="#experiences" class="header-mobile-nav-link">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Experiences</span>
+                </a>
+            </div>
+            <div class="header-mobile-nav-item">
+                <a href="#projects" class="header-mobile-nav-link">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Projects</span>
+                </a>
+            </div>
+            <div class="header-mobile-nav-item">
+                <a href="#publication" class="header-mobile-nav-link">
+                    <i class="fas fa-book"></i>
+                    <span>Publications</span>
+                </a>
+            </div>
+            <div class="header-mobile-nav-item">
+                <a href="#contact" class="header-mobile-nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+        <div class="header-mobile-cta">
+            <!-- Professional Theme Toggle -->
+            <div class="header-theme-toggle-container">
+                <div class="header-theme-toggle" id="header-theme-toggle-mobile">
+                    <div class="header-theme-toggle-slider">
+                        <i id="header-dark-light-mobile" class="fa-solid fa-lightbulb"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scroll Up Button -->
+    <div class="header-scroll-up-btn" onclick="headerScrollToTop()">
+        <i class="fas fa-angle-up"></i>
+    </div>
+</div>
