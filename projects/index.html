@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ══ SEARCH CONSOLE / TRACKING VERIFICATION TAGS ══ -->
+  <meta name="google-site-verification" content="0Q44ThNd-nRbHfHzQhiPxU1ZzrModxospSeE9wBv-SM"/>
+  <meta name="facebook-domain-verification" content="ofgogy7nvurx97s5fd5btwdni26eu7"/>
+  <meta name="yandex-verification" content="ed2e3a2dc755eb8f"/>
+  <meta name="msvalidate.01" content="227BF01D2BC9D42FED6873CDF5378DE3"/>
+  <meta name="p:domain_verify" content="512a2c8ee6509c0c665345ce6edba550"/>
+
+  <!-- ══ YANDEX METRIKA ══ -->
+  <script type="text/javascript">
+  try {
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for(var j = 0; j < document.scripts.length; j++){if(document.scripts[j].src===r){return;}}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0];k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=104856668','ym');
+    if (typeof ym !== 'undefined') {
+      ym(104856668,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",accurateTrackBounce:true,trackLinks:true});
+    }
+  } catch (e) {
+    console.warn('Yandex Metrika failed to load:', e);
+  }
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/104856668" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
+
+  <!-- ══ GOOGLE ANALYTICS ══ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-48TDTQMGNW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-48TDTQMGNW');</script>
+
+  <!-- ══ PRIMARY SEO META TAGS ══ -->
+  <title>Projects — Niloy Kanti Paul | Software Engineer | Salesforce Developer</title>
+  <meta name="author" content="Niloy Kanti Paul"/>
+  <meta name="description" content="Browse through the portfolio of projects by Niloy Kanti Paul. Explore software development projects in Salesforce, full-stack applications, IoT, machine learning, and more."/>
+  <meta name="keywords" content="Niloy Kanti Paul, projects, software development, Salesforce, full-stack, IoT, machine learning, web applications"/>
+  <meta name="theme-color" content="#10b981"/>
+  <meta name="msapplication-TileColor" content="#10b981"/>
+  <link rel="canonical" href="https://dev-nkp.github.io/projects/"/>
+  <link rel="icon" href="../resources/images/nkpico.png" type="image/png"/>
+
+  <!-- ══ OPEN GRAPH ══ -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Projects — Niloy Kanti Paul | Software Engineer | Salesforce Developer"/>
+  <meta property="og:description" content="Browse through the portfolio of projects by Niloy Kanti Paul. Explore software development projects in Salesforce, full-stack applications, IoT, machine learning, and more."/>
+  <meta property="og:image" content="../resources/images/niloy.jpg"/>
+  <meta property="og:url" content="https://dev-nkp.github.io/projects/"/>
+  <meta property="og:site_name" content="Niloy Kanti Paul Portfolio"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!-- ══ TWITTER CARD ══ -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@Niloy_Paul_"/>
+  <meta name="twitter:creator" content="@Niloy_Paul_"/>
+  <meta name="twitter:title" content="Projects — Niloy Kanti Paul | Software Engineer | Salesforce Developer"/>
+  <meta name="twitter:description" content="Browse through the portfolio of projects by Niloy Kanti Paul. Explore software development projects in Salesforce, full-stack applications, IoT, machine learning, and more."/>
+  <meta name="twitter:image" content="../resources/images/niloy.jpg"/>
+
+  <!-- ══ FONTS ══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- ══ CSS ══ -->
+  <link rel="stylesheet" href="../styles.css"/>
+  <style>
+    /* Projects Page Specific Styles */
+    #projects-list {
+      background: var(--bg1);
+      padding: 120px 5% 80px;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    #projects-list::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      background: radial-gradient(circle at 75% 25%, rgba(139, 92, 246, .08) 0%, transparent 50%),
+                  radial-gradient(circle at 25% 75%, rgba(16, 185, 129, .06) 0%, transparent 50%);
+    }
+
+    /* Animated background particles */
+    #projects-list::after {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.05) 0%, transparent 8%),
+        radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.05) 0%, transparent 8%),
+        radial-gradient(circle at 40% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 6%);
+      background-size: 50px 50px, 60px 60px, 40px 40px;
+      background-position: 0 0, 20px 20px, 40px 10px;
+      animation: floatParticles 40s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes floatParticles {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(-50px, -50px) rotate(10deg); }
+    }
+
+    .projects-intro {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      text-align: center;
+      position: relative;
+    }
+
+    .projects-intro .sec-sub {
+      color: var(--text-dim);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      font-weight: 400;
+      position: relative;
+      z-index: 2;
+    }
+
+    .projects-intro::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .projects-filter {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .projects-filter::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 10px 24px;
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      background: rgba(20, 25, 46, 0.6);
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 30px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .filter-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(16, 185, 129, 0.3));
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: -1;
+    }
+
+    .filter-btn::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+    }
+
+    .filter-btn.active::before,
+    .filter-btn:hover::before {
+      width: 100%;
+    }
+
+    .filter-btn:active::after {
+      width: 300px;
+      height: 300px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 35px;
+      position: relative;
+    }
+
+    .project-card {
+      background: linear-gradient(135deg, rgba(20, 25, 46, 0.9), rgba(15, 20, 40, 0.9));
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(16, 185, 129, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 0;
+      clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    }
+
+    .project-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid var(--accent);
+      transform: scale(0.95);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      z-index: 1;
+      clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    }
+
+    .project-card:hover {
+      border-color: var(--border-h);
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 30px rgba(16, 185, 129, 0.15);
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
+    .project-card:hover::after {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .project-img-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: var(--bg3);
+    }
+
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .project-card:hover .project-img {
+      transform: scale(1.08);
+    }
+
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10, 14, 39, 0.9), rgba(20, 25, 46, 0.9));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .project-card:hover .project-overlay {
+      opacity: 1;
+    }
+
+    .project-play-btn {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.9), rgba(139, 92, 246, 0.9));
+      border: none;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+    }
+
+    .project-play-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(16, 185, 129, 0.6);
+    }
+
+    .project-play-btn:active {
+      transform: scale(0.95);
+    }
+
+    .project-hover-content {
+      text-align: center;
+      z-index: 2;
+      transform: translateY(20px);
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover .project-hover-content {
+      transform: translateY(0);
+    }
+
+    .project-hover-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-hover-desc {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 220px;
+    }
+
+    .project-info {
+      padding: 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .project-tag {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--accent);
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 8px;
+      padding: 4px 12px;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover .project-tag {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: rgba(16, 185, 129, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .project-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      line-height: 1.3;
+      color: var(--text);
+      transition: color 0.3s ease;
+    }
+
+    .project-card:hover .project-title {
+      color: var(--accent);
+    }
+
+    .project-desc {
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      margin-top: auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover .project-link {
+      color: var(--accent);
+      transform: translateX(5px);
+    }
+
+    .project-card:hover .project-link::before {
+      transform: translateX(0);
+    }
+
+    .project-link i {
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover .project-link i {
+      transform: translateX(3px);
+    }
+
+    /* Add glow effect to project cards on hover */
+    .project-card:hover {
+      background: linear-gradient(135deg, rgba(25, 30, 55, 0.95), rgba(20, 25, 45, 0.95));
+    }
+
+    /* Add floating animation to project cards */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .project-card {
+      animation: float 8s ease-in-out infinite;
+      animation-delay: calc(var(--card-index) * 0.3s);
+    }
+
+    .project-card:nth-child(1) { --card-index: 0; }
+    .project-card:nth-child(2) { --card-index: 1; }
+    .project-card:nth-child(3) { --card-index: 2; }
+    .project-card:nth-child(4) { --card-index: 3; }
+    .project-card:nth-child(5) { --card-index: 4; }
+    .project-card:nth-child(6) { --card-index: 5; }
+    .project-card:nth-child(7) { --card-index: 6; }
+    .project-card:nth-child(8) { --card-index: 7; }
+    .project-card:nth-child(9) { --card-index: 8; }
+    .project-card:nth-child(10) { --card-index: 9; }
+    .project-card:nth-child(11) { --card-index: 10; }
+
+    /* Video Modal Styles */
+    .vmod {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 14, 39, 0.95);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .vmod.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .vmod-box {
+      position: relative;
+      width: 80%;
+      max-width: 900px;
+      aspect-ratio: 16 / 9;
+      background: var(--bg1);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+    }
+
+    .vmod.open .vmod-box {
+      transform: scale(1);
+    }
+
+    .vmod-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(20, 25, 46, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .vmod-close:hover {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #projects-list {
+        padding: 100px 3% 60px;
+      }
+      
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+      
+      .projects-filter {
+        margin-bottom: 40px;
+      }
+
+      .vmod-box {
+        width: 95%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .filter-btn {
+        padding: 8px 18px;
+        font-size: 0.65rem;
+      }
+      
+      .project-info {
+        padding: 22px;
+      }
+      
+      .project-title {
+        font-size: 1.2rem;
+      }
+      
+      .project-desc {
+        font-size: 0.9rem;
+      }
+      
+      .project-hover-content {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ SCROLL PROGRESS ══ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ══ CANVAS & AMBIENT ══ -->
+<canvas id="constellation"></canvas>
+<div class="amb amb1"></div><div class="amb amb2"></div><div class="amb amb3"></div>
+
+<!-- ══ CUSTOM CURSOR ══ -->
+<div id="csr"></div><div id="csr-r"></div>
+
+<!-- ══ NAVIGATION ══ -->
+<nav id="nav">
+  <a href="../#hero" class="nav-logo">NKP<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../#about">About</a></li>
+    <li><a href="../#skills">Skills</a></li>
+    <li><a href="../#experience">Experience</a></li>
+    <li><a href="../#education">Education</a></li>
+    <li><a href="../#projects" class="nav-active">Projects</a></li>
+    <li><a href="../#case-studies">Cases</a></li>
+    <li><a href="../#publications">Research</a></li>
+    <li><a href="../#certifications">Certifications</a></li>
+    <li><a href="../#contact" class="nav-cta"><i class="fas fa-paper-plane"></i> Hire Me</a></li>
+  </ul>
+  <button class="hbtn" id="hbtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ══ MOBILE NAV ══ -->
+<div class="mob" id="mob">
+  <div class="mob-header">
+    <a href="../#hero" class="mob-logo" onclick="cmob()">NKP<span>.</span></a>
+    <button class="mob-close" onclick="cmob()" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  </div>
+  <a href="../#about" class="mob-nav-item" onclick="cmob()"><i class="fas fa-user"></i><span>About</span></a>
+  <a href="../#skills" class="mob-nav-item" onclick="cmob()"><i class="fas fa-code"></i><span>Skills</span></a>
+  <a href="../#experience" class="mob-nav-item" onclick="cmob()"><i class="fas fa-briefcase"></i><span>Experience</span></a>
+  <a href="../#education" class="mob-nav-item" onclick="cmob()"><i class="fas fa-graduation-cap"></i><span>Education</span></a>
+  <a href="../#projects" class="mob-nav-item" onclick="cmob()"><i class="fas fa-project-diagram"></i><span>Projects</span></a>
+  <a href="../#case-studies" class="mob-nav-item" onclick="cmob()"><i class="fas fa-building"></i><span>Case Studies</span></a>
+  <a href="../#publications" class="mob-nav-item" onclick="cmob()"><i class="fas fa-book-open"></i><span>Research</span></a>
+  <a href="../#certifications" class="mob-nav-item" onclick="cmob()"><i class="fas fa-certificate"></i><span>Certifications</span></a>
+  <a href="../#contact" class="mob-cta" onclick="cmob()"><i class="fas fa-envelope"></i> Hire Me</a>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION: PROJECTS
+══════════════════════════════════════ -->
+<section id="projects-list">
+  <div class="max">
+    <div class="sec-eyebrow rv">PROJECTS</div>
+    <h2 class="sec-title rv">FEATURED <span class="hi">PROJECTS</span></h2>
+    
+    <div class="projects-intro rv">
+      <p class="sec-sub">Explore my portfolio of software development projects spanning web applications, IoT devices, machine learning systems, and more. Each project represents a unique solution to real-world challenges.</p>
+    </div>
+    
+    <div class="projects-filter rv">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="web">Web Apps</button>
+      <button class="filter-btn" data-filter="ml">ML / AI</button>
+      <button class="filter-btn" data-filter="iot">IoT</button>
+      <button class="filter-btn" data-filter="software">Software</button>
+    </div>
+    
+    <div class="projects-grid">
+      <!-- Student Progress Indicator (SPI) -->
+      <a href="student-progress-indicator" class="project-card rv" data-category="software">
+        <div class="project-img-wrap">
+          <img src="../resources/images/spi.PNG" alt="Student Progress Indicator (SPI)" class="project-img" loading="lazy"/>
+          <div class="project-overlay">
+            <button class="project-play-btn" onclick="event.stopPropagation(); oVM('https://www.youtube.com/embed/W-WLPlPVl8s')" aria-label="Play Demo">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="project-hover-content">
+              <div class="project-hover-title">View Project</div>
+              <div class="project-hover-desc">Click to explore this project</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="project-tag">C++</span><span class="project-tag">Education</span><span class="project-tag">Console</span></div>
+          <div class="project-title">Student Progress Indicator (SPI)</div>
+          <p class="project-desc">Console-based student management system for tracking academic progress with role-based access.</p>
+          <div class="project-link">
+            <span>Explore Project</span>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </a>
+      
+      <!-- RAW V1.0 -->
+      <a href="remotely-assistant-worker-v1" class="project-card rv" data-category="software">
+        <div class="project-img-wrap">
+          <img src="../resources/images/rawv1.PNG" alt="Remotely Assistant Worker (RAW) V1.0" class="project-img" loading="lazy"/>
+          <div class="project-overlay">
+            <button class="project-play-btn" onclick="event.stopPropagation(); oVM('https://www.youtube.com/embed/aObzrlNLhI0')" aria-label="Play Demo">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="project-hover-content">
+              <div class="project-hover-title">View Project</div>
+              <div class="project-hover-desc">Click to explore this project</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="project-tag">Java</span><span class="project-tag">Console</span><span class="project-tag">Freelancing</span></div>
+          <div class="project-title">RAW V1.0 — Remote Assistant Workers</div>
+          <p class="project-desc">Java-based freelancing platform with buyer-seller job management and admin authority.</p>
+          <div class="project-link">
+            <span>Explore Project</span>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </a>
+      
+      <!-- RAW V2.0 -->
+      <a href="remotely-assistant-worker-v2" class="project-card rv" data-category="software">
+        <div class="project-img-wrap">
+          <img src="../resources/images/rawv2.PNG" alt="Remotely Assistant Workers (RAW) V2.0" class="project-img" loading="lazy"/>
+          <div class="project-overlay">
+            <button class="project-play-btn" onclick="event.stopPropagation(); oVM('https://www.youtube.com/embed/AuJNB6E_LVY')" aria-label="Play Demo">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="project-hover-content">
+              <div class="project-hover-title">View Project</div>
+              <div class="project-hover-desc">Click to explore this project</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="project-tag">Java Swing</span><span class="project-tag">GUI</span><span class="project-tag">MySQL</span></div>
+          <div class="project-title">RAW V2.0 — GUI-Based Remote Work Platform</div>
+          <p class="project-desc">Updated version with Java Swing GUI for remote workforce management with job posting.</p>
+          <div class="project-link">
+            <span>Explore Project</span>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </a>
+      
+      <!-- RAW V3.0 -->
+      <a href="remotely-assistant-worker-v3" class="project-card rv" data-category="software">
+        <div class="project-img-wrap">
+          <img src="../resources/images/rawv3.PNG" alt="Remotely Assistant Workers (RAW) V3.0" class="project-img" loading="lazy"/>
+          <div class="project-overlay">
+            <button class="project-play-btn" onclick="event.stopPropagation(); oVM('https://www.youtube.com/embed/pC-buVJy-WQ')" aria-label="Play Demo">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="project-hover-content">
+              <div class="project-hover-title">View Project</div>
+              <div class="project-hover-desc">Click to explore this project</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="project-tag">C#</span><span class="project-tag">.NET</span><span class="project-tag">SQL Server</span></div>
+          <div class="project-title">RAW V3.0 — Enterprise Remote Work System</div>
+          <p class="project-desc">C# (.NET) based software connecting buyers and sellers for remote job opportunities.</p>
+          <div class="project-link">
+            <span>Explore Project</span>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </a>
+      
+      <!-- Fest Of Harmony (FOH) -->
+      <a href="fest-of-harmony" class="project-card rv" data-category="software">
+        <div class="project-img-wrap">
+          <img src="../resources/images/foh.PNG" alt="Fest Of Harmony (FOH)" class="project-img" loading="lazy"/>
+          <div class="project-overlay">
+            <button class="project-play-btn" onclick="event.stopPropagation(); oVM('https://www.youtube.com/embed/b0pqrtICzf8')" aria-label="Play Demo">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="project-hover-content">
+              <div class="project-hover-title">View Project</div>
+              <div class="project-hover-desc">Click to explore this project</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="project-tag">C++</span><span class="project-tag">OpenGL</span><span class="project-tag">Graphics</span></div>
+          <div class="project-title">Fest Of Harmony (FOH)</div>
+          <p class="project-desc">C++ graphically designed system showcasing a virtual village fair with realistic nature views.</p>
+          <div class="project-link">
+            <span>Explore Project</span>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </a>
+      
+      <!-- Medic Master (Medic-M) -->
+      <a href="medical-master" class="project-card rv" data-category="web">
+        <div class="project-img-wrap">
+          <img src="../resources/images/medicm.PNG" alt="Medical Master (Medic-M)" class="project-img" loading="lazy"/>
+          <div class="project-overlay">
+            <button class="project-play-btn" onclick="event.stopPropagation(); oVM('https://www.youtube.com/embed/GeP8AP01ut8')" aria-label="Play Demo">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="project-hover-content">
+              <div class="project-hover-title">View Project</div>
+              <div class="project-hover-desc">Click to explore this project</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="project-tag">PHP</span><span class="project-tag">HTML/CSS/JS</span><span class="project-tag">MySQL</span></div>
+          <div class="project-title">Medic Master (Medic-M) — Healthcare Marketplace</div>
+          <p class="project-desc">Medical marketplace system facilitating online medicine purchases with admin and seller functionalities.</p>
+          <div class="project-link">
+            <span>Explore Project</span>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </a>
+      
+      <!-- IDEA-X -->
+      <a href="idea-x" class="project-card rv" data-category="web">
+        <div class="project-img-wrap">
+          <img src="../resources/images/ideax.PNG" alt="IDEA-X" class="project-img" loading="lazy"/>
+          <div class="project-overlay">
+            <div class="project-hover-content">
+              <div class="project-hover-title">View Project</div>
+              <div class="project-hover-desc">Click to explore this project</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="project-tag">C#</span><span class="project-tag">ASP.NET</span><span class="project-tag">SQL Server</span></div>
+          <div class="project-title">IDEA-X — Social Media for Engineers</div>
+          <p class="project-desc">Social media platform for engineers to explore and share exceptional ideas with admin access.</p>
+          <div class="project-link">
+            <span>Explore Project</span>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </a>
+      
+      <!-- Together Go (TOGO) -->
+      <a href="together-go" class="project-card rv" data-category="web">
+        <div class="project-img-wrap">
+          <img src="../resources/images/togo.PNG" alt="Together Go (TOGO)" class="project-img" loading="lazy"/>
+          <div class="project-overlay">
+            <div class="project-hover-content">
+              <div class="project-hover-title">View Project</div>
+              <div class="project-hover-desc">Click to explore this project</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="project-tag">Java</span><span class="project-tag">CSS</span><span class="project-tag">MySQL</span></div>
+          <div class="project-title">Together Go (TOGO) — Education Platform</div>
+          <p class="project-desc">Communication platform for students and faculty with classroom access and task management.</p>
+          <div class="project-link">
+            <span>Explore Project</span>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </a>
+      
+      <!-- TOSS V1.0 -->
+      <a href="traffic-operation-surveillance-system" class="project-card rv" data-category="web">
+        <div class="project-img-wrap">
+          <img src="../resources/images/toss.PNG" alt="Traffic Operation Surveillance System (TOSS) V1.0" class="project-img" loading="lazy"/>
+          <div class="project-overlay">
+            <div class="project-hover-content">
+              <div class="project-hover-title">View Project</div>
+              <div class="project-hover-desc">Click to explore this project</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="project-tag">Node.js</span><span class="project-tag">PostgreSQL</span><span class="project-tag">Traffic</span></div>
+          <div class="project-title">TOSS V1.0 — Traffic Operation Surveillance System</div>
+          <p class="project-desc">Traffic violation management system for reporting violations and vehicle registration with ML integration.</p>
+          <div class="project-link">
+            <span>Explore Project</span>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </a>
+      
+      <!-- META BIN -->
+      <a href="meta-bin" class="project-card rv" data-category="iot">
+        <div class="project-img-wrap">
+          <img src="../resources/images/meta.jpg" alt="META BIN" class="project-img" loading="lazy"/>
+          <div class="project-overlay">
+            <div class="project-hover-content">
+              <div class="project-hover-title">View Project</div>
+              <div class="project-hover-desc">Click to explore this project</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="project-tag">IoT</span><span class="project-tag">Arduino</span><span class="project-tag">Published</span></div>
+          <div class="project-title">META BIN — Smart Autonomous Waste Collector</div>
+          <p class="project-desc">Arduino-based smart trash collection device that autonomously follows people and detects trash.</p>
+          <div class="project-link">
+            <span>Explore Project</span>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </a>
+      
+      <!-- SKYHAWK -->
+      <a href="skyhawk-traffic-safety" class="project-card rv" data-category="ml">
+        <div class="project-img-wrap">
+          <img src="../resources/images/toss.PNG" alt="SKYHAWK" class="project-img" loading="lazy"/>
+          <div class="project-overlay">
+            <button class="project-play-btn" onclick="event.stopPropagation(); oVM('https://www.youtube.com/embed/8SdIXk1VMU4')" aria-label="Play Video">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="project-hover-content">
+              <div class="project-hover-title">View Project</div>
+              <div class="project-hover-desc">Click to explore this project</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="project-tag">ML/AI</span><span class="project-tag">OpenCV</span><span class="project-tag">MJSAT Published</span></div>
+          <div class="project-title">SKYHAWK — Traffic Safety ML System</div>
+          <p class="project-desc">Revolutionary machine learning system for traffic rule violation detection using intelligent camera surveillance.</p>
+          <div class="project-link">
+            <span>Explore Project</span>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VIDEO MODAL ══ -->
+<div class="vmod" id="vm">
+  <div class="vmod-box">
+    <button class="vmod-close" onclick="cV()"><i class="fas fa-times"></i> Close</button>
+    <iframe id="vf" src="" allowfullscreen style="width:100%;height:100%;border:none;"></iframe>
+  </div>
+</div>
+
+<!-- ══ SCROLL TO TOP ══ -->
+<button class="stb" id="stb" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ══ SCRIPTS ══ -->
+<script src="../script.js"></script>
+<script>
+  // Project filter functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    // Add click event to filter buttons
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Get filter value
+        const filterValue = this.getAttribute('data-filter');
+        
+        // Filter projects
+        projectCards.forEach(card => {
+          if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+            card.style.display = 'flex';
+            // Add animation
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 10);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+    
+    // Set initial state for project cards
+    projectCards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    });
+    
+    // Trigger initial animation after page load
+    setTimeout(() => {
+      projectCards.forEach((card, index) => {
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
+    }, 300);
+  });
+
+  // Video modal functionality
+  function oVM(url) {
+    document.getElementById('vf').src = url;
+    document.getElementById('vm').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function cV() {
+    document.getElementById('vm').classList.remove('open');
+    document.getElementById('vf').src = '';
+    document.body.style.overflow = '';
+  }
+
+  // Close modal when clicking outside
+  document.getElementById('vm').addEventListener('click', function(e) {
+    if (e.target === this) {
+      cV();
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      cV();
+    }
+  });
+
+  // Add hover effect to project cards
+  document.addEventListener('DOMContentLoaded', function() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        // Add glow effect
+        this.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.3), 0 0 20px var(--accent-glow)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        // Remove glow effect
+        this.style.boxShadow = '';
+      });
+    });
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const nav = document.getElementById('nav');
+        const targetPosition = target.offsetTop - nav.offsetHeight - 20;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Add active state to navigation based on scroll position
+  window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    let current = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.pageYOffset >= sectionTop - 100) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove('nav-active');
+      if (link.getAttribute('href').substring(1) === current) {
+        link.classList.add('nav-active');
+      }
+    });
+  });
+
+  // Add parallax effect to project cards on scroll
+  window.addEventListener('scroll', function() {
+    const scrolled = window.pageYOffset;
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach((card, index) => {
+      const rect = card.getBoundingClientRect();
+      const speed = 0.5 + (index * 0.1);
+      const yPos = -(scrolled * speed);
+      
+      if (rect.bottom >= 0 && rect.top <= window.innerHeight) {
+        card.style.transform = `translateY(${yPos * 0.1}px)`;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

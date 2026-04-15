@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ══ SEARCH CONSOLE / TRACKING VERIFICATION TAGS ══ -->
+  <meta name="google-site-verification" content="0Q44ThNd-nRbHfHzQhiPxU1ZzrModxospSeE9wBv-SM"/>
+  <meta name="facebook-domain-verification" content="ofgogy7nvurx97s5fd5btwdni26eu7"/>
+  <meta name="yandex-verification" content="ed2e3a2dc755eb8f"/>
+  <meta name="msvalidate.01" content="227BF01D2BC9D42FED6873CDF5378DE3"/>
+  <meta name="p:domain_verify" content="512a2c8ee6509c0c665345ce6edba550"/>
+
+  <!-- ══ YANDEX METRIKA ══ -->
+  <script type="text/javascript">
+  try {
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for(var j = 0; j < document.scripts.length; j++){if(document.scripts[j].src===r){return;}}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0];k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=104856668','ym');
+    if (typeof ym !== 'undefined') {
+      ym(104856668,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",accurateTrackBounce:true,trackLinks:true});
+    }
+  } catch (e) {
+    console.warn('Yandex Metrika failed to load:', e);
+  }
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/104856668" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
+
+  <!-- ══ GOOGLE ANALYTICS ══ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-48TDTQMGNW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-48TDTQMGNW');</script>
+
+  <!-- ══ PRIMARY SEO META TAGS ══ -->
+  <title>Remotely Assistant Worker (RAW) V1.0 — Java Freelancing Platform | Niloy Kanti Paul</title>
+  <meta name="author" content="Niloy Kanti Paul"/>
+  <meta name="description" content="RAW V1.0 is a Java-based freelancing platform connecting buyers and sellers for remote work. Features job posting, bidding, profile management, and secure transactions. Developed by Niloy Kanti Paul, Kaushik Biswas, and Dipanwita Saha."/>
+  <meta name="keywords" content="RAW, Remotely Assistant Worker, Java freelancing platform, remote work, job posting, bidding system, Niloy Kanti Paul, Kaushik Biswas, Dipanwita Saha, freelance marketplace, remote jobs, Java application, console application"/>
+  <meta name="theme-color" content="#10b981"/>
+  <meta name="msapplication-TileColor" content="#10b981"/>
+  <link rel="canonical" href="https://dev-nkp.github.io/projects/remotely-assistant-worker-v1"/>
+  <link rel="icon" href="../resources/images/nkpico.png" type="image/png"/>
+
+  <!-- ══ OPEN GRAPH ══ -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Remotely Assistant Worker (RAW) V1.0 — Java Freelancing Platform | Niloy Kanti Paul"/>
+  <meta property="og:description" content="RAW V1.0 is a Java-based freelancing platform connecting buyers and sellers for remote work. Features job posting, bidding, profile management, and secure transactions."/>
+  <meta property="og:image" content="../resources/images/rawv1.PNG"/>
+  <meta property="og:image:alt" content="Remotely Assistant Worker (RAW) V1.0 Interface"/>
+  <meta property="og:url" content="https://dev-nkp.github.io/projects/remotely-assistant-worker-v1"/>
+  <meta property="og:site_name" content="Niloy Kanti Paul Portfolio"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!-- ══ TWITTER CARD ══ -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@Niloy_Paul_"/>
+  <meta name="twitter:creator" content="@Niloy_Paul_"/>
+  <meta name="twitter:title" content="Remotely Assistant Worker (RAW) V1.0 — Java Freelancing Platform | Niloy Kanti Paul"/>
+  <meta name="twitter:description" content="RAW V1.0 is a Java-based freelancing platform connecting buyers and sellers for remote work. Features job posting, bidding, profile management, and secure transactions."/>
+  <meta name="twitter:image" content="../resources/images/rawv1.PNG"/>
+  <meta name="twitter:image:alt" content="Remotely Assistant Worker (RAW) V1.0 Interface"/>
+
+  <!-- ══ STRUCTURED DATA: CREATIVE WORK ══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Remotely Assistant Worker (RAW) V1.0",
+    "alternateName": "RAW V1.0",
+    "url": "https://github.com/DEV-NKP/Remotely-Assistant-Workers-RAW-V1.0.git",
+    "description": "Java-based freelancing platform connecting buyers and sellers for remote work opportunities with job posting, bidding, and secure transaction features.",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Niloy Kanti Paul",
+        "email": "niloykanti.paul2017@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/niloykantipaul/",
+          "https://github.com/DEV-NKP"
+        ]
+      },
+      {
+        "@type": "Person",
+        "name": "Kaushik Biswas",
+        "email": "biswaskaushik.2020@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/kaushik-biswas-2b6554243/",
+          "https://github.com/Kaushik-Biswas"
+        ]
+      },
+      {
+        "@type": "Person",
+        "name": "Dipanwita Saha",
+        "email": "dipanwita.saha2017@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/dipanwita-saha-656b5215b/",
+          "https://github.com/dipanwitasaha"
+        ]
+      }
+    ],
+    "dateCreated": "2021-10-15",
+    "dateModified": "2021-10-15",
+    "programmingLanguage": "Java",
+    "applicationCategory": "Freelance Platform",
+    "operatingSystem": "Windows",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "keywords": ["freelancing", "remote work", "Java", "job platform", "bidding system"]
+  }
+  </script>
+
+  <!-- ══ FONTS ══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- ══ CSS ══ -->
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="project-detail.css"/>
+</head>
+<body>
+
+<!-- ══ SCROLL PROGRESS ══ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ══ CANVAS & AMBIENT ══ -->
+<canvas id="constellation"></canvas>
+<div class="amb amb1"></div><div class="amb amb2"></div><div class="amb amb3"></div>
+
+<!-- ══ CUSTOM CURSOR ══ -->
+<div id="csr"></div><div id="csr-r"></div>
+
+<!-- ══ NAVIGATION ══ -->
+<nav id="nav">
+  <a href="../#hero" class="nav-logo">NKP<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../#about">About</a></li>
+    <li><a href="../#skills">Skills</a></li>
+    <li><a href="../#experience">Experience</a></li>
+    <li><a href="../#education">Education</a></li>
+    <li><a href="../#projects" class="nav-active">Projects</a></li>
+    <li><a href="../#case-studies">Cases</a></li>
+    <li><a href="../#publications">Research</a></li>
+    <li><a href="../#certifications">Certifications</a></li>
+    <li><a href="../#contact" class="nav-cta"><i class="fas fa-paper-plane"></i> Hire Me</a></li>
+  </ul>
+  <button class="hbtn" id="hbtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ══ MOBILE NAV ══ -->
+<div class="mob" id="mob">
+  <div class="mob-header">
+    <a href="../#hero" class="mob-logo" onclick="cmob()">NKP<span>.</span></a>
+    <button class="mob-close" onclick="cmob()" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  </div>
+  <a href="../#about" class="mob-nav-item" onclick="cmob()"><i class="fas fa-user"></i><span>About</span></a>
+  <a href="../#skills" class="mob-nav-item" onclick="cmob()"><i class="fas fa-code"></i><span>Skills</span></a>
+  <a href="../#experience" class="mob-nav-item" onclick="cmob()"><i class="fas fa-briefcase"></i><span>Experience</span></a>
+  <a href="../#education" class="mob-nav-item" onclick="cmob()"><i class="fas fa-graduation-cap"></i><span>Education</span></a>
+  <a href="../#projects" class="mob-nav-item" onclick="cmob()"><i class="fas fa-project-diagram"></i><span>Projects</span></a>
+  <a href="../#case-studies" class="mob-nav-item" onclick="cmob()"><i class="fas fa-building"></i><span>Case Studies</span></a>
+  <a href="../#publications" class="mob-nav-item" onclick="cmob()"><i class="fas fa-book-open"></i><span>Research</span></a>
+  <a href="../#certifications" class="mob-nav-item" onclick="cmob()"><i class="fas fa-certificate"></i><span>Certifications</span></a>
+  <a href="../#contact" class="mob-cta" onclick="cmob()"><i class="fas fa-envelope"></i> Hire Me</a>
+</div>
+
+<!-- ══════════════════════════════════════
+     PROJECT HERO
+══════════════════════════════════════ -->
+<section id="project-hero">
+  <div class="max">
+    <div class="project-hero-grid">
+      <div class="project-hero-visual rvl">
+        <div class="project-hero-img-wrap">
+          <img src="../resources/images/rawv1.PNG" alt="Remotely Assistant Worker (RAW) V1.0 Interface" class="project-hero-img" loading="eager"/>
+          <div class="project-hero-overlay">
+            <button class="project-hero-play-btn" onclick="oVM('https://www.youtube.com/embed/aObzrlNLhI0')">
+              <i class="fas fa-play"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="project-hero-content rvr">
+        <div class="project-breadcrumb">
+          <a href="/projects">Projects</a> <i class="fas fa-chevron-right"></i> <span>RAW V1.0</span>
+        </div>
+        <h1 class="project-hero-title">Remotely Assistant Worker (RAW) V1.0</h1>
+        <div class="project-hero-tags">
+          <span class="project-tag">Java</span>
+          <span class="project-tag">Console</span>
+          <span class="project-tag">Freelancing</span>
+        </div>
+        <p class="project-hero-desc">Java-based freelancing platform designed to connect buyers and sellers for remote work opportunities. Features job posting, bidding system, profile management, and secure transactions to facilitate the growing remote work economy.</p>
+        <div class="project-hero-actions">
+          <a href="https://github.com/DEV-NKP/Remotely-Assistant-Workers-RAW-V1.0.git" target="_blank" rel="noopener noreferrer" class="btn-va btn-solid">
+            <span><i class="fab fa-github"></i> View on GitHub</span>
+          </a>
+          <button class="btn-va btn-line" onclick="oVM('https://www.youtube.com/embed/aObzrlNLhI0')">
+            <i class="fas fa-play"></i> Watch Demo
+          </button>
+        </div>
+        <div class="project-hero-meta">
+          <div class="project-meta-item">
+            <div class="project-meta-label">Development Team</div>
+            <div class="project-meta-value">Niloy Kanti Paul, Kaushik Biswas, Dipanwita Saha</div>
+          </div>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Project Date</div>
+            <div class="project-meta-value">October 2021</div>
+          </div>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Technology Stack</div>
+            <div class="project-meta-value">Java, SQL Server, CodeBlocks IDE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PROJECT DETAILS
+══════════════════════════════════════ -->
+<section id="project-details">
+  <div class="max">
+    <div class="project-detail-grid">
+      <div class="project-detail-main">
+        <div class="project-section rv">
+          <h2 class="project-section-title">Project Overview</h2>
+          <p class="project-detail-text">RAW (Remotely Assistant Worker) V1.0 is a comprehensive Java-based freelancing platform designed to address the growing demand for remote work opportunities. The platform serves as a bridge between clients seeking remote talent and professionals looking for flexible work arrangements.</p>
+          <p class="project-detail-text">Built with a focus on simplicity and functionality, RAW V1.0 provides essential features for freelancing including job posting, bid management, profile creation, and secure payment processing. The console-based interface ensures accessibility across different systems while maintaining robust functionality.</p>
+        </div>
+        
+        <div class="project-section rv">
+          <h2 class="project-section-title">Key Features</h2>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-users"></i></div>
+              <div class="feature-content">
+                <h3 class="feature-title">User Management</h3>
+                <p class="feature-desc">Comprehensive user registration and profile management system for both buyers and sellers with authentication and authorization.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
+              <div class="feature-content">
+                <h3 class="feature-title">Job Posting System</h3>
+                <p class="feature-desc">Intuitive job posting interface for buyers to create detailed job listings with requirements, budget, and timeline specifications.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+              <div class="feature-content">
+                <h3 class="feature-title">Bidding Platform</h3>
+                <p class="feature-desc">Dynamic bidding system allowing freelancers to submit competitive proposals with detailed breakdowns of services and pricing.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="feature-content">
+                <h3 class="feature-title">Secure Transactions</h3>
+                <p class="feature-desc">Integrated payment processing system with escrow functionality to ensure secure and timely payments for completed work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-section rv">
+          <h2 class="project-section-title">Technical Implementation</h2>
+          <p class="project-detail-text">RAW V1.0 was developed using Java as the primary programming language, leveraging its platform independence and robust object-oriented programming capabilities. The system utilizes SQL Server for data persistence, ensuring reliable storage and retrieval of user information, job listings, and transaction records.</p>
+          <p class="project-detail-text">The application follows a modular architecture with separate packages for user management, job operations, bidding logic, and payment processing. This design ensures maintainability and scalability for future enhancements. The console interface was carefully crafted to provide an intuitive user experience while maintaining efficiency.</p>
+          <div class="tech-stack">
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-java"></i></div>
+              <div class="tech-name">Java</div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-database"></i></div>
+              <div class="tech-name">SQL Server</div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-laptop-code"></i></div>
+              <div class="tech-name">CodeBlocks IDE</div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-object-group"></i></div>
+              <div class="tech-name">OOP Design</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-section rv">
+          <h2 class="project-section-title">Impact & Use Cases</h2>
+          <p class="project-detail-text">RAW V1.0 addresses the critical need for reliable freelancing platforms in today's remote work economy. The platform empowers businesses to access global talent pools while providing freelancers with opportunities to work on diverse projects from anywhere in the world.</p>
+          <p class="project-detail-text">The system is particularly valuable for small to medium-sized businesses seeking specialized skills without geographical constraints, and for freelancers looking to build their client base and reputation in the digital marketplace.</p>
+        </div>
+        
+        <div class="project-section rv">
+          <h2 class="project-section-title">Demo</h2>
+          <div class="video-container">
+            <iframe 
+              src="https://www.youtube.com/embed/aObzrlNLhI0" 
+              title="RAW V1.0 - Remotely Assistant Worker Platform Demo"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-detail-sidebar">
+        <div class="sidebar-card rv">
+          <h3 class="sidebar-title">Project Info</h3>
+          <div class="sidebar-info-list">
+            <div class="sidebar-info-item">
+              <div class="sidebar-info-label">Project Type</div>
+              <div class="sidebar-info-value">Freelance Platform</div>
+            </div>
+            <div class="sidebar-info-item">
+              <div class="sidebar-info-label">Development Period</div>
+              <div class="sidebar-info-value">October 2021</div>
+            </div>
+            <div class="sidebar-info-item">
+              <div class="sidebar-info-label">Target Users</div>
+              <div class="sidebar-info-value">Freelancers, Businesses</div>
+            </div>
+            <div class="sidebar-info-item">
+              <div class="sidebar-info-label">Platform</div>
+              <div class="sidebar-info-value">Windows, Linux, macOS</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="sidebar-card rv">
+          <h3 class="sidebar-title">Team Members</h3>
+          <div class="team-list">
+            <div class="team-member">
+              <div class="member-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="member-info">
+                <div class="member-name">Niloy Kanti Paul</div>
+                <div class="member-role">Lead Developer</div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="member-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="member-info">
+                <div class="member-name">Kaushik Biswas</div>
+                <div class="member-role">Developer</div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="member-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="member-info">
+                <div class="member-name">Dipanwita Saha</div>
+                <div class="member-role">Developer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="sidebar-card rv">
+          <h3 class="sidebar-title">Quick Links</h3>
+          <div class="sidebar-links">
+            <a href="https://github.com/DEV-NKP/Remotely-Assistant-Workers-RAW-V1.0.git" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+              <i class="fab fa-github"></i>
+              <span>GitHub Repository</span>
+            </a>
+            <a href="https://www.youtube.com/embed/aObzrlNLhI0" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+              <i class="fab fa-youtube"></i>
+              <span>Project Demo</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="sidebar-card rv">
+          <h3 class="sidebar-title">Share This Project</h3>
+          <div class="share-buttons">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://dev-nkp.github.io/projects/remotely-assistant-worker-v1&text=Check out this RAW V1.0 freelancing platform by Niloy Kanti Paul" target="_blank" rel="noopener noreferrer" class="share-btn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=https://dev-nkp.github.io/projects/remotely-assistant-worker-v1&text=Check out this RAW V1.0 freelancing platform by Niloy Kanti Paul" target="_blank" rel="noopener noreferrer" class="share-btn">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://dev-nkp.github.io/projects/remotely-assistant-worker-v1" target="_blank" rel="noopener noreferrer" class="share-btn">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="mailto:?subject=RAW V1.0 Project&body=Check out this project: https://dev-nkp.github.io/projects/remotely-assistant-worker-v1" class="share-btn">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     RELATED PROJECTS
+══════════════════════════════════════ -->
+<section id="related-projects">
+  <div class="max">
+    <div class="sec-eyebrow rv">RELATED PROJECTS</div>
+    <h2 class="sec-title rv">EXPLORE <span class="hi">MORE</span></h2>
+    <div class="related-projects-grid">
+      <div class="related-project-card rv">
+        <div class="related-project-img-wrap">
+          <img src="../resources/images/rawv2.PNG" alt="Remotely Assistant Worker (RAW) V2.0" class="related-project-img"/>
+        </div>
+        <div class="related-project-info">
+          <div class="related-project-tags">
+            <span class="project-tag">Java Swing</span>
+            <span class="project-tag">GUI</span>
+          </div>
+          <div class="related-project-title">RAW V2.0 — GUI-Based Platform</div>
+          <a href="remotely-assistant-worker-v2" class="related-project-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <div class="related-project-card rv">
+        <div class="related-project-img-wrap">
+          <img src="../resources/images/rawv3.PNG" alt="Remotely Assistant Worker (RAW) V3.0" class="related-project-img"/>
+        </div>
+        <div class="related-project-info">
+          <div class="related-project-tags">
+            <span class="project-tag">C#</span>
+            <span class="project-tag">.NET</span>
+          </div>
+          <div class="related-project-title">RAW V3.0 — Enterprise System</div>
+          <a href="remotely-assistant-worker-v3" class="related-project-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <div class="related-project-card rv">
+        <div class="related-project-img-wrap">
+          <img src="../resources/images/togo.PNG" alt="Together Go (TOGO)" class="related-project-img"/>
+        </div>
+        <div class="related-project-info">
+          <div class="related-project-tags">
+            <span class="project-tag">Java</span>
+            <span class="project-tag">Web</span>
+          </div>
+          <div class="related-project-title">Together Go (TOGO) — Education Platform</div>
+          <a href="together-go" class="related-project-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VIDEO MODAL ══ -->
+<div class="vmod" id="vm">
+  <div class="vmod-box">
+    <button class="vmod-close" onclick="cV()"><i class="fas fa-times"></i> Close</button>
+    <iframe id="vf" src="" allowfullscreen style="width:100%;height:100%;border:none;"></iframe>
+  </div>
+</div>
+
+<!-- ══ SCROLL TO TOP ══ -->
+<button class="stb" id="stb" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ══ SCRIPTS ══ -->
+<script src="../script.js"></script>
+<script src="project-detail.js"></script>
+
+</body>
+</html>

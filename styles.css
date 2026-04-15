@@ -719,6 +719,7 @@ nav.scrolled {
   transition: all var(--transition-smooth);
   position: relative;
   overflow: hidden;
+  background-color: transparent;
 }
 .btn-solid {
   background: var(--accent);

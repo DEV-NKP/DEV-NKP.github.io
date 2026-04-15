@@ -3,63 +3,89 @@ const debounce=(func,wait)=>{let timeout;return function(...args){const later=()
 const throttle=(func,limit)=>{let inThrottle;return function(){const args=arguments,context=this;if(!inThrottle){func.apply(context,args);inThrottle=true;setTimeout(()=>inThrottle=false,limit);}};};
 
 // ── TYPED.JS ──
-new Typed('#typed5',{
-  strings:['Software Engineer.','Salesforce Expert.','Full-Stack Developer.','CRM Architect.','Deep Learning Researcher.','Apex & LWC Specialist.'],
-  typeSpeed:80,
-  backSpeed:40,
-  loop:true
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+  // Check if Typed is available and the element exists
+  if (typeof Typed !== 'undefined' && document.querySelector('#typed5')) {
+    new Typed('#typed5',{
+      strings:['Software Engineer.','Salesforce Expert.','Full-Stack Developer.','CRM Architect.','Deep Learning Researcher.','Apex & LWC Specialist.'],
+      typeSpeed:80,
+      backSpeed:40,
+      loop:true
+    });
+  }
 });
 
 // ── CUSTOM CURSOR ──
-const csr=document.getElementById('csr'),cr=document.getElementById('csr-r');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',throttle((e)=>{mx=e.clientX;my=e.clientY;csr.style.left=mx+'px';csr.style.top=my+'px';},16));
-(function loop(){rx+=(mx-rx)*0.09;ry+=(my-ry)*0.09;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(loop);})();
-document.querySelectorAll('a,button,.project-card,.cert-card,.edu-card,.cs-card,.pub-item,.ci,.s-tag,.ft-soc,.hsa,.soc-btn,.a-tag').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{csr.classList.add('hov');cr.classList.add('hov');});
-  el.addEventListener('mouseleave',()=>{csr.classList.remove('hov');cr.classList.remove('hov');});
-});
+// Only initialize cursor if elements exist
+const csr=document.getElementById('csr');
+const cr=document.getElementById('csr-r');
+if (csr && cr) {
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',throttle((e)=>{mx=e.clientX;my=e.clientY;csr.style.left=mx+'px';csr.style.top=my+'px';},16));
+  (function loop(){rx+=(mx-rx)*0.09;ry+=(my-ry)*0.09;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(loop);})();
+  
+  // Add hover effects to interactive elements
+  const interactiveElements = 'a,button,.project-card,.cert-card,.edu-card,.cs-card,.pub-item,.ci,.s-tag,.ft-soc,.hsa,.soc-btn,.a-tag';
+  document.querySelectorAll(interactiveElements).forEach(el=>{
+    el.addEventListener('mouseenter',()=>{csr.classList.add('hov');cr.classList.add('hov');});
+    el.addEventListener('mouseleave',()=>{csr.classList.remove('hov');cr.classList.remove('hov');});
+  });
+}
 
 // ── CONSTELLATION CANVAS ──
-(function(){
-  const c=document.getElementById('constellation'),ctx=c.getContext('2d');
-  let W,H,pts=[];
-  function resize(){W=c.width=innerWidth;H=c.height=innerHeight;}
-  resize();
-  window.addEventListener('resize',debounce(resize,250));
-  for(let i=0;i<60;i++)pts.push({x:Math.random()*window.innerWidth,y:Math.random()*window.innerHeight,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25});
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    pts.forEach(p=>{
-      p.x+=p.vx;p.y+=p.vy;
-      if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
-      ctx.beginPath();ctx.arc(p.x,p.y,1.2,0,Math.PI*2);ctx.fillStyle='rgba(16,185,129,0.5)';ctx.fill();
-    });
-    for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){
-      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
-      if(d<130){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(16,185,129,${.15*(1-d/130)})`;ctx.lineWidth=.5;ctx.stroke();}
-    }}
-    requestAnimationFrame(draw);
-  }
-  draw();
-})();
+// Only initialize canvas if element exists
+const canvas=document.getElementById('constellation');
+if (canvas) {
+  (function(){
+    const c=canvas;
+    const ctx=c.getContext('2d');
+    let W,H,pts=[];
+    function resize(){W=c.width=innerWidth;H=c.height=innerHeight;}
+    resize();
+    window.addEventListener('resize',debounce(resize,250));
+    for(let i=0;i<60;i++)pts.push({x:Math.random()*window.innerWidth,y:Math.random()*window.innerHeight,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25});
+    function draw(){
+      ctx.clearRect(0,0,W,H);
+      pts.forEach(p=>{
+        p.x+=p.vx;p.y+=p.vy;
+        if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+        ctx.beginPath();ctx.arc(p.x,p.y,1.2,0,Math.PI*2);ctx.fillStyle='rgba(16,185,129,0.5)';ctx.fill();
+      });
+      for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){
+        const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<130){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(16,185,129,${.15*(1-d/130)})`;ctx.lineWidth=.5;ctx.stroke();}
+      }}
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+}
 
 // ── SCROLL PROGRESS ──
+// Only initialize scroll progress if element exists
 const scrollProgress=document.getElementById('scrollProgress');
 const sections=document.querySelectorAll('section');
 let morphTimer=null,activeSection=null;
 
 function updateScrollProgress(){
+  if (!scrollProgress) return;
+  
   const scrollTop=window.pageYOffset||document.documentElement.scrollTop;
   const scrollHeight=document.documentElement.scrollHeight-document.documentElement.clientHeight;
   scrollProgress.style.transform=`scaleX(${Math.min(1,scrollTop/scrollHeight)})`;
   updateSectionStates(scrollTop);
+  
   const heroSection=document.getElementById('hero');
   const stb=document.getElementById('stb');
-  if(scrollTop>heroSection.offsetTop+heroSection.offsetHeight){stb.classList.add('on');}else{stb.classList.remove('on');}
+  if (heroSection && stb) {
+    if(scrollTop>heroSection.offsetTop+heroSection.offsetHeight){stb.classList.add('on');}else{stb.classList.remove('on');}
+  }
 }
 
 function updateSectionStates(scrollTop){
+  if (sections.length === 0) return;
+  
   const vh=window.innerHeight;
   const vc=scrollTop+vh/2;
   sections.forEach(section=>{
@@ -74,7 +100,8 @@ function updateSectionStates(scrollTop){
 }
 
 function getActiveSection(){
-  const sections=document.querySelectorAll('section');
+  if (sections.length === 0) return null;
+  
   const viewportHeight=window.innerHeight;
   const viewportCenter=window.pageYOffset+viewportHeight/2;
   let mostVisibleSection=null;
@@ -112,7 +139,7 @@ function handleActiveSectionMorph(){
           clearInterval(morphTimer);
           morphTimer=null;
         }
-      },5000); // Increased interval to reduce frequency
+      },5000);
     }
   }
 }
@@ -142,7 +169,6 @@ function triggerMorphAnimation(section){
           const span=document.createElement('span');
           span.style.display='inline-block';
           span.style.animation=`morphChar ${animationDuration}ms ${charIndex*delayBetweenChars}ms cubic-bezier(0.4, 0, 0.2, 1) forwards`;
-          // Fixed: Use actual non-breaking space character instead of &nbsp;
           span.textContent=char===' ' ? '\u00A0' : char;
           fragment.appendChild(span);
           charIndex++;
@@ -192,139 +218,205 @@ function triggerMorphAnimation(section){
   }
 }
 
-window.addEventListener('scroll',throttle(updateScrollProgress,16),{passive:true});
-window.addEventListener('load',()=>{
-  updateScrollProgress();
-  const firstSection=document.querySelector('#hero');
-  if(firstSection){setTimeout(()=>triggerMorphAnimation(firstSection),500);}
-});
+// Only add scroll listeners if we have sections
+if (sections.length > 0) {
+  window.addEventListener('scroll',throttle(updateScrollProgress,16),{passive:true});
+  window.addEventListener('load',()=>{
+    updateScrollProgress();
+    const firstSection=document.querySelector('#hero');
+    if(firstSection){setTimeout(()=>triggerMorphAnimation(firstSection),500);}
+  });
+}
 
 // ── NAV SCROLL EFFECT ──
-window.addEventListener('scroll',throttle(()=>{
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
-},16),{passive:true});
+// Only add nav scroll effect if nav exists
+const nav=document.getElementById('nav');
+if (nav) {
+  window.addEventListener('scroll',throttle(()=>{
+    nav.classList.toggle('scrolled',window.scrollY>60);
+  },16),{passive:true});
+}
 
 // ── MOBILE MENU ──
-document.getElementById('hbtn').addEventListener('click',()=>{
-  const mob=document.getElementById('mob');
-  mob.classList.toggle('open');
-  document.body.style.overflow=mob.classList.contains('open')?'hidden':'';
-});
-function cmob(){const mob=document.getElementById('mob');mob.classList.remove('open');document.body.style.overflow='';}
-document.addEventListener('keydown',(e)=>{if(e.key==='Escape')cmob();});
+// Only initialize mobile menu if elements exist
+const hbtn=document.getElementById('hbtn');
+const mob=document.getElementById('mob');
+if (hbtn && mob) {
+  hbtn.addEventListener('click',()=>{
+    mob.classList.toggle('open');
+    document.body.style.overflow=mob.classList.contains('open')?'hidden':'';
+  });
+  function cmob(){mob.classList.remove('open');document.body.style.overflow='';}
+  document.addEventListener('keydown',(e)=>{if(e.key==='Escape')cmob();});
+}
 
 // ── REVEAL ANIMATIONS ──
-const obsOptions={threshold:0.08,rootMargin:'0px 0px -50px 0px'};
-const obs=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('on');});},obsOptions);
-document.querySelectorAll('.rv,.rvl,.rvr').forEach(el=>obs.observe(el));
+// Only initialize reveal animations if elements exist
+const revealElements=document.querySelectorAll('.rv,.rvl,.rvr');
+if (revealElements.length > 0) {
+  const obsOptions={threshold:0.08,rootMargin:'0px 0px -50px 0px'};
+  const obs=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('on');});},obsOptions);
+  revealElements.forEach(el=>obs.observe(el));
+}
 
 // ── COUNTER ANIMATION ──
-function animC(el){
-  const t=+el.dataset.target;let c=0;const s=t/50;
-  const iv=setInterval(()=>{c+=s;if(c>=t){c=t;clearInterval(iv);}el.textContent=Math.floor(c)+(t>10?'+':'');},40);
+// Only initialize counter animation if elements exist
+const counterElements=document.querySelectorAll('.counter');
+if (counterElements.length > 0) {
+  function animC(el){
+    const t=+el.dataset.target;let c=0;const s=t/50;
+    const iv=setInterval(()=>{c+=s;if(c>=t){c=t;clearInterval(iv);}el.textContent=Math.floor(c)+(t>10?'+':'');},40);
+  }
+  const co=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{if(entry.isIntersecting){counterElements.forEach(animC);co.disconnect();}});
+  },{threshold:0.5});
+  counterElements.forEach(el=>co.observe(el));
 }
-const co=new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{if(entry.isIntersecting){document.querySelectorAll('.counter').forEach(animC);co.disconnect();}});
-},{threshold:0.5});
-document.querySelectorAll('.counter').forEach(el=>co.observe(el));
 
 // ── PROJECT FILTER ──
-document.querySelectorAll('.filter-btn').forEach(btn=>{
-  btn.addEventListener('click',function(){
-    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-    this.classList.add('active');
-    const f=this.dataset.filter;
-    document.querySelectorAll('.project-card').forEach(card=>{
-      card.style.display=(f==='all'||card.dataset.cat===f)?'flex':'none';
+// Only initialize project filter if elements exist
+const filterButtons=document.querySelectorAll('.filter-btn');
+const projectCards=document.querySelectorAll('.project-card');
+if (filterButtons.length > 0 && projectCards.length > 0) {
+  filterButtons.forEach(btn=>{
+    btn.addEventListener('click',function(){
+      filterButtons.forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');
+      const f=this.dataset.filter;
+      projectCards.forEach(card=>{
+        card.style.display=(f==='all'||card.dataset.cat===f)?'flex':'none';
+      });
     });
   });
-});
+}
 
 // ── PROJECT CARD REVEAL ──
-const projectObserver=new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible');});
-},{threshold:0.1});
-document.querySelectorAll('.project-card').forEach(card=>projectObserver.observe(card));
+// Only initialize project card reveal if elements exist
+const projectCardElements=document.querySelectorAll('.project-card');
+if (projectCardElements.length > 0) {
+  const projectObserver=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible');});
+  },{threshold:0.1});
+  projectCardElements.forEach(card=>projectObserver.observe(card));
+}
 
 // ── CASE STUDY FILTER ──
-document.querySelectorAll('.cs-fbtn').forEach(b=>{
-  b.addEventListener('click',function(){
-    document.querySelectorAll('.cs-fbtn').forEach(x=>x.classList.remove('on'));
-    this.classList.add('on');
-    const f=this.dataset.cf;
-    document.querySelectorAll('.cs-card').forEach(c=>{
-      c.style.display=(f==='all'||c.dataset.ci===f)?'block':'none';
+// Only initialize case study filter if elements exist
+const csFilterButtons=document.querySelectorAll('.cs-fbtn');
+const csCards=document.querySelectorAll('.cs-card');
+if (csFilterButtons.length > 0 && csCards.length > 0) {
+  csFilterButtons.forEach(b=>{
+    b.addEventListener('click',function(){
+      csFilterButtons.forEach(x=>x.classList.remove('on'));
+      this.classList.add('on');
+      const f=this.dataset.cf;
+      csCards.forEach(c=>{
+        c.style.display=(f==='all'||c.dataset.ci===f)?'block':'none';
+      });
     });
   });
-});
+}
 
 // ── CERTIFICATIONS TOGGLE ──
-function toggleCerts(){
-  const m=document.getElementById('ch');
-  const icon=document.getElementById('cert-icon');
-  const btn=document.getElementById('cert-toggle');
-  if(m.style.display==='none'||m.style.display===''){
-    m.style.display='grid';
-    icon.className='fas fa-minus';
-    btn.innerHTML='<i class="fas fa-minus" id="cert-icon"></i> Show Less Certifications';
-  }else{
-    m.style.display='none';
-    icon.className='fas fa-plus';
-    btn.innerHTML='<i class="fas fa-plus" id="cert-icon"></i> Show More Certifications';
+// Only initialize certifications toggle if elements exist
+const certToggle=document.getElementById('cert-toggle');
+const ch=document.getElementById('ch');
+const certIcon=document.getElementById('cert-icon');
+if (certToggle && ch && certIcon) {
+  function toggleCerts(){
+    if(ch.style.display==='none'||ch.style.display===''){
+      ch.style.display='grid';
+      certIcon.className='fas fa-minus';
+      certToggle.innerHTML='<i class="fas fa-minus" id="cert-icon"></i> Show Less Certifications';
+    }else{
+      ch.style.display='none';
+      certIcon.className='fas fa-plus';
+      certToggle.innerHTML='<i class="fas fa-plus" id="cert-icon"></i> Show More Certifications';
+    }
   }
+  certToggle.addEventListener('click', toggleCerts);
 }
 
 // ── VIDEO MODAL ──
-function oVM(u){document.getElementById('vf').src=u;document.getElementById('vm').classList.add('open');document.body.style.overflow='hidden';}
-function cV(){document.getElementById('vm').classList.remove('open');document.getElementById('vf').src='';document.body.style.overflow='';}
-document.getElementById('vm').addEventListener('click',function(e){if(e.target===this)cV();});
+// Only initialize video modal if elements exist
+const vm=document.getElementById('vm');
+const vf=document.getElementById('vf');
+if (vm && vf) {
+  function oVM(u){vf.src=u;vm.classList.add('open');document.body.style.overflow='hidden';}
+  function cV(){vm.classList.remove('open');vf.src='';document.body.style.overflow='';}
+  vm.addEventListener('click',function(e){if(e.target===this)cV();});
+  
+  // Make functions globally accessible
+  window.oVM = oVM;
+  window.cV = cV;
+}
 
 // ── CERTIFICATE MODAL ──
-function openCertModal(name){
-  const modal=document.getElementById('certModal');
-  const img=document.getElementById('certModalImg');
-  img.src=`./resources/certificates/${name}.jpg`;
-  img.alt=name;
-  modal.classList.add('open');
-  document.body.style.overflow='hidden';
+// Only initialize certificate modal if elements exist
+const certModal=document.getElementById('certModal');
+const certModalImg=document.getElementById('certModalImg');
+if (certModal && certModalImg) {
+  function openCertModal(name){
+    certModalImg.src=`./resources/certificates/${name}.jpg`;
+    certModalImg.alt=name;
+    certModal.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeCertModal(){
+    certModal.classList.remove('open');
+    certModalImg.src='';
+    document.body.style.overflow='';
+  }
+  certModal.addEventListener('click',function(e){if(e.target===this)closeCertModal();});
+  
+  // Make functions globally accessible
+  window.openCertModal = openCertModal;
+  window.closeCertModal = closeCertModal;
 }
-function closeCertModal(){
-  const modal=document.getElementById('certModal');
-  modal.classList.remove('open');
-  document.getElementById('certModalImg').src='';
-  document.body.style.overflow='';
-}
-document.getElementById('certModal').addEventListener('click',function(e){if(e.target===this)closeCertModal();});
 
 // ── CONTACT FORM ──
-function submitForm(e){
-  e.preventDefault();
-  const btn=document.getElementById('submit-msg');
-  btn.innerHTML='<span><i class="fas fa-spinner fa-spin"></i> Sending...</span>';
-  btn.disabled=true;
-  const formData=new FormData(document.getElementById('cf'));
-  fetch('https://formsubmit.io/send/3d570815-9c63-444a-b736-63cc759338a9',{method:'POST',body:formData})
-  .then(()=>{document.getElementById('cf').style.display='none';document.getElementById('cf-ok').style.display='block';})
-  .catch(()=>{btn.innerHTML='<span><i class="fas fa-paper-plane"></i> Send Message</span>';btn.disabled=false;alert('Error sending. Please email directly: niloykanti.paul2017@gmail.com');});
-  return false;
+// Only initialize contact form if elements exist
+const cf=document.getElementById('cf');
+const submitMsg=document.getElementById('submit-msg');
+const cfOk=document.getElementById('cf-ok');
+if (cf && submitMsg && cfOk) {
+  function submitForm(e){
+    e.preventDefault();
+    submitMsg.innerHTML='<span><i class="fas fa-spinner fa-spin"></i> Sending...</span>';
+    submitMsg.disabled=true;
+    const formData=new FormData(cf);
+    fetch('https://formsubmit.io/send/3d570815-9c63-444a-b736-63cc759338a9',{method:'POST',body:formData})
+    .then(()=>{cf.style.display='none';cfOk.style.display='block';})
+    .catch(()=>{submitMsg.innerHTML='<span><i class="fas fa-paper-plane"></i> Send Message</span>';submitMsg.disabled=false;alert('Error sending. Please email directly: niloykanti.paul2017@gmail.com');});
+    return false;
+  }
+  cf.addEventListener('submit', submitForm);
 }
 
 // ── SMOOTH SCROLL ──
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-  anchor.addEventListener('click',function(e){
-    e.preventDefault();
-    const target=document.querySelector(this.getAttribute('href'));
-    if(target){
-      const nav=document.getElementById('nav');
-      const targetPosition=target.offsetTop-nav.offsetHeight-20;
-      window.scrollTo({top:targetPosition,behavior:'smooth'});
-    }
+// Only initialize smooth scroll if anchor links exist
+const anchorLinks=document.querySelectorAll('a[href^="#"]');
+if (anchorLinks.length > 0) {
+  anchorLinks.forEach(anchor=>{
+    anchor.addEventListener('click',function(e){
+      e.preventDefault();
+      const target=document.querySelector(this.getAttribute('href'));
+      if(target){
+        const targetNav=document.getElementById('nav');
+        const targetPosition=target.offsetTop-(targetNav?targetNav.offsetHeight:0)-20;
+        window.scrollTo({top:targetPosition,behavior:'smooth'});
+      }
+    });
   });
-});
+}
 
 // ── GPU ACCELERATION ──
+// Only add GPU acceleration to elements that exist
 window.addEventListener('DOMContentLoaded',()=>{
-  document.querySelectorAll('.rv,.rvl,.rvr,section').forEach(el=>el.classList.add('gpu-accelerated'));
+  const gpuElements=document.querySelectorAll('.rv,.rvl,.rvr,section');
+  if (gpuElements.length > 0) {
+    gpuElements.forEach(el=>el.classList.add('gpu-accelerated'));
+  }
 });
 
 // ── PERFORMANCE MONITORING ──
@@ -344,18 +436,15 @@ window.addEventListener('beforeunload',()=>{
 // ── FIX FOR ESCAPE KEY IN MODALS ──
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
-    const videoModal = document.getElementById('vm');
-    const certModal = document.getElementById('certModal');
-    
-    if (videoModal.classList.contains('open')) {
+    if (vm && vm.classList.contains('open')) {
       cV();
     }
     
-    if (certModal.classList.contains('open')) {
+    if (certModal && certModal.classList.contains('open')) {
       closeCertModal();
     }
     
-    if (document.getElementById('mob').classList.contains('open')) {
+    if (mob && mob.classList.contains('open')) {
       cmob();
     }
   }

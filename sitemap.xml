@@ -137,86 +137,92 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Project Detail Pages (if they exist as separate pages) -->
+  <!-- Project Detail Pages (Updated URLs) -->
+     <url>
+    <loc>https://dev-nkp.github.io/projects/</loc>
+    <lastmod>2026-4-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url>
-    <loc>https://dev-nkp.github.io/projects/student-progress-indicator/</loc>
+    <loc>https://dev-nkp.github.io/projects/student-progress-indicator</loc>
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://dev-nkp.github.io/projects/remotely-assistant-workers-v1/</loc>
+    <loc>https://dev-nkp.github.io/projects/remotely-assistant-worker-v1</loc>
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://dev-nkp.github.io/projects/remotely-assistant-workers-v2/</loc>
+    <loc>https://dev-nkp.github.io/projects/remotely-assistant-worker-v2</loc>
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://dev-nkp.github.io/projects/remotely-assistant-workers-v3/</loc>
+    <loc>https://dev-nkp.github.io/projects/remotely-assistant-worker-v3</loc>
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://dev-nkp.github.io/projects/fest-of-harmony/</loc>
+    <loc>https://dev-nkp.github.io/projects/fest-of-harmony</loc>
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://dev-nkp.github.io/projects/medic-master/</loc>
+    <loc>https://dev-nkp.github.io/projects/medical-master</loc>
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://dev-nkp.github.io/projects/idea-x/</loc>
+    <loc>https://dev-nkp.github.io/projects/idea-x</loc>
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://dev-nkp.github.io/projects/together-go/</loc>
+    <loc>https://dev-nkp.github.io/projects/together-go</loc>
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://dev-nkp.github.io/projects/toss/</loc>
+    <loc>https://dev-nkp.github.io/projects/traffic-operation-surveillance-system</loc>
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://dev-nkp.github.io/projects/meta-bin/</loc>
+    <loc>https://dev-nkp.github.io/projects/meta-bin</loc>
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://dev-nkp.github.io/projects/skyhawk/</loc>
+    <loc>https://dev-nkp.github.io/projects/skyhawk-traffic-safety</loc>
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Publication Detail Pages (if they exist as separate pages) -->
-  <url>
+  <!-- <url>
     <loc>https://dev-nkp.github.io/publications/meta-bin-arduino-smart-device/</loc>
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
@@ -235,5 +241,6 @@
     <lastmod>2024-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
-  </url>
+  </url> -->
+
 </urlset>

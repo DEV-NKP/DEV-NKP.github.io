@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ══ SEARCH CONSOLE / TRACKING VERIFICATION TAGS ══ -->
+  <meta name="google-site-verification" content="0Q44ThNd-nRbHfHzQhiPxU1ZzrModxospSeE9wBv-SM"/>
+  <meta name="facebook-domain-verification" content="ofgogy7nvurx97s5fd5btwdni26eu7"/>
+  <meta name="yandex-verification" content="ed2e3a2dc755eb8f"/>
+  <meta name="msvalidate.01" content="227BF01D2BC9D42FED6873CDF5378DE3"/>
+  <meta name="p:domain_verify" content="512a2c8ee6509c0c665345ce6edba550"/>
+
+  <!-- ══ YANDEX METRIKA ══ -->
+  <script type="text/javascript">
+  try {
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for(var j = 0; j < document.scripts.length; j++){if(document.scripts[j].src===r){return;}}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0];k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=104856668','ym');
+    if (typeof ym !== 'undefined') {
+      ym(104856668,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",accurateTrackBounce:true,trackLinks:true});
+    }
+  } catch (e) {
+    console.warn('Yandex Metrika failed to load:', e);
+  }
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/104856668" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
+
+  <!-- ══ GOOGLE ANALYTICS ══ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-48TDTQMGNW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-48TDTQMGNW');</script>
+
+  <!-- ══ PRIMARY SEO META TAGS ══ -->
+  <title>META BIN — Smart Autonomous Waste Collector | Niloy Kanti Paul</title>
+  <meta name="author" content="Niloy Kanti Paul"/>
+  <meta name="description" content="META BIN is an Arduino-based smart trash collection device that autonomously follows people, detects trash, and monitors fill levels. Features ultrasonic sensors, motor control, and IoT connectivity for automated waste management."/>
+  <meta name="keywords" content="META BIN, smart waste collector, Arduino, IoT, autonomous robot, trash detection, ultrasonic sensor, motor control, waste management, Niloy Kanti Paul, Kaushik Biswas, Dipanwita Saha, published research"/>
+  <meta name="theme-color" content="#10b981"/>
+  <meta name="msapplication-TileColor" content="#10b981"/>
+  <link rel="canonical" href="https://dev-nkp.github.io/projects/meta-bin"/>
+  <link rel="icon" href="../resources/images/nkpico.png" type="image/png"/>
+
+  <!-- ══ OPEN GRAPH ══ -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="META BIN — Smart Autonomous Waste Collector | Niloy Kanti Paul"/>
+  <meta property="og:description" content="META BIN is an Arduino-based smart trash collection device that autonomously follows people, detects trash, and monitors fill levels with IoT connectivity for automated waste management."/>
+  <meta property="og:image" content="../resources/images/meta.jpg"/>
+  <meta property="og:image:alt" content="META BIN Smart Waste Collector Device"/>
+  <meta property="og:url" content="https://dev-nkp.github.io/projects/meta-bin"/>
+  <meta property="og:site_name" content="Niloy Kanti Paul Portfolio"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!-- ══ TWITTER CARD ══ -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@Niloy_Paul_"/>
+  <meta name="twitter:creator" content="@Niloy_Paul_"/>
+  <meta name="twitter:title" content="META BIN — Smart Autonomous Waste Collector | Niloy Kanti Paul"/>
+  <meta name="twitter:description" content="META BIN is an Arduino-based smart trash collection device that autonomously follows people, detects trash, and monitors fill levels with IoT connectivity for automated waste management."/>
+  <meta name="twitter:image" content="../resources/images/meta.jpg"/>
+  <meta name="twitter:image:alt" content="META BIN Smart Waste Collector Device"/>
+
+  <!-- ══ STRUCTURED DATA: CREATIVE WORK ══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "META BIN",
+    "alternateName": "Smart Autonomous Waste Collector",
+    "url": "https://github.com/DEV-NKP/META-BIN.git",
+    "description": "Arduino-based smart trash collection device that autonomously follows people, detects trash, and monitors fill levels with ultrasonic sensors, motor control, and IoT connectivity for automated waste management.",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Niloy Kanti Paul",
+        "email": "niloykanti.paul2017@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/niloykantipaul/",
+          "https://github.com/DEV-NKP"
+        ]
+      },
+      {
+        "@type": "Person",
+        "name": "Kaushik Biswas",
+        "email": "biswaskaushik.2020@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/kaushik-biswas-2b6554243/",
+          "https://github.com/Kaushik-Biswas"
+        ]
+      },
+      {
+        "@type": "Person",
+        "name": "Dipanwita Saha",
+        "email": "dipanwita.saha2017@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/dipanwita-saha-656b5215b/",
+          "https://github.com/dipanwitasaha"
+        ]
+      }
+    ],
+    "dateCreated": "2021-08-15",
+    "dateModified": "2021-08-15",
+    "programmingLanguage": ["Arduino", "C++"],
+    "applicationCategory": "IoT Device",
+    "operatingSystem": "Arduino",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "isPartOf": {
+      "@type": "PublicationEvent",
+      "name": "MJSAT 2021"
+    },
+    "keywords": ["IoT", "Arduino", "waste management", "autonomous", "robotics", "ultrasonic", "sensor", "motor control"]
+  }
+  </script>
+
+  <!-- ══ FONTS ══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- ══ CSS ══ -->
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="project-detail.css"/>
+</head>
+<body>
+
+<!-- ══ SCROLL PROGRESS ══ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ══ CANVAS & AMBIENT ══ -->
+<canvas id="constellation"></canvas>
+<div class="amb amb1"></div><div class="amb amb2"></div><div class="amb amb3"></div>
+
+<!-- ══ CUSTOM CURSOR ══ -->
+<div id="csr"></div><div id="csr-r"></div>
+
+<!-- ══ NAVIGATION ══ -->
+<nav id="nav">
+  <a href="../#hero" class="nav-logo">NKP<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../#about">About</a></li>
+    <li><a href="../#skills">Skills</a></li>
+    <li><a href="../#experience">Experience</a></li>
+    <li><a href="../#education">Education</a></li>
+    <li><a href="../#projects" class="nav-active">Projects</a></li>
+    <li><a href="../#case-studies">Cases</a></li>
+    <li><a href="../#publications">Research</a></li>
+    <li><a href="../#certifications">Certifications</a></li>
+    <li><a href="../#contact" class="nav-cta"><i class="fas fa-paper-plane"></i> Hire Me</a></li>
+  </ul>
+  <button class="hbtn" id="hbtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ══ MOBILE NAV ══ -->
+<div class="mob" id="mob">
+  <div class="mob-header">
+    <a href="../#hero" class="mob-logo" onclick="cmob()">NKP<span>.</span></a>
+    <button class="mob-close" onclick="cmob()" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  </div>
+  <a href="../#about" class="mob-nav-item" onclick="cmob()"><i class="fas fa-user"></i><span>About</span></a>
+  <a href="../#skills" class="mob-nav-item" onclick="cmob()"><i class="fas fa-code"></i><span>Skills</span></a>
+  <a href="../#experience" class="mob-nav-item" onclick="cmob()"><i class="fas fa-briefcase"></i><span>Experience</span></a>
+  <a href="../#education" class="mob-nav-item" onclick="cmob()"><i class="fas fa-graduation-cap"></i><span>Education</span></a>
+  <a href="../#projects" class="mob-nav-item" onclick="cmob()"><i class="fas fa-project-diagram"></i><span>Projects</span></a>
+  <a href="../#case-studies" class="mob-nav-item" onclick="cmob()"><i class="fas fa-building"></i><span>Case Studies</span></a>
+  <a href="../#publications" class="mob-nav-item" onclick="cmob()"><i class="fas fa-book-open"></i><span>Research</span></a>
+  <a href="../#certifications" class="mob-nav-item" onclick="cmob()"><i class="fas fa-certificate"></i><span>Certifications</span></a>
+  <a href="../#contact" class="mob-cta" onclick="cmob()"><i class="fas fa-envelope"></i> Hire Me</a>
+</div>
+
+<!-- ══════════════════════════════════════
+     PROJECT HERO
+══════════════════════════════════════ -->
+<section id="project-hero">
+  <div class="max">
+    <div class="project-hero-grid">
+      <div class="project-hero-visual rvl">
+        <div class="project-hero-img-wrap">
+          <img src="../resources/images/meta.jpg" alt="META BIN Smart Autonomous Waste Collector" class="project-hero-img" loading="eager"/>
+          <div class="project-hero-overlay">
+            <div class="project-hover-content">
+              <div class="project-hover-title">View Project</div>
+              <div class="project-hover-desc">Click to explore this device</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-hero-content rvr">
+        <div class="project-breadcrumb">
+          <a href="/projects">Projects</a> <i class="fas fa-chevron-right"></i> <span>META BIN</span>
+        </div>
+        <h1 class="project-hero-title">META BIN</h1>
+        <div class="project-hero-tags">
+          <span class="project-tag">IoT</span>
+          <span class="project-tag">Arduino</span>
+          <span class="project-tag">Published</span>
+        </div>
+        <p class="project-hero-desc">Arduino-based smart trash collection device that autonomously follows people, detects trash, and monitors fill levels with ultrasonic sensors, motor control, and IoT connectivity for automated waste management.</p>
+        <div class="project-hero-actions">
+          <a href="https://github.com/DEV-NKP/META-BIN.git" target="_blank" rel="noopener noreferrer" class="btn-va btn-solid">
+            <span><i class="fab fa-github"></i> View on GitHub</span>
+          </a>
+        </div>
+        <div class="project-hero-meta">
+          <div class="project-meta-item">
+            <div class="project-meta-label">Development Team</div>
+            <div class="project-meta-value">Niloy Kanti Paul, Kaushik Biswas, Dipanwita Saha</div>
+          </div>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Project Date</div>
+            <div class="project-meta-value">August 2021</div>
+          </div>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Technology Stack</div>
+            <div class="project-meta-value">Arduino, C++, Ultrasonic Sensors</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PROJECT DETAILS
+══════════════════════════════════════ -->
+<section id="project-details">
+  <div class="max">
+    <div class="project-detail-grid">
+      <div class="project-detail-main">
+        <div class="project-section rv">
+          <h2 class="project-section-title">Smart Waste Management Innovation</h2>
+          <p class="project-detail-text">META BIN is an innovative IoT device designed to revolutionize waste management through automation and intelligent sensing. The device addresses the growing need for efficient waste collection in public spaces by autonomously detecting and collecting trash without human intervention.</p>
+          <p class="project-detail-text">Built on the Arduino platform, META BIN combines multiple sensors and actuators to create a self-sufficient waste collection system. The device can navigate spaces, identify trash items, and collect them while monitoring its own operational status and communicating with central management systems.</p>
+        </div>
+        
+        <div class="project-section rv">
+          <h2 class="project-section-title">Core Technical Features</h2>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-user-friends"></i></div>
+              <div class="feature-content">
+                <h3 class="feature-title">Autonomous Following</h3>
+                <p class="feature-desc">Advanced person-following algorithm using ultrasonic sensors and motor control to autonomously track and follow people in public spaces for convenient trash collection.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-search"></i></div>
+              <div class="feature-content">
+                <h3 class="feature-title">Trash Detection</h3>
+                <p class="feature-desc">Intelligent trash detection system using proximity sensors and object recognition algorithms to identify and locate trash items in the environment.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+              <div class="feature-content">
+                <h3 class="feature-title">Fill Level Monitoring</h3>
+                <p class="feature-desc">Real-time monitoring of trash bin fill levels using ultrasonic distance sensors, providing data for optimized collection scheduling and capacity management.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+              <div class="feature-content">
+                <h3 class="feature-title">IoT Connectivity</h3>
+                <p class="feature-desc">Wireless connectivity for remote monitoring, data collection, and system control through IoT platforms enabling smart city integration.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-section rv">
+          <h2 class="project-section-title">Hardware Implementation</h2>
+          <p class="project-detail-text">META BIN is built around the Arduino microcontroller platform, providing a reliable and programmable foundation for the device's operations. The system integrates multiple ultrasonic sensors for distance measurement and object detection, enabling precise navigation and trash identification.</p>
+          <p class="project-detail-text">The motor control system uses DC motors with encoder feedback for accurate movement and navigation. Power management ensures optimal battery life through efficient component selection and power-saving modes. The device chassis is designed for durability and functionality in public environments.</p>
+          <div class="tech-stack">
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-microchip"></i></div>
+              <div class="tech-name">Arduino</div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-code"></i></div>
+              <div class="tech-name">C++</div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-wave-square"></i></div>
+              <div class="tech-name">Ultrasonic Sensors</div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-cogs"></i></div>
+              <div class="tech-name">Motor Control</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-section rv">
+          <h2 class="project-section-title">Algorithm Design</h2>
+          <p class="project-detail-text">The core of META BIN's functionality lies in its sophisticated algorithms for person tracking and trash detection. The person-following algorithm uses sensor fusion techniques to maintain optimal following distance while avoiding obstacles.</p>
+          <p class="project-detail-text">The trash detection algorithm combines proximity sensing with pattern recognition to distinguish trash items from environmental objects. The system includes decision-making algorithms for collection priority and navigation planning, ensuring efficient operation in complex environments.</p>
+        </div>
+        
+        <div class="project-section rv">
+          <h2 class="project-section-title">Research Publication</h2>
+          <p class="project-detail-text">META BIN was published in the MJSAT (Multidisciplinary Journal of Science and Technology) 2021, recognizing its innovation in IoT and waste management. The publication details the technical implementation, experimental results, and potential applications in smart city environments.</p>
+          <p class="project-detail-text">The research demonstrates the feasibility of autonomous waste collection systems and their potential impact on urban cleanliness and environmental sustainability. The publication has contributed to academic discourse on IoT applications in public service domains.</p>
+        </div>
+        
+        <div class="project-section rv">
+          <h2 class="project-section-title">Environmental Impact</h2>
+          <p class="project-detail-text">META BIN addresses critical environmental challenges by automating waste collection and reducing the need for human intervention in potentially unsanitary tasks. The system contributes to cleaner public spaces and more efficient waste management practices.</p>
+          <p class="project-detail-text">By enabling real-time monitoring and data collection, META BIN helps municipalities optimize waste collection routes and schedules, reducing fuel consumption and environmental impact. The device represents a step toward smarter, more sustainable urban environments.</p>
+        </div>
+      </div>
+      
+      <div class="project-detail-sidebar">
+        <div class="sidebar-card rv">
+          <h3 class="sidebar-title">Project Info</h3>
+          <div class="sidebar-info-list">
+            <div class="sidebar-info-item">
+              <div class="sidebar-info-label">Project Type</div>
+              <div class="sidebar-info-value">IoT Device</div>
+            </div>
+            <div class="sidebar-info-item">
+              <div class="sidebar-info-label">Development Period</div>
+              <div class="sidebar-info-value">August 2021</div>
+            </div>
+            <div class="sidebar-info-item">
+              <div class="sidebar-info-label">Target Users</div>
+              <div class="sidebar-info-value">Municipalities, Public Spaces</div>
+            </div>
+            <div class="sidebar-info-item">
+              <div class="sidebar-info-label">Platform</div>
+              <div class="sidebar-info-value">Arduino IoT Device</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="sidebar-card rv">
+          <h3 class="sidebar-title">Team Members</h3>
+          <div class="team-list">
+            <div class="team-member">
+              <div class="member-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="member-info">
+                <div class="member-name">Niloy Kanti Paul</div>
+                <div class="member-role">Lead Developer</div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="member-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="member-info">
+                <div class="member-name">Kaushik Biswas</div>
+                <div class="member-role">Hardware Engineer</div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="member-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="member-info">
+                <div class="member-name">Dipanwita Saha</div>
+                <div class="member-role">Algorithm Developer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="sidebar-card rv">
+          <h3 class="sidebar-title">Quick Links</h3>
+          <div class="sidebar-links">
+            <a href="https://github.com/DEV-NKP/META-BIN.git" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+              <i class="fab fa-github"></i>
+              <span>GitHub Repository</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.XXXXXX" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+              <i class="fas fa-book"></i>
+              <span>Research Paper</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="sidebar-card rv">
+          <h3 class="sidebar-title">Share This Project</h3>
+          <div class="share-buttons">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://dev-nkp.github.io/projects/meta-bin&text=Check out this META BIN smart waste collector by Niloy Kanti Paul" target="_blank" rel="noopener noreferrer" class="share-btn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=https://dev-nkp.github.io/projects/meta-bin&text=Check out this META BIN smart waste collector by Niloy Kanti Paul" target="_blank" rel="noopener noreferrer" class="share-btn">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://dev-nkp.github.io/projects/meta-bin" target="_blank" rel="noopener noreferrer" class="share-btn">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="mailto:?subject=META BIN Project&body=Check out this project: https://dev-nkp.github.io/projects/meta-bin" class="share-btn">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     RELATED PROJECTS
+══════════════════════════════════════ -->
+<section id="related-projects">
+  <div class="max">
+    <div class="sec-eyebrow rv">RELATED PROJECTS</div>
+    <h2 class="sec-title rv">EXPLORE <span class="hi">MORE</span></h2>
+    <div class="related-projects-grid">
+      <div class="related-project-card rv">
+        <div class="related-project-img-wrap">
+          <img src="../resources/images/skyhawk.jpg" alt="SKYHAWK Traffic Safety ML System" class="related-project-img"/>
+        </div>
+        <div class="related-project-info">
+          <div class="related-project-tags">
+            <span class="project-tag">ML/AI</span>
+            <span class="project-tag">OpenCV</span>
+          </div>
+          <div class="related-project-title">SKYHAWK — Traffic Safety ML System</div>
+          <a href="skyhawk-traffic-safety" class="related-project-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <div class="related-project-card rv">
+        <div class="related-project-img-wrap">
+          <img src="../resources/images/toss.PNG" alt="Traffic Operation Surveillance System (TOSS) V1.0" class="related-project-img"/>
+        </div>
+        <div class="related-project-info">
+          <div class="related-project-tags">
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">Traffic</span>
+          </div>
+          <div class="related-project-title">TOSS V1.0 — Traffic Surveillance</div>
+          <a href="traffic-operation-surveillance-system" class="related-project-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <div class="related-project-card rv">
+        <div class="related-project-img-wrap">
+          <img src="../resources/images/foh.PNG" alt="Fest Of Harmony (FOH)" class="related-project-img"/>
+        </div>
+        <div class="related-project-info">
+          <div class="related-project-tags">
+            <span class="project-tag">C++</span>
+            <span class="project-tag">Graphics</span>
+          </div>
+          <div class="related-project-title">Fest Of Harmony — Virtual Village Fair</div>
+          <a href="fest-of-harmony" class="related-project-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SCROLL TO TOP ══ -->
+<button class="stb" id="stb" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ══ SCRIPTS ══ -->
+<script src="../script.js"></script>
+<script src="project-detail.js"></script>
+
+</body>
+</html>

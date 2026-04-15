@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ══ SEARCH CONSOLE / TRACKING VERIFICATION TAGS ══ -->
+  <meta name="google-site-verification" content="0Q44ThNd-nRbHfHzQhiPxU1ZzrModxospSeE9wBv-SM"/>
+  <meta name="facebook-domain-verification" content="ofgogy7nvurx97s5fd5btwdni26eu7"/>
+  <meta name="yandex-verification" content="ed2e3a2dc755eb8f"/>
+  <meta name="msvalidate.01" content="227BF01D2BC9D42FED6873CDF5378DE3"/>
+  <meta name="p:domain_verify" content="512a2c8ee6509c0c665345ce6edba550"/>
+
+  <!-- ══ YANDEX METRIKA ══ -->
+  <script type="text/javascript">
+  try {
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for(var j = 0; j < document.scripts.length; j++){if(document.scripts[j].src===r){return;}}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0];k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=104856668','ym');
+    if (typeof ym !== 'undefined') {
+      ym(104856668,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",accurateTrackBounce:true,trackLinks:true});
+    }
+  } catch (e) {
+    console.warn('Yandex Metrika failed to load:', e);
+  }
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/104856668" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
+
+  <!-- ══ GOOGLE ANALYTICS ══ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-48TDTQMGNW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-48TDTQMGNW');</script>
+
+  <!-- ══ PRIMARY SEO META TAGS ══ -->
+  <title>IDEA-X — Social Media Platform for Engineers | Niloy Kanti Paul</title>
+  <meta name="author" content="Niloy Kanti Paul"/>
+  <meta name="description" content="IDEA-X is a C# ASP.NET social media platform designed for engineers to share and explore innovative ideas. Features admin and User Access Controller roles, post management, and collaborative tools for engineering innovation."/>
+  <meta name="keywords" content="IDEA-X, social media, engineers, innovation platform, C#, ASP.NET, SQL Server, idea sharing, collaborative tools, Niloy Kanti Paul, Kaushik Biswas, Dipanwita Saha, Anindra Das Bivas, engineering community"/>
+  <meta name="theme-color" content="#10b981"/>
+  <meta name="msapplication-TileColor" content="#10b981"/>
+  <link rel="canonical" href="https://dev-nkp.github.io/projects/idea-x"/>
+  <link rel="icon" href="../resources/images/nkpico.png" type="image/png"/>
+
+  <!-- ══ OPEN GRAPH ══ -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="IDEA-X — Social Media Platform for Engineers | Niloy Kanti Paul"/>
+  <meta property="og:description" content="IDEA-X is a C# ASP.NET social media platform designed for engineers to share and explore innovative ideas with admin and User Access Controller roles."/>
+  <meta property="og:image" content="../resources/images/ideax.PNG"/>
+  <meta property="og:image:alt" content="IDEA-X Social Media Platform Interface"/>
+  <meta property="og:url" content="https://dev-nkp.github.io/projects/idea-x"/>
+  <meta property="og:site_name" content="Niloy Kanti Paul Portfolio"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!-- ══ TWITTER CARD ══ -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@Niloy_Paul_"/>
+  <meta name="twitter:creator" content="@Niloy_Paul_"/>
+  <meta name="twitter:title" content="IDEA-X — Social Media Platform for Engineers | Niloy Kanti Paul"/>
+  <meta name="twitter:description" content="IDEA-X is a C# ASP.NET social media platform designed for engineers to share and explore innovative ideas with admin and User Access Controller roles."/>
+  <meta name="twitter:image" content="../resources/images/ideax.PNG"/>
+  <meta name="twitter:image:alt" content="IDEA-X Social Media Platform Interface"/>
+
+  <!-- ══ STRUCTURED DATA: WEB APPLICATION ══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "IDEA-X",
+    "url": "https://github.com/DEV-NKP/IDEA-X-V1.0.git",
+    "description": "Social media platform designed for engineers to share and explore innovative ideas with admin and User Access Controller roles, post management, and collaborative tools for engineering innovation.",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Niloy Kanti Paul",
+        "email": "niloykanti.paul2017@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/niloykantipaul/",
+          "https://github.com/DEV-NKP"
+        ]
+      },
+      {
+        "@type": "Person",
+        "name": "Kaushik Biswas",
+        "email": "biswaskaushik.2020@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/kaushik-biswas-2b6554243/",
+          "https://github.com/Kaushik-Biswas"
+        ]
+      },
+      {
+        "@type": "Person",
+        "name": "Dipanwita Saha",
+        "email": "dipanwita.saha2017@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/dipanwita-saha-656b5215b/",
+          "https://github.com/dipanwitasaha"
+        ]
+      },
+      {
+        "@type": "Person",
+        "name": "Anindra Das Bivas",
+        "email": "anindra.dasbivas2017@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/anindra-das-bivas-087631155/",
+          "https://github.com/AnindraDasBivas"
+        ]
+      }
+    ],
+    "dateCreated": "2022-02-15",
+    "dateModified": "2022-02-15",
+    "programmingLanguage": "C#",
+    "applicationCategory": "Social Media Platform",
+    "operatingSystem": "Windows",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "screenshot": "../resources/images/ideax.PNG",
+    "softwareVersion": "1.0",
+    "featureList": [
+      "Idea Sharing",
+      "Post Management",
+      "User Roles",
+      "Admin Dashboard",
+      "Collaboration Tools",
+      "Engineering Community"
+    ],
+    "keywords": ["social media", "engineers", "ideas", "C#", "ASP.NET", "innovation", "collaboration", "engineering"]
+  }
+  </script>
+
+  <!-- ══ FONTS ══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- ══ CSS ══ -->
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="project-detail.css"/>
+</head>
+<body>
+
+<!-- ══ SCROLL PROGRESS ══ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ══ CANVAS & AMBIENT ══ -->
+<canvas id="constellation"></canvas>
+<div class="amb amb1"></div><div class="amb amb2"></div><div class="amb amb3"></div>
+
+<!-- ══ CUSTOM CURSOR ══ -->
+<div id="csr"></div><div id="csr-r"></div>
+
+<!-- ══ NAVIGATION ══ -->
+<nav id="nav">
+  <a href="../#hero" class="nav-logo">NKP<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../#about">About</a></li>
+    <li><a href="../#skills">Skills</a></li>
+    <li><a href="../#experience">Experience</a></li>
+    <li><a href="../#education">Education</a></li>
+    <li><a href="../#projects" class="nav-active">Projects</a></li>
+    <li><a href="../#case-studies">Cases</a></li>
+    <li><a href="../#publications">Research</a></li>
+    <li><a href="../#certifications">Certifications</a></li>
+    <li><a href="../#contact" class="nav-cta"><i class="fas fa-paper-plane"></i> Hire Me</a></li>
+  </ul>
+  <button class="hbtn" id="hbtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ══ MOBILE NAV ══ -->
+<div class="mob" id="mob">
+  <div class="mob-header">
+    <a href="../#hero" class="mob-logo" onclick="cmob()">NKP<span>.</span></a>
+    <button class="mob-close" onclick="cmob()" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  </div>
+  <a href="../#about" class="mob-nav-item" onclick="cmob()"><i class="fas fa-user"></i><span>About</span></a>
+  <a href="../#skills" class="mob-nav-item" onclick="cmob()"><i class="fas fa-code"></i><span>Skills</span></a>
+  <a href="../#experience" class="mob-nav-item" onclick="cmob()"><i class="fas fa-briefcase"></i><span>Experience</span></a>
+  <a href="../#education" class="mob-nav-item" onclick="cmob()"><i class="fas fa-graduation-cap"></i><span>Education</span></a>
+  <a href="../#projects" class="mob-nav-item" onclick="cmob()"><i class="fas fa-project-diagram"></i><span>Projects</span></a>
+  <a href="../#case-studies" class="mob-nav-item" onclick="cmob()"><i class="fas fa-building"></i><span>Case Studies</span></a>
+  <a href="../#publications" class="mob-nav-item" onclick="cmob()"><i class="fas fa-book-open"></i><span>Research</span></a>
+  <a href="../#certifications" class="mob-nav-item" onclick="cmob()"><i class="fas fa-certificate"></i><span>Certifications</span></a>
+  <a href="../#contact" class="mob-cta" onclick="cmob()"><i class="fas fa-envelope"></i> Hire Me</a>
+</div>
+
+<!-- ══════════════════════════════════════
+     PROJECT HERO
+══════════════════════════════════════ -->
+<section id="project-hero">
+  <div class="max">
+    <div class="project-hero-grid">
+      <div class="project-hero-visual rvl">
+        <div class="project-hero-img-wrap">
+          <img src="../resources/images/ideax.PNG" alt="IDEA-X Social Media Platform for Engineers" class="project-hero-img" loading="eager"/>
+          <div class="project-hero-overlay">
+            <div class="project-hover-content">
+              <div class="project-hover-title">View Project</div>
+              <div class="project-hover-desc">Click to explore this platform</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-hero-content rvr">
+        <div class="project-breadcrumb">
+          <a href="/projects">Projects</a> <i class="fas fa-chevron-right"></i> <span>IDEA-X</span>
+        </div>
+        <h1 class="project-hero-title">IDEA-X</h1>
+        <div class="project-hero-tags">
+          <span class="project-tag">C#</span>
+          <span class="project-tag">ASP.NET</span>
+          <span class="project-tag">SQL Server</span>
+        </div>
+        <p class="project-hero-desc">Social media platform designed for engineers to share and explore innovative ideas. Features admin and User Access Controller roles, post management, and collaborative tools for engineering innovation.</p>
+        <div class="project-hero-actions">
+          <a href="https://github.com/DEV-NKP/IDEA-X-V1.0.git" target="_blank" rel="noopener noreferrer" class="btn-va btn-solid">
+            <span><i class="fab fa-github"></i> View on GitHub</span>
+          </a>
+        </div>
+        <div class="project-hero-meta">
+          <div class="project-meta-item">
+            <div class="project-meta-label">Development Team</div>
+            <div class="project-meta-value">Niloy Kanti Paul, Kaushik Biswas, Dipanwita Saha, Anindra Das Bivas</div>
+          </div>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Project Date</div>
+            <div class="project-meta-value">February 2022</div>
+          </div>
+          <div class="project-meta-item">
+            <div class="project-meta-label">Technology Stack</div>
+            <div class="project-meta-value">C#, ASP.NET, SQL Server</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PROJECT DETAILS
+══════════════════════════════════════ -->
+<section id="project-details">
+  <div class="max">
+    <div class="project-detail-grid">
+      <div class="project-detail-main">
+        <div class="project-section rv">
+          <h2 class="project-section-title">Engineering Innovation Platform</h2>
+          <p class="project-detail-text">IDEA-X is a specialized social media platform created exclusively for engineers to share, discuss, and collaborate on innovative ideas and projects. The platform addresses the unique need for engineers to have a dedicated space to showcase their technical innovations and seek feedback from peers.</p>
+          <p class="project-detail-text">Built with the engineering community in mind, IDEA-X provides features tailored to technical discussions, code sharing, and project collaboration. The platform serves as a catalyst for innovation, connecting engineers with similar interests and fostering a community of creative problem-solvers.</p>
+        </div>
+        
+        <div class="project-section rv">
+          <h2 class="project-section-title">Platform Features</h2>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+              <div class="feature-content">
+                <h3 class="feature-title">Idea Sharing</h3>
+                <p class="feature-desc">Rich media posts supporting detailed project descriptions, code snippets, diagrams, and technical specifications for comprehensive idea presentation.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-comments"></i></div>
+              <div class="feature-content">
+                <h3 class="feature-title">Technical Discussions</h3>
+                <p class="feature-desc">Threaded comment system with code highlighting, mathematical notation support, and technical vocabulary for in-depth engineering discussions.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-users-cog"></i></div>
+              <div class="feature-content">
+                <h3 class="feature-title">Role-Based Access</h3>
+                <p class="feature-desc">Three-tier system with Admin, User Access Controllers, and regular users, each with specific permissions and capabilities for platform governance.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-project-diagram"></i></div>
+              <div class="feature-content">
+                <h3 class="feature-title">Collaboration Tools</h3>
+                <p class="feature-desc">Built-in project collaboration features including version control integration, team formation, and collaborative documentation tools.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-section rv">
+          <h2 class="project-section-title">Technical Architecture</h2>
+          <p class="project-detail-text">IDEA-X is developed using C# with the ASP.NET framework, providing a robust and scalable foundation for the social media platform. The architecture follows the Model-View-Controller (MVC) pattern, ensuring clean separation of concerns and maintainability.</p>
+          <p class="project-detail-text">The backend utilizes SQL Server for efficient data management with optimized queries for handling social media data structures. The frontend implements responsive web design using ASP.NET Web Forms with custom controls for enhanced user experience. Security measures include data validation, authentication, and protection against common web vulnerabilities.</p>
+          <div class="tech-stack">
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-microsoft"></i></div>
+              <div class="tech-name">C#</div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-globe"></i></div>
+              <div class="tech-name">ASP.NET</div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-database"></i></div>
+              <div class="tech-name">SQL Server</div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="tech-name">Security Layer</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-section rv">
+          <h2 class="project-section-title">User Roles & Permissions</h2>
+          <p class="project-detail-text">IDEA-X implements a sophisticated three-tier user role system to ensure proper platform governance. Administrators have complete control over platform settings, user management, content moderation, and system analytics.</p>
+          <p class="project-detail-text">User Access Controllers (UACs) serve as moderators with enhanced permissions to manage content, resolve disputes, and enforce community guidelines. Regular users can create posts, comment, collaborate on projects, and participate in the engineering community with appropriate access controls.</p>
+        </div>
+        
+        <div class="project-section rv">
+          <h2 class="project-section-title">Engineering Community Impact</h2>
+          <p class="project-detail-text">IDEA-X creates a valuable ecosystem for engineers to showcase their innovations, receive constructive feedback, and find collaboration opportunities. The platform bridges the gap between academic research and practical implementation, helping engineers transform ideas into real-world solutions.</p>
+          <p class="project-detail-text">By providing a dedicated space for technical discussions and idea sharing, IDEA-X contributes to the advancement of engineering knowledge and fosters a culture of innovation and continuous learning within the engineering community.</p>
+        </div>
+      </div>
+      
+      <div class="project-detail-sidebar">
+        <div class="sidebar-card rv">
+          <h3 class="sidebar-title">Project Info</h3>
+          <div class="sidebar-info-list">
+            <div class="sidebar-info-item">
+              <div class="sidebar-info-label">Project Type</div>
+              <div class="sidebar-info-value">Social Media Platform</div>
+            </div>
+            <div class="sidebar-info-item">
+              <div class="sidebar-info-label">Development Period</div>
+              <div class="sidebar-info-value">February 2022</div>
+            </div>
+            <div class="sidebar-info-item">
+              <div class="sidebar-info-label">Target Users</div>
+              <div class="sidebar-info-value">Engineers, Innovators, Researchers</div>
+            </div>
+            <div class="sidebar-info-item">
+              <div class="sidebar-info-label">Platform</div>
+              <div class="sidebar-info-value">Web Application</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="sidebar-card rv">
+          <h3 class="sidebar-title">Team Members</h3>
+          <div class="team-list">
+            <div class="team-member">
+              <div class="member-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="member-info">
+                <div class="member-name">Niloy Kanti Paul</div>
+                <div class="member-role">Lead Developer</div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="member-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="member-info">
+                <div class="member-name">Kaushik Biswas</div>
+                <div class="member-role">Developer</div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="member-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="member-info">
+                <div class="member-name">Dipanwita Saha</div>
+                <div class="member-role">Developer</div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="member-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="member-info">
+                <div class="member-name">Anindra Das Bivas</div>
+                <div class="member-role">Database Developer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="sidebar-card rv">
+          <h3 class="sidebar-title">Quick Links</h3>
+          <div class="sidebar-links">
+            <a href="https://github.com/DEV-NKP/IDEA-X-V1.0.git" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+              <i class="fab fa-github"></i>
+              <span>GitHub Repository</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="sidebar-card rv">
+          <h3 class="sidebar-title">Share This Project</h3>
+          <div class="share-buttons">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://dev-nkp.github.io/projects/idea-x&text=Check out this IDEA-X social media platform by Niloy Kanti Paul" target="_blank" rel="noopener noreferrer" class="share-btn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=https://dev-nkp.github.io/projects/idea-x&text=Check out this IDEA-X social media platform by Niloy Kanti Paul" target="_blank" rel="noopener noreferrer" class="share-btn">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://dev-nkp.github.io/projects/idea-x" target="_blank" rel="noopener noreferrer" class="share-btn">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="mailto:?subject=IDEA-X Project&body=Check out this project: https://dev-nkp.github.io/projects/idea-x" class="share-btn">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     RELATED PROJECTS
+══════════════════════════════════════ -->
+<section id="related-projects">
+  <div class="max">
+    <div class="sec-eyebrow rv">RELATED PROJECTS</div>
+    <h2 class="sec-title rv">EXPLORE <span class="hi">MORE</span></h2>
+    <div class="related-projects-grid">
+      <div class="related-project-card rv">
+        <div class="related-project-img-wrap">
+          <img src="../resources/images/rawv3.PNG" alt="Remotely Assistant Worker (RAW) V3.0" class="related-project-img"/>
+        </div>
+        <div class="related-project-info">
+          <div class="related-project-tags">
+            <span class="project-tag">C#</span>
+            <span class="project-tag">.NET</span>
+          </div>
+          <div class="related-project-title">RAW V3.0 — Enterprise System</div>
+          <a href="remotely-assistant-worker-v3" class="related-project-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <div class="related-project-card rv">
+        <div class="related-project-img-wrap">
+          <img src="../resources/images/togo.PNG" alt="Together Go (TOGO)" class="related-project-img"/>
+        </div>
+        <div class="related-project-info">
+          <div class="related-project-tags">
+            <span class="project-tag">Java</span>
+            <span class="project-tag">Web</span>
+          </div>
+          <div class="related-project-title">Together Go (TOGO) — Education Platform</div>
+          <a href="together-go" class="related-project-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <div class="related-project-card rv">
+        <div class="related-project-img-wrap">
+          <img src="../resources/images/toss.PNG" alt="Traffic Operation Surveillance System (TOSS) V1.0" class="related-project-img"/>
+        </div>
+        <div class="related-project-info">
+          <div class="related-project-tags">
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">Traffic</span>
+          </div>
+          <div class="related-project-title">TOSS V1.0 — Traffic Surveillance</div>
+          <a href="traffic-operation-surveillance-system" class="related-project-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SCROLL TO TOP ══ -->
+<button class="stb" id="stb" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ══ SCRIPTS ══ -->
+<script src="../script.js"></script>
+<script src="project-detail.js"></script>
+
+</body>
+</html>
