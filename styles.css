@@ -1315,6 +1315,11 @@ nav.scrolled {
   margin-bottom: 40px;
   justify-content: left;
 }
+.project-info {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 .filter-btn {
   font-family: var(--font-mono);
   font-size: 0.68rem;
