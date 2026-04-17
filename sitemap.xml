@@ -137,6 +137,12 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://dev-nkp.github.io/services/</loc>
+    <lastmod>2026-4-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
   <!-- Project Detail Pages (Updated URLs) -->
      <url>
     <loc>https://dev-nkp.github.io/projects/</loc>

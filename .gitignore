@@ -1,0 +1,73 @@
+# =========================
+# System files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# IDE / Editor folders
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Cursor IDE
+cursor/
+
+# =========================
+# Salesforce / SFDX
+# =========================
+.sfdx/
+.force/
+*.log
+*.log.*
+
+# Salesforce local auth / metadata cache
+.env
+.env.*
+sfdx-config.json
+.sfdx-project.json.bak
+
+# =========================
+# Temporary / build artifacts
+# =========================
+dist/
+build/
+out/
+tmp/
+temp/
+
+# =========================
+# Node (if ever added later)
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# OS cache / backups
+# =========================
+*~
+*.bak
+*.tmp
+
+# =========================
+# Optional: local test files
+# =========================
+test.html
+V1.0.html
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Optional: sensitive files
+# =========================
+secrets.json
+private.json
