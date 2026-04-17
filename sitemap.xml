@@ -1,252 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- ==========================================
+       PRIMARY PAGES
+       ========================================== -->
   <!-- Homepage -->
   <url>
     <loc>https://dev-nkp.github.io/</loc>
-    <lastmod>2024-10-10</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- About Section -->
+  <!-- Services Page -->
   <url>
-    <loc>https://dev-nkp.github.io/#about</loc>
-    <lastmod>2024-10-10</lastmod>
+    <loc>https://dev-nkp.github.io/services/</loc>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- Skills Section -->
-  <url>
-    <loc>https://dev-nkp.github.io/#skills</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Qualifications Section -->
-  <url>
-    <loc>https://dev-nkp.github.io/#qualifications</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Projects Section -->
-  <url>
-    <loc>https://dev-nkp.github.io/#projects</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Publications Section -->
-  <url>
-    <loc>https://dev-nkp.github.io/#publication</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Contact Section -->
-  <url>
-    <loc>https://dev-nkp.github.io/#contact</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
   <!-- Video Page -->
   <url>
     <loc>https://dev-nkp.github.io/project-video/</loc>
-    <lastmod>2024-10-10</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
-  <!-- Professional Projects Page -->
+  <!-- ==========================================
+       PROJECTS SECTION
+       ========================================== -->
+  <!-- Projects Index Page -->
   <url>
-    <loc>https://dev-nkp.github.io/professional-projects/</loc>
-    <lastmod>2024-10-10</lastmod>
+    <loc>https://dev-nkp.github.io/projects/</loc>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Professional Project Case Studies -->
-  <url>
-    <loc>https://dev-nkp.github.io/professional-projects/?caseId=travel-experience-platform</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://dev-nkp.github.io/professional-projects/?caseId=nonprofit-resource-hub</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://dev-nkp.github.io/professional-projects/?caseId=community-advocacy-platform</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://dev-nkp.github.io/professional-projects/?caseId=educator-advocacy-system</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://dev-nkp.github.io/professional-projects/?caseId=mortgage-financing-platform</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://dev-nkp.github.io/professional-projects/?caseId=agricultural-marketing-system</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://dev-nkp.github.io/professional-projects/?caseId=humanitarian-aid-management</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://dev-nkp.github.io/professional-projects/?caseId=medical-treatment-platform</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://dev-nkp.github.io/professional-projects/?caseId=workplace-safety-system</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://dev-nkp.github.io/services/</loc>
-    <lastmod>2026-4-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <!-- Project Detail Pages (Updated URLs) -->
-     <url>
-    <loc>https://dev-nkp.github.io/projects/</loc>
-    <lastmod>2026-4-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <!-- Individual Project Pages -->
   <url>
     <loc>https://dev-nkp.github.io/projects/student-progress-indicator</loc>
-    <lastmod>2024-10-10</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://dev-nkp.github.io/projects/remotely-assistant-worker-v1</loc>
-    <lastmod>2024-10-10</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://dev-nkp.github.io/projects/remotely-assistant-worker-v2</loc>
-    <lastmod>2024-10-10</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://dev-nkp.github.io/projects/remotely-assistant-worker-v3</loc>
-    <lastmod>2024-10-10</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://dev-nkp.github.io/projects/fest-of-harmony</loc>
-    <lastmod>2024-10-10</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://dev-nkp.github.io/projects/medical-master</loc>
-    <lastmod>2024-10-10</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://dev-nkp.github.io/projects/idea-x</loc>
-    <lastmod>2024-10-10</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://dev-nkp.github.io/projects/together-go</loc>
-    <lastmod>2024-10-10</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://dev-nkp.github.io/projects/traffic-operation-surveillance-system</loc>
-    <lastmod>2024-10-10</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://dev-nkp.github.io/projects/meta-bin</loc>
-    <lastmod>2024-10-10</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://dev-nkp.github.io/projects/skyhawk-traffic-safety</loc>
-    <lastmod>2024-10-10</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
 
-  <!-- Publication Detail Pages (if they exist as separate pages) -->
-  <!-- <url>
-    <loc>https://dev-nkp.github.io/publications/meta-bin-arduino-smart-device/</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
+  <!-- ==========================================
+       PROFESSIONAL CASE STUDIES
+       ========================================== -->
+  <!-- Professional Projects Index Page -->
   <url>
-    <loc>https://dev-nkp.github.io/publications/iot-based-trash-collection-system/</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://dev-nkp.github.io/professional-projects/</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
+  <!-- 1. Travel Experience Platform -->
   <url>
-    <loc>https://dev-nkp.github.io/publications/traffic-violation-detection/</loc>
-    <lastmod>2024-10-10</lastmod>
+    <loc>https://dev-nkp.github.io/professional-projects/travel-experience-platform</loc>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url> -->
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Salesforce Experience Cloud Travel Booking Platform</image:title>
+      <image:caption>Travel Experience Platform achieving 30% higher booking conversion with Salesforce</image:caption>
+    </image:image>
+  </url>
 
+  <!-- 2. Nonprofit Resource Hub -->
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/nonprofit-resource-hub</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Salesforce NPSP Nonprofit Community Portal</image:title>
+      <image:caption>Nonprofit Resource Hub achieving 25% higher user engagement with Salesforce NPSP</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 3. Community Advocacy Platform -->
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/community-advocacy-platform</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Salesforce NPSP Grant Management Platform</image:title>
+      <image:caption>Community Advocacy Platform achieving 40% faster grant processing</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 4. Educator Advocacy System -->
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/educator-advocacy-system</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Salesforce Event Management Platform for Educators</image:title>
+      <image:caption>Educator Advocacy System achieving 20% higher event attendance</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 5. Mortgage Financing Platform -->
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/mortgage-financing-platform</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Salesforce Financial Services Cloud Mortgage Platform</image:title>
+      <image:caption>Mortgage Financing Platform achieving 50% faster loan processing</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 6. Agricultural Marketing System -->
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/agricultural-marketing-system</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Salesforce Tableau Agricultural Commodity Platform</image:title>
+      <image:caption>Agricultural Marketing System achieving 30% faster transactions</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 7. Humanitarian Aid Management -->
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/humanitarian-aid-management</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Salesforce NPSP Humanitarian Aid Platform</image:title>
+      <image:caption>Humanitarian Aid Management achieving 40% faster emergency response</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 8. Medical Treatment Platform -->
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/medical-treatment-platform</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Salesforce Health Cloud HIPAA Compliant Patient Portal</image:title>
+      <image:caption>Medical Treatment Platform achieving 25% higher patient bookings with Salesforce Health Cloud</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 9. Workplace Safety System -->
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/workplace-safety-system</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Salesforce Offline LWC Factory Inspection Platform</image:title>
+      <image:caption>Workplace Safety System achieving 35% higher inspection completion across 1,800+ factories</image:caption>
+    </image:image>
+  </url>
 </urlset>

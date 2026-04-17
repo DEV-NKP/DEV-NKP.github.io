@@ -70,33 +70,65 @@ function initContactForm() {
       return;
     }
 
-    // Simulate loading state
+    // Real loading state
     submitBtn.disabled = true;
     submitBtn.querySelector('span').textContent = 'Sending...';
     if (btnLoader) btnLoader.classList.add('active');
 
-    // Collect form data for logging / future backend integration
+    // ── Web3Forms Integration ──
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-    console.log('Consultation form submitted:', data);
+    
+    // ⚠️ IMPORTANT: Replace 'YOUR_ACCESS_KEY_HERE' with your actual Web3Forms key
+    formData.append('access_key', 'e39e99b2-b6ff-4b9c-b5cc-0ee48da1803d'); 
+    
+    // Redirect URL (optional, keeps your custom success panel working smoothly)
+    formData.append('redirect', 'false'); 
 
-    // Simulate a short network delay, then show success
-    setTimeout(() => {
-      // Hide the form, show success panel
-      if (formWrapper) formWrapper.style.display = 'none';
-      if (successPanel) successPanel.style.display = 'block';
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then(async (response) => {
+      let data = await response.json();
+      if (data.success) {
+        // Success: Hide form, show your beautiful success panel
+        if (formWrapper) formWrapper.style.display = 'none';
+        if (successPanel) successPanel.style.display = 'block';
 
-      // Smooth scroll to the success panel
-      if (successPanel) {
-        successPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (successPanel) {
+          successPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        form.reset(); // Clear the form fields
+      } else {
+        console.error('Web3Forms Error:', data);
+        alert('Oops! Something went wrong. Please try again or email me directly at niloykanti.paul2017@gmail.com');
       }
-
-      // Reset button state (for if user navigates back)
+    })
+    .catch(error => {
+      console.error('Network Error:', error);
+      alert('Network error. Please check your connection and try again.');
+    })
+    .finally(() => {
+      // Reset button state regardless of success or failure
       submitBtn.disabled = false;
       if (btnLoader) btnLoader.classList.remove('active');
       submitBtn.querySelector('span').textContent = 'Send Message';
-      form.reset();
-    }, 1200);
+    });
+  });
+}
+
+function highlightEmptyFields(form) {
+  const required = form.querySelectorAll('[required]');
+  required.forEach(field => {
+    if (!field.value.trim()) {
+      field.style.borderColor = 'rgba(239,68,68,0.8)';
+      field.style.boxShadow = '0 0 0 3px rgba(239,68,68,0.12)';
+      field.addEventListener('input', function recover() {
+        field.style.borderColor = '';
+        field.style.boxShadow = '';
+        field.removeEventListener('input', recover);
+      }, { once: true });
+    }
   });
 }
 
