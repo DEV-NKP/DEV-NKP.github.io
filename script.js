@@ -273,50 +273,117 @@ if (counterElements.length > 0) {
   counterElements.forEach(el=>co.observe(el));
 }
 
-// ── PROJECT FILTER ──
-// Only initialize project filter if elements exist
-const filterButtons=document.querySelectorAll('.filter-btn');
-const projectCards=document.querySelectorAll('.project-card');
-if (filterButtons.length > 0 && projectCards.length > 0) {
-  filterButtons.forEach(btn=>{
-    btn.addEventListener('click',function(){
-      filterButtons.forEach(b=>b.classList.remove('active'));
+/* ══════════════════════════════════════════════
+   FEATURED WORK — Filter + Show More/Less Logic
+══════════════════════════════════════════════ */
+(function() {
+  const grid = document.getElementById('fw-grid');
+  if (!grid) return;
+  const toggleBtn = document.getElementById('fw-toggle-btn');
+  const toggleIcon = document.getElementById('fw-toggle-icon');
+  const toggleText = document.getElementById('fw-toggle-text');
+  const noResults = document.getElementById('fw-no-results');
+
+  const INITIAL_VISIBLE = 12;
+  let showAll = false;
+  let currentFilter = 'all';
+
+  const allCards = Array.from(grid.querySelectorAll('.fw-card:not(.fw-no-results)'));
+
+  function updateCounts() {
+    const clientCount = allCards.filter(c => c.dataset.badge === 'client').length;
+    const openCount = allCards.filter(c => c.dataset.badge === 'open').length;
+    const allCount = allCards.length;
+    const el = (id) => document.getElementById(id);
+    if(el('fw-count-all')) el('fw-count-all').textContent = allCount;
+    if(el('fw-count-client')) el('fw-count-client').textContent = clientCount;
+    if(el('fw-count-open')) el('fw-count-open').textContent = openCount;
+  }
+
+  function getMatchingCards() {
+    if (currentFilter === 'all') return allCards;
+    if (currentFilter === 'client') return allCards.filter(c => c.dataset.badge === 'client');
+    if (currentFilter === 'open') return allCards.filter(c => c.dataset.badge === 'open');
+    return allCards.filter(c => {
+      const cats = (c.dataset.category || '').split(' ');
+      return cats.includes(currentFilter);
+    });
+  }
+
+  function applyVisibility() {
+    const matching = getMatchingCards();
+    const nonMatching = allCards.filter(c => !matching.includes(c));
+
+    nonMatching.forEach(c => {
+      c.style.display = 'none';
+      c.classList.remove('fw-visible');
+    });
+
+    matching.forEach((c, i) => {
+      if (showAll || i < INITIAL_VISIBLE) {
+        c.style.display = 'flex';
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => c.classList.add('fw-visible'));
+        });
+      } else {
+        c.style.display = 'none';
+        c.classList.remove('fw-visible');
+      }
+    });
+
+    if (matching.length <= INITIAL_VISIBLE) {
+      toggleBtn.style.display = 'none';
+    } else {
+      toggleBtn.style.display = 'inline-flex';
+      if (showAll) {
+        toggleIcon.className = 'fas fa-minus';
+        toggleText.textContent = 'Show Less';
+      } else {
+        toggleIcon.className = 'fas fa-plus';
+        const remaining = matching.length - INITIAL_VISIBLE;
+        toggleText.textContent = `Show ${remaining} More Project${remaining !== 1 ? 's' : ''}`;
+      }
+    }
+
+    if (noResults) {
+      noResults.style.display = matching.length === 0 ? 'block' : 'none';
+    }
+  }
+
+  const filterBtns = document.querySelectorAll('.fw-filter-btn');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      filterBtns.forEach(b => b.classList.remove('active'));
       this.classList.add('active');
-      const f=this.dataset.filter;
-      projectCards.forEach(card=>{
-        card.style.display=(f==='all'||card.dataset.cat===f)?'flex':'none';
-      });
+      currentFilter = this.dataset.fwFilter;
+      showAll = false;
+      applyVisibility();
     });
   });
-}
 
-// ── PROJECT CARD REVEAL ──
-// Only initialize project card reveal if elements exist
-const projectCardElements=document.querySelectorAll('.project-card');
-if (projectCardElements.length > 0) {
-  const projectObserver=new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible');});
-  },{threshold:0.1});
-  projectCardElements.forEach(card=>projectObserver.observe(card));
-}
-
-// ── CASE STUDY FILTER ──
-// Only initialize case study filter if elements exist
-const csFilterButtons=document.querySelectorAll('.cs-fbtn');
-const csCards=document.querySelectorAll('.cs-card');
-if (csFilterButtons.length > 0 && csCards.length > 0) {
-  csFilterButtons.forEach(b=>{
-    b.addEventListener('click',function(){
-      csFilterButtons.forEach(x=>x.classList.remove('on'));
-      this.classList.add('on');
-      const f=this.dataset.cf;
-      csCards.forEach(c=>{
-        c.style.display=(f==='all'||c.dataset.ci===f)?'block':'none';
-      });
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function() {
+      showAll = !showAll;
+      applyVisibility();
+      if (!showAll) {
+        document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
-  });
-}
+  }
 
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.target.style.display !== 'none') {
+        entry.target.classList.add('fw-visible');
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  allCards.forEach(card => cardObserver.observe(card));
+
+  updateCounts();
+  applyVisibility();
+})();
 // ── CERTIFICATIONS TOGGLE ──
 // Only initialize certifications toggle if elements exist
 const certToggle=document.getElementById('cert-toggle');
@@ -374,23 +441,74 @@ if (certModal && certModalImg) {
   window.closeCertModal = closeCertModal;
 }
 
-// ── CONTACT FORM ──
-// Only initialize contact form if elements exist
+// ── CONTACT FORM ── (Web3Forms Integration)
 const cf=document.getElementById('cf');
 const submitMsg=document.getElementById('submit-msg');
 const cfOk=document.getElementById('cf-ok');
 if (cf && submitMsg && cfOk) {
-  function submitForm(e){
+  cf.addEventListener('submit', function(e){
     e.preventDefault();
-    submitMsg.innerHTML='<span><i class="fas fa-spinner fa-spin"></i> Sending...</span>';
-    submitMsg.disabled=true;
-    const formData=new FormData(cf);
-    fetch('https://formsubmit.io/send/3d570815-9c63-444a-b736-63cc759338a9',{method:'POST',body:formData})
-    .then(()=>{cf.style.display='none';cfOk.style.display='block';})
-    .catch(()=>{submitMsg.innerHTML='<span><i class="fas fa-paper-plane"></i> Send Message</span>';submitMsg.disabled=false;alert('Error sending. Please email directly: niloykanti.paul2017@gmail.com');});
-    return false;
-  }
-  cf.addEventListener('submit', submitForm);
+
+    // Basic validation — highlight empty required fields
+    const nameField = cf.querySelector('#con-uname');
+    const emailField = cf.querySelector('#con-email');
+    const subField = cf.querySelector('#con-sub');
+    const msgField = cf.querySelector('#con-msg');
+
+    let hasEmpty = false;
+    [nameField, emailField, subField, msgField].forEach(field => {
+      if (field && !field.value.trim()) {
+        hasEmpty = true;
+        field.style.borderColor = 'rgba(239,68,68,0.8)';
+        field.style.boxShadow = '0 0 0 3px rgba(239,68,68,0.12)';
+        field.addEventListener('input', function recover() {
+          field.style.borderColor = '';
+          field.style.boxShadow = '';
+          field.removeEventListener('input', recover);
+        }, { once: true });
+      }
+    });
+
+    if (hasEmpty) return;
+
+    // Loading state
+    submitMsg.disabled = true;
+    submitMsg.innerHTML = '<span><i class="fas fa-spinner fa-spin"></i> Sending...</span>';
+
+    // ── Web3Forms Integration ──
+    const formData = new FormData(cf);
+    formData.append('access_key', '0d4929a8-f0d7-4b63-b2fc-b640e2b220d9');
+    formData.append('redirect', 'false');
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then(async (response) => {
+      const data = await response.json();
+      if (data.success) {
+        // Success — hide form, show confirmation
+        cf.style.display = 'none';
+        cfOk.style.display = 'block';
+        if (cfOk) {
+          cfOk.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        cf.reset();
+      } else {
+        console.error('Web3Forms Error:', data);
+        alert('Oops! Something went wrong. Please try again or email me directly at niloykanti.paul2017@gmail.com');
+      }
+    })
+    .catch((error) => {
+      console.error('Network Error:', error);
+      alert('Network error. Please check your connection and try again.');
+    })
+    .finally(() => {
+      // Reset button state regardless of outcome
+      submitMsg.disabled = false;
+      submitMsg.innerHTML = '<span><i class="fas fa-paper-plane"></i> Send Message</span>';
+    });
+  });
 }
 
 // ── SMOOTH SCROLL ──
@@ -449,3 +567,5 @@ document.addEventListener('keydown', (e) => {
     }
   }
 });
+
+

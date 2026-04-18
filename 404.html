@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="404 — Page Not Found. This page was deleted like a record without a WHERE clause. Return to Niloy Kanti Paul's portfolio.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Niloy Kanti Paul">
+    <meta name="theme-color" content="#080c1f">
+    <meta name="color-scheme" content="dark">
+    <title>404 — Page Not Found | Niloy Kanti Paul</title>
+    <link rel="canonical" href="https://dev-nkp.github.io/404.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg0: #080c1f;
+            --bg1: #0d1230;
+            --accent: #10b981;
+            --accent-glow: rgba(16,185,129,0.35);
+            --coral: #f97316;
+            --coral-glow: rgba(249,115,22,0.35);
+            --violet: #a78bfa;
+            --sky: #38bdf8;
+            --red: #ef4444;
+            --text: #f0f4f8;
+            --text-secondary: #c8d2de;
+            --text-dim: #7a8ba5;
+            --border: rgba(16,185,129,0.14);
+            --border-hover: rgba(16,185,129,0.4);
+            --card-bg: rgba(255,255,255,0.03);
+            --font-display: 'DM Serif Display', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-mono: 'DM Mono', 'Courier New', monospace;
+            --radius: 20px;
+            --radius-sm: 12px;
+            --radius-full: 9999px;
+            --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background: var(--bg0);
+            color: var(--text);
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.65;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 16px;
+            position: relative;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            cursor: none;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 25% 15%, rgba(16,185,129,0.06) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 75% 85%, rgba(239,68,68,0.04) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 30% at 60% 40%, rgba(167,139,250,0.04) 0%, transparent 60%);
+            z-index: -2;
+            pointer-events: none;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        #constellation {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        /* Cursor */
+        #csr, #csr-r {
+            position: fixed;
+            pointer-events: none;
+            z-index: 99999;
+            transition: width 0.25s ease, height 0.25s ease, background 0.25s ease, border-color 0.25s ease, transform 0.1s ease;
+        }
+        #csr {
+            width: 10px; height: 10px;
+            background: var(--coral);
+            border-radius: 2px;
+            transform: translate(-50%, -50%) rotate(45deg);
+            box-shadow: 0 0 16px var(--coral-glow);
+        }
+        #csr-r {
+            width: 40px; height: 40px;
+            border: 1.5px solid rgba(249,115,22,0.45);
+            border-radius: 6px;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        #csr.hov { transform: translate(-50%, -50%) rotate(45deg) scale(2.2); background: var(--accent); box-shadow: 0 0 24px var(--accent-glow); }
+        #csr-r.hov { width: 56px; height: 56px; border-color: rgba(16,185,129,0.5); }
+        @media (pointer: coarse), (max-width: 768px) {
+            body { cursor: auto; }
+            #csr, #csr-r { display: none !important; }
+        }
+
+        /* Container */
+        .error-container {
+            max-width: 680px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Glitch 404 */
+        .glitch-wrapper {
+            position: relative;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+        .glitch {
+            font-family: var(--font-display);
+            font-size: clamp(6rem, 20vw, 12rem);
+            font-weight: 400;
+            color: var(--text);
+            position: relative;
+            line-height: 1;
+            user-select: none;
+        }
+        .glitch::before,
+        .glitch::after {
+            content: '404';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            overflow: hidden;
+        }
+        .glitch::before {
+            color: var(--coral);
+            z-index: -1;
+            animation: glitch-1 3s infinite linear alternate-reverse;
+            clip-path: inset(0 0 65% 0);
+        }
+        .glitch::after {
+            color: var(--violet);
+            z-index: -1;
+            animation: glitch-2 2.5s infinite linear alternate-reverse;
+            clip-path: inset(60% 0 0 0);
+        }
+        @keyframes glitch-1 {
+            0%, 85% { transform: translate(0); }
+            86% { transform: translate(-4px, -2px); }
+            88% { transform: translate(4px, 1px); }
+            90% { transform: translate(-2px, 3px); }
+            92% { transform: translate(3px, -1px); }
+            94%, 100% { transform: translate(0); }
+        }
+        @keyframes glitch-2 {
+            0%, 80% { transform: translate(0); }
+            81% { transform: translate(3px, 2px); }
+            83% { transform: translate(-3px, -1px); }
+            85% { transform: translate(2px, -3px); }
+            87% { transform: translate(-4px, 2px); }
+            89%, 100% { transform: translate(0); }
+        }
+
+        /* Scan line */
+        .scanline {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--coral), transparent);
+            opacity: 0.4;
+            animation: scan 4s ease-in-out infinite;
+            z-index: 2;
+            pointer-events: none;
+        }
+        @keyframes scan {
+            0%, 100% { top: 0%; opacity: 0; }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.4; }
+            50% { top: 100%; }
+        }
+
+        /* Error badge */
+        .error-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(239,68,68,0.1);
+            border: 1px solid rgba(239,68,68,0.25);
+            border-radius: var(--radius-full);
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 28px;
+        }
+        .error-badge .dot {
+            width: 8px; height: 8px;
+            background: var(--red);
+            border-radius: 50%;
+            animation: pulse-dot 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.7); }
+        }
+
+        /* Headline */
+        .error-headline {
+            font-family: var(--font-display);
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            color: var(--text);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        /* Joke card */
+        .joke-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px 28px;
+            margin: 28px auto;
+            max-width: 520px;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .joke-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--coral), var(--violet), var(--accent));
+        }
+        .joke-card:hover { border-color: var(--border-hover); }
+
+        .joke-label {
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .joke-label i { font-size: 0.7rem; }
+
+        .joke-text {
+            font-family: var(--font-mono);
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        .joke-text .code {
+            color: var(--accent);
+            background: rgba(16,185,129,0.08);
+            padding: 1px 7px;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+        .joke-text .comment {
+            color: var(--text-dim);
+            font-style: italic;
+        }
+
+        /* Cycle button */
+        .joke-cycle {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            background: none;
+            border: 1px solid rgba(255,255,255,0.08);
+            color: var(--text-dim);
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .joke-cycle:hover { border-color: var(--coral); color: var(--coral); }
+        .joke-cycle:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; }
+
+        /* Description */
+        .error-desc {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            max-width: 460px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        .error-desc a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(16,185,129,0.3);
+            transition: var(--transition);
+        }
+        .error-desc a:hover { border-color: var(--accent); }
+
+        /* Search box */
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin: 28px auto;
+            max-width: 440px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .search-box:focus-within { border-color: var(--border-hover); box-shadow: 0 0 20px rgba(16,185,129,0.1); }
+        .search-box input {
+            flex: 1;
+            background: none;
+            border: none;
+            outline: none;
+            color: var(--text);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            padding: 14px 20px;
+        }
+        .search-box input::placeholder { color: var(--text-dim); }
+        .search-box button {
+            background: var(--accent);
+            border: none;
+            color: var(--bg0);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+        .search-box button:hover { background: var(--coral); }
+
+        /* Action buttons */
+        .error-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+        .error-btn {
+            padding: 14px 32px;
+            border-radius: var(--radius-full);
+            font-family: var(--font-mono);
+            font-weight: 500;
+            font-size: 0.78rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        .error-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+        .error-btn.primary { background: var(--accent); color: var(--bg0); font-weight: 600; }
+        .error-btn.primary:hover { background: var(--coral); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(249,115,22,0.3); }
+        .error-btn.secondary { border: 1px solid var(--border); color: var(--text-secondary); }
+        .error-btn.secondary:hover { border-color: var(--border-hover); color: var(--accent); transform: translateY(-2px); }
+
+        /* Fun fact ticker */
+        .fun-ticker {
+            margin-top: 40px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+        .ticker-label {
+            font-family: var(--font-mono);
+            font-size: 0.58rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 10px;
+        }
+        .ticker-text {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            color: var(--violet);
+            min-height: 1.4em;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Floating elements */
+        .float-element {
+            position: fixed;
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.06);
+            pointer-events: none;
+            z-index: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            user-select: none;
+        }
+        .float-el-1 { top: 12%; left: 6%; transform: rotate(-8deg); animation: float-slow 8s ease-in-out infinite; }
+        .float-el-2 { top: 25%; right: 8%; transform: rotate(5deg); animation: float-slow 10s ease-in-out infinite reverse; }
+        .float-el-3 { bottom: 20%; left: 10%; transform: rotate(3deg); animation: float-slow 9s ease-in-out infinite 1s; }
+        .float-el-4 { bottom: 15%; right: 6%; transform: rotate(-4deg); animation: float-slow 7s ease-in-out infinite 2s; }
+        .float-el-5 { top: 50%; left: 3%; transform: rotate(6deg); animation: float-slow 11s ease-in-out infinite 0.5s; }
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0) rotate(var(--r, -5deg)); opacity: 0.06; }
+            50% { transform: translateY(-15px) rotate(var(--r, -5deg)); opacity: 0.1; }
+        }
+
+        /* Confetti piece */
+        .confetti {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        @media (max-width: 480px) {
+            .joke-card { padding: 18px 20px; }
+            .error-actions { flex-direction: column; width: 100%; }
+            .error-btn { width: 100%; justify-content: center; }
+            .search-box { margin-left: 16px; margin-right: 16px; }
+            .float-element { display: none; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+            #constellation, .scanline { display: none; }
+            .glitch::before, .glitch::after { animation: none; }
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="constellation" aria-hidden="true"></canvas>
+<div id="csr" aria-hidden="true"></div>
+<div id="csr-r" aria-hidden="true"></div>
+
+<!-- Floating decorative text -->
+<div class="float-element float-el-1" style="--r:-8deg">System.NullReferenceException</div>
+<div class="float-element float-el-2" style="--r:5deg">DELETE WITHOUT WHERE</div>
+<div class="float-element float-el-3" style="--r:3deg">DEPLOYMENT FAILED</div>
+<div class="float-element float-el-4" style="--r:-4deg">APEX_CPU_LIMIT</div>
+<div class="float-element float-el-5" style="--r:6deg">TOO MANY SOQL</div>
+
+<main class="error-container" role="main">
+    <div class="glitch-wrapper">
+        <div class="scanline" aria-hidden="true"></div>
+        <div class="glitch" aria-hidden="true">404</div>
+    </div>
+
+    <div class="error-badge">
+        <span class="dot" aria-hidden="true"></span>
+        Page Not Found
+    </div>
+
+    <h1 class="error-headline">Even my Apex code doesn't break this badly.</h1>
+
+    <!-- Joke card -->
+    <div class="joke-card" aria-live="polite">
+        <div class="joke-label"><i class="fas fa-terminal" aria-hidden="true"></i> Error.log</div>
+        <div class="joke-text" id="joke-content"></div>
+        <button class="joke-cycle" id="joke-btn" aria-label="Show another joke">
+            <i class="fas fa-shuffle" aria-hidden="true"></i> Another excuse
+        </button>
+    </div>
+
+    <p class="error-desc">
+        The page you're looking for has been deleted — probably by a <code style="color:var(--coral);background:rgba(249,115,22,0.1);padding:1px 6px;border-radius:4px;">DELETE</code> statement without a <code style="color:var(--coral);background:rgba(249,115,22,0.1);padding:1px 6px;border-radius:4px;">WHERE</code> clause. Let's get you back to <a href="https://dev-nkp.github.io">somewhere that actually exists</a>.
+    </p>
+
+    <!-- Search -->
+    <form class="search-box" action="https://www.google.com/search" method="get" role="search" aria-label="Search this site">
+        <input type="hidden" name="sitesearch" value="dev-nkp.github.io">
+        <input type="search" name="q" placeholder="Try searching instead..." aria-label="Search dev-nkp.github.io" required>
+        <button type="submit" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></button>
+    </form>
+
+    <!-- Actions -->
+    <nav class="error-actions" aria-label="Navigation options">
+        <a href="https://dev-nkp.github.io" class="error-btn primary">
+            <i class="fas fa-home" aria-hidden="true"></i> Go Home
+        </a>
+        <a href="https://dev-nkp.github.io/mini-cv.html" class="error-btn secondary">
+            <i class="fas fa-file-alt" aria-hidden="true"></i> View Mini CV
+        </a>
+        <a href="mailto:niloykanti.paul2017@gmail.com" class="error-btn secondary">
+            <i class="fas fa-envelope" aria-hidden="true"></i> Report This
+        </a>
+    </nav>
+
+    <!-- Fun fact ticker -->
+    <div class="fun-ticker">
+        <div class="ticker-label">Did you know?</div>
+        <div class="ticker-text" id="fun-fact" aria-live="polite"></div>
+    </div>
+</main>
+
+<script>
+/* ========================================
+   Jokes Data
+======================================== */
+const jokes = [
+    `<span class="comment">// What happened to this page?</span>\nIt got <span class="code">Database.delete()</span>'d\nwithout a WHERE clause.\n<span class="comment">// Oops.</span>`,
+
+    `<span class="comment">// Stack Trace:</span>\nat Page.load(Line 404)\nat Router.resolve(Line 0)\nCaused by: <span class="code">NoSuchPageException</span>\n<span class="comment">// I swear it worked on my org.</span>`,
+
+    `try {\n  findPage(requestedUrl);\n} catch (PageNotFoundException e) {\n  <span class="comment">// You are here.</span>\n  <span class="code">System.debug('LOL');</span>\n}`,
+
+    `<span class="comment">// Deployment Log:</span>\n✗ Page not found\n✗ Coverage: 0%\n✗ My will to live: 0%\n✓ Blaming the intern: 100%`,
+
+    `<span class="comment">// WARNING:</span>\nThis page was archived like a\nSpring '23 Salesforce org.\n<span class="code">Status: GONE_FOREVER</span>`,
+
+    `SELECT Id FROM Pages\nWHERE Url = '<span class="code">this-one</span>'\n<span class="comment">// Result: 0 rows</span>\n<span class="comment">// Surprise surprise.</span>`,
+
+    `<span class="comment">// The page left a note:</span>\n"Dear user, I have resigned.\nEffective immediately.\nSincerely, <span class="code">/about-me</span>"`,
+
+    `<span class="code">System.assert</span>(page.exists(),\n  'Page should exist');\n<span class="comment">// AssertionError at line 1</span>\n<span class="comment">// Well, that's embarrassing.</span>`,
+
+    `<span class="comment">// Real reason this page is gone:</span>\nI pushed it to production\non a Friday at 5:47 PM.\n<span class="code">RIP.</span>`
+];
+
+/* ========================================
+   Fun Facts
+======================================== */
+const funFacts = [
+    "A Salesforce deployment fails at least 3 times before succeeding. It's science.",
+    "The average Salesforce developer has typed 'System.debug' 47,000 times.",
+    "\"It works in my org\" is the most dangerous sentence in software.",
+    "There are 10 types of people: those who understand SOQL, and those who don't.",
+    "The WHERE clause was invented after someone deleted an entire database.",
+    "Every Flow you build secretly gains sentience at 3 AM.",
+    "A Test Class walks into a bar. The bartender says: 'Coverage: 0%.'",
+    "If you put every Apex trigger end-to-end, they'd still not cover this 404 page."
+];
+
+let currentJoke = -1;
+let currentFact = -1;
+
+function showJoke() {
+    const el = document.getElementById('joke-content');
+    let next;
+    do { next = Math.floor(Math.random() * jokes.length); } while (next === currentJoke && jokes.length > 1);
+    currentJoke = next;
+    el.style.opacity = '0';
+    setTimeout(() => {
+        el.innerHTML = jokes[currentJoke].replace(/\n/g, '<br>');
+        el.style.opacity = '1';
+    }, 200);
+}
+
+function showFact() {
+    const el = document.getElementById('fun-fact');
+    let next;
+    do { next = Math.floor(Math.random() * funFacts.length); } while (next === currentFact && funFacts.length > 1);
+    currentFact = next;
+    el.style.opacity = '0';
+    setTimeout(() => {
+        el.textContent = funFacts[currentFact];
+        el.style.opacity = '1';
+    }, 250);
+}
+
+showJoke();
+showFact();
+setInterval(showFact, 6000);
+
+document.getElementById('joke-btn').addEventListener('click', showJoke);
+
+/* ========================================
+   Constellation
+======================================== */
+(function() {
+    const canvas = document.getElementById('constellation');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [], mouse = { x: -1000, y: -1000 };
+    const COUNT = window.innerWidth < 768 ? 35 : 65;
+    const CONNECT = window.innerWidth < 768 ? 70 : 120;
+
+    function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+    resize();
+    window.addEventListener('resize', resize);
+
+    class P {
+        constructor() { this.init(); }
+        init() {
+            this.x = Math.random() * W;
+            this.y = Math.random() * H;
+            this.s = Math.random() * 1.6 + 0.5;
+            this.vx = (Math.random() - 0.5) * 0.35;
+            this.vy = (Math.random() - 0.5) * 0.35;
+            this.a = Math.random() * 0.4 + 0.2;
+            // Use coral-tinted particles on 404
+            this.hue = Math.random() > 0.7 ? 0 : 160; // 0 = red-ish, 160 = green
+        }
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.x < -10 || this.x > W + 10 || this.y < -10 || this.y > H + 10) this.init();
+        }
+        draw() {
+            const color = this.hue === 0
+                ? `rgba(249,115,22,${this.a})`
+                : `rgba(16,185,129,${this.a * 0.6})`;
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.s, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+    for (let i = 0; i < COUNT; i++) particles.push(new P());
+
+    document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+    document.addEventListener('mouseleave', () => { mouse.x = -1000; mouse.y = -1000; });
+
+    function animate() {
+        ctx.clearRect(0, 0, W, H);
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const d = Math.sqrt(dx * dx + dy * dy);
+                if (d < CONNECT) {
+                    ctx.strokeStyle = `rgba(249,115,22,${(1 - d / CONNECT) * 0.08})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+            const mdx = particles[i].x - mouse.x;
+            const mdy = particles[i].y - mouse.y;
+            const mD = Math.sqrt(mdx * mdx + mdy * mdy);
+            if (mD < 160) {
+                ctx.strokeStyle = `rgba(249,115,22,${(1 - mD / 160) * 0.2})`;
+                ctx.lineWidth = 0.7;
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(mouse.x, mouse.y);
+                ctx.stroke();
+            }
+            particles[i].update();
+            particles[i].draw();
+        }
+        requestAnimationFrame(animate);
+    }
+    animate();
+})();
+
+/* ========================================
+   Cursor
+======================================== */
+(function() {
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+    const csr = document.getElementById('csr');
+    const cr = document.getElementById('csr-r');
+    if (!csr || !cr) return;
+    let mx = -100, my = -100, cx = -100, cy = -100;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; csr.style.left = mx + 'px'; csr.style.top = my + 'px'; });
+    (function loop() { cx += (mx - cx) * 0.15; cy += (my - cy) * 0.15; cr.style.left = cx + 'px'; cr.style.top = cy + 'px'; requestAnimationFrame(loop); })();
+    document.querySelectorAll('a, button, input, .joke-card').forEach(el => {
+        el.addEventListener('mouseenter', () => { csr.classList.add('hov'); cr.classList.add('hov'); });
+        el.addEventListener('mouseleave', () => { csr.classList.remove('hov'); cr.classList.remove('hov'); });
+    });
+})();
+
+/* ========================================
+   Confetti burst on 404 click
+======================================== */
+(function() {
+    const glitch = document.querySelector('.glitch');
+    if (!glitch) return;
+    const colors = ['#10b981', '#f97316', '#a78bfa', '#ef4444', '#38bdf8', '#facc15'];
+
+    function burst() {
+        for (let i = 0; i < 20; i++) {
+            const c = document.createElement('div');
+            c.className = 'confetti';
+            c.style.left = '50%';
+            c.style.top = '50%';
+            c.style.background = colors[Math.floor(Math.random() * colors.length)];
+            c.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+            c.style.width = (Math.random() * 6 + 4) + 'px';
+            c.style.height = (Math.random() * 6 + 4) + 'px';
+            document.body.appendChild(c);
+
+            const angle = (Math.PI * 2 * i) / 20 + (Math.random() - 0.5) * 0.5;
+            const velocity = Math.random() * 200 + 100;
+            const dx = Math.cos(angle) * velocity;
+            const dy = Math.sin(angle) * velocity - 100;
+            const rot = Math.random() * 720 - 360;
+
+            c.animate([
+                { transform: 'translate(-50%, -50%) translate(0, 0) rotate(0deg)', opacity: 1 },
+                { transform: `translate(-50%, -50%) translate(${dx}px, ${dy + 300}px) rotate(${rot}deg)`, opacity: 0 }
+            ], {
+                duration: 1200 + Math.random() * 600,
+                easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                fill: 'forwards'
+            }).onfinish = () => c.remove();
+        }
+    }
+    glitch.style.cursor = 'none';
+    glitch.addEventListener('click', burst);
+})();
+</script>
+</body>
+</html>

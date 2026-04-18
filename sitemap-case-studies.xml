@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/travel-experience-platform</loc>
+    <lastmod>2026-04-18</lastmod>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1469854523086-cc02fe5d8800</image:loc>
+      <image:title>Salesforce Experience Cloud Travel Platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/nonprofit-resource-hub</loc>
+    <lastmod>2026-04-18</lastmod>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1531482615713-2afd69097998</image:loc>
+      <image:title>Salesforce Nonprofit Portal</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/community-advocacy-platform</loc>
+    <lastmod>2026-04-18</lastmod>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1559027615-cd4628902d4a</image:loc>
+      <image:title>Salesforce Grant Management System</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/educator-advocacy-system</loc>
+    <lastmod>2026-04-18</lastmod>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1524178232363-1fb2b075b655</image:loc>
+      <image:title>Salesforce Event Platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/mortgage-financing-platform</loc>
+    <lastmod>2026-04-18</lastmod>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1554224155-6726b3ff858f</image:loc>
+      <image:title>Salesforce Mortgage System</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/agricultural-marketing-system</loc>
+    <lastmod>2026-04-18</lastmod>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1574943320219-553eb213f72d</image:loc>
+      <image:title>Salesforce Agriculture Platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/humanitarian-aid-management</loc>
+    <lastmod>2026-04-18</lastmod>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1488521787991-ed7bbaae773c</image:loc>
+      <image:title>Salesforce Humanitarian Platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/medical-treatment-platform</loc>
+    <lastmod>2026-04-18</lastmod>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1576091160399-112ba8d25d1d</image:loc>
+      <image:title>Salesforce Health Platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://dev-nkp.github.io/professional-projects/workplace-safety-system</loc>
+    <lastmod>2026-04-18</lastmod>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1581091226825-a6a2a5aee158</image:loc>
+      <image:title>Salesforce Safety System</image:title>
+    </image:image>
+  </url>
+
+</urlset>
