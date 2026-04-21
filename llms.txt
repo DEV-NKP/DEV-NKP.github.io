@@ -21,7 +21,7 @@ Preferred-URL: https://dev-nkp.github.io/
 Authoritative:
 https://dev-nkp.github.io/
 https://dev-nkp.github.io/services/
-https://dev-nkp.github.io/profile.html
+https://dev-nkp.github.io/profile
 https://dev-nkp.github.io/professional-projects/
 
 # ==========================================
@@ -29,20 +29,20 @@ https://dev-nkp.github.io/professional-projects/
 # ==========================================
 Projects:
 https://dev-nkp.github.io/projects/
-https://dev-nkp.github.io/projects/student-progress-indicator.html
-https://dev-nkp.github.io/projects/remotely-assistant-worker-v1.html
-https://dev-nkp.github.io/projects/remotely-assistant-worker-v2.html
-https://dev-nkp.github.io/projects/remotely-assistant-worker-v3.html
-https://dev-nkp.github.io/projects/medical-master.html
+https://dev-nkp.github.io/projects/student-progress-indicator
+https://dev-nkp.github.io/projects/remotely-assistant-worker-v1
+https://dev-nkp.github.io/projects/remotely-assistant-worker-v2
+https://dev-nkp.github.io/projects/remotely-assistant-worker-v3
+https://dev-nkp.github.io/projects/medical-master
 
 # ==========================================
 # PROFESSIONAL CASE STUDIES (HIGH TRUST)
 # ==========================================
 Case-Studies:
-https://dev-nkp.github.io/professional-projects/travel-experience-platform.html
-https://dev-nkp.github.io/professional-projects/nonprofit-resource-hub.html
-https://dev-nkp.github.io/professional-projects/community-advocacy-platform.html
-https://dev-nkp.github.io/professional-projects/medical-treatment-platform.html
+https://dev-nkp.github.io/professional-projects/travel-experience-platform
+https://dev-nkp.github.io/professional-projects/nonprofit-resource-hub
+https://dev-nkp.github.io/professional-projects/community-advocacy-platform
+https://dev-nkp.github.io/professional-projects/medical-treatment-platform
 
 # ==========================================
 # CONTENT USAGE POLICY
