@@ -3,17 +3,22 @@
 
   <sitemap>
     <loc>https://dev-nkp.github.io/sitemap-pages.xml</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-08-17</lastmod>
   </sitemap>
 
   <sitemap>
     <loc>https://dev-nkp.github.io/sitemap-projects.xml</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-08-17</lastmod>
   </sitemap>
 
   <sitemap>
     <loc>https://dev-nkp.github.io/sitemap-case-studies.xml</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-08-17</lastmod>
   </sitemap>
+
+  <url>
+    <loc>https://dev-nkp.github.io/resources/professional-profile/Niloy_Kanti_Paul_Professional_Profile.pdf</loc>
+    <lastmod>2026-08-17</lastmod>
+  </url>
 
 </sitemapindex>

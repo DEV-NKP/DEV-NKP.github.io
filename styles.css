@@ -2985,3 +2985,59 @@ img {
   }
 }
 
+
+
+/* ── Professional Profile Button (Footer) ── */
+.ft-profile-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 22px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-mid));
+  color: var(--bg0);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 40px;
+  border: none;
+  box-shadow: 0 4px 20px var(--accent-glow);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+.ft-profile-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--coral), #ea580c);
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+.ft-profile-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(249, 115, 22, 0.35);
+  color: var(--bg0);
+}
+.ft-profile-btn:hover::before {
+  opacity: 1;
+}
+.ft-profile-btn i,
+.ft-profile-btn span {
+  position: relative;
+  z-index: 1;
+}
+.ft-profile-btn i {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .ft-profile-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+  }
+}
